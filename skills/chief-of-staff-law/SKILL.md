@@ -1,6 +1,6 @@
 ---
 name: chief-of-staff-law
-description: The operating law for a personal chief-of-staff system — how a task list, calendar, and knowledge base stay correct and legible over time. Read IN FULL before adding, routing, scheduling, reviewing, closing, or cleaning up any task, and before any unattended engine writes anything. Covers the seven invariants, the two contracts and three sets, the three homes, the six kinds, task shape, the planning law and placement calculus, the obligation gate, closure, the two write modes, provenance, anti-rot, and failure handling. Use whenever work touches ~~state (~~task surface) or ~~container (~~calendar), whether a human or a scheduled engine is driving.
+description: The operating law for a personal chief-of-staff system — how a task list, calendar, and knowledge base stay correct and legible over time. Read IN FULL before adding, routing, scheduling, reviewing, closing, or cleaning up any task, and before any unattended engine writes anything. Covers the seven invariants, the two contracts and three sets, the three homes, the seven kinds, task shape, the planning law and placement calculus, the obligation gate, closure, the two write modes, provenance, anti-rot, and failure handling. Use whenever work touches ~~state (~~task surface) or ~~container (~~calendar), whether a human or a scheduled engine is driving.
 ---
 
 # The law
@@ -22,7 +22,7 @@ the action.
 Italic *type cases* illustrate a real failure; they are not the boundary of the rule. Apply every
 rule to the full scope its sentence states. If scope seems ambiguous, the wider reading is correct.
 
-The failure this prevents: one app absorbing six different kinds of thing until nothing is
+The failure this prevents: one app absorbing seven different kinds of thing until nothing is
 findable, the overdue count is meaningless, and the calendar is a wall of all-day banners nobody
 can act on.
 
@@ -49,14 +49,39 @@ law present — lead with that and stop.
 
 **THE CANARY.** Quote, from this read:
 
-1. §9b's three starvation conditions, in order.
-2. The two exceptions to the date-only ban.
-3. The ghost sweep's delete predicate, and the one thing that makes the sweep a no-op.
+1. §6's stagger — the minimum gap between two overlapping blocks' start times, and what it protects.
+2. §9's visibility ladder — what a waiting counterparty outranks.
+3. §13 — why a retired rule is never quoted verbatim in a live artifact.
 
-Three facts, three distant sections, about fifteen words. It deliberately does not ask for the
-seven invariant names: those are printed in the spine table below, in this file's frontmatter, and
-in the engine prompt that asks for them — so a nine-line skim answers them, and so does a runtime
-that never opened this file at all. **A canary must be unfakeable from the thing that asks for it.**
+Three facts, three distant sections — §6, §9, §13 — a sentence each. It deliberately does not ask
+for the seven invariant names: **those are printed in the spine table a few lines below, so quoting
+them proves only that the spine was read** — which is the skim this section exists to catch. **A
+canary must be unfakeable from the thing that asks for it.** That rule disqualifies far more of this
+file than it looks like, and the next paragraph is how the three above survived it.
+
+**The siting rule — and it is two halves, not one.** A fact can only measure a read if it is printed
+nowhere the reader already is. So: **each canary fact has exactly one home in the whole package, and
+it sits where nothing else has any reason to restate it.** The second half is the one that gets
+forgotten, and it is the expensive one. §9b's three conditions look like the perfect canary — deep,
+ordered, load-bearing — and they are disqualified, because the engine restates them in full at its
+write step, correctly, since a dropped clause there is a wrong write every morning. **A fact anything
+else has a reason to carry is a fact the canary cannot use.** These three are safe precisely because
+nothing else wants them: a number inside a stagger rule, an ordering clause inside a table, and an
+editing discipline no engine executes.
+
+**Replacing a fact is a grep, not a judgement.** Before you assert a fact is single-homed, count it —
+the engine, the setup, the README, every reference, the diagrams. **Asserting single-homedness
+without counting is the defect this paragraph exists because of.** And note what kind of claim it is:
+it is about *other files*, so it goes false when someone edits one of them, with nobody touching this
+file. Print one of these three anywhere else and the canary is decorative from that commit onward,
+silently, while still reading PASSED. §12 binds the shed contract to that.
+
+**What it buys, exactly.** It catches the skim: an engine that routed to one section, or never loaded
+the file, cannot produce three facts it has never been near. **It does not catch a reader who found
+three lines and read nothing between them** — nothing three quotes long can. It is a cheap check, not
+a proof: it can show the text was not read; it cannot show it was understood. Run it every pass
+anyway. **The alternative is not a better instrument — it is no instrument**, and no instrument is
+how a partial read renders as a run.
 
 **Durable vs. runtime — the test: if a concrete noun here would drift in six months, it is a
 pointer, not a fact.**
@@ -350,7 +375,7 @@ is a commitment nobody saw — invisible, expensive. So when a real move is unce
 than drop. But that bias buys the staged lane, never the loop lane: **the cockpit is curated, and
 flooding it with maybes destroys the one surface they read.**
 
-## 2. The six kinds · derives from I4 and I5
+## 2. The seven kinds · derives from I4 and I5
 
 | Kind | Test | Home | On calendar? |
 |---|---|---|---|
@@ -933,7 +958,7 @@ failure.**
 **So §9 is a door, not the door. Offense gets its own, and it is keyed to their declaration instead
 of a stranger's demand.**
 
-### The positive test — name both, or create nothing
+### The positive test — name all three, or create nothing
 
 §9's power is that it is positive: name both or create nothing, because a negative test resolves
 toward creating. **This door must be positive for the same reason, or it becomes the flood.**
@@ -1268,10 +1293,16 @@ Each sweep, also run this checklist — one line, one check:
 
 | This file owns — the law | The engine owns — the engine |
 |---|---|
-| the spine (I0–I6) · the profile contract · **the roles — the two contracts and the three sets** · the three homes · the six kinds · task shape · the planning law and placement calculus · the envelope · the projection model and ghost sweep · the cockpit · the sales rail · the obligation gate, closure, next-move · **the two modes** · provenance · anti-rot · operating discipline · failure handling | which sources it sweeps and how · the run pipeline · its write surface and gates · where each failure lands · the brief's specification |
+| the spine (I0–I6) · the profile contract · **the roles — the two contracts and the three sets** · the three homes · the seven kinds · task shape · the planning law and placement calculus · the envelope · the projection model and ghost sweep · the cockpit · the sales rail · the obligation gate, closure, next-move · **the two modes** · provenance · anti-rot · operating discipline · failure handling | which sources it sweeps and how · the run pipeline · its write surface and gates · where each failure lands · the brief's specification |
 
-**The engine loads this file and reads it in full before any other action, and proves it** — quote
-I0–I6 by name. **A failed load is a hard stop, not a degradation.** The engine carries no second copy,
+**The engine loads this file and reads it in full before any other action, and proves it** — by
+emitting the canary this file asks for, backstage, before anything else. **Never the invariant
+names.** I0–I6 are printed in the spine table at the top of this file: an engine that skimmed the
+spine and read nothing else can quote all seven, which is exactly why the canary refuses to ask for
+them. **An instrument that a skim passes is not measuring the skim.** Whatever re-checks the read
+later in a pass asks for the same three facts, for the same reason — if a check is worth running
+twice, it is worth pointing at something that can fail. **A failed load is a hard stop, not a
+degradation.** The engine carries no second copy,
 by design. **An engine that cannot load this file does not have partial law — it has none.** It does not
 proceed on the half it remembers: a recollection of a law is a synthesis, and I0 says the synthesis
 loses.
@@ -1280,6 +1311,16 @@ loses.
 or greater fidelity, power, and intention.** If this file's version is weaker or missing a nuance:
 upgrade this file first, then shed. Duplication is a cost; a lost distinction is a loss — and the
 loss is silent, which makes it the worse trade. **When in doubt, leave it duplicated.**
+
+**The one exclusion, and the canary lives on it: a restatement may never land on a canary fact, in
+either direction.** Do not shed a canary fact into the engine, and do not canary a fact the engine
+already carries. **A restatement is not a copy of a fact — it is a second home for it**, and a canary
+whose answer is printed in the file doing the asking measures nothing while continuing to pass. Where
+the restatement is right — §9b's conditions at the write, where a dropped clause is a wrong write
+every morning — **the restatement wins and the fact leaves the canary.** So the two rules are one
+rule: duplicate freely, and site the canary on what nothing else wants. **Editing the engine? Grep
+the three facts before you commit. This file cannot see that change, which is why it is written
+here.**
 
 Why the law lives in a skill — an unreachable path is not an unreachable capability. A path is a
 filesystem address, and a scheduled runtime's view of the filesystem is narrower than an interactive

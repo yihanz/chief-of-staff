@@ -30,10 +30,17 @@ the whole relationship.
 
 **The two facts that are load-bearing here, and neither is about money:**
 
-- **Task durations are a PAID feature (Pro and above).** Without a duration, a dated task renders as
-  an **all-day banner** at the top of the calendar rather than a time block at a specific hour.
-  *Why this matters here:* placement is the entire product. On Beginner the engine still runs, but
-  its output degrades into the exact calendar clutter the system exists to remove.
+- **Task durations are a PAID feature (Pro and above).** *(That is what the sources below establish,
+  and it is all they establish.)* *Why this matters here:* **without a duration the engine cannot
+  state what a thing costs and cannot enforce the 30-minute floor**, so task-derived rows render a
+  `—` time gutter rather than an hour with nothing behind it. On Beginner the engine still runs and
+  still places rows at their hour; **what the upgrade buys is the visible length and the enforceable
+  floor.**
+  **What a Beginner-tier timed row with no duration draws on a calendar is NOT a fact this file
+  carries.** No source below speaks to it — it depends on the user's own task↔calendar sync, which is
+  not observable from a pricing page. **The engine probes it on the first run and reports what it
+  found.** Anything else here would be a guess wearing this file's date and citation, which is the
+  one thing this file exists to prevent.
 - **Activity history: 7 days on Beginner, full history on Pro.**
   *Why this matters here:* that log is the engine's **only** discriminator between a row it placed
   and a row the user placed. Past the 7-day cap it cannot prove ownership, so it stops re-placing
@@ -180,6 +187,56 @@ creates it. The gate, the envelopes, and the brief work identically.
 4. Sign in with the **work account**.
 
 **Source:** https://support.claude.com/en/articles/12542951-set-up-the-microsoft-365-connector
+
+---
+
+## Slack → Claude — and the 2026-08-03 cutover
+
+**Two different products share the word "Slack," and telling them apart is the whole entry.**
+
+| | What it is | Plan gate, verbatim |
+|---|---|---|
+| **The Slack connector** | **What this engine uses.** Claude searches your channels, DMs and shared files. | *"available for all paid plans (Pro, Max, Team, and Enterprise)"* |
+| **Claude in Slack → Claude Tag** | The `@Claude` app *inside* Slack. **This engine does not use it.** | *"Claude Tag is available on Team and Enterprise plans in beta."* |
+
+**THE DATE, verbatim from two separate Anthropic help-centre articles:** *"Claude in Slack will be
+switched over to the new Claude Tag experience on **August 3, 2026**."*
+
+**THE TIERS, verbatim:** *"Claude Tag is available on Team and Enterprise plans in beta."* Setup is
+**Primary Owner or Owner only** — *"The Admin role can't."* Role-based member restriction is
+**Enterprise-only**.
+
+**⚠ THE CONSEQUENCE STILL DOES NOT RESOLVE — and that is the finding, not a gap in the search.**
+The connector is documented as all-paid-plans. But the same article states a prerequisite:
+**"You must install Claude in Slack before enabling and using the Slack connector."** The thing that
+prerequisite names is what is retired on 2026-08-03, and its replacement is Team/Enterprise-only and
+admin-provisioned. **No Anthropic page states what a Pro or Max individual's Slack connector does on
+2026-08-04.** Not "it keeps working." Not "it breaks." **Unstated.** **Do not resolve this by
+reasoning about it** — it needs a live probe after the date.
+
+**⚠ THIS ENTRY GOES STALE BEFORE THE REST OF THE FILE DOES.** The header says re-verify after
+**2026-10-17**. **This entry is stale on 2026-08-03** — ten weeks earlier. The file-level horizon
+does not vouch for it.
+
+*Why this matters here:* Slack is an optional door-one source — somewhere other people put things on
+you. **Nothing in the engine needs it**, so the honest posture is: don't build a setup story on Slack
+until someone has probed it after the cutover. The engine only ever *reads* Slack; no write of any
+kind depends on this.
+
+**Unchanged and still true:** the connector needs a **paid Slack plan** and a **Slack admin** to
+approve the Claude app first. Members of Team/Enterprise Claude orgs *"will not see the option to
+enable the Slack connector individually until it's enabled by an Owner."*
+
+**Sources:**
+- https://support.claude.com/en/articles/11506255-get-started-with-claude-in-slack
+- https://support.claude.com/en/articles/15594475-what-is-claude-tag
+- https://claude.com/docs/claude-tag/admins/migrate-from-earlier
+
+**⚠ NOT SOURCED — deliberately left out.** Trade coverage and SEO roundups circulate a *"30-day
+opt-in window closing ~2026-07-23"* and specific migration-credit figures. **No Anthropic page states
+either**, and Anthropic's own migration doc says only: *"The earlier Claude in Slack app… is being
+deprecated; check with your account team for the cutover date."* Omitted rather than carried — a
+number from a roundup is exactly the kind of fact this file exists to refuse.
 
 ---
 
@@ -351,11 +408,19 @@ download. **Source:** https://support.claude.com/en/articles/15520349-use-claude
 |---|---|---|
 | **Skills** | **Free, Pro, Max, Team, Enterprise** (needs code execution enabled) | all |
 | **Plugins** | **Paid only** — *"available to all paid plans (Pro, Max, Team, Enterprise)"* | web, Desktop Chat tab, Cowork. Mobile ⚠️ contradicted across docs |
-| **Connectors** | **all plans, all surfaces incl. mobile** (Free capped at one custom connector) | all |
+| **Connectors** | **all plans, all surfaces incl. mobile** (Free capped at one custom connector) ⚠️ *the capability, not each connector — see note* | all |
 | **Scheduled tasks** | **Cowork only, paid only** | Cowork |
 | **Desktop Extensions (.mcpb)** | no stated gate ⚠️ — appears to work on Free | **Claude Desktop / Claude Code only** |
 
 **Sources:** https://support.claude.com/en/articles/13837440-use-plugins-in-claude · https://support.claude.com/en/articles/12512180-use-skills-in-claude · https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities
+
+**⚠️ Read the Connectors row as the *capability*, not a promise about any one connector. Each
+connector sets its own gate on top.** Two in this file already do: the **Slack** connector is
+*"available for all paid plans (Pro, Max, Team, and Enterprise)"* — **not Free** — and additionally
+needs a paid Slack plan and a Slack admin; **Microsoft 365** needs an Entra work tenant and excludes
+personal Outlook accounts entirely. *Why this matters here:* "connectors work on every plan" is true
+of the feature and false of the specific connector someone is about to try, and that gap is where a
+setup conversation dies.
 
 ### The free path — the widest-reach fact in this package
 

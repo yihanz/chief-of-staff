@@ -1,7 +1,7 @@
 graph TB
     subgraph GOV["What governs it — the split IS the design"]
         LAW["THE LAW · portable<br/>no facts about any person<br/>so it can be shared and audited"]
-        PROF["YOUR PROFILE · yours<br/>who you are, what makes you start<br/>never packaged, never shared<br/>(it does pass through the model each run,<br/>like your mail already does)"]
+        PROF["YOUR PROFILE · a row on your task list<br/>who you are, what makes you start,<br/>and the work you'd call your own<br/>a row labelled cos-profile, never a file —<br/>a file only works on one computer<br/>not packaged, never shared — but it does<br/>pass through the model each run,<br/>like your mail already does"]
     end
 
     subgraph READ["What it reads — every pass, nothing remembered between runs"]
@@ -12,21 +12,30 @@ graph TB
         EV["Things that can prove a fact<br/>messages, health records, receipts"]
     end
 
-    subgraph GATE["Four questions — most things stop here. That is the point."]
+    subgraph GATE["DOOR ONE · what the world asks of you — most things stop here. That is the point."]
         Q1["1 · Is anything actually owed?<br/>name a person AND a deadline, or nothing happens"]
         Q2["2 · Whose move is it?<br/>if they will call you, you don't need a task"]
         Q3["3 · Where can your body do it?<br/>not 'is the slot free'"]
         Q4["4 · Will it fit, and will it fire?<br/>first move pre-done, or it never starts"]
     end
 
+    subgraph DOOR2["DOOR TWO · the work you declared — nobody is waiting on it, so door one cannot see it"]
+        D1["1 · Did you declare this work?<br/>it never guesses what matters in your life"]
+        D2["2 · Has it actually gone dark?<br/>proven from your own list this run, never a hunch"]
+        D3["3 · Did you kill the last block?<br/>then it stays killed — it never asks twice"]
+    end
+
     subgraph OUT["What it writes — two things, nothing else"]
         LIST["YOUR TASK LIST<br/>the system's entire memory<br/>no database · no cache · no hidden file<br/>you tick a box = the instruction lands"]
-        CARD["ONE CARD, ONCE A DAY<br/>your day + an honest footer:<br/>what it closed, what it refused to create,<br/>what it could not reach"]
+        CARD["ONE CARD, ONCE A DAY<br/>your day + an honest footer:<br/>what it closed, what it refused to create,<br/>what it could not reach, and the days<br/>since your own work last moved"]
         NOSEND["It cannot send email<br/>drafts only — enforced by the<br/>absent tool, not by a promise"]
     end
 
     LAW --> GATE
     PROF --> GATE
+    LAW --> DOOR2
+    PROF --> DOOR2
+
     STATE --> Q1
     CAL --> Q1
     IN --> Q1
@@ -38,13 +47,22 @@ graph TB
     Q4 --> LIST
     Q4 --> CARD
     Q4 -.-> NOSEND
+
+    STATE --> D2
+    D1 --> D2
+    D2 --> D3
+    D3 -->|"one block, protected —<br/>placed BEFORE the reactive work"| LIST
+    D3 --> CARD
+
     LIST -.->|"your closes and placements<br/>are read back as law"| Q1
+    LIST -.->|"a block you killed<br/>is never re-placed"| D3
 
     classDef law fill:#E6F1FB,stroke:#185FA5,color:#0C447C
     classDef prof fill:#FAEEDA,stroke:#854F0B,color:#633806
     classDef req fill:#E1F5EE,stroke:#0F6E56,color:#085041
     classDef src fill:#F1EFE8,stroke:#5F5E5A,color:#2C2C2A
     classDef gate fill:#EEEDFE,stroke:#534AB7,color:#3C3489
+    classDef own fill:#FAEEDA,stroke:#854F0B,color:#633806
     classDef out fill:#E1F5EE,stroke:#0F6E56,color:#085041
 
     class LAW law
@@ -52,4 +70,5 @@ graph TB
     class STATE,CAL req
     class IN,INT,EV src
     class Q1,Q2,Q3,Q4 gate
+    class D1,D2,D3 own
     class LIST,CARD,NOSEND out

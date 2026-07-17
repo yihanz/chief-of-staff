@@ -8,10 +8,10 @@ type:**
 set up my chief of staff
 ```
 
-You'll see your first card in about **two minutes** — setup runs a real pass before it asks you
-anything. Then comes the interview, about twenty questions at your pace: **budget 20–40 minutes**
-depending on how much you're connecting. You can stop after any phase and still have something
-that works.
+You'll see your first card in **under a minute** — setup runs a real pass before it asks you
+anything. Then comes the interview: **about two dozen questions**, at your pace, and **ten minutes
+of them gets you something that works.** The rest, and connecting anything you haven't connected,
+takes as long as it takes. **You can stop after any phase.**
 
 ---
 
@@ -46,14 +46,63 @@ One day, rendered:
 > ---
 >
 > *Closed 1 — "payment received, 14 July" from the invoice thread. Didn't create 6 — no
-> counterparty, no clock. Swept 1 ghost block. Sources 6/7 — messages didn't answer, so anything
-> that moved a time by text is unknown. Write-once — created 3, revised nothing; one block I placed
+> counterparty, no clock. Swept 1 ghost block. `read 6/7` — iMessage didn't answer, so anything
+> that moved a time by text is unknown. `write-once` — created 3, revised nothing; a block placed
 > last week is 20 minutes, under the floor, and it's yours to resize.*
 
 Two things there are the whole product. **`14:10` is the envelope** — the engine computes the real
-cost of a 15:45 appointment (getting ready, life slack, travel, arriving early), puts it on the
-calendar, and refuses to fill it. That's why you stop arriving flustered at things you had "free
-time" before. **"9 days dark"** is the number that tells you whether any of this is working.
+cost of a 15:45 appointment (getting ready, life slack, travel, arriving early), refuses to place
+anything inside it, and tells you the hour your day actually ends. It never writes the envelope to
+your calendar: it's a rule about what may be placed, plus that one line. That's why you stop
+arriving flustered at things you had "free time" before. **"9 days dark"** is the number that tells
+you whether any of this is working.
+
+### What that card renders on a free task list — read this before the `13:00` sells you anything
+
+*(This is about your **task list's** free tier — a different "free" from the Claude plan further
+down. Both are real; they cost you different things.)*
+
+**Time blocks need a task duration, and on nearly every task list a duration is a paid feature** —
+Todoist included; `references/VOLATILE.md` carries the current price and the date it was checked.
+Here is exactly what that costs you, and we'll keep it to what this package actually owns.
+
+**Without a duration the engine cannot state what a thing costs, and cannot enforce the 30-minute
+floor.** So the time gutter renders `—` rather than an hour it has nothing to stand behind. That is
+a fact about the engine, and it's true on any surface, on any tier.
+
+**What your own calendar draws for a timed row with no length, this page does not predict.** The
+engine doesn't author a calendar event for a task — your task list's sync draws that row, and how it
+draws it is a property of your task app and your setup, neither of which we can see from here.
+**So the engine probes it on the first run and tells you what it found**, in the receipts. That's
+the answer we can actually stand behind, and it's about your list rather than a guess about lists in
+general.
+
+| On the card above | Free | Paid |
+|---|---|---|
+| `09:00` Reply to the venue — **and every other task-derived row** | placed at `09:00`; the gutter reads **`—`** | a block at `09:00` |
+| `13:00` The venture, protected — **the second door's block** | placed; the gutter reads **`—`** | 90 minutes you can see |
+| `15:45` Quarterly review | `15:45` | `15:45` — it's a real calendar event, not a task |
+| `14:10` Envelope opens | `14:10` | `14:10` — computed, never a block on either tier |
+
+**The card names which one you're on**, in a line of the receipts, together with what the duration
+probe actually found on your list. It also reports the 30-minute floor as unenforceable rather than
+pretending to hold it.
+
+**Everything else is unchanged, and it is not a demo:** the gate and the six things it refused, both
+doors, closure on evidence, the envelope, the appointment events, the ghost sweep, the coverage
+token, and `9 days dark`. **Door two still fires on the free tier** — the `13:00` row is placed, at
+its hour, with the dark-day count behind it; the door is not what the free tier takes. **What the
+upgrade buys is the placement** — not the door but the *length*: a block you can see, at an hour
+your body can actually do it, and a floor the engine can hold instead of merely report. It's the one
+spend setup argues for, and you can say no.
+
+**One more free-tier limit on that second door, since we're being exact.** Protecting the `13:00`
+block also needs your task list's **activity history** — the engine reads it to check it isn't
+re-placing a block you already killed. Free tiers cap that history to a short window (VOLATILE has
+the current length). **Where the cadence you declared runs longer than that window, the door goes
+quiet rather than guess.** `9 days dark` still renders and still climbs, so it isn't invisible — and
+if that number is climbing while no blocks ever appear, **the mode line on the card is where you
+look.**
 
 ---
 
@@ -61,11 +110,13 @@ time" before. **"9 days dark"** is the number that tells you whether any of this
 
 This gives an AI write access to your calendar and task list and lets it read your mail while you
 sleep. The design's central bet is that **an agent that creates almost nothing is more useful than
-one that captures everything** — so the obligation gate defaults to doing nothing, the engine can't
-send mail, and every rule about your decisions resolves toward leaving your stuff alone. The real
-risks are: a public calendar mirror if you take the free iCloud path, a local shell bridge if you
-enable one, and the ordinary fact that hosted connectors mean your data flows through a vendor.
-None of those are hidden from you, and two of the three are avoidable.
+one that captures everything** — so the obligation gate defaults to doing nothing, mail is
+drafts-only (and on the recommended mail surface there's no send verb at all, **which is a property
+of the surface you chose, not a promise this package makes**), and every rule about your decisions
+resolves toward leaving your stuff alone. The real risks are: a public calendar mirror if you take
+the free iCloud path, a local shell bridge if you enable one, a mail surface that *can* send if you
+choose one, and the ordinary fact that hosted connectors mean your data flows through a vendor. None
+of those are hidden from you, and three of the four are avoidable.
 
 The long version is `references/RISK.md`. **Read it before you connect anything with write
 access.** It's the only document here you actually have to read.
@@ -78,39 +129,60 @@ access.** It's the only document here you actually have to read.
 
 - Create a task from the world only when it can name **a counterparty and a clock** from evidence
   read this run — **or** protect a block for a lane *you declared*, when it can prove that lane is
-  starving. Those are the only two doors. There is no third.
+  starving. **Those are the two doors that make work.** There is a third that doesn't — it's for
+  offers, it's named below, and it writes.
 - Place work by **activation cost**, not duration — an errand rides a trip you're already taking;
   admin goes in the window where you're stuck in a chair anyway.
 - Compute the real **envelope** around an appointment and refuse to fill it.
 - **Close loops on evidence** and tell you the sentence that justified each one.
-- Ship every task with **the first move already made** — the draft written, the number found.
+- Ship every task with **the first move already made** — the number found, the draft written where
+  you've connected a mailbox that drafts.
 - Report what it **refused to create**, and what it **could not reach**.
 
 **Won't:**
 
-- **Send email.** Drafts only — and on the recommended mail surface, sending isn't possible at all
-  because the capability doesn't exist.
+- **Send email.** Drafts only. The engine's own rules ban sending — and on the recommended mail
+  surface the ban isn't being relied on, because the send capability doesn't exist there at all.
+  **On a mail surface that *can* send, "drafts only" stops being a guarantee and becomes a
+  configuration you must not get wrong.**
 - **Re-open anything you closed.** Your close is final and is never audited.
 - **Move a block you placed.** It places a row once; after that the row is yours.
 - **Rebuild something you parked.** Your decisions live on the list and it reads them.
 - **Render a partial run as a complete one.** Silence about a failure is the one unforgivable bug.
 
 **And on almost every task list, it won't edit anything at all — ever.** Telling an agent's rows
-apart from yours needs a field that exactly one product on the landscape actually has. Without it,
-the engine **creates and never revises**: if something it made ends up the wrong shape, it says so
-in one line rather than reaching back into your list. That's the honest default, and it's arguably
-the *safer* product — most of the rules above exist to stop an engine touching your stuff, and this
-way the verb simply isn't in its hands. Where the field does exist, the engine may also tidy up
-**its own** rows. **Neither mode ever reaches a row you placed or touched**, and it names which mode
-it's in on every card.
+apart from yours needs a field that exactly one product on the landscape actually has. Without it the
+engine runs **write-once**: it **creates and never revises** — if something it made ends up the wrong
+shape, it says so in one line rather than reaching back into your list. That's the honest default,
+and it's arguably the *safer* product — most of the rules above exist to stop an engine touching your
+stuff, and in write-once that whole class of failure isn't unlikely, it's **structurally
+impossible**: the verb simply isn't in its hands. Where the field does exist — **maintained** — the
+engine may also tidy up **its own** rows, and only ones it can prove it placed and you haven't
+touched. **Neither mode ever reaches a row you placed or touched**, and **the card names which mode
+you're in, every run.**
+
+**Read that Won't list for what it is: the design's rules, not a warranty.** `LICENSE` says
+something harsher — that an AI agent with your credentials can create, modify and delete entries,
+and can close a loop you'd already closed. Both are true at once. **The list above is what the rules
+require; the licence is what could happen if a rule fails**, and a licence that assumed the rules
+held would be worthless to you. See the licence note at the bottom.
 
 ---
 
 ## Install
 
-**This is distributed as a file — `chief-of-staff.plugin`. There's no marketplace for it yet.**
-Install it however your Claude client installs a local plugin file; if yours doesn't offer a way,
-ask whoever sent it to you, because they installed it somehow.
+**This is distributed as a file — `chief-of-staff.plugin`. There's no marketplace for it yet, and
+no public link.** **Plugins also need a paid Claude plan** — Pro, Max, Team or Enterprise. **Skills
+don't.** If you're on Free, skip to the next section; you can have nearly all of this.
+
+1. Go to **claude.ai** → **Customize** → **Plugins**.
+2. Choose the option to **upload a custom plugin file**, and pick `chief-of-staff.plugin`.
+3. **If the picker refuses the file, rename it to `chief-of-staff.zip` and try again.** It's the
+   same archive either way, and some pickers only accept `.zip`.
+
+**These screens move, and this one isn't in `references/VOLATILE.md`** — that file carries the dated,
+sourced paths for connectors and plans, not this. So if what's on your screen disagrees with the
+three steps above, **trust the screen.**
 
 Then, in a **new chat** — plugins only load when a conversation starts — type `set up my chief of
 staff`. Setup shows you a card first, then probes what you already have, tells you what's missing
@@ -162,6 +234,22 @@ where you can't miss it.
 clean and productive, the system is working beautifully at the thing it wasn't built for — and it
 will tell you so.
 
+### And a third door, which isn't about work — but it writes, so you should hear it from us
+
+**Offers.** A sale on something you already own is not a task and you owe nobody a purchase, so
+neither gate above can judge it — door one would refuse every one of them, forever. So the law gives
+offers their own quiet door, the **sales rail**, and it is built to stay out of your way: **a
+date-only row**, which your calendar renders as an **all-day banner** on the day the offer expires —
+its own band, lowest priority, never in the lead, never counted as backlog, never a time block.
+
+**Its gate is three parts, and all three have to come from what the offer itself says:** you already
+have a relationship with that brand, it states a real number, and it states a real end date. Fail
+any one and nothing is created — **which is most of the time.** It's deliberately over-filtered.
+
+It's named here, and not in the small print, for one reason: **it is a write, it lands on your
+calendar, and finding out about it by discovery is the wrong way to find out.** `references/RISK.md`
+has its blast radius, including what happens to expired banners in write-once mode.
+
 ---
 
 ## Two design decisions worth knowing
@@ -208,7 +296,8 @@ card — all of it runs on a task list and a calendar alone.
 
 **None of the three is required and zero of any of them is legitimate.** The engine does the most it
 can with what's connected, then tells you in one line what it couldn't reach — that's the
-`sources 6/7` on the card.
+`read 6/7` on the card. A complete pass over whatever your stack is reads `sources 6/6`; the day a
+source goes dark, the number drops and the receipts name it.
 
 **Use whatever you already have.** If your task manager can't do something, the engine tells you
 which part degrades rather than demanding you switch. **A worse tool you actually open beats a
@@ -242,16 +331,42 @@ Inside the plugin: `chief-of-staff-law` is the operating law (universal, no pers
 **Support.** There isn't a desk. This is a personal project shared as-is — if it breaks, tell
 whoever gave it to you.
 
-**Uninstall.** Remove the plugin and delete the scheduled task. Everything the engine created
-carries the label **`chief-of-staff`**, so one filter finds all of it. Your profile is the row
-labelled **`cos-profile`** — delete that and nothing about you is left.
+**Uninstall.** Remove the plugin and delete the scheduled task — **that alone stops it.** The rest
+is cleanup, and it's in **three piles, because no single filter reaches all of them:**
+
+1. **The rows on your task list.** Every one the engine created carries the label
+   **`chief-of-staff`** — search `label: chief-of-staff` and what comes back is the complete set.
+   Anything without that label is yours, and that search cannot reach it.
+2. **The calendar events.** When the engine verified a real appointment that wasn't on any calendar
+   you already had, it created **an ordinary event on your calendar.** A calendar event has no task
+   label, so **no filter finds these** — they look exactly like events you made, because they are
+   the same kind of object. Delete them by hand. There won't be many; that's the only reason it
+   ever creates one.
+3. **The `✓` ghosts.** On the calendar your task list projects your dated tasks onto, the engine
+   sweeps leftover events whose titles start with `✓`. With it gone, nothing sweeps them — filter
+   for `✓` there and delete, or delete that projection calendar outright if nothing else lives on
+   it.
+
+Your profile is the row labelled **`cos-profile`** — it holds every personal fact you gave this
+system, so delete that and nothing about you is left.
 
 **Licence — it is not MIT.** See `LICENSE`, which is short and in plain English: **you may use and
-modify this for yourself, free, forever — including for your own work at your job — but you may not
-sell it, redistribute it, or roll it out across an organization** (one person, one install; share
-the original instead). **It comes with no warranty and no liability** — an AI writes to your
-calendar and task list unattended, it can be wrong, and what it does under your credentials is your
+modify this for yourself — no fee, no registration — including for your own work at your job. You
+may not sell it, redistribute it, or roll it out across an organization: one person, one install.**
+Read "free" as *no fee*, not as *irrevocable* — **the grant is revocable, and it ends automatically
+if you breach it.** **It comes with no warranty and no liability** — an AI writes to your calendar
+and task list unattended, it can be wrong, and what it does under your credentials is your
 responsibility.
+
+**There's no public link to send anyone yet.** The licence asks you not to pass copies around; if
+someone wants one, **point them at whoever sent this to you** rather than at your copy.
+
+**And where `LICENSE` contradicts the Won't list above, it's contradicting it on purpose.** The
+licence says the agent can create, modify and delete entries in your task list and calendar, and can
+close a loop you'd closed yourself. The Won't list says it doesn't do those things. **The Won't list
+is the design's rules; the licence is what an AI holding your credentials could do if a rule fails.**
+Nothing here is entitled to assume its own rules hold — least of all the document that decides who
+carries the loss when they don't.
 
 **Version 0.1.0.** Expect rough edges.
 

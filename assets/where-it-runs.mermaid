@@ -2,7 +2,7 @@ graph TB
     START{"Does your engine need<br/>LOCAL files or apps?"}
 
     START -->|"NO — hosted connectors only<br/>tasks · calendar · mail · notes"| CLOUD
-    START -->|"YES — iMessage, a lifelog,<br/>a local notes server, a shell bridge"| LOCAL
+    START -->|"YES — your message history,<br/>a wearable that records your day,<br/>notes that live on your own disk"| LOCAL
 
     subgraph CLOUD["CLOUD-ELIGIBLE · the transfer-grade product"]
         C1["Runs on Anthropic infrastructure"]
@@ -18,7 +18,7 @@ graph TB
         L2["Computer asleep at 7am = run SKIPPED"]
         L3["One catch-up run on wake,<br/>older misses discarded"]
         L4["A 7am brief can fire at 10pm"]
-        L5["Buys: messages, lifelog,<br/>local notes, shell"]
+        L5["Buys: your message history,<br/>a wearable's record of your day,<br/>notes that live on your own disk"]
         L1 --> L2 --> L3 --> L4 --> L5
     end
 

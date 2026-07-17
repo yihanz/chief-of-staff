@@ -13,8 +13,8 @@ This file carries the *shapes* and the *arguments*. **The numbers move; the argu
 read out of their documentation — which matters, because the headline finding is a case where the
 documentation and the live call disagree. **Ⓔ marks a claim established by a live call in that
 probe.** **⚠️ marks a claim that is NOT VERIFIED** — inferred, single-sourced, or read from a doc and
-never tested. **Re-probe anything here older than about three months**; a tool set can change in a
-day, and one below changed while this file was being written.
+never tested. **Re-probe anything here older than about three months** — a tool set can change in a
+day.
 
 ---
 
@@ -33,9 +33,9 @@ mentions it. It detects, then acts, then reports what it could not reach.
 
 This mirrors the law's §0b exactly. **A CONTRACT is a set of capabilities a tool either has or does
 not have — testable, universal, asked of every person on earth. A SET is whatever this person
-happens to have.** The old framing on this page — a tier table listing *mail, notes, messages,
-lifelog* as first-class roles — described one person's stack and called it an architecture. It is
-gone.
+happens to have.** *Mail, notes, messages, a lifelog* are set members — each one a product somebody
+connected, never a first-class role. **A role named after one person's sources is a stack wearing
+the syntax of an architecture, and it is wrong about the second person who reads it.**
 
 ### The two contracts — mandatory, capability-tested, identical for everyone
 
@@ -48,11 +48,15 @@ pass/fail:
 2. **What did you already complete?** An open-row search cannot answer an existence question.
    Without this the engine rebuilds a row you closed an hour ago, forever. **Required.**
 3. **Who placed this row — the engine, or you?** Answerable **only by a CLIENT field on the activity
-   log.** **Not pass/fail — the answer selects the mode.** See the finding below; it is the reason
-   this page was rewritten.
+   log.** **Not pass/fail — the answer selects the mode.** See the finding below; it is the fact
+   everything else on this page turns on.
 4. **What does it cost — a duration on a row?** A block has a length. Without a duration the engine
-   cannot state the cost or enforce the 30-minute floor, and a dated row renders as an all-day
-   banner instead of a block.
+   cannot state the cost or enforce the 30-minute floor — so task-derived rows get the `—` gutter,
+   and the floor is reported as unenforceable rather than silently broken. **That is a fact about the
+   ENGINE, and it is the only part of this anyone here owns.** What a duration-less *timed* row draws
+   on a calendar is a property of that task app and that person's own sync; **probe it and report what
+   the probe found** (§13's method) — never predict it. **Not pass/fail:** the surface is present,
+   time-blocking is not.
 
 **And `~~state` must be PERSONAL and DURABLE** — a test of the container, not the feature list. A
 surface can answer all four and still fail it. That argument is below.
@@ -80,14 +84,18 @@ stranger can write to) at the same time.
 
 ## The client field — the finding that decides everything below
 
-**The test:** a live call to Todoist's `find-activity`, one account, one human, returned three rows
-with an **identical `initiatorId`** and these `extraData.client` values: Ⓔ
+**The test:** `find-activity` was called live against one account with one human behind it. It
+returned three rows carrying an **identical `initiatorId`** — and three *different*
+`extraData.client` values: Ⓔ
 
 ```
-Todoist v26.7.9 (iOS)   ← the human, on his phone
-Claude                   ← an agent
-ChatGPT                  ← a different agent
+<the task app, on a phone>   ← the person, by hand
+<an agent>                   ← an agent, writing through the person's token
+<a different agent>          ← a different agent, same token
 ```
+
+**The actor was the same on all three rows. Only the client told them apart.** That is the whole
+finding: on this surface the actor field cannot discriminate and the client field can.
 
 **Every connector authenticates AS the user.** So the actor on an agent's write is the user —
 byte-identical to the actor on your own write. **For a solo person, "who" is always you. An actor
@@ -115,7 +123,7 @@ modes below are that rule followed to its conclusion and given a name.
 
 | Surface | Official MCP/connector | Completed query | Activity log → actor / **CLIENT** | Duration | Gate | Type |
 |---|---|---|---|---|---|---|
-| **Todoist** | ✅ | ✅ Ⓔ | ✅ Ⓔ / **✅ Ⓔ `extraData.client`** | ✅ Ⓔ | log 7d free; duration **Pro** | Personal |
+| **Todoist** | ✅ | ✅ Ⓔ | ✅ Ⓔ / **✅ Ⓔ `extraData.client`** | ✅ Ⓔ | log capped on free; duration paid — VOLATILE | Personal |
 | Asana | ✅ `mcp.asana.com/v2/mcp` | ✅ | ❌ / ❌ — **no stories/activity tool in the V2 set** | ⚠️ start+due, no minutes | `search_tasks` Premium | Team |
 | Linear | ✅ `mcp.linear.app/mcp` | ✅ via status | ❌ / ❌ — **no history tool** ⚠️ | ❌ estimate = **story points** | private teams **Business+** | Team |
 | ClickUp | ✅ `mcp.clickup.com/mcp` | ⚠️ | ❌ / ❌ no activity tool | ⚠️ | audit **Enterprise** | Team |
@@ -128,7 +136,7 @@ modes below are that rule followed to its conclusion and given a name.
 | Motion | ❌ **see trap** | API only | ❌ UI-only feed | ✅ richest — **unreachable** | no free tier | Personal |
 | Akiflow | ✅ `akiflow.com/mcp` | ✅ | ❌ **zero ownership proof** | ✅ | no free tier | Personal |
 | Sunsama | ✅ beta, no published tool list ⚠️ | ⚠️ | ❌ | ⚠️ | no free tier | Personal |
-| Amie | ✅ `mcp.amie.so` (**shipped Jul 14 — volatile**) | ⚠️ | ❌ | ⚠️ | free tier | Personal |
+| Amie | ✅ `mcp.amie.so` (**shipped days before this probe — volatile**) | ⚠️ | ❌ | ⚠️ | free tier | Personal |
 
 **Notion's cell is the actor trap wearing a friendlier name.** `last_edited_by` resolves to the
 *person* Ⓔ — it is an actor field, and an agent writing through your token is you. The real audit log
@@ -144,16 +152,8 @@ is **Enterprise, owners only**.
 · Things 3 —
 [culturedcode.com/things/support/articles/5510170/](https://culturedcode.com/things/support/articles/5510170/).
 
-**⚠ A LIVE DEMONSTRATION OF WHY THIS FILE DATES ITS CLAIMS — Asana's tool set moved under it.** An
-earlier reading of this research had Asana's cell quoting a claim that stories were *"intentionally
-left out"* of MCP v2. **That quote does not survive checking, and it is instructive in three separate
-ways.** It came from a **forum user, not Asana**; its own "confirmed in another thread" citation
-**links back to the thread it is posted in** — a circle; and it has since been **overtaken by
-events**: Asana's tools reference, updated the day this was written, now lists `add_comment` as a
-write tool and has `get_task` returning comments. **The load-bearing half survives on better
-evidence** — there is still **no stories or activity tool** in the live V2 tool list, so actor ❌ /
-client ❌ holds, and it holds because the current tool set says so rather than because a stranger
-said so. Re-probe with `tools/list` before relying on any Asana row here.
+**Asana's row rests on the live V2 tool list, not on a description of it: there is no stories or
+activity tool in it, so actor ❌ / client ❌. Re-probe with `tools/list` before relying on that row.**
 
 **TRAP — `claude.com/connectors/motion` resolves and looks official. It is a different company.**
 Motion Creative Analytics (Meta ad analytics), not usemotion.com, whose Motion is the one with the
@@ -210,8 +210,9 @@ private "Life" team. Privacy: fine. Durability: fine. Both of the above are answ
   the richest ownership model of any surface here. **The MCP exposes no history tool at all.** ⚠️ The
   capability exists and is unreachable, which is the same as absent.
 - **Question 4 dies.** Linear's `estimate` is **story points, not minutes.** There is no minute field
-  to place a block with. **Every dated life-row becomes an all-day banner** — the exact calendar
-  clutter this system exists to remove.
+  to place a block with — so **no life-row on this surface can carry a length the engine can state or
+  a floor it can hold.** Every one of them gets the `—` gutter. Placement is the entire product, and
+  this surface cannot express it.
 
 **A surface that fails on the steelman does not fail because of the employer. It fails on the
 contract.**
@@ -315,9 +316,14 @@ problem, and no amount of connecting more surfaces fixes it.
 **Works, but behind a gate someone else controls:**
 
 - **Slack** — needs paid Slack + admin. Reads channels **and DMs** via search. **No mention list.**
-  ⚠️ **Claude in Slack migrates to Claude Tag on 2026-08-03, and Claude Tag is Team/Enterprise-only.
-  The consequence for Pro/Max users is UNDOCUMENTED** — not "fine," not "broken." Unknown. Re-check
-  before relying on it.
+  ⚠️ **Two different products wear this name, and the difference is the whole risk.** The
+  *connector* is what the engine reads through. *Claude in Slack* is the `@Claude` app — a separate
+  thing, which the connector's own documented prerequisite says you must install first. **The app is
+  the one being retired**, and its replacement is gated to the top plan tiers. So the question is
+  not "is my connector gated?" — it is **whether a connector still works once the app it depends on
+  is replaced by something a solo user cannot install. No vendor page says.** Not "fine," not
+  "broken." **Unstated.** Date and tiers in VOLATILE. **Probe it after the cutover; do not reason
+  it out.**
 - **MS Teams** — Anthropic-built, inside M365. Needs an Entra tenant + Global Admin consent.
   **Personal Microsoft accounts are excluded.**
 - **GitHub · HubSpot · Asana** — work, with an admin or plan gate.
@@ -353,7 +359,9 @@ problem, and no amount of connecting more surfaces fixes it.
   costs nothing.**
 - **Free tiers cap activity history and withhold durations.** Both are load-bearing, and **both
   failures are silent.** Past the cap the engine cannot prove ownership, so it stops re-placing
-  anything — safe, silent, and inert. Numbers in VOLATILE.
+  anything — safe, silent, and inert. Without a duration it cannot state a cost or hold the
+  30-minute floor, so the gutter reads `—` and the floor is reported unenforceable — **rows are still
+  placed at their hour; the length is what's missing.** Numbers in VOLATILE.
 
 ### When your mail is somewhere the connectors don't reach
 
@@ -377,66 +385,23 @@ diagram.**
 
 ---
 
-## What the optional connectors actually ARE
+## The optional connectors — and what substitutes for them
 
-**A bare table cell is not an explanation.** If a stranger cannot decode a name, the name is doing
-no work. Each of these is **one product filling a role — the role is what matters.**
+**The general rule, and it is the whole section: every optional connector is a ROLE, and any tool
+that answers the role's question substitutes for it. The engine reads a role, never a product name.**
+So swapping one is a **data-migration question, never a capability question** — and no product below
+is worth a page of its own, because nothing in the intelligence depends on which one you picked.
 
-### Notion — an `~~intent[]` member
+| The role | What fills it | What substitutes | The cost that decides it |
+|---|---|---|---|
+| **`~~intent[]` — your own hand** | a hosted notes workspace · a notes app running a local server on a loopback port | Apple Notes · Obsidian · a folder of Markdown · **email-to-self** | **hosted stays cloud-eligible; every local one pins the brief to the machine** |
+| **`~~evidence[]` — corroboration** | a wearable that continuously records the conversations around you | another device of the same kind — **or nothing** | a local corpus that can rot, **and a privacy cost paid by people who did not consent** |
 
-**What it is:** a hosted notes-and-database workspace. Pages, databases, views; lives on their
-servers; official connector.
-
-**What it contributes:** the **knowledge home** — protocols, reference material, decision logs. In
-the three-homes split it is the *things you KNOW*, as distinct from the things you *owe* (`~~state`)
-and the things you *do at a time* (`~~container`).
-
-**What it asks:** read access to a hosted workspace. No local dependency, so it **stays
-cloud-eligible** — which is why it's the one place a profile-in-a-note works well.
-
-### Bee — an `~~evidence[]` member
-
-**What it is:** a **wearable that continuously records the conversations happening around you** and
-produces transcripts, summaries, and derived facts from them.
-
-**What it contributes:** **corroboration.** What was *actually said* — and a first-person record of
-commitments you made out loud, which is the one category of obligation that leaves no written trace
-anywhere else.
-
-**The privacy reality, stated plainly:** **it records everyone around you, and most of them did not
-consent.** `RISK.md` covers a message reader — a database of everyone who ever texted you. **This is
-broader and sharper:** a message reader captures people who chose to write to you. A continuous
-recorder captures anyone who happens to be in the room, including people who never interacted with
-you at all, in places where they had every reason to assume they weren't being recorded. **That is a
-decision about other people, made without them, and it should be made deliberately or not at all.**
-
-**One engine constraint that matters here:** the engine only ever ingests **first-person** content,
-and **never treats an AI-derived summary as a commitment.** A summary is a claim about what was said,
-not evidence of an obligation. Only your own words count.
-
-### Reflect — an `~~intent[]` member
-
-**What it is:** a personal notes app that runs a **local HTTP server on a loopback port**; the
-connector talks to that server, not to a cloud API.
-
-**What it contributes:** **your own hand** — daily notes, the highest-fidelity record of intentions
-that exists anywhere in the stack.
-
-**What it asks:** the app must be **running on the machine**. That makes it a local dependency, and a
-local dependency **pins the schedule** — see below.
-
----
-
-## Replacements — and how to actually do them
-
-**The general rule, stated once: every optional connector is a ROLE, and any tool that answers the
-role's question substitutes for it. Nothing in the intelligence depends on a product name.** That is
-the whole point of the abstraction — and it means every replacement below is a **data-migration
-question, never a capability question.**
-
-### Notion → anything that holds text
-
-**What replaces it:** Apple Notes. Obsidian. A plain folder of Markdown. **Or email-to-self.**
+**Notes surfaces: hosted vs local is the deciding factor, not features.** They all hold your own
+hand, at identical fidelity — swapping one changes *nothing* about what the engine reads. Migration
+is an export: these surfaces export Markdown, so export it, drop it where the new home is, and point
+`~~intent[]` there. **A hosted notes surface is also the one place a profile-in-a-note works well**,
+because it carries no local dependency.
 
 **Email-to-self is legitimate and common, and it deserves better than a footnote.** If you already
 mail yourself notes, **a mail member of `~~inbound[]` already covers `~~intent[]`.** Point the engine
@@ -444,39 +409,20 @@ at the self-sent thread and **skip a connector entirely.** No new app, no new pe
 subscription, no schedule cost. **For a large number of people this is the correct answer and they
 should not be talked out of it.**
 
-**Migration:** Notion exports **Markdown + CSV**. Export, drop the result into a folder, point
-`~~intent[]` at that folder. Databases arrive as CSV and pages as Markdown; the engine reads prose,
-so the Markdown is the part that matters.
+**Continuous recorders: most people should not add one, and setup should say so without a hint of
+disappointment.** What one buys is **corroboration, not capability** — the commitment you made out
+loud that left no written trace. The engine still finds every obligation that *did* leave one, which
+is nearly all of them, so the blind spot is narrow. What it costs is paid by other people: **it
+records anyone who happens to be in the room, including people who never interacted with you, in
+places where they had every reason to assume they weren't being recorded.** `RISK.md` covers a
+message reader — a database of everyone who ever texted you. **This is broader and sharper:** a
+message reader captures people who *chose* to write to you. **That is a decision about other people,
+made without them, and it should be made deliberately or not at all.** **"Nothing" is the right
+answer for the large majority.**
 
-**The one cost to name:** Apple Notes, Obsidian, and a Markdown folder are all **local** — they pin
-the brief to the machine. Notion and email-to-self are hosted and don't. **That is usually the
-deciding factor, not the app's features.**
-
-### Reflect → any notes surface
-
-**What replaces it:** any of the above. There is nothing special about the shape of the data.
-
-**Migration:** Reflect exports **Markdown**. Export it, put it wherever the new home is, point
-`~~intent[]` there.
-
-**The role is what matters, not the app.** Reflect's contribution was "your own hand." Any surface
-holding your own hand contributes exactly the same thing. Swapping it changes the fidelity of
-*nothing*.
-
-### Bee → Limitless, or nothing
-
-**Be honest about both halves of this:**
-
-- **There is no drop-in replacement.** Nothing else produces a continuous first-person record of what
-  was said out loud. If that specific record is what you want, the only substitute is another device
-  of the same kind — **Limitless** fills the same role.
-- **Its blind spot is narrow.** Losing it costs **corroboration, not capability.** The engine still
-  finds every obligation that left a written trace — which is nearly all of them. What you lose is
-  the verbal commitment nobody wrote down.
-
-**Most people should not add it.** The privacy cost is paid by other people, the schedule cost is paid
-by you, and the blind spot it closes is small. **"Nothing" is the right answer for the large
-majority**, and setup should say so without a hint of disappointment.
+**One engine constraint, and it binds every `~~evidence[]` member:** the engine ingests
+**first-person** content only, and **never treats an AI-derived summary as a commitment.** A summary
+is a claim about what was said, not evidence of an obligation. Only your own words count.
 
 ---
 

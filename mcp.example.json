@@ -32,7 +32,7 @@
       "_what": "A wearable that records your conversations. Fills an ~~evidence[] slot.",
       "_honest": "There is no drop-in replacement and the blind spot is narrow. Most people should not add this. It also records everyone around you, most of whom did not consent.",
       "_install": "Vendor's own installer, then its CLI. This plugin cannot install it.",
-      "_why_disabled": "The paths below are examples. A venv path is not a library — it is one person's data corpus.",
+      "_why_example": "The paths below are examples. A venv path is not a library — it is one person's data corpus. The leading underscore documents; it does not disable — renaming this file to .mcp.json would make every entry here live.",
       "command": "/opt/homebrew/bin/EXAMPLE-lifelog-cli",
       "args": ["mcp", "serve"]
     },
@@ -55,27 +55,14 @@
   },
 
   "_NOT_HERE_ON_PURPOSE": {
-    "a_shell_bridge": [
-      "An AppleScript/osascript extension — sometimes called 'Control your Mac' — is NOT listed here,",
-      "and setup will not recommend one. This is a decision, not an oversight.",
-      "",
-      "It is not a connector. It is a SHELL. Its blast radius is your whole user account: files,",
-      "credentials, browser data, ssh keys. Desktop extensions run fully unsandboxed with full",
-      "system permissions.",
-      "",
-      "And it composes badly with THIS system specifically. A zero-click remote-code-execution",
-      "affecting 50 extensions — triggered by a single malicious CALENDAR INVITE — was declined by",
-      "the vendor as 'outside our current threat model', on the stated position that locally",
-      "installed extensions are trusted. THIS ENGINE READS CALENDAR INVITES.",
-      "",
-      "If you already run one, that is your call and your risk. This package will not talk you into it."
-    ],
     "hosted_connectors": [
       "Gmail, Google Calendar, Todoist, Notion, Slack, Linear and the rest are NOT declared here.",
-      "They are not local servers — you add them once in Claude's own connector settings and they",
-      "work on every surface and every plan, including mobile, and they keep your brief",
-      "cloud-eligible. That is strictly better than anything this file can do.",
-      "Setup walks you through them. See references/VOLATILE.md for the current click paths."
+      "They are not local servers — you add them once in Claude's own connector settings, they work",
+      "on every surface including mobile, and they keep your brief cloud-eligible. That is strictly",
+      "better than anything this file can do.",
+      "Each one still sets its own plan/admin gate on top: Slack is paid-plans-only and also needs a",
+      "Slack admin; Microsoft 365 needs a work tenant. Setup walks you through them, and",
+      "references/VOLATILE.md carries the current gates and click paths, dated and sourced."
     ]
   }
 }

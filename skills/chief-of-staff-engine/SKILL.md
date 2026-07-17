@@ -1,6 +1,6 @@
 ---
 name: chief-of-staff-engine
-description: The unattended chief-of-staff pass — sweep every connected source, capture only what is genuinely owed, reconcile and close on evidence, prep what is coming, and render one condensed status card. Use when running the daily brief, when a scheduled chief-of-staff task fires, or when asked to "run my brief", "run the pass", "catch me up", or "what's on my plate". Progressive: it probes for capability and does the most it can with whatever is connected. Its law is the chief-of-staff-law skill, loaded and read in full before any other action.
+description: The unattended chief-of-staff pass — sweep every connected source, capture only what is genuinely owed, reconcile and close on evidence, prep what is coming, and render one condensed status card. Use when running the daily brief, when a scheduled chief-of-staff task fires, or when asked to "run my brief", "run the pass", "catch me up", or "what's on my plate". Progressive — it probes for capability and does the most it can with whatever is connected. Its law is the chief-of-staff-law skill, loaded and read in full before any other action.
 ---
 
 # Chief of staff — capture, reconcile, prep, anticipate, brief
@@ -49,14 +49,27 @@ resolve at STEP 0.5. See `references/STACK.md`.
 **Load `chief-of-staff-law` and read it IN FULL — before you read a calendar, any source, or the
 list.**
 
-**THEN PROVE IT, in one line of the card's receipts: emit THE CANARY THE LAW ASKS FOR.** Read it
-there — **this prompt does not restate it, on purpose.** A canary printed here is a canary you
-could emit without opening the law, which makes it measure nothing. **A load returns text; the
-canary is the only thing that shows the text was read — and only if the answer is not in the
-question.**
+**THEN PROVE IT: emit THE CANARY THE LAW ASKS FOR — BACKSTAGE, in this run's own reasoning, before
+any other action.** Read what it asks for there — **this prompt does not restate it, on purpose.** A
+canary printed here is a canary you could emit without opening the law, which makes it measure
+nothing. **A load returns text; the canary is the only thing that shows the text was read — and only
+if the answer is not in the question.**
 
-**IF IT DOES NOT LOAD, OR YOU CANNOT QUOTE THE SPINE: STOP. Do not run the pass.** Lead with
-that, name what you attempted, do nothing else.
+**IT NEVER RENDERS — NOT IN THE RECEIPTS, NOT AS A TOKEN, NOT ANYWHERE ON THE CARD, IN NO DELIVERY
+MODE.** Two reasons, and either alone settles it. **First: the canary is a fact about THE RUN, not
+news about their day** — a paragraph of law-quotation dropped into thirty seconds of someone who just
+woke up, which is the act of checking rendered as an outcome. Check 2 deletes it. **Second: it could
+carry no information even if it fit. A failed canary HARD-STOPS the pass, so there is no card to
+print it on — the token could only ever read PASSED, on every card that exists.** That is the actor
+field's defect one instrument over: **not a weak signal, NO signal**, and an instrument wired to fire
+only once things are already fine. **THE CARD'S EXISTENCE IS THE PROOF: no card is rendered by a pass
+whose canary failed.**
+
+**IF IT DOES NOT LOAD, OR YOU CANNOT EMIT THE CANARY IT ASKS FOR: STOP. Do not run the pass.** Lead
+with that, name what you attempted, do nothing else. **NOT "the spine" — the spine is a table at the
+TOP of the law, so an engine that read only the top can quote it whole. The law refuses to canary it
+for that exact reason, and the check that gates every other action may not be the one thing a skim
+passes.**
 
 - **This is a HARD STOP, not a degradation, and the reason is structural: this prompt carries no
   backup copy of the law.** An engine that cannot load the law does not have partial law. **It
@@ -151,7 +164,7 @@ that set is for.
   never of the set (§10) — ask §10's question of the source in front of you, never of the bucket it
   arrived in.**
 
-### Three readings that change what you are ALLOWED to do — test, never assume
+### Four readings that change what you are ALLOWED to do — test, never assume
 
 1. **Can `~~container` write?** Some calendar connectors are **read-only**. Prove write capability
    before planning to create anything. **Cannot write → PROPOSE-ONLY: render the event you would
@@ -185,20 +198,52 @@ that set is for.
      silently: a plan downgrade caps the log, a vendor ships or drops a field, a token loses a
      scope. **The mode line is what makes the flip visible the day it happens rather than six weeks
      later, in the rows.**
-3. **Does a DURATION stick on `~~state`?** On many surfaces **durations are a PAID feature**, and a
-   dated row with no duration is **an ALL-DAY BANNER, not a time block** — the exact clutter this
-   system exists to remove, and the law forbids the engine from creating all-day rows. **PROVE IT
-   WITH THE DISPOSABLE PROBE, never by inference:** create a throwaway row with a duration, **read
-   the field BACK** (a write that returns 200 and drops the field is the whole failure), delete it.
-   **Never read a plan name, a pricing page, or a silent accept as an answer.**
+3. **Does a DURATION stick on `~~state`?** On many surfaces **durations are a PAID feature**, and
+   **without a duration you cannot state the cost or enforce the floor** (§0b q4) — which is a fact
+   about the ENGINE, and the only part of this you own. **PROVE IT WITH THE DISPOSABLE PROBE, never
+   by inference:** create a throwaway row with a duration, **read the field BACK** (a write that
+   returns 200 and drops the field is the whole failure), delete it. **Never read a plan name, a
+   pricing page, or a silent accept as an answer.**
    **Duration does NOT stick → NOT a hard stop — the surface is present; time-blocking is not.
-   Three consequences, all mandatory:**
-   - **You may NOT render a mono time gutter for task-derived rows.** They get the `—` gutter.
-   - **The receipts say it: "banners, not blocks — time-blocking unavailable on this tier."**
+   Three consequences, all mandatory — and each is a claim about the engine or about what the probe
+   returned, NEVER about a calendar render you did not observe:**
+   - **You may NOT render a mono time gutter for task-derived rows.** They get the `—` gutter. **A
+     length you could not write is a length you may not print.**
+   - **The receipts REPORT WHAT THE PROBE FOUND, never a predicted render:** *"durations don't stick
+     on this tier — no length to place, so no blocks; the time gutter reads `—`."* **What their
+     CALENDAR draws for a timed row with no length is a property of THEIR task app and THEIR OWN
+     sync — you did not observe it, and the engine does not author it.** **§0b q4 makes that its own
+     probe and it is MANDATORY before you place a duration-less timed row: run it (§13's method),
+     and put WHAT IT FOUND in the receipts — never a prediction in its place, and never silence
+     where a finding belongs.** **"Banners, not blocks" is a PREDICTION; say it and you have
+     laundered an untested assumption into a receipt (§13).**
    - **Report the 30-min floor as UNENFORCEABLE on this tier** — never silently violate it.
    *(Type case: the default configuration. Probe only "list projects; query open rows", write
-   "blocks" that land as banners, then render a mono gutter over them. Card clean, calendar wrong —
-   and a clean card over a wrong calendar is the cardinal sin, not a rounding error.)*
+   "blocks" with no length that stick, then render a mono gutter over them. Card clean, cost
+   unstated — and a clean card over a length you never wrote is the cardinal sin, not a rounding
+   error.)*
+4. **IS THERE A RENDER SURFACE? — THIS SELECTS THE DELIVERY FALLBACK (§9c's write mode is untouched
+   by it). A READING, NOT A SETTING, AND NOT PASS/FAIL.**
+   - **NAME IT BY ROLE, NEVER BY TOOL ID: a surface that renders a rich visual artifact into the
+     response.** **A tool ID here is this prompt's own named defect** — a fact about one machine's
+     OAuth grants, written in the syntax of a universal — and the DEFAULT delivery mode must not hang
+     on one. **A render surface either exists in this runtime or it does not: ask, do not assume.**
+   - **Present → `card` can render. ABSENT → THE DELIVERY MODE IS `text`: say so ONCE, in the
+     receipts, and DO NOT TREAT IT AS A FAILURE.** A runtime with no render surface has lost nothing
+     — it never had one, and **`text` is a whole delivery mode, not a broken card: every check runs
+     on it, and the receipts render in full.** *(A hard stop it is never: the deliverable is the
+     verdict, and the verdict does not need a widget.)*
+   - **THE LINE'S SUBJECT IS THE SURFACE, NEVER THE ENGINE** — same rule as §P-2's clause. *"No
+     render surface here — plain text"* is a fact about the runtime, and it survives check 2.
+     *"I couldn't render the widget"* is a tool call with a voice, and check 2 deletes it. **Same
+     information; only one of them is a status update.**
+   - **Same reading, the other surface: a mailbox among `~~inbound[]` with a proved DRAFT verb — that
+     is what `email` mode needs, and its fallback is `card`.** Probe it here or `email` is a
+     preference with nowhere to land.
+   - **NEITHER READING ENTERS THE COVERAGE TOKEN, ON EITHER SIDE.** The denominator is the two
+     contracts plus every ENUMERATED member (§P-1); **a delivery surface is neither a contract nor a
+     set member.** Scoring the card's own plumbing inside the number that reports THEIR stack is the
+     shrinking denominator wearing the other mask.
 
 **Never depend on a missing, disabled, or unverified capability. Never report a capability as
 unavailable without probing it.**
@@ -427,10 +472,17 @@ STOPS, because §0b makes them two contracts** — an absent set is never one of
   - **Compact mid-pass and you are, by the law's own definition, operating on a SYNTHESIS of the
     law and of the evidence** — the thing I0 says loses to source, and the thing STEP 0 calls the
     worst outcome available.
-  - **THE DETECTOR — re-assert the STEP 0 canary FROM CONTEXT: the facts the law's canary asks for, I0
-    through I6, BY NAME. Twice: immediately BEFORE THE WRITE PHASE, and again BEFORE RENDER.**
-    **From context, not from memory — if you are reconstructing the names rather than reading them
-    back, that IS the compaction, and it has already happened.**
+  - **THE DETECTOR — re-assert the STEP 0 canary FROM CONTEXT: THE THREE FACTS THE LAW'S CANARY ASKS
+    FOR, in the law's own words. NEVER I0–I6 BY NAME — the invariant names live in the spine table at
+    the TOP of the law, which is the part a compaction eats LAST. They survive the loss of everything
+    below them, so a detector pointed at them reports HEALTHY on a law that is already gone: an
+    instrument wired to fire only once things are fine, one instrument over from the actor field's
+    defect. The canary's three facts sit at §6, §9, and §13 — they are the part that goes first.
+    Twice: immediately BEFORE THE WRITE PHASE, and again BEFORE RENDER.**
+    **From context, not from memory — if you are reconstructing the facts rather than reading them
+    back, that IS the compaction, and it has already happened.** **BACKSTAGE, like STEP 0's — this
+    is an instrument reading itself, and it renders nowhere.** *(It is also the second proof the
+    canary is not card material: a canary that rendered would render three times a morning.)*
   - **HARD STOP, not a degradation — same structure as STEP 0: a remembered law is a synthesis, and
     no law means no run.** Say so plainly, name the step you reached, and **report what you had
     already written from the LIST, never from memory** (the partial pass, below). Do nothing else.
@@ -443,9 +495,14 @@ STOPS, because §0b makes them two contracts** — an absent set is never one of
   block carries "cannot rule out a collision." **LEAD with it and name the fix.**
 - **A source will not answer** → say which, in the receipts, in one line. **NEVER render an unread
   source as an empty one.**
-- **THE RENDER SURFACE is unavailable** → **fall back to the `text` DELIVERY mode**: one line saying
-  so, then the same verdict as terse text. **The fallback is a degradation of the SURFACE only —
-  every check still runs, and the receipts still render, write mode line included.**
+- **THE RENDER SURFACE PROVED AT STEP 0.5, THEN FAILED AT RENDER** → **fall back to the `text`
+  DELIVERY mode**: one line saying so, then the same verdict as terse text. **The fallback is of the
+  SURFACE only — every check still runs, and the receipts still render, write mode line included.**
+  **THIS one is a degradation and the `unreached` line names it:** the surface answered the probe and
+  died after it, which is a FAILURE. *(NO render surface AT the probe is a different claim entirely
+  and never lands here: it never existed, `text` is simply the mode, STEP 0.5 said so once, and
+  nothing about it is unreached. **The token counts failure, never absence** — same distinction,
+  one instrument over.)*
 
 **WRITES LANDED, THEN A FAILURE — the partial pass. The case with teeth.**
 
@@ -512,7 +569,7 @@ which is exactly where its evidence already lives.**
 ### §P-1 — THE STANDING SIGNAL: THE COVERAGE TOKEN'S DENOMINATOR IS WHAT THIS PASS SET OUT TO READ
 
 **`read 5/6` already says a source went dark. It says it in the receipts, on every card, every
-morning, in four characters, and it asks for nothing.** That IS the progressive process, and it
+morning, in a label and a fraction, and it asks for nothing.** That IS the progressive process, and it
 already exists. **It needed no mechanic — it needed a denominator that cannot lie.**
 
 - **THE DENOMINATOR IS FIXED AT STEP 0.5: THE TWO CONTRACTS, PLUS EVERY MEMBER ENUMERATED ACROSS THE
@@ -535,7 +592,7 @@ already exists. **It needed no mechanic — it needed a denominator that cannot 
   bytes of**, which §P-2 bans outright; and a sub-unity token that can never move is **the nag
   arriving by architecture rather than by intent** (§P-3's own words). **The engine cannot count what
   it never read.**
-- **SO THE TOKEN SAYS EXACTLY ONE THING, every morning, in four characters: what this pass MEANT to
+- **SO THE TOKEN SAYS EXACTLY ONE THING, every morning, in a label and a fraction: what this pass MEANT to
   read against what it GOT.** `sources 6/6` is a complete pass over their stack, whatever their stack
   is. **`read 5/6` is a failure, and the `unreached` line names it.** That is the whole ambient
   signal: **no metric card, no pill, no sentence.**
@@ -656,13 +713,15 @@ the list hands it something to say, and then once.**
 
 ## THE PIPELINE
 
-**0** LOAD THE LAW + canary. **Hard stop if it fails.**
+**0** LOAD THE LAW + canary — **BACKSTAGE; it never renders, in any mode. Hard stop if it fails.**
 **0.1** LOAD THE PROFILE **from the surface this task's prompt names; no location named → the
 `cos-profile` row. Hard stop if neither resolves.** Note the delivery mode.
 **0.2** `date` — weekday **and clock**, live.
 **0.5** CAPABILITY-TEST THE TWO CONTRACTS — **either absent → hard stop.** ENUMERATE THE THREE SETS
 — **zero members is an answer.** Record coverage. Resolve write-ability, **whether a duration
-sticks**, and **the CLIENT field — which SELECTS THE WRITE MODE (§9c): maintained or write-once.**
+sticks**, **the CLIENT field — which SELECTS THE WRITE MODE (§9c): maintained or write-once** — and
+**whether a RENDER SURFACE exists (by ROLE, never a tool ID): it selects the DELIVERY fallback, it is
+not a failure when absent, and it enters NEITHER SIDE of the coverage token.**
 **1** resolve calendars by pattern; confirm each feed's role on the events call.
 **2** state: events across every readable calendar · engine-labelled rows · **completed rows and
 Someday — an open-row query cannot answer an existence question.**
@@ -678,18 +737,47 @@ pass, never the count of what answered, and never a constant (§P-1).** **Mark e
 as SEARCHED: it bounds every claim you make about it.**
 **4 CAPACITY MAP, 7–14 days:** neighborhoods · computed ENVELOPES, biased long · window STATES ·
 real durations · **each appointment's description length** (it flips undate vs. keep-dated).
-**4b CANARY RE-ASSERT — BEFORE THE FIRST WRITE.** I0–I6 by name, from context, not from memory.
-**Cannot → CONTEXT EXHAUSTION: hard stop, and nothing has been written yet.** *(Everything from 5
+**4b CANARY RE-ASSERT — BEFORE THE FIRST WRITE. Backstage, like STEP 0's.** The law's THREE CANARY
+FACTS, from context, not from memory — **never I0–I6, which a skim can quote and a compaction
+spares.** **Cannot → CONTEXT EXHAUSTION: hard stop, and nothing has been written yet.** *(Everything from 5
 on can touch their list — this is the last moment a stop is free.)*
 **5** classify → obligation gate → next-move test → placement → COCKPIT / DOMAIN / SOMEDAY · human
 text sized to its container · **first move pre-done.**
-**5b THE SECOND DOOR (§9b) — RUN IT BEFORE YOU COMPOSE THE DAY, NOT AFTER.** For each offense lane
-the profile declares: query completed rows for its cadence window. **Starved + declared → protect
-ONE container, placed BEFORE the reactive work.** Never invent the work inside it; they author the
-goals. **Compute the starvation count either way — it renders on the card even when no block is
-placed.** **The profile declares NO lane → the metric STILL renders, as `Offense: not declared`. A
-blank offense section is a finding, not a silence.** *(Placed after the admin is composed, offense
-gets whatever the tide left, which is nothing. That is the failure this step exists to prevent.)*
+**5b THE SECOND DOOR (§9b) — RUN IT BEFORE YOU COMPOSE THE DAY, NOT AFTER.** **THIS ECHO SITS AT THE
+WRITE, so it carries §9b's THREE conditions in the law's own order, ALL of them. A dropped clause
+here is not a shorter echo — it is a wrong write, every morning, forever.** For each offense lane the
+profile declares, name all three or place nothing.
+**(1) DECLARED** — the PROFILE names this lane as offense. **They declare it; you never infer it.**
+**(2) STARVED**, provable from the surface THIS run — query **COMPLETED** rows for its cadence
+window: no completed row in the lane inside its declared cadence, or its container deferred 3×.
+**The starvation query EXCLUDES YOUR OWN ROWS — filter out the `chief-of-staff` label.** Otherwise
+the door writes a container, they tick it, starvation clears, and **the one uncomfortable number on
+the card goes healthy because they checked a box you created** — the metric reading its best exactly
+when they are box-ticking instead of writing the book.
+**(3) YOU DID NOT ALREADY TRY THIS** — the **ACTIVITY LOG** shows no engine-created container for
+this lane deleted or dismissed inside the cadence window. **CANNOT CHECK THE LOG → DO NOT PLACE**
+(§9's fail-safe: cannot prove it → it is theirs).
+**Cannot name all three → NOTHING. Not a nudge, not a p4. Nothing.** *(Why the third is not optional,
+and it is the clause every short echo drops: **delete is the one user action this architecture cannot
+see.** Closed → completed. Parked → Someday. Moved → its date. **Deleted → nothing at all — deleting
+a block completes no row, so starvation is MONOTONIC UNDER DELETION.** They kill yesterday's block;
+today the lane is still declared and still starved; the test passes and it places again. And again.
+Every individual card correct, the nag visible only across passes — **and this architecture has no
+cross-pass observation by design, so it cannot see its own worst behaviour.** §9b's starvation never
+ages out, so the nag is permanent. The likeliest case: they abandoned the lane on purpose, deleted
+the blocks, never edited the profile — and the machine asks every morning, forever.)*
+**THE CAPS — the count, not the intention:** **one container PER LANE PER CADENCE WINDOW, not per
+run** — a weekly lane gets one block a week, not seven · **at most ONE placement PER PASS, total,
+across all lanes** · **MORE THAN THREE DECLARED LANES → THE DOOR DOES NOT FIRE AT ALL:** render the
+count as the metric and refrain — *"N lanes declared, N starved — the profile is a wish list"* ·
+**several starved and one placement to give → the profile's VALUE HIERARCHY ranks them, and say which
+lane lost.**
+**Then: protect ONE container, placed BEFORE the reactive work. Never invent the work inside it; they
+author the goals.** **Compute the starvation count either way — it renders on the card even when no
+block is placed.** **The profile declares NO lane → the metric STILL renders, as `Your own work: not
+declared`. A blank lane section is a finding, not a silence.** *(Placed after the admin is composed,
+their own work gets whatever the tide left, which is nothing. That is the failure this step exists to
+prevent.)*
 **6** reconcile idempotent (enrichment = MERGE **into your own labelled rows**; label; an inbound
 item acted on → marked).
 **7** closure detection — their word closes immediately; source evidence closes on the law's
@@ -720,10 +808,12 @@ ONE §P line in the receipts, and NONE without such a row to record it in. The w
 cost this pass bills (§P-2).** **Weekday gate → §P-3, only if the budget is unspent.**
 *(Before 17, because the clause must be in the row before the day is composed from it.)*
 **17** compose the day from the capacity map.
-**17b CANARY RE-ASSERT — BEFORE RENDER.** I0–I6 by name, from context. **Cannot → hard stop, and
-report the writes from the LIST.**
+**17b CANARY RE-ASSERT — BEFORE RENDER. Backstage: it gates the card, it never joins it.** The law's
+THREE CANARY FACTS, from context — **never I0–I6.** **Cannot → hard stop, and report the writes from
+the LIST.**
 **18 RENDER THE CARD, AND DELIVER IT IN THE PROFILE'S DELIVERY MODE** — `card` (default) · `email` ·
-`text`. **The receipts name the WRITE MODE (§9c), every run.**
+`text`. **No RENDER SURFACE at STEP 0.5 → `text`: named ONCE, never as a failure.** **The receipts
+name the WRITE MODE (§9c), every run — and never the canary.**
 
 **There is no step 19: nothing is persisted, because the list is the state.**
 
@@ -743,9 +833,13 @@ never §9c's write mode, which no profile chooses and every run reads.)*
 **The profile carries the choice; read it at STEP 0.1. Never ask, never infer it from the hour or
 the day's shape. Absent, blank, or unreadable → `card`.**
 
+**AND `card` NEEDS A RENDER SURFACE: none proved at STEP 0.5 → `text`, stated once.** That is the
+SURFACE answering, not the profile being overridden — **and it is not a failure**: a runtime that
+never had a render surface has lost nothing, and the verdict does not need a widget.
+
 | Delivery mode | The deliverable | Where it lands |
 |---|---|---|
-| **`card`** *(default)* | the widget | in chat, `mcp__visualize__show_widget` |
+| **`card`** *(default)* | the widget | in chat, on the RENDER SURFACE proved at STEP 0.5 |
 | **`email`** | **the same card in HTML, as a DRAFT addressed to them** | the drafts of a mailbox among `~~inbound[]` |
 | **`text`** | the same verdict as terse plain text, no widget | the response |
 
@@ -764,7 +858,9 @@ preference they set once, in their profile; a dropped receipt is a lie told fres
   CDS variables and takes no dark mode from you, so **this is the one place a literal color is not a
   violation; keep the palette small and it survives more clients.** **No mailbox among `~~inbound[]`
   with a proved DRAFT verb at STEP 0.5 → fall back to `card` and name the fallback in the receipts
-  as a degradation.** **A mailbox that CAN send is a config you must not get wrong: draft, never
+  as a degradation** — **a mode they CHOSE and did not get is a degradation; a default they never
+  chose is not.** **And the chain terminates: no render surface either → `text`. One line, both
+  hops named once. `text` always lands, which is why it is the floor and never a failure.** **A mailbox that CAN send is a config you must not get wrong: draft, never
   send, and the ban is this prompt's, not the surface's.**
 - **`text` IS TERSE, NOT TRUNCATED.** Check 9 governs: dropping is not condensing. Same rows, same
   receipts, no widget — the pill becomes a word, the metric grid becomes one line, **the gutter
@@ -774,8 +870,10 @@ preference they set once, in their profile; a dropped receipt is a lie told fres
 
 ### `card` — THE WIDGET IS THE DELIVERABLE. THE RESPONSE TEXT IS NOT A PLACE.
 
-**Render with `mcp__visualize__show_widget`** (call its `read_me` once first, modules `["mockup"]`,
-silently — no narration). Not decoration: the deliverable's form.
+**Render on the RENDER SURFACE STEP 0.5 PROVED — named by ROLE, never by tool ID.** **If it exposes a
+style or guidance preflight, make that call ONCE first, silently — no narration — and take its
+variables over anything you remember.** Not decoration: the deliverable's form. **No render surface
+at the probe → `text`. That is the mode, not a failure, and STEP 0.5 already said so once.**
 
 **FIT THE ARTIFACT TO ITS CONTAINER — AND THE CONTAINER IS THE WHOLE RESPONSE, NOT THE CARD.** The
 container is **thirty seconds of someone who just woke up**, and it holds everything on screen —
@@ -810,11 +908,14 @@ top to bottom:
    shape, and beside it one sentence of why. Roles below.
 3. **A metric grid, ≤4 cards** (`--surface-1`, no border, `--radius`), each an 11–12px muted label
    over an 18–20px/500 value. **This is the "full scope at a glance" row.**
-   - **ONE OF THE FOUR IS ALWAYS THE OFFENSE METRIC — days since the declared lane last moved
-     (§9b). ALWAYS: when the profile declares NO offense lane, it still renders, as `Offense: not
-     declared`.** Not optional, not "if it fits." **It is the only number on the card that reports
-     whether this system is doing its actual job**, and it is the first thing a tide-shaped pass
-     will want to drop for a tidier grid. Drop anything else first.
+   - **ONE OF THE FOUR IS ALWAYS THE OFFENSE METRIC (§9b) — RENDERED LABEL `Your own work`, value:
+     days since that lane last moved. ALWAYS: the profile declares NO lane → it still renders, as
+     `Your own work: not declared`.** Not optional, not "if it fits." **It is the only number on the
+     card that reports whether this system is doing its actual job**, and it is the first thing a
+     tide-shaped pass will want to drop for a tidier grid. Drop anything else first.
+   - **THE RENDERED LABEL IS NEVER `Offense`, in any mode.** The law is explicit: *in anything the
+     user reads this is "your own work" — the word offense never leaves that file.* **This prompt
+     reasons in it because this prompt is not read by them; the card is. Check 14 counts it.**
    - **Gating this metric on a lane BEING declared gates the check on the failure not having
      happened.** *(Type case: the profile's offense section is blank — the DEFAULT, and the
      highest-cost silent failure in the system. No lane declared → no metric → nothing on any card
@@ -829,13 +930,18 @@ top to bottom:
    ONE line: a mono time gutter, the commitment, and the one clause that placed it. **What needs
    them is folded IN, at the block where they act on it.** Undated rows that still matter get a
    `—` gutter and one clause on why undated is correct. **Where duration did not stick (STEP 0.5),
-   task-derived rows take the `—` gutter too — a mono gutter over a banner is a lie about the
-   calendar.**
+   task-derived rows take the `—` gutter too — a length you could not write is a length you may not
+   print, and a mono gutter over a row with no length is a lie about the cost.**
 5. **A final divider-separated row in `--text-secondary`: the receipts** — the **coverage token**,
    the **write mode**, closes (with the evidence inline), refrains (count + reason class), swept, and
    **unreached** (any source or step that failed, its class, and what is now unknown). **This is
    their obligation-gate audit and their failure report: compress it, never drop it.** **The
    unreached line is ABSENT when nothing failed — and never absent when something did.**
+   - **THE CANARY IS NOT ON THAT LIST, AND THE OMISSION IS DELIBERATE (STEP 0).** It is emitted
+     backstage, and what it proves is that the law was READ — **a fact about the RUN, not an outcome
+     of their day.** **Everything this row carries is an outcome or a bounded claim; the canary is
+     the act of checking, and verifying is the job, not the news.** **The card's existence already
+     carries it: a pass whose canary failed renders no card.**
    - **THE COVERAGE TOKEN IS ALWAYS PRESENT — a POSITIVE count, `sources 6/6` or `read 5/6`, from
      step 3.7. On every card, every run, never absent, never "None".** **A count survives; an
      absence does not** — so a dropped failure line shows up as a WRONG NUMBER.
@@ -867,11 +973,16 @@ top to bottom:
 
 1. **Count the lines outside the card. More than one → delete them.**
 2. **Count the sentences whose subject is you or the engine — anywhere. The answer is zero.**
+   - **THIS IS THE CHECK THAT CATCHES THE CANARY**, and it should never have anything to catch: the
+     canary is emitted backstage at STEP 0 and re-asserted backstage at 4b and 17b. **Law-quotation
+     on the card is the engine talking about itself. It renders nowhere, in no mode, NOT EVEN AS A
+     TOKEN** — a token that can only read PASSED on every card that exists measures nothing (STEP 0).
+     Found → **delete it. The pass is not re-run; the canary already did its work.**
 3. **A section with nothing in it is ABSENT, not empty.** Search the draft for "None" / "Nothing to
    report" / "N/A" → **delete the line.** A brief reporting its own emptiness is padding wearing a
    status face.
    - **THREE EXEMPTIONS, and this check NEVER touches them: the coverage token · the offense metric
-     including `Offense: not declared` · the write mode line.** **None is a report of emptiness —
+     including `Your own work: not declared` · the write mode line.** **None is a report of emptiness —
      each is the one instrument that makes something invisible visible.** Deleting them deletes
      exactly the signal the card exists to carry.
    - **A set with zero members is not a section with nothing in it — it is a section that does not
@@ -891,6 +1002,10 @@ top to bottom:
     things on this card that must exist when there is nothing to say** — because their absence is
     precisely the failure each exists to expose. **A run that did not name its mode is the law's own
     named regression (§11).** Any one missing → **the card is not finished. Re-render.**
+    - **THREE, AND THE CANARY IS NOT A FOURTH.** Each of these three can be FALSE on a card that
+      exists — that is what makes it an instrument. **A canary token could only ever read PASSED,
+      because a failed canary renders no card at all** (STEP 0). **An always-true token is not a
+      weak signal. It is no signal, and it costs a line of the thirty seconds.**
 11. **THE COVERAGE DENOMINATOR IS STEP 0.5's OWN COUNT — the two contracts plus every ENUMERATED
     member, whole and fixed for the pass. Never the count of what answered, and never a constant
     written into this file.** Divide by what answered and the token renders `6/6` over a dark stack:
@@ -906,6 +1021,12 @@ top to bottom:
     sentence is bounded to the queries you ran, or it is DELETED.** *"Nothing was asked"* over a
     search endpoint is a sentence the engine has no evidence for (§10), and it is the one lie on this
     card that tells them they are covered.
+14. **SEARCH THE DRAFT FOR THE WORD "offense". THE COUNT IS ZERO, IN EVERY MODE** — card, mail body,
+    plain text, and every task title and calendar row this pass wrote. The law: *"in anything the
+    user reads this is 'your own work' — the word offense never leaves this law."* **This prompt
+    reasons in it; they never read this prompt. They read the card.** Found → **the label is `Your
+    own work`; the value is a number or `not declared`.** *(A rendered-string ban with no count is a
+    JUDGE clause, and a judge clause dies silently — this is the count that makes it BUILD.)*
 
 **Craft:** flat, CDS variables only (never hardcoded hex), sentence case, **no emoji**, weights
 400/500, hairline `0.5px solid var(--border)`, one accent per state, mono for the time gutter only.

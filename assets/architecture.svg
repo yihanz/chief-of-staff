@@ -1,6 +1,6 @@
-<svg viewBox="0 0 940 660" xmlns="http://www.w3.org/2000/svg" role="img" width="100%">
+<svg viewBox="0 0 940 948" xmlns="http://www.w3.org/2000/svg" role="img" width="100%">
   <title>How the chief of staff works</title>
-  <desc>Sources are read every pass on the left. A four-question filter in the middle decides what becomes a task. Two outputs on the right: your task list, which is the system's only memory, and one status card. Two inputs govern everything: the portable law and your own profile, which is never packaged or shared.</desc>
+  <desc>Sources are read every pass on the left. In the middle, two doors decide what becomes a task: door one admits things the world asks of you, and only when a person is waiting and a date breaks; door two admits the work you declared as your own, which nobody is chasing and which door one therefore cannot see. Two outputs on the right: your task list, which is the system's only memory, and one status card. Two things govern it all: a portable law that holds no facts about anyone, and your profile, which lives as a row on your own task list.</desc>
 
   <style>
     .t  { fill: #2C2C2A; font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; }
@@ -65,30 +65,57 @@
 
   <line x1="158" y1="163" x2="212" y2="163" stroke="#888780" stroke-width="1" marker-end="url(#ar)"/>
 
-  <rect x="220" y="52" width="290" height="290" rx="12" fill="none" stroke="#c3c2b7" stroke-width="1"/>
-  <text x="236" y="78" class="th" style="font-size:15px;font-weight:500">Four questions</text>
-  <text x="236" y="95" class="ts" style="font-size:11px">Most things stop here. That is the point.</text>
+  <rect x="220" y="52" width="290" height="592" rx="12" fill="none" stroke="#c3c2b7" stroke-width="1"/>
+  <text x="236" y="78" class="th" style="font-size:15px;font-weight:500">Two doors — there is no third</text>
+  <text x="236" y="95" class="ts" style="font-size:11px">One door alone hands you a perfect card made</text>
+  <text x="236" y="110" class="ts" style="font-size:11px">entirely of other people's demands.</text>
+
+  <text x="236" y="136" class="th" style="font-size:12px;font-weight:500">Door one · what the world asks of you</text>
+  <text x="236" y="151" class="ts" style="font-size:11px">Most things stop here. That is the point.</text>
 
   <g class="c-purple">
-    <rect x="236" y="108" width="258" height="46" rx="4"/>
-    <text x="248" y="127" class="t" style="font-size:12px">1 · Is anything actually owed?</text>
-    <text x="248" y="143" class="ts" style="font-size:11px">Name a person and a deadline, or nothing happens</text>
+    <rect x="236" y="160" width="258" height="46" rx="4"/>
+    <text x="248" y="179" class="t" style="font-size:12px">1 · Is anything actually owed?</text>
+    <text x="248" y="195" class="ts" style="font-size:11px">Name a person and a deadline, or nothing happens</text>
   </g>
   <g class="c-purple">
-    <rect x="236" y="162" width="258" height="46" rx="4"/>
-    <text x="248" y="181" class="t" style="font-size:12px">2 · Whose move is it?</text>
-    <text x="248" y="197" class="ts" style="font-size:11px">If they will call you, you don't need a task</text>
+    <rect x="236" y="214" width="258" height="46" rx="4"/>
+    <text x="248" y="233" class="t" style="font-size:12px">2 · Whose move is it?</text>
+    <text x="248" y="249" class="ts" style="font-size:11px">If they will call you, you don't need a task</text>
   </g>
   <g class="c-purple">
-    <rect x="236" y="216" width="258" height="46" rx="4"/>
-    <text x="248" y="235" class="t" style="font-size:12px">3 · Where can you actually do it?</text>
-    <text x="248" y="251" class="ts" style="font-size:11px">Not "is the slot free" — can your body do it there</text>
+    <rect x="236" y="268" width="258" height="46" rx="4"/>
+    <text x="248" y="287" class="t" style="font-size:12px">3 · Where can you actually do it?</text>
+    <text x="248" y="303" class="ts" style="font-size:11px">Not "is the slot free" — can your body do it there</text>
   </g>
   <g class="c-purple">
-    <rect x="236" y="270" width="258" height="46" rx="4"/>
-    <text x="248" y="289" class="t" style="font-size:12px">4 · Will it fit, and will it fire?</text>
-    <text x="248" y="305" class="ts" style="font-size:11px">First move pre-done, or it never starts</text>
+    <rect x="236" y="322" width="258" height="46" rx="4"/>
+    <text x="248" y="341" class="t" style="font-size:12px">4 · Will it fit, and will it fire?</text>
+    <text x="248" y="357" class="ts" style="font-size:11px">First move pre-done, or it never starts</text>
   </g>
+
+  <text x="236" y="398" class="th" style="font-size:12px;font-weight:500">Door two · the work you declared</text>
+  <text x="236" y="413" class="ts" style="font-size:11px">Nobody is waiting on it. Nothing breaks.</text>
+  <text x="236" y="428" class="ts" style="font-size:11px">Door one cannot see it — so it gets its own.</text>
+
+  <g class="c-amber">
+    <rect x="236" y="438" width="258" height="46" rx="4"/>
+    <text x="248" y="457" class="t" style="font-size:12px">1 · Did you declare this work?</text>
+    <text x="248" y="473" class="ts" style="font-size:11px">It never guesses what matters in your life</text>
+  </g>
+  <g class="c-amber">
+    <rect x="236" y="492" width="258" height="46" rx="4"/>
+    <text x="248" y="511" class="t" style="font-size:12px">2 · Has it actually gone dark?</text>
+    <text x="248" y="527" class="ts" style="font-size:11px">Proven from your own list this run, never a hunch</text>
+  </g>
+  <g class="c-amber">
+    <rect x="236" y="546" width="258" height="46" rx="4"/>
+    <text x="248" y="565" class="t" style="font-size:12px">3 · Did you kill the last block?</text>
+    <text x="248" y="581" class="ts" style="font-size:11px">Then it stays killed. It never asks twice.</text>
+  </g>
+
+  <text x="236" y="614" class="ts" style="font-size:11px">All three → one block, protected, placed before</text>
+  <text x="236" y="629" class="ts" style="font-size:11px">the reactive work. Any miss → nothing at all.</text>
 
   <line x1="518" y1="163" x2="572" y2="163" stroke="#888780" stroke-width="1" marker-end="url(#ar)"/>
 
@@ -106,45 +133,48 @@
   </g>
 
   <g class="c-teal">
-    <rect x="580" y="176" width="270" height="98" rx="4"/>
+    <rect x="580" y="176" width="270" height="114" rx="4"/>
     <text x="594" y="200" class="t" style="font-size:14px">One card, once a day</text>
-    <text x="594" y="220" class="ts" style="font-size:11px">Your day, what needs you, and an</text>
-    <text x="594" y="236" class="ts" style="font-size:11px">honest footer: what it closed, what it</text>
-    <text x="594" y="252" class="ts" style="font-size:11px">refused to create, and what it could</text>
-    <text x="594" y="268" class="ts" style="font-size:11px">not reach. Never a clean-looking lie.</text>
+    <text x="594" y="220" class="ts" style="font-size:11px">Your day, what needs you, and an honest</text>
+    <text x="594" y="236" class="ts" style="font-size:11px">footer: what it closed, what it refused to</text>
+    <text x="594" y="252" class="ts" style="font-size:11px">create, what it could not reach — and the</text>
+    <text x="594" y="268" class="ts" style="font-size:11px">days since your own work last moved.</text>
+    <text x="594" y="284" class="ts" style="font-size:11px">Never a clean-looking lie.</text>
   </g>
 
   <g class="c-teal">
-    <rect x="580" y="290" width="270" height="52" rx="4"/>
-    <text x="594" y="312" class="t" style="font-size:12px">It cannot send email</text>
-    <text x="594" y="330" class="ts" style="font-size:11px">Drafts only — enforced by the tool, not a promise</text>
+    <rect x="580" y="298" width="270" height="52" rx="4"/>
+    <text x="594" y="320" class="t" style="font-size:12px">It cannot send email</text>
+    <text x="594" y="338" class="ts" style="font-size:11px">Drafts only — enforced by the tool, not a promise</text>
   </g>
 
-  <line x1="150" y1="430" x2="150" y2="378" stroke="#888780" stroke-width="1" marker-end="url(#ar)"/>
-  <line x1="790" y1="430" x2="790" y2="378" stroke="#888780" stroke-width="1" marker-end="url(#ar)"/>
-  <line x1="150" y1="404" x2="790" y2="404" stroke="#c3c2b7" stroke-width="1"/>
-  <line x1="470" y1="404" x2="470" y2="356" stroke="#888780" stroke-width="1" marker-end="url(#ar)"/>
+  <text x="0" y="686" class="th" style="font-size:17px;font-weight:500">What governs it</text>
+  <text x="0" y="704" class="ts" style="font-size:12px">A portable law, and facts only you can supply.</text>
 
-  <text x="0" y="470" class="th" style="font-size:17px;font-weight:500">What governs it</text>
-  <text x="0" y="488" class="ts" style="font-size:12px">Two files, and the split between them is the whole design.</text>
+  <line x1="470" y1="738" x2="470" y2="652" stroke="#888780" stroke-width="1" marker-end="url(#ar)"/>
+  <line x1="225" y1="738" x2="695" y2="738" stroke="#c3c2b7" stroke-width="1"/>
+  <line x1="225" y1="738" x2="225" y2="782" stroke="#c3c2b7" stroke-width="1"/>
+  <line x1="695" y1="738" x2="695" y2="782" stroke="#c3c2b7" stroke-width="1"/>
 
   <g class="c-blue">
-    <rect x="0" y="504" width="450" height="132" rx="4"/>
-    <text x="16" y="530" class="t" style="font-size:14px">The law · portable</text>
-    <text x="16" y="552" class="ts" style="font-size:11px">How a list and a calendar stay correct. Contains no</text>
-    <text x="16" y="568" class="ts" style="font-size:11px">facts about any person, so it can be shared, audited,</text>
-    <text x="16" y="584" class="ts" style="font-size:11px">and improved by anyone.</text>
-    <text x="16" y="608" class="ts" style="font-size:11px">Every rule is phrased about YOU, never about a tool —</text>
-    <text x="16" y="624" class="ts" style="font-size:11px">because tools change and you don't.</text>
+    <rect x="0" y="782" width="450" height="152" rx="4"/>
+    <text x="16" y="808" class="t" style="font-size:14px">The law · portable</text>
+    <text x="16" y="830" class="ts" style="font-size:11px">How a list and a calendar stay correct.</text>
+    <text x="16" y="846" class="ts" style="font-size:11px">It holds no facts about any person — which is exactly</text>
+    <text x="16" y="862" class="ts" style="font-size:11px">what lets it be shared, audited and improved by anyone.</text>
+    <text x="16" y="884" class="ts" style="font-size:11px">Every rule is phrased about YOU, never about a tool,</text>
+    <text x="16" y="900" class="ts" style="font-size:11px">because tools change and you don't.</text>
+    <text x="16" y="922" class="ts" style="font-size:11px">Without your profile it is inert. The profile without it is a diary.</text>
   </g>
 
   <g class="c-amber">
-    <rect x="470" y="504" width="450" height="132" rx="4"/>
-    <text x="486" y="530" class="t" style="font-size:14px">Your profile · private, stays home</text>
-    <text x="486" y="552" class="ts" style="font-size:11px">Who you are, what you're actually trying to do, what</text>
-    <text x="486" y="568" class="ts" style="font-size:11px">makes you start things, and what your body can do</text>
-    <text x="486" y="584" class="ts" style="font-size:11px">and when.</text>
-    <text x="486" y="608" class="ts" style="font-size:11px">Never packaged. Never shared. The law without this is</text>
-    <text x="486" y="624" class="ts" style="font-size:11px">inert; this without the law is a diary.</text>
+    <rect x="470" y="782" width="450" height="152" rx="4"/>
+    <text x="486" y="808" class="t" style="font-size:14px">Your profile · a row on your task list</text>
+    <text x="486" y="830" class="ts" style="font-size:11px">Who you are, what you're actually trying to do, what</text>
+    <text x="486" y="846" class="ts" style="font-size:11px">makes you start things, and what your body can do.</text>
+    <text x="486" y="868" class="ts" style="font-size:11px">It is a row labelled cos-profile, not a file — a file only</text>
+    <text x="486" y="884" class="ts" style="font-size:11px">works on the one computer holding it, and dies with it.</text>
+    <text x="486" y="906" class="ts" style="font-size:11px">Not packaged. Never shared with whoever gave you this.</text>
+    <text x="486" y="922" class="ts" style="font-size:11px">It does pass through the model each run, like your mail.</text>
   </g>
 </svg>

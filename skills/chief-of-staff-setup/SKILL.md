@@ -1,6 +1,6 @@
 ---
 name: chief-of-staff-setup
-description: Set up, extend, troubleshoot, or remove the chief-of-staff system. Use when the user installs this plugin, says "set up my chief of staff", "get me started", "onboard me", "what do I need to connect", "how much does this cost", "can I use this on the free plan", "where is Cowork", "why isn't my brief running", "my scheduled task keeps asking me to connect things that are already connected", "it keeps recreating a task I deleted", "everything shows as an all-day banner", "add my calendar", "my calendar is iCloud", "I use Outlook", "I don't have a Todoist account", "I don't use Todoist — what else works", "can I just use Linear/Asana/Jira for this", "can it control my Mac", "where does my profile live", "how do I uninstall this", "remove my chief of staff", or asks what a connector is for and whether it's worth it. Runs the onboarding as a guided conversation: probe what exists, run a real pass before asking for anything, build the profile by interview with their own work first, write it where the engine can reach it, teach the required behaviours, schedule the run.
+description: Set up, extend, troubleshoot, or remove the chief-of-staff system. Use when the user installs this plugin or says "set up my chief of staff", "get me started", "onboard me", "what do I need to connect", "how much does this cost", "can I use this on the free plan", "where is Cowork", "why isn't my brief running", "it keeps asking me to connect things already connected", "it recreated a task I deleted", "everything is an all-day banner", "add my calendar", "my calendar is iCloud", "I use Outlook", "I don't use Todoist — what else works", "can I just use Linear or Asana", "can it control my Mac", "where does my profile live", or "how do I uninstall this". Runs onboarding as a guided conversation — probe what exists, run a real pass before asking for anything, build the profile by interview with their own work first, write it where the engine can reach it, teach the required behaviours, schedule the run.
 ---
 
 # Setup — a guided onboarding, start to finish
@@ -18,7 +18,7 @@ placeholders unless they ask. They are setting up an assistant, not configuring 
 should be able to stop after any phase and still have something that works.
 
 **Show before you ask.** The first artifact comes before the first interview question — that's
-Phase 1, and it is the shape of this whole conversation. An onboarding that asks twenty-three
+Phase 1, and it is the shape of this whole conversation. An onboarding that asks two dozen
 questions before it produces anything is an onboarding people leave.
 
 **Never present the full stack as a prerequisite.** That is how people bounce. A calendar and a
@@ -41,18 +41,54 @@ tool they abandon. Say what degrades and let them choose.
 **Never invent a fact about them.** An absent profile field is recoverable. A fabricated one is a
 lie the engine will act on every morning.
 
-### READ `references/VOLATILE.md` BEFORE YOU QUOTE ANY PRICE, PLAN NAME, OR CLICK PATH
+### READ `references/VOLATILE.md` BEFORE YOU STATE AN INSTANCE — AND THE LIST IS EIGHT
 
-**Prices move, plan names get renamed, and vendors reorganise their settings screens.** Every one
-of those facts lives in `references/VOLATILE.md` — dated and cited. **This file is not dated and
-is not the source.** So:
+**§V of the law names six: a vendor, a price, a renewal window, a case number, a date, a count.**
+This file adds the two that bite hardest in a setup: **a plan name and a click path.** Prices move,
+plans get renamed, vendors reorganise their settings screens, counts grow, issues get reopened, and
+a status flips the day someone changes their mind. Every one of those facts lives in
+`references/VOLATILE.md` — dated and cited. **This file is not dated and is not the source.** So:
 
-- **Read VOLATILE before you say a number or dictate a path.** Not from memory, not from this file.
+- **Read VOLATILE before you say a number, name a plan, dictate a path, cite a case, quote a count,
+  or report a status.** Not from memory, not from this file.
+- **A short list reads as satisfied by everything off it — so this gate is the whole eight, and the
+  eight are not the point.** Check price, plan, and path only, and an issue number, a tally of
+  affected products, and a closed-as-not-planned all sail straight through: not one of them is a
+  price, and every one of them rots. **The category is not the test. §V's question is: could this
+  line be wrong tomorrow with nobody touching this file? Yes → it is on the list, whatever it is
+  called.**
+- **Some instances still earn their keep here — and they earn it by being structural.** When a fact
+  survives this gate, say what makes it **durable**, never what makes it **citable**: the mechanism
+  that will still be true next year, not the number you could look up. *(An extension runs
+  unsandboxed — durable, and it is the whole argument. How many extensions one report covered —
+  citable, and it is stale by the next report.)* **If the durable version of a sentence is the same
+  sentence minus its number, the number was decoration.**
 - **Where VOLATILE disagrees with anything written here, VOLATILE wins.** The paths in this file
   are the *shape* of the journey — the destinations and the traps. The current clicks are there.
-- **If VOLATILE is missing, or its date is old enough to worry you, say so out loud** and tell them
-  the screen may have moved. A wrong price is the first lie they catch you in, and after that
-  nothing else you say gets the benefit of the doubt.
+- **If VOLATILE's date is old enough to worry you, say so out loud** and tell them the screen may
+  have moved. A wrong price is the first lie they catch you in, and after that nothing else you say
+  gets the benefit of the doubt.
+
+**AND IF YOU CANNOT READ VOLATILE AT ALL — QUOTE NOTHING, AND SAY THAT OUT LOUD.** Not a price, not
+a plan name, not a click path, not a case number, not a count, not a date, not a status. **Do not
+reconstruct one from memory** — that is the fatal version of exactly the failure above, with the
+excuse pre-attached. **The structural argument survives the outage: you can always say what a thing
+is, without saying what it costs or how many.**
+
+> I can't reach my own price sheet, so I'm not going to quote you a number I might have wrong.
+> Check the vendor's own pricing page — that's the one to trust, and it's more current than me
+> anyway. I can still tell you *which screen* to go to, and what it's called.
+
+**This is not a hypothetical and it is not rare — it is the normal state of the free path this file
+markets.** `references/` sits **beside** `skills/`, not inside it, so a skill uploaded on its own
+arrives with no VOLATILE, no RISK, no STACK, and no profile template. **Try to read it in Phase 0,
+before you need it**, so you find out at the start rather than mid-sentence in Phase 7. **The fix is
+one line and it's in Phase 5's free path — put `references/` in the zip.** Until they do: work
+without it, say why, and give them destinations instead of clicks.
+
+**Say it, every time. An instruction to read a phantom returns silence, and silence reads as
+"nothing to do"** — which is how a remembered price gets quoted with a straight face and no
+warning attached.
 
 ### Resuming is normal — probe, don't re-ask
 
@@ -60,7 +96,7 @@ People leave mid-setup and come back, and one step in this file **tells them to 
 which guarantees it. **So never assume you are starting from zero.** Before anything else, run
 Phase 0's probe *and* check for the two artifacts setup leaves behind: **the `cos-profile` row**
 and **the scheduled task.** Then pick up at the first thing that isn't done and say so — *"You've
-got Todoist connected and your profile row is there but empty. Let's do the three questions."*
+got Todoist connected and your profile row is there but empty. Let's fill it in."*
 **Re-asking someone what they already answered is how they conclude you weren't listening.**
 
 ---
@@ -70,23 +106,38 @@ got Todoist connected and your profile row is there but empty. Let's do the thre
 **Probe first. Ask second.** Most people have more connected than they think, and a question you
 could have answered yourself is friction on the first minute of the first experience.
 
-Check what's actually connected for each role: task list, calendar, mail, notes, and the optional
-ones. **A listed tool is not a capability — the probe is the fact.** Confirm the tool responds,
-not just that it appears.
+**Two things this needs. Everything else is three piles of whatever they happen to have — and the
+two are asked of everybody, the three are nobody's to predict.** Check both halves, and hold them
+apart, because a no means something different in each:
 
-Then report back in one short list. Something like:
+- **The two it needs — a no here is what stops setup:** **somewhere their tasks live**, and **a
+  calendar.**
+- **The three piles — count what's there, and stop:** **places other people can put something on
+  them** (mail, a chat app, work assigned to them) · **places they write their own thinking** (a
+  notes app, voice capture, a journal — **or nothing**) · **things that can prove a fact one way or
+  the other** (sent mail, a message thread, a health record, a receipt).
+
+**Zero of any pile is a real answer, not a gap.** Most people keep no second brain. **Never report
+an empty pile as something missing, and never count it against them** — you're taking an inventory,
+not marking a checklist.
+
+**A listed tool is not a capability — the probe is the fact.** Confirm the tool responds, not just
+that it appears.
+
+Then report back in one short list, **in their words. The two-and-three shape is how you think about
+it, not how you say it — no role names, no jargon, no piles named out loud.** Something like:
 
 > Here's what I can already see:
-> - **Task list** — Todoist, connected ✓
-> - **Calendar** — Google Calendar, connected ✓
+> - **Your tasks** — Todoist, connected ✓
+> - **Your calendar** — Google Calendar, connected ✓
 > - **Mail** — not connected
-> - **Notes** — not connected
+> - Nothing else connected — which is completely normal, and I'll ask about it later.
 >
 > That's enough to run. Give me thirty seconds and I'll just show you.
 
 **Then ask only about what the probe could not resolve — and fork:**
 
-- **Task list + calendar both answered → Phase 1. Run it. Do not explain first, do not ask first.**
+- **Both of the two answered → Phase 1. Run it. Do not explain first, do not ask first.**
 - **Either one missing → Phase 2** for the sixty seconds, **Phase 7** for the connect path, then
   **come straight back to Phase 1.** The run still comes before the interview.
 
@@ -95,7 +146,7 @@ Then report back in one short list. Something like:
 ## Phase 1 — Run a pass before you ask for anything
 
 **This is the most important structural rule in this file.** They have not agreed to anything yet.
-An argument does not earn twenty-three personal questions. **A card does.**
+An argument does not earn two dozen personal questions. **A card does.**
 
 ### First, create the profile row — empty
 
@@ -168,7 +219,7 @@ Say roughly this, in your own words:
 
 **Then ask for the interview — small, and against the artifact:**
 
-> So: three questions, and that line stops being blank?
+> So — a few questions, and that line stops being blank?
 
 ---
 
@@ -491,6 +542,18 @@ paid-only.** Read the current plan names out of `references/VOLATILE.md`.
 Skills** — code execution must be enabled. Connectors work on Free too, on every surface including
 mobile. **Read the current click path from VOLATILE before dictating it.**
 
+**And tell them to put `references/` inside each skill folder before zipping — this is the step
+nobody thinks of, and skipping it silently costs them the price sheet.** `references/` lives
+*beside* `skills/`, not inside it, so a skill zipped on its own arrives with no VOLATILE, no RISK,
+no STACK, no profile template — **and a setup skill that can't read VOLATILE can't quote a price, a
+plan name, or a click path at all.** It has to say so and send them to the vendor's page instead,
+which is honest but worse. **One line, not a lecture:**
+
+> One thing the zip won't do for you: drop a copy of the **`references`** folder inside each skill
+> folder before you zip it. It's the dated price-and-click sheet all of this reads. Without it I
+> can't tell you what anything costs — I'd only be able to point you at the vendor's page and let
+> you read it yourself.
+
 Then three decisions, then the clicks.
 
 ### Decision 1 — the hour
@@ -641,7 +704,9 @@ people have five, some have none, and **none is a legitimate answer that needs n
 **Two things to say plainly when they ask about the third row especially:**
 
 - **None of it is load-bearing.** The engine runs without any of it and tells you in one line what
-  it couldn't reach — that's the `sources 6/7` on the card.
+  it couldn't reach — that's the `read 5/6` on the card. A complete pass over whatever your stack
+  happens to be reads `sources 6/6`; **the day a source goes dark, the number drops and the
+  receipts name it.**
 - **Anything that reads this machine costs you the schedule.** That's the real price, it's invisible
   otherwise, and it's in **Phase 5, decision 2.** Name it every time.
 
@@ -670,8 +735,11 @@ capability, the call is.**
    **Required.**
 3. **Who put this row here — me, or the engine?** — otherwise it "fixes" a block you deliberately
    moved. **This one isn't pass/fail. It picks which of two modes you get** — see below.
-4. **How long does this take?** — the engine places work as *blocks*, and a block has a length. No
-   duration on a row, no block: it renders as an all-day banner at the top of your calendar instead.
+4. **How long does this take?** — the engine places work as *blocks*, and a block has a length. **No
+   duration on a row, no length** — so it can't tell you what the thing costs and can't hold the
+   30-minute floor. It shows a `—` where the hour would go rather than an hour it has nothing behind.
+   **What your calendar draws for that row is your task app's business, not ours — so probe it on the
+   first run and tell them what you found.** Never predict it.
 
 **And two questions about the container it lives in, which have nothing to do with features:**
 
@@ -695,7 +763,8 @@ feature comparison — **the argument that actually lands is the container:**
 
 Two more, briefly, if they want them: **the rows aren't yours** — admins can export private boards
 and teams; the vendors document this themselves — and **most work trackers can't tell you a task's
-length in minutes**, so every dated life-row becomes an all-day banner.
+length in minutes** (they estimate in points, or not at all), so nothing on that surface can state
+what a life-row costs or hold the 30-minute floor.
 
 **But do not tell them to leave the work tracker. It's excellent at work.** The move is **two
 surfaces, one direction** — say it exactly this way:
@@ -752,8 +821,10 @@ then tell them plainly which questions it answers and what degrades:**
   more and creating less.
 - **No way to tell who placed a row** → **write-once.** See above. **Degraded is the wrong word** —
   it fails toward leaving your stuff alone, which is the right direction to fail.
-- **No duration field** → all-day banners instead of blocks. This one is worth saying twice; it's
-  the exact clutter the system exists to remove.
+- **No duration field** → **no length, so no stated cost and no enforceable floor.** The rows still
+  get placed at their hour; the time gutter reads `—`. **Worth saying twice, because placement is the
+  whole product** — and worth saying carefully: **what their calendar draws for those rows is a
+  question the probe answers, not this page.**
 
 Then stop. **Do not push.** Say: *"That works. Here's what you'll get and what you won't. Your
 call."*
@@ -773,16 +844,18 @@ prompt you have to dodge — the free tier is a real product and the engine runs
    Google, the Google button skips the password entirely.)*
 4. **Confirm the email** if it asks.
 5. Skip the onboarding questions — the engine doesn't need a project structure.
-6. **You're on Free. Done.** Now come back and connect it, below.
+6. **Done — you're on the free tier.** *(If you need to say its name out loud, read it from
+   VOLATILE. This file doesn't own plan names and they get renamed.)* Now come back and connect it,
+   below.
 
 **Read the current path from VOLATILE before dictating it.** Signup flows change more often than
 anything else on this page.
 
 #### Todoist: what it costs, plainly
 
-**You do not have to pay. The engine runs on Todoist Free.** Here is exactly what Free costs you,
-and both failures are **silent** — which is why you're hearing it now instead of discovering it in
-three weeks.
+**You do not have to pay. The engine runs on Todoist's free tier.** Here is exactly what that tier
+costs you, and both failures are **silent** — which is why you're hearing it now instead of
+discovering it in three weeks.
 
 | | Free | Paid |
 |---|---|---|
@@ -796,34 +869,50 @@ isn't one here on purpose.**
 
 **Why those two rows are the whole argument:**
 
-- **Durations are a paid feature.** The engine places work as time blocks. A task with no duration
-  renders as an **all-day banner** at the top of your calendar instead of a block at 2pm — which
-  is precisely the calendar clutter this system exists to remove. Free doesn't break the engine;
-  it turns the output into the thing you were trying to escape.
-- **Activity history is capped on Free.** That log is how the engine knows which rows it placed
+- **Durations are a paid feature.** The engine places work as time blocks, and **a block is a
+  length.** Without a duration it cannot state what a thing costs and cannot enforce the 30-minute
+  floor — so the card's time gutter reads `—` for every task-derived row, and it reports the floor as
+  unenforceable instead of pretending to hold it. **That's a fact about the engine, and it's the part
+  we own.** The free tier doesn't break it: rows still get placed, at their hour, and **both doors
+  still fire.** What you don't get is the *length* — the thing you can see, and the floor the engine
+  can hold.
+  **What your own calendar draws for a timed row with no length, don't guess at — probe it.** The
+  engine doesn't author a calendar event for a task; your task list's sync draws that row, and how it
+  draws it belongs to your app and your setup. **The first run probes it and puts what it found in
+  the receipts.** Say that, and say it's what you found — never a prediction about lists in general.
+- **Activity history is capped on the free tier.** That log is how the engine knows which rows it placed
   versus which ones you placed. Past the cap it can't prove ownership, so it stops re-placing
   anything at all. Safe, but inert.
 
 Then say the honest version and let them choose — **with the price read live from VOLATILE:**
 
-> You can absolutely run on Free. You'll get all-day banners instead of time blocks, and after
-> that history window closes the engine stops adjusting anything it placed. Paid is [price from
-> VOLATILE]. It's the only spend I'm going to argue for.
+> You can absolutely run on the free tier. Everything still runs — I still protect your own work,
+> still place things at an hour, still close loops. What you don't get is the **length**: without a
+> duration I can't tell you what a thing costs, and I can't hold the 30-minute floor — so where an
+> hour would go, you'll see a dash, and I'll say the floor is unenforceable rather than pretend.
+> **I'll check what your calendar actually does with those rows on the first run and tell you what I
+> found** — that's yours to see, and I'd rather look than guess. After the history window closes I
+> stop adjusting anything I placed. Paid is [price from VOLATILE]. It's the only spend I'm going to
+> argue for.
 
 #### Upgrading Todoist — do this on the web, not on your iPhone
 
-**Say why first:** upgrading inside the iOS app bills through Apple, and people who've already got
-a web subscription end up **double-billed.** Use the browser.
+**Say why first, because the trap costs real money:** upgrading inside the iOS app bills through
+Apple, and someone who already has a web subscription ends up **double-billed.** That's a reported
+outcome, not a theory. **Use the browser, not the phone.**
 
-1. Go to **todoist.com** and log in.
-2. Click your **avatar, top left.**
-3. Click **Settings.**
-4. Click **Subscription.**
-5. Click **Upgrade.**
-6. Choose **yearly or monthly.**
-7. Click **Continue to checkout.**
-8. Enter payment.
-9. Click **Subscribe.**
+**The shape is all this file owns, and it's stable:** log in at **todoist.com** on the web → their
+account settings → the **subscription** screen → choose a billing period → checkout. That
+destination and that trap don't move.
+
+**The buttons do. Read the current path out of `references/VOLATILE.md` and dictate that one** —
+not a path from here, and not one from memory. A click path written into this file is a path that
+started rotting the day it was written, and a renamed button dictated confidently is a small lie
+that costs you everything you say next.
+
+**If VOLATILE is unreachable, don't reconstruct it.** Name the destination — the subscription screen
+in their account settings, on the web, not in the app — say you can't see the current buttons, and
+let them find it. **That's a thirty-second inconvenience. A confident wrong path is worse.**
 
 #### Connecting Todoist to Claude
 
@@ -1037,10 +1126,15 @@ official Anthropic extensions**; you're not sending them to a stranger's code.
 > No — and I want to give you the actual reason rather than a policy voice.
 >
 > Extensions **run fully unsandboxed on your machine, with full system permissions.** There's no
-> box around them. And this isn't hypothetical: researchers found a **zero-click vulnerability
-> across 50 extensions** — the most severe rating there is — where **a single malicious calendar
-> invite** was enough to trigger it. **Anthropic declined it as outside their threat model**, on the
-> view that an extension you installed locally is one you trust.
+> box around them. And that isn't a worry about what someone might find — it's the design. **Nothing
+> is watching an extension, on purpose**, because the trust model says an extension you installed
+> locally is one you chose to trust. **You are the sandbox.**
+>
+> Which puts the whole weight on where its input comes from. Zero-click compromise of unsandboxed
+> extensions **via nothing but a malicious calendar invite** is a demonstrated class of attack, not a
+> theory — and the reason it keeps working is structural: **an invite is text a stranger writes into
+> your calendar, and an unsandboxed extension is code with no boundary around it.** Both halves stay
+> true no matter who patches what.
 >
 > Now look at what this thing does every single morning: **it reads your calendar invites.** Strangers
 > put text in there. So handing that same run a general-purpose shell is the one combination I'm not
@@ -1162,7 +1256,7 @@ one calendar. **That's the whole footprint, and now they've seen all of it.**
 | Symptom | Likely cause |
 |---|---|
 | **"It keeps recreating a task I deleted"** | **You deleted it instead of parking it.** A deleted row leaves no trace — the engine has no memory, so tomorrow the same evidence produces the same row. **Park it in Someday.** That's a decision the engine reads and honours permanently. |
-| **"Everything's an all-day banner, not a time block"** | Free-tier task list — **durations are a paid feature.** No duration, nothing to build a block from. Upgrade, or accept banners. This one fails silently, which is why it's a surprise. |
+| **"Everything's an all-day banner, not a time block"** | **Read the mode line on the card first — don't diagnose this from here.** If durations aren't sticking on your list (paid feature on most, free tier included), there's **no length for the engine to place**, which is why it can't state a cost or hold the 30-minute floor and shows `—` instead of an hour. **But the engine doesn't draw that banner — your task list's calendar sync does**, and what it draws is a property of your app and your setup. **The run probes exactly that and reports what it found; that finding is the diagnosis, not this table.** If it's banners you're seeing and you want lengths, durations are what buys them — and if you'd rather not pay, the fix isn't to live with clutter: **stop syncing task rows to the calendar and read them off the card**, where the `—` is honest about what's known. This fails silently, which is why it's a surprise. |
 | **"It stopped fixing / re-placing anything after about a week"** | Free-tier **activity history is capped** (VOLATILE has the current window). Past that the engine can't prove which rows are its own, so it stops touching everything. Failing safe, working as designed. |
 | **"It tells me a block is the wrong shape instead of just fixing it"** | **That's the mode you're in, and it's correct.** Your list can't tell the engine's rows apart from yours, so **it only ever creates — it never goes back and edits.** It names the problem in one line rather than reaching into your list to fix it. This is the safer half of the trade, not a broken feature. |
 | **"Expired sale banners are piling up"** | Same mode, same reason: deleting a row needs proof it placed that row, and your list can't give it. **It reports the count instead of silently deleting.** Clear them by hand, or use a list that records what wrote each row. |
@@ -1175,13 +1269,13 @@ one calendar. **That's the whole footprint, and now they've seen all of it.**
 | **"The Todoist connector isn't there"** | **You didn't open a new chat after connecting.** Tools only load at the start of a conversation. |
 | **"I can't find Cowork / do I have to buy it?"** | **Cowork isn't an app and isn't a separate purchase — it's a toggle.** claude.ai → find the message box → **"Cowork" in the bottom left corner.** Same site, same login. What *is* paid is the scheduled task itself. |
 | **"I'm on Free and can't install the plugin"** | **Correct — plugins are paid-plan only. Skills aren't.** Upload each skill as a ZIP at **Customize > Skills** (code execution must be on) and connect Gmail/Calendar/your task list as normal. **You get everything except the packaged install and the automatic morning run** — start the run yourself with *"run my chief-of-staff brief."* |
-| **"The scheduled run asks me to connect things that are already connected"** | **A known bug, not your setup, and there is nothing for you to fix.** Scheduled runs can fail to see connectors that are plainly connected, then stop and ask for them. Reported against Claude Code (**issue #43397**, **closed as not planned**, reproducible every time) and seen on Desktop too. **Do not re-connect anything — it won't help.** Run the brief by hand from a chat that morning; it works there. |
+| **"The scheduled run asks me to connect things that are already connected"** | **A known bug, not your setup, and there is nothing for you to fix.** Scheduled runs can fail to see connectors that are plainly connected, then stop and ask for them. **It reproduces**, it has been reported, and it has been seen on more than one surface — so treat it as the behaviour, not as an accident of your install. **Do not re-connect anything — it won't help**, and re-connecting is the one move the symptom talks you into. Run the brief by hand from a chat that morning; it works there. |
 | **"The brief silently never fires"** / **"nothing runs overnight"** | **You pointed it at something local.** A task that touches local files or apps **can only run locally** — and a local run is **skipped** whenever the machine sleeps, with no error and no notification. **Unattended scheduling and local access are mutually exclusive.** Either drop the local surface and go back to cloud, or leave the machine awake. |
-| **"The brief didn't run"** | Check the scheduled task exists and **has a next-run time** — a task with no next run is the failure that looks like success. Then check the row above: was the machine asleep? Local tasks fire on next wake — **one** catch-up, older misses dropped. Also check whether the run stopped to ask for connectors (**#43397**, above). |
+| **"The brief didn't run"** | Check the scheduled task exists and **has a next-run time** — a task with no next run is the failure that looks like success. Then check the row above: was the machine asleep? Local tasks fire on next wake — **one** catch-up, older misses dropped. Also check whether the run stopped to ask for connectors — the connector-blindness row above. |
 | **"An event I made disappeared from my calendar"** | **Did you title it starting with `✓`?** On the calendar your task list projects onto, that's the ghost sweep's delete signal and it can't tell your event from a leftover. Nothing else there is ever deleted, and no other calendar is ever touched. |
 | **"It made a duplicate"** | The completed-row query is unavailable, or a create was retried. |
 | **"It moved a block I placed"** | **It should never do this, in either mode.** A row you placed or touched is yours, permanently. If your list records what wrote each row, this is a bug — report it. If it doesn't, the engine shouldn't have been editing *anything*, so it's a worse bug. Either way it's ours, not yours. |
-| **"Can it control my Mac / run shell commands?"** | **No, and setup won't help you add that.** Extensions run **unsandboxed with full system permissions**, a zero-click flaw hit **50 of them via a single calendar invite**, and it was **declined as outside the threat model** — while this engine reads calendar invites for a living. See Phase 7. |
+| **"Can it control my Mac / run shell commands?"** | **No, and setup won't help you add that.** Extensions run **unsandboxed with full system permissions** — by design, because the trust model treats what you installed as what you trust. **Zero-click compromise through a single calendar invite is a demonstrated class**, and this engine reads calendar invites for a living. Nothing about that combination depends on a patch. See Phase 7. |
 | **"It says my calendar is clean and it isn't"** | Poll lag on a subscribed feed — hours on a public ICS link, minutes on a paid sync. The engine only sees what synced. |
 | **"Nothing shows up from my notes"** | Usually correct — most notes contain zero commitments. Check the connector responded at all: an **unread** source and an **empty** one are different. |
 | **"It's asking about things I already decided"** | The parked row isn't being read, or the decision never landed on the list. **Decisions live on the list, not in chat.** |

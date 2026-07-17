@@ -2,11 +2,11 @@
   "name": "chief-of-staff",
   "displayName": "Chief of Staff",
   "version": "0.1.0",
-  "description": "An unattended chief-of-staff pass that sweeps your mail, messages, calendars, notes and task list, captures only what you actually owe, places it where it will physically fire, and renders one condensed daily brief. Tool-agnostic and progressive: it does the most with whatever you have connected.",
+  "description": "An unattended daily brief. It reads what you have connected, works out what you actually owe today, places it where you can physically do it, and hands you one card. It creates almost nothing on purpose: a task needs a person waiting and a date something breaks, or it needs to be work you declared as your own and can prove is starving. A task list and a calendar is the whole floor.",
   "author": {
     "name": "Yihan Zhao"
   },
-  "license": "SEE LICENSE FILE — personal use only, no resale, no redistribution, no organizational deployment",
+  "license": "LicenseRef-ChiefOfStaff-Personal-Use-1.0",
   "keywords": [
     "chief-of-staff",
     "daily-brief",
