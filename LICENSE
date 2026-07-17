@@ -1,0 +1,117 @@
+Chief of Staff — Personal Use License
+Version 1.0 · 2026-07-17
+
+Copyright (c) 2026 Yihan Zhao
+
+READ THIS FIRST, IN PLAIN ENGLISH
+--------------------------------
+You may use this for yourself, free, forever — including for your own work at
+your job. You may change it to suit you. You may not sell it, republish it, or
+roll it out across an organization. If it breaks something, that is on you, not
+on me.
+
+The binding terms follow.
+
+
+1. DEFINITIONS
+
+"The Software" means this plugin and every file distributed with it.
+
+"You" means the individual person reading this. This license is granted to a
+natural person, never to a company, team, or organization.
+
+"Personal Use" means use by You, on Your own accounts and Your own data, for
+Your own purposes — including work You do for an employer or a client, provided
+the Software runs for You alone and its outputs serve Your own work.
+
+
+2. GRANT
+
+Subject to the terms below, You are granted a worldwide, royalty-free,
+non-exclusive, non-transferable, revocable license to:
+
+  (a) use the Software for Personal Use;
+  (b) modify the Software for Your own Personal Use;
+  (c) make copies for Your own backup or Your own devices.
+
+No fee is required. No registration is required.
+
+
+3. WHAT YOU MAY NOT DO
+
+  (a) SELL. You may not sell, license, rent, lease, or otherwise charge for the
+      Software or for any work substantially derived from it.
+
+  (b) REDISTRIBUTE. You may not publish, host, mirror, bundle, or otherwise
+      distribute the Software or a derivative of it to any third party. Share
+      the original source instead.
+
+  (c) DEPLOY ORGANIZATIONALLY. You may not install, provision, or operate the
+      Software for or on behalf of an organization, team, or group — including
+      Your employer. One person, one install. Internal enterprise deployment,
+      IT rollout, and multi-seat provisioning are all excluded.
+
+  (d) OFFER AS A SERVICE. You may not use the Software to provide a hosted,
+      managed, or commercial service to anyone else.
+
+  (e) REMOVE THIS LICENSE. You may not remove or alter this notice in any copy
+      or modified version You are permitted to make.
+
+For any use not granted in Section 2 — including anything in Section 3 — ask.
+Written permission from the copyright holder is the only route.
+
+
+4. NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+Understand specifically what You are accepting. The Software directs an AI agent
+to read Your mail, messages, notes, and calendars, and to CREATE, MODIFY, and
+DELETE entries in Your task list and calendar, unattended, on a schedule, without
+a human reviewing each action. It reads text written by strangers and can be
+wrong about it. It can create a task You did not want, close one You did, or
+delete a calendar entry it misidentified. It is not a safety-critical system and
+must not be relied upon for anything where being wrong is dangerous — medical,
+legal, financial, or otherwise.
+
+Read `references/RISK.md` before granting it write access. It is the honest
+account of what can go wrong.
+
+
+5. NO LIABILITY
+
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR
+OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+OR OTHER DEALINGS IN THE SOFTWARE.
+
+This includes, without limitation: lost, deleted, or altered tasks, calendar
+entries, notes, or messages; missed appointments, deadlines, payments, or
+obligations; actions taken by an AI agent under Your credentials; disclosure of
+Your data to any third party whose service You connect; and any consequence of
+relying on the Software's output.
+
+You are responsible for what You connect it to and what it does with Your
+accounts.
+
+
+6. THIRD PARTIES
+
+The Software connects to services operated by other companies. Their terms,
+prices, privacy policies, and capabilities are theirs, not mine, and they change
+without notice. Nothing here is a representation about any of them.
+
+
+7. TERMINATION
+
+This license ends automatically if You breach it. On termination, stop using the
+Software and delete Your copies.
+
+
+8. NOT LEGAL ADVICE
+
+This is a plain-language license written by a non-lawyer for a personal project.
+It is intended to be readable rather than airtight. If You need certainty for
+Your situation, get advice.

@@ -1,0 +1,150 @@
+<svg viewBox="0 0 940 660" xmlns="http://www.w3.org/2000/svg" role="img" width="100%">
+  <title>How the chief of staff works</title>
+  <desc>Sources are read every pass on the left. A four-question filter in the middle decides what becomes a task. Two outputs on the right: your task list, which is the system's only memory, and one status card. Two inputs govern everything: the portable law and your own profile, which is never packaged or shared.</desc>
+
+  <style>
+    .t  { fill: #2C2C2A; font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; }
+    .ts { fill: #5F5E5A; font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; }
+    .th { fill: #0b0b0b; font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; }
+    .c-gray   rect { fill: #F1EFE8; stroke: #B4B2A9; stroke-width: 1; }
+    .c-purple rect { fill: #EEEDFE; stroke: #7F77DD; stroke-width: 1; }
+    .c-teal   rect { fill: #E1F5EE; stroke: #5DCAA5; stroke-width: 1; }
+    .c-blue   rect { fill: #E6F1FB; stroke: #85B7EB; stroke-width: 1; }
+    .c-amber  rect { fill: #FAEEDA; stroke: #EF9F27; stroke-width: 1; }
+    .c-purple .t  { fill: #3C3489; } .c-purple .ts { fill: #534AB7; }
+    .c-teal   .t  { fill: #085041; } .c-teal   .ts { fill: #0F6E56; }
+    .c-blue   .t  { fill: #0C447C; } .c-blue   .ts { fill: #185FA5; }
+    .c-amber  .t  { fill: #633806; } .c-amber  .ts { fill: #854F0B; }
+    @media (prefers-color-scheme: dark) {
+      .t { fill: #ffffff; } .ts { fill: #c3c2b7; } .th { fill: #ffffff; }
+      .c-gray   rect { fill: #2C2C2A; stroke: #888780; }
+      .c-purple rect { fill: #3C3489; stroke: #AFA9EC; }
+      .c-teal   rect { fill: #085041; stroke: #5DCAA5; }
+      .c-blue   rect { fill: #0C447C; stroke: #85B7EB; }
+      .c-amber  rect { fill: #633806; stroke: #EF9F27; }
+      .c-purple .t, .c-teal .t, .c-blue .t, .c-amber .t { fill: #ffffff; }
+      .c-purple .ts { fill: #CECBF6; } .c-teal .ts { fill: #9FE1CB; }
+      .c-blue   .ts { fill: #B5D4F4; } .c-amber .ts { fill: #FAC775; }
+    }
+  </style>
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-end">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888780"/>
+    </marker>
+  </defs>
+
+  <text x="0" y="20" class="th" style="font-size:17px;font-weight:500">What it reads</text>
+  <text x="0" y="38" class="ts" style="font-size:12px">Every pass. Nothing is remembered between runs.</text>
+
+  <g class="c-teal">
+    <rect x="0" y="52" width="150" height="38" rx="4"/>
+    <text x="12" y="70" class="t" style="font-size:13px">Your task list · required</text>
+    <text x="12" y="84" class="ts" style="font-size:11px">its only memory</text>
+  </g>
+  <g class="c-teal">
+    <rect x="0" y="98" width="150" height="38" rx="4"/>
+    <text x="12" y="116" class="t" style="font-size:13px">Your calendar · required</text>
+    <text x="12" y="130" class="ts" style="font-size:11px">where your body will be</text>
+  </g>
+  <g class="c-gray">
+    <rect x="0" y="144" width="150" height="38" rx="4"/>
+    <text x="12" y="162" class="t" style="font-size:13px">Where people ask you</text>
+    <text x="12" y="176" class="ts" style="font-size:11px">mail, chat, a work tracker</text>
+  </g>
+  <g class="c-gray">
+    <rect x="0" y="190" width="150" height="38" rx="4"/>
+    <text x="12" y="208" class="t" style="font-size:13px">Where you think</text>
+    <text x="12" y="222" class="ts" style="font-size:11px">notes, voice — or nothing</text>
+  </g>
+  <g class="c-gray">
+    <rect x="0" y="236" width="150" height="38" rx="4"/>
+    <text x="12" y="254" class="t" style="font-size:13px">What can prove a fact</text>
+    <text x="12" y="268" class="ts" style="font-size:11px">optional, zero is fine</text>
+  </g>
+
+  <line x1="158" y1="163" x2="212" y2="163" stroke="#888780" stroke-width="1" marker-end="url(#ar)"/>
+
+  <rect x="220" y="52" width="290" height="290" rx="12" fill="none" stroke="#c3c2b7" stroke-width="1"/>
+  <text x="236" y="78" class="th" style="font-size:15px;font-weight:500">Four questions</text>
+  <text x="236" y="95" class="ts" style="font-size:11px">Most things stop here. That is the point.</text>
+
+  <g class="c-purple">
+    <rect x="236" y="108" width="258" height="46" rx="4"/>
+    <text x="248" y="127" class="t" style="font-size:12px">1 · Is anything actually owed?</text>
+    <text x="248" y="143" class="ts" style="font-size:11px">Name a person and a deadline, or nothing happens</text>
+  </g>
+  <g class="c-purple">
+    <rect x="236" y="162" width="258" height="46" rx="4"/>
+    <text x="248" y="181" class="t" style="font-size:12px">2 · Whose move is it?</text>
+    <text x="248" y="197" class="ts" style="font-size:11px">If they will call you, you don't need a task</text>
+  </g>
+  <g class="c-purple">
+    <rect x="236" y="216" width="258" height="46" rx="4"/>
+    <text x="248" y="235" class="t" style="font-size:12px">3 · Where can you actually do it?</text>
+    <text x="248" y="251" class="ts" style="font-size:11px">Not "is the slot free" — can your body do it there</text>
+  </g>
+  <g class="c-purple">
+    <rect x="236" y="270" width="258" height="46" rx="4"/>
+    <text x="248" y="289" class="t" style="font-size:12px">4 · Will it fit, and will it fire?</text>
+    <text x="248" y="305" class="ts" style="font-size:11px">First move pre-done, or it never starts</text>
+  </g>
+
+  <line x1="518" y1="163" x2="572" y2="163" stroke="#888780" stroke-width="1" marker-end="url(#ar)"/>
+
+  <text x="580" y="20" class="th" style="font-size:17px;font-weight:500">What it writes</text>
+  <text x="580" y="38" class="ts" style="font-size:12px">Two things. Nothing else.</text>
+
+  <g class="c-teal">
+    <rect x="580" y="52" width="270" height="116" rx="4"/>
+    <text x="594" y="76" class="t" style="font-size:14px">Your task list</text>
+    <text x="594" y="96" class="ts" style="font-size:11px">This is the system's entire memory.</text>
+    <text x="594" y="112" class="ts" style="font-size:11px">There is no database, no cache, no</text>
+    <text x="594" y="128" class="ts" style="font-size:11px">hidden file. When you tick a box or</text>
+    <text x="594" y="144" class="ts" style="font-size:11px">drag a block, that IS the instruction —</text>
+    <text x="594" y="160" class="ts" style="font-size:11px">and it lands everywhere, instantly.</text>
+  </g>
+
+  <g class="c-teal">
+    <rect x="580" y="176" width="270" height="98" rx="4"/>
+    <text x="594" y="200" class="t" style="font-size:14px">One card, once a day</text>
+    <text x="594" y="220" class="ts" style="font-size:11px">Your day, what needs you, and an</text>
+    <text x="594" y="236" class="ts" style="font-size:11px">honest footer: what it closed, what it</text>
+    <text x="594" y="252" class="ts" style="font-size:11px">refused to create, and what it could</text>
+    <text x="594" y="268" class="ts" style="font-size:11px">not reach. Never a clean-looking lie.</text>
+  </g>
+
+  <g class="c-teal">
+    <rect x="580" y="290" width="270" height="52" rx="4"/>
+    <text x="594" y="312" class="t" style="font-size:12px">It cannot send email</text>
+    <text x="594" y="330" class="ts" style="font-size:11px">Drafts only — enforced by the tool, not a promise</text>
+  </g>
+
+  <line x1="150" y1="430" x2="150" y2="378" stroke="#888780" stroke-width="1" marker-end="url(#ar)"/>
+  <line x1="790" y1="430" x2="790" y2="378" stroke="#888780" stroke-width="1" marker-end="url(#ar)"/>
+  <line x1="150" y1="404" x2="790" y2="404" stroke="#c3c2b7" stroke-width="1"/>
+  <line x1="470" y1="404" x2="470" y2="356" stroke="#888780" stroke-width="1" marker-end="url(#ar)"/>
+
+  <text x="0" y="470" class="th" style="font-size:17px;font-weight:500">What governs it</text>
+  <text x="0" y="488" class="ts" style="font-size:12px">Two files, and the split between them is the whole design.</text>
+
+  <g class="c-blue">
+    <rect x="0" y="504" width="450" height="132" rx="4"/>
+    <text x="16" y="530" class="t" style="font-size:14px">The law · portable</text>
+    <text x="16" y="552" class="ts" style="font-size:11px">How a list and a calendar stay correct. Contains no</text>
+    <text x="16" y="568" class="ts" style="font-size:11px">facts about any person, so it can be shared, audited,</text>
+    <text x="16" y="584" class="ts" style="font-size:11px">and improved by anyone.</text>
+    <text x="16" y="608" class="ts" style="font-size:11px">Every rule is phrased about YOU, never about a tool —</text>
+    <text x="16" y="624" class="ts" style="font-size:11px">because tools change and you don't.</text>
+  </g>
+
+  <g class="c-amber">
+    <rect x="470" y="504" width="450" height="132" rx="4"/>
+    <text x="486" y="530" class="t" style="font-size:14px">Your profile · private, stays home</text>
+    <text x="486" y="552" class="ts" style="font-size:11px">Who you are, what you're actually trying to do, what</text>
+    <text x="486" y="568" class="ts" style="font-size:11px">makes you start things, and what your body can do</text>
+    <text x="486" y="584" class="ts" style="font-size:11px">and when.</text>
+    <text x="486" y="608" class="ts" style="font-size:11px">Never packaged. Never shared. The law without this is</text>
+    <text x="486" y="624" class="ts" style="font-size:11px">inert; this without the law is a diary.</text>
+  </g>
+</svg>

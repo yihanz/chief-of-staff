@@ -1,0 +1,55 @@
+graph TB
+    subgraph GOV["What governs it — the split IS the design"]
+        LAW["THE LAW · portable<br/>no facts about any person<br/>so it can be shared and audited"]
+        PROF["YOUR PROFILE · yours<br/>who you are, what makes you start<br/>never packaged, never shared<br/>(it does pass through the model each run,<br/>like your mail already does)"]
+    end
+
+    subgraph READ["What it reads — every pass, nothing remembered between runs"]
+        STATE["YOUR TASK LIST · required<br/>the engine's only memory<br/>must be personal, and outlive any job"]
+        CAL["YOUR CALENDAR · required<br/>where your body will be"]
+        IN["Places others ask you for things<br/>mail, chat, a work tracker<br/>zero, one, or five"]
+        INT["Where you write your own thinking<br/>notes, voice — or nothing<br/>nothing is a real answer"]
+        EV["Things that can prove a fact<br/>messages, health records, receipts"]
+    end
+
+    subgraph GATE["Four questions — most things stop here. That is the point."]
+        Q1["1 · Is anything actually owed?<br/>name a person AND a deadline, or nothing happens"]
+        Q2["2 · Whose move is it?<br/>if they will call you, you don't need a task"]
+        Q3["3 · Where can your body do it?<br/>not 'is the slot free'"]
+        Q4["4 · Will it fit, and will it fire?<br/>first move pre-done, or it never starts"]
+    end
+
+    subgraph OUT["What it writes — two things, nothing else"]
+        LIST["YOUR TASK LIST<br/>the system's entire memory<br/>no database · no cache · no hidden file<br/>you tick a box = the instruction lands"]
+        CARD["ONE CARD, ONCE A DAY<br/>your day + an honest footer:<br/>what it closed, what it refused to create,<br/>what it could not reach"]
+        NOSEND["It cannot send email<br/>drafts only — enforced by the<br/>absent tool, not by a promise"]
+    end
+
+    LAW --> GATE
+    PROF --> GATE
+    STATE --> Q1
+    CAL --> Q1
+    IN --> Q1
+    INT --> Q1
+    EV --> Q1
+    Q1 -->|"most things<br/>die here"| Q2
+    Q2 --> Q3
+    Q3 --> Q4
+    Q4 --> LIST
+    Q4 --> CARD
+    Q4 -.-> NOSEND
+    LIST -.->|"your closes and placements<br/>are read back as law"| Q1
+
+    classDef law fill:#E6F1FB,stroke:#185FA5,color:#0C447C
+    classDef prof fill:#FAEEDA,stroke:#854F0B,color:#633806
+    classDef req fill:#E1F5EE,stroke:#0F6E56,color:#085041
+    classDef src fill:#F1EFE8,stroke:#5F5E5A,color:#2C2C2A
+    classDef gate fill:#EEEDFE,stroke:#534AB7,color:#3C3489
+    classDef out fill:#E1F5EE,stroke:#0F6E56,color:#085041
+
+    class LAW law
+    class PROF prof
+    class STATE,CAL req
+    class IN,INT,EV src
+    class Q1,Q2,Q3,Q4 gate
+    class LIST,CARD,NOSEND out

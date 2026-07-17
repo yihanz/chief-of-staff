@@ -1,0 +1,41 @@
+# ── THE ONLY RULE THAT MATTERS HERE ──────────────────────────────────────────
+# Your PROFILE is the one file with all your personal facts in one place.
+# It is NOT supposed to live in this repo — it belongs on your task list, as a
+# row labelled `cos-profile`. But if you ever fill the template in place, or
+# drop a copy here "just for a second", these patterns stop it reaching a public
+# remote. This is a guard, not a permission.
+PROFILE.md
+profile.md
+PROFILE-*.md
+**/PROFILE.md
+!references/PROFILE.template.md
+
+# A live MCP config points at YOUR machine's paths and may hold secrets.
+# The tracked file is mcp.example.json — that one is safe and inert.
+.mcp.json
+mcp.json
+!mcp.example.json
+
+# Secrets, in every shape people accidentally commit them.
+.env
+.env.*
+*.pem
+*.key
+*_rsa
+credentials.json
+token.json
+*.secret
+
+# Anything you were told to keep local.
+/local/
+/private/
+/scratch/
+*.local.md
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~

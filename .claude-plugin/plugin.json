@@ -1,0 +1,19 @@
+{
+  "name": "chief-of-staff",
+  "displayName": "Chief of Staff",
+  "version": "0.1.0",
+  "description": "An unattended chief-of-staff pass that sweeps your mail, messages, calendars, notes and task list, captures only what you actually owe, places it where it will physically fire, and renders one condensed daily brief. Tool-agnostic and progressive: it does the most with whatever you have connected.",
+  "author": {
+    "name": "Yihan Zhao"
+  },
+  "license": "SEE LICENSE FILE — personal use only, no resale, no redistribution, no organizational deployment",
+  "keywords": [
+    "chief-of-staff",
+    "daily-brief",
+    "task-management",
+    "calendar",
+    "inbox",
+    "personal-automation",
+    "executive-function"
+  ]
+}
