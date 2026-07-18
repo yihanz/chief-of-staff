@@ -1,0 +1,25 @@
+{
+  "dxt_version": "0.1",
+  "name": "imessage-fixed",
+  "display_name": "iMessage Fixed Reader",
+  "version": "1.2.0",
+  "description": "Read-only iMessage reader: fixes short-code handles + attributedBody decoding (Unicode-aware), adds thread enumeration, named-chat reads, and attachments. Stdlib-only, schema-aware, tested.",
+  "author": { "name": "Yihan Zhao" },
+  "license": "MIT",
+  "server": {
+    "type": "python",
+    "entry_point": "server/main.py",
+    "mcp_config": {
+      "command": "python3",
+      "args": ["${__dirname}/server/main.py"],
+      "env": {}
+    }
+  },
+  "tools": [
+    { "name": "imsg_read_thread", "description": "Read a thread by phone number or short code." },
+    { "name": "imsg_recent", "description": "Recent messages across all senders, read-state-independent." },
+    { "name": "imsg_search", "description": "Full-text search decoded message bodies." },
+    { "name": "imsg_list_threads", "description": "Enumerate recent conversations with counts and latest message." },
+    { "name": "imsg_read_chat", "description": "Read a named group chat or contact conversation." }
+  ]
+}

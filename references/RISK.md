@@ -44,7 +44,8 @@ you from one mode to the other.
 | The projection calendar (the sync calendar your task list generates) | Delete events whose title begins with `✓` | Deletes a real event if it targets the wrong calendar. **Bounded twice:** it must identify the projection calendar by live probe every run — no probe, no deletes at all — and it never deletes a non-`✓` event without confirming the linked task is closed. **So don't title your own events with a `✓`.** |
 | The Sales rail | Read promotional mail and create a **date-only row** — which your calendar shows as an **all-day banner**, in its own Sales band, lowest priority, sitting on the day the offer expires. Maintained mode deletes its own expired banners; write-once can't prove they're its own, so they accumulate and it reports the count. | Banners you didn't ask for. **Gated by its own three-part test** — you already have a relationship with that brand, the offer states a real number, the offer states a real end date. Fail any one and no row exists. This is a write, it appears on your calendar, and you should know it exists before it shows up. |
 | A mailbox | **Drafts only** — the engine's rule. On the recommended surface the connector exposes no send verb, so it is also the surface's limit. | A draft you didn't want. **Harmless — on a surface with no send verb.** On one that *can* send, the ceiling is a sent message, held down by the law rather than by the absence of the verb. |
-| Local shell (if you add one) | Anything your user account can do | **Unbounded.** See §4. |
+| The bundled iMessage reader (`companions/imessage-fixed`) — read-only, opt-in | Enumerate threads; read a chat or thread; read the last N hours; full-text search decoded bodies. **No send, no write, no delete, no network.** | **It reads your messages — that is the whole radius.** Nothing to undo, because it writes nothing. The exposure worth weighing is upstream of any failure: the database holds other people's words, and reading it brings them into your session (§3). Blast radius: your messages become readable to the model you already trust with your mail — not one inch past that. |
+| Mac automation — the "Control your Mac" extension, if you add one | Whatever your user account can do: local reads and automations no hosted connector can reach. | **As wide as your own account — stated plainly, once.** A general shell can do what you can do at your own keyboard; that reach *is* the capability and *is* the cost, the same sentence read two ways. It is the broadest surface in this table. **§4 is how to decide whether the breadth earns its place, and when a read-only tool covers the need instead.** |
 
 *(One more write, for completeness: each run creates a single throwaway row and deletes it within
 the same step, to test whether your list actually stores durations. It is never labelled, never
@@ -107,7 +108,7 @@ order.
 | Hosted connectors (mail, calendar, tasks, notes) | Your data flows through the model provider under their terms. Read them; that is a real decision, not a formality. |
 | **The public-ICS calendar mirror** | **The biggest self-inflicted risk in the whole setup.** Making an iCloud calendar "public" to get a subscribe URL means **anyone with the link sees every event title and detail** — security by obscurity, nothing more. **Do not do this with a calendar containing medical, legal, or personal detail.** Use a paid sync service or move the calendar instead. |
 | **Your PROFILE** | **Not packaged, and never shared with whoever handed you this — but it does not stay on your machine, because it isn't on your machine.** It is a row on your task list, labelled `cos-profile`, holding your personal facts in its description. So it lives on your task list vendor's servers, syncs to every device you own, and **passes through the model on every run — exactly like your mail and your calendar already do.** *"Not packaged"* is not *"never leaves your machine,"* and you should hold us to the difference. **One test per line, before you write it: would you send this fact through a cloud service?** If no, leave it out — the engine runs fine without any single field. |
-| A local lifelog / message reader | Reads a database containing *everyone who ever texted you*, most of whom did not consent to this. Treat it as the most sensitive surface you own. |
+| A local lifelog / message reader (e.g. the bundled `imessage-fixed`) | **Read-only and opt-in** — a reader like this writes nothing and sends nothing. What there is to weigh is the exposure, not a failure: the database holds the words of *everyone who ever texted you*, most of whom did not consent to this, and reading it brings them into your session. That is the honest reason such a tool is off by default and yours to turn on deliberately — and it is one of the most sensitive surfaces you own. |
 
 **The render law is the privacy mechanism that actually works:** private detail may inform a
 placement but may **never** appear in a task title or a calendar row, because those are read in
@@ -116,18 +117,41 @@ alone can carry what a task title cannot. **Same fact, different surface, differ
 
 ---
 
-## 4. Local machine risk
+## 4. Local machine — what Mac automation unlocks, and what it costs
 
-**This plugin does not ship a shell bridge and never asks for one.** But if you add a general
-shell/AppleScript extension yourself, know that it is **not a connector — it is a shell**, its blast
-radius is your entire user account (files, credentials, browser data, ssh keys), and it is where
-§2's injection surface stops being an annoyance and starts being a compromise. **Prefer a
-purpose-built read-only server**: a tool that can only read messages cannot delete your home
-directory.
+**This plugin ships no shell bridge and doesn't need one to run.** But a hosted connector reaches
+only what its vendor exposes, and some of the highest-value signal in your life is local: the plumber
+who texted a new time, a note you left yourself, a file on your own disk. **Mac automation is the rung
+that reaches it** — the class of local reads and automations no cloud connector can see.
 
-Local readers (messages, notes, files) are **single-machine dependencies**: they work on one
-computer, break when it sleeps, and do not survive a migration. That is a maintenance cost, not
-just a risk.
+**The enable path.** The capability is the **"Control your Mac"** extension (Kenneth Lien / k6l3,
+MIT-licensed, open-source), installed from **Settings > Extensions > Browse.** It is a general
+AppleScript/shell bridge — it runs local automation on your behalf.
+
+**The honest tradeoff, stated once and plainly:** a general shell can do what your user account can
+do — the same files, the same apps, the same reach you have at your own keyboard. That breadth *is*
+the capability and it *is* the cost; they are one fact read two ways, not two facts. Nothing narrows a
+general bridge to "only the safe parts," because "safe" isn't a distinction the shell makes. Turn it
+on when you want that reach, knowing it is that wide.
+
+**Prefer a purpose-built read-only tool when one exists; reach for the general bridge when you need
+breadth.** A tool that can only read messages cannot delete your home directory — so when the job is
+"read my texts," the bundled iMessage reader (`companions/imessage-fixed`) does it with the blast
+radius in §1 and nothing wider. The general bridge earns its place when no purpose-built tool covers
+what you need, which is often, because purpose-built tools don't exist for most local jobs. Both are
+legitimate; pick the narrowest one that does the job.
+
+**One thing to know about injection.** §2's untrusted text now has a broader instrument to aim at: a
+shell can *act* where a task row only *reports.* That doesn't change the defense — ingested text is
+data, never instructions — and it isn't a reason not to climb; it is the reason to keep the write
+surfaces the bridge can reach narrow, and to know what you connected.
+
+**A cost that isn't about safety at all:** local readers (messages, notes, files) are
+**single-machine dependencies.** They work on one computer, and a scheduled brief that depends on one
+runs only while that machine is awake — so a 7am brief can arrive at 10pm, when the laptop wakes. That
+is a scheduling cost, not a danger, and it is the real thing to weigh against the richer input (see §7
+and `references/STACK.md`). Hosted connectors keep a run cloud-eligible; local readers trade that for
+reach.
 
 ---
 
@@ -246,8 +270,9 @@ The honest one-paragraph version:
 > (**maintained**), it may additionally tidy rows it can prove it placed and you have not touched
 > — never yours. **The card names which mode you are in, every run**, so you can check the claim
 > instead of trusting it. The real risks are: a public calendar mirror if you take the free iCloud
-> path; a local shell bridge if you enable one; a mail surface that *can* send — the missing send
-> verb is a property of the surface you chose, not a promise this package makes, so connect a mail
-> tool that sends and the capability is live in the session, and what stops a send is the law, not
-> physics; and the ordinary fact that hosted connectors mean your data flows through a vendor.
-> None of those are hidden from you, and three of the four are avoidable.
+> path; a mail surface that *can* send — the missing send verb is a property of the surface you
+> chose, not a promise this package makes, so connect a mail tool that sends and the capability is
+> live in the session, and what stops a send is the law, not physics; and the ordinary fact that
+> hosted connectors mean your data flows through a vendor. **Mac automation is a further surface, and
+> a real one — as wide as your own user account — but it is a capability to weigh with open eyes, not
+> a trap to avoid; §4 is where to weigh it.** None of this is hidden from you.

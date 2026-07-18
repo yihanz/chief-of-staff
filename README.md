@@ -132,9 +132,10 @@ one that captures everything** — so the obligation gate defaults to doing noth
 drafts-only (and on the recommended mail surface there's no send verb at all, **which is a property
 of the surface you chose, not a promise this package makes**), and every rule about your decisions
 resolves toward leaving your stuff alone. The real risks are: a public calendar mirror if you take
-the free iCloud path, a local shell bridge if you enable one, a mail surface that *can* send if you
-choose one, and the ordinary fact that hosted connectors mean your data flows through a vendor. None
-of those are hidden from you, and three of the four are avoidable.
+the free iCloud path, a mail surface that *can* send if you choose one, and the ordinary fact that
+hosted connectors mean your data flows through a vendor — none of them hidden from you, and mostly
+avoidable. Mac automation is a further surface, as wide as your own account; it's a capability to
+weigh with open eyes, not a trap, and `references/RISK.md` §4 is where to weigh it.
 
 The long version is `references/RISK.md`. **Read it before you connect anything with write
 access.** It's the only document here you actually have to read.
@@ -219,8 +220,9 @@ your mail are **hosted connectors: you add each one once, in Claude's own connec
 it's live on every surface you use — including mobile, including the unattended 7am run.** Nothing
 about them is declared in a file here, and that's deliberate rather than missing: a connector named
 in a bundled file would be a *local* one, and a local one **pins your brief to a machine that has to
-be awake.** Hosted keeps the run cloud-eligible, which is strictly better than anything this package
-could ship. **The archive does contain `mcp.example.json` — it isn't loaded, it's named that on
+be awake.** Hosted keeps the run cloud-eligible, which for schedule reliability beats any local connector a
+bundled file could declare — a different question from the local *reach* the capability ladder below
+invites, which is a deliberate trade, not a downgrade. **The archive does contain `mcp.example.json` — it isn't loaded, it's named that on
 purpose, and it covers only that local kind. You don't need to open it.**
 
 ### On the free plan? You can have almost all of this.
@@ -332,8 +334,9 @@ missed run is survivable and a stale cache can never lie to you.
 
 ## Two things it needs. Everything else is whatever you already have.
 
-**There's no ladder here and no level you're on.** Two things are required, and they're required
-because nothing substitutes for them:
+**Two things are the floor. Everything above them is a ladder — and you're invited to climb it at
+your own pace, or stop at the floor, which is itself a real product and no one's idea of falling
+behind.** Two things are genuinely required, because nothing substitutes for them:
 
 | What it needs | Why there's no way around it |
 |---|---|
@@ -343,21 +346,47 @@ because nothing substitutes for them:
 **Those two are a real product, today.** The gate, the envelopes, placement by activation cost, the
 card — all of it runs on a task list and a calendar alone.
 
-**Everything else falls into three piles, and you might have five of something or none of it:**
+**Everything above the floor is a rung, and each rung buys something specific on the card. Here is
+the ladder and what climbing it actually changes** — you might have five of something or none of it,
+and there is no wrong number:
 
-- **Places other people can put something on you** — mail, a chat app, work assigned to you.
-  **Mail is the highest-leverage thing you can add:** without it the engine can only organize what
-  you already knew about; with it, it finds what you'd have missed.
-- **Places you write your own thinking** — a notes app, voice capture, a journal, **or nothing.**
-  Most people don't keep a second brain, and **nothing is a perfectly good answer.** If you already
-  email yourself notes, mail covers this and you're done.
+- **Mail — the highest-leverage rung, and the one to add first.** Without it the engine can only
+  organize what you already knew about; with it, it *finds* what you'd have missed. This is the
+  `09:00` reply-to-the-venue row arriving with its draft already in your inbox, and the receipts
+  reading *"Closed 1 — payment received, from the invoice thread."* Nothing else buys as much.
+- **Message reading — the bundled iMessage reader.** On the sample card, `read 6/7` is the engine
+  naming a blind spot out loud: *"iMessage didn't answer, so anything that moved a time by text is
+  unknown."* Add the reader this package ships (`companions/imessage-fixed`) and that line closes —
+  the plumber who texted a new time and the friend who moved dinner both get caught, and the coverage
+  token reads `read 7/7`. It's a first-class capability here, not a bolt-on: it fixes two real defects
+  in the stock iMessage connector on the way — short-code and bare-number handles that never matched,
+  and message text lost to `attributedBody` encoding — and it is **read-only: no send, no writes, no
+  network.** `companions/imessage-fixed/README.md` is its own doc. **Its cost is schedule, not
+  safety:** reading messages is local, so a brief that leans on it runs on a waking Mac (see the
+  honest cost below).
+- **A place you write your own thinking** — a notes app, voice capture, a journal, **or nothing.**
+  Buys capture of what you tell yourself. Most people don't keep a second brain, and **nothing is a
+  perfectly good answer;** if you already email yourself notes, mail covers this and you're done.
 - **Things that can prove a fact** — your sent mail, a message thread, a health record, a receipt.
-  Each closes **one** specific blind spot. Worth it only if it's a blind spot you actually have.
+  Each buys **one** closed loop: proof is what lets the engine *close* a row on evidence instead of
+  leaving it open. Worth it only for a blind spot you actually have.
+- **Breadth — Mac automation.** When what you need is local and no purpose-built tool covers it, the
+  general **"Control your Mac"** bridge reaches it: the widest rung, with the widest cost. The rule of
+  thumb is simple — prefer a purpose-built read-only tool (like the reader above) when one exists, and
+  climb to the general bridge when you need reach nothing else gives. `references/RISK.md` §4 is the
+  whole weighing.
 
-**None of the three is required and zero of any of them is legitimate.** The engine does the most it
-can with what's connected, then tells you in one line what it couldn't reach — that's the
-`read 6/7` on the card. A complete pass over whatever your stack is reads `sources 6/6`; the day a
-source goes dark, the number drops and the receipts name it.
+**The honest cost of the local rungs, kept in plain sight:** anything the engine reads *locally* —
+messages, local notes, files on your disk — pins that brief to a machine that is awake. A 7am run
+whose slot passes while the laptop sleeps arrives when it wakes, which is why a morning brief can
+land at night. Hosted connectors don't carry this cost; local reach trades schedule reliability for
+signal no cloud connector can see. **That's the trade, and it's yours to make** — climb for the
+signal, or stay hosted for the timing; both are legitimate.
+
+**None of the rungs is required, and any subset — including none of them — is legitimate.** The
+engine does the most it can with what's connected, then tells you in one line what it couldn't reach
+— that's the `read 6/7` on the card. A complete pass over whatever your stack is reads `sources 6/6`;
+the day a source goes dark, the number drops and the receipts name it.
 
 **Use whatever you already have.** If your task manager can't do something, the engine tells you
 which part degrades rather than demanding you switch. **A worse tool you actually open beats a
@@ -379,6 +408,9 @@ lists, one direction, never synced.** `references/STACK.md` has the full argumen
 - **`references/VOLATILE.md`** — when a price or a click path doesn't match what you see on screen.
 - **`references/PROFILE.template.md`** — only if you'd rather see the questions before you're
   asked. Setup fills it in with you; you don't need to open it.
+- **`companions/imessage-fixed/README.md`** — the bundled **read-only iMessage reader** this package
+  ships: the two stock-connector defects it fixes, its two-click Desktop-Extension install, and its
+  blast radius. A first-class capability, not an afterthought.
 - **`assets/architecture.svg`** (source: `assets/architecture.mermaid`) — the design on one page.
 - **`mcp.example.json`** — **you don't need to open it, and it's here for completeness.** It isn't
   loaded, and it describes only *local* servers, which your connectors aren't. See the connector

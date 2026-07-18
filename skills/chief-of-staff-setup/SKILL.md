@@ -1,6 +1,6 @@
 ---
 name: chief-of-staff-setup
-description: Set up, extend, troubleshoot, or remove the chief-of-staff system. Use when the user installs this plugin or says "set up my chief of staff", "get me started", "onboard me", "what do I need to connect", "how much does this cost", "can I use this on the free plan", "where is Cowork", "why isn't my brief running", "it recreated a task I deleted", "everything is an all-day banner", "add my calendar", "my calendar is iCloud", "I use Outlook", "I don't use Todoist — what else works", "my tasks are already in Linear or Jira", "my own work never gets a block", "where do I configure my connectors", "I uploaded the skill and nothing happened", "can it control my Mac", or "how do I uninstall this". Runs onboarding as a guided conversation — probe what exists and test whether it qualifies, not just whether it answers; run a real pass before asking for anything; build the profile by interview, their own work first; write it where the engine can reach it; teach the required behaviours; schedule the run.
+description: Set up, extend, troubleshoot, or remove the chief-of-staff system. Use when the user installs this plugin or says "set up my chief of staff", "get me started", "onboard me", "what do I need to connect", "how much does this cost", "can I use this on the free plan", "where is Cowork", "why isn't my brief running", "it recreated a task I deleted", "everything is an all-day banner", "add my calendar", "my calendar is iCloud", "I use Outlook", "I don't use Todoist — what else works", "my tasks are in Linear or Jira", "my own work never gets a block", "where do I configure my connectors", "I uploaded the skill and nothing happened", "can it control my Mac", "read my messages", or "how do I uninstall this". Runs onboarding as a guided conversation — probe what exists and test whether it qualifies, not just whether it answers; run a real pass before asking for anything; build the profile by interview, their own work first; write it where the engine can reach it; teach the required behaviours; schedule the run.
 ---
 
 # Setup — a guided onboarding, start to finish
@@ -830,22 +830,25 @@ system depends on it existing.
 
 ---
 
-## Phase 6 — What's next: two things this needs, and everything else is whatever you already have
+## Phase 6 — What's next: the floor works, now here's the ladder
 
-**They have a working thing now. Everything from here is earned, and nothing here is required.**
+**They have a working thing now — that's the floor, and the floor is already the product, not a demo.
+Everything from here is a rung they can climb: opt-in, one at a time. Nothing here is required, and
+the right number of rungs to climb is however many earn their cost.**
 
-**There is no ladder and there are no levels. Do not present one.** Someone with mail but no notes
-is not "on level one" — they are a person with mail and no notes, which is a completely ordinary
-way to be. **Say it in two sentences:**
+**Offer the ladder — don't withhold it, and don't dump it all at once.** The posture is an
+invitation: *your brief already works; here's how to make it see more.* Present the rungs, say what
+each one unlocks and what it honestly costs, and let them turn on the ones that are worth it to them.
+**Say it in two sentences:**
 
 > **This needs exactly two things: somewhere your tasks live, and a calendar.** You've got both —
 > that's why you already have a card.
 >
-> Everything after that is just *whatever you happen to have already.* There's no next level to
-> reach and nothing you're missing out on. **Some of it you'll have five of, some of it you'll have
-> none of, and none of it is required.**
+> Everything after that is a **rung you can climb whenever it's worth it to you** — each one lets me
+> see more of your life, and each one has a cost I'll name up front. Turn on one, or none, or all of
+> them over time. **It's yours, nothing here is required, and there's no wrong number to stop at.**
 
-### The two it actually needs
+### The floor — the two it actually needs
 
 | What it needs | Why there's no substitute |
 |---|---|
@@ -856,29 +859,40 @@ way to be. **Say it in two sentences:**
 cost, envelope math around appointments, and the ghost sweep. **That is not a demo. That is the
 product — and they've seen it, which was the point of Phase 1.**
 
-### The three kinds of everything-else — plural, optional, zero is a real answer
+### The ladder — each rung is a category, climb the ones that earn their cost
 
-**Ask what they already have. Never present these as a list to complete.** For each one: some
-people have five, some have none, and **none is a legitimate answer that needs no apology.**
+**This is the progressive part, and it's opt-in, not all-or-nothing.** Each rung below is a
+**category of capability** with a concrete example — what it unlocks on the card, what it honestly
+costs, and how to turn it on. **Offer them; invite; let them choose.** Some people climb five rungs,
+some climb none, and **none is a legitimate answer that needs no apology.**
 
-| The kind | What belongs in it | The honest pitch |
-|---|---|---|
-| **Places other people can put something on you** | Mail. A chat app. Work assigned to you. A portal that emails you. | **The highest-leverage thing you can add, and for most people that means mail.** Without it the engine can only organize what you already knew about; with it, it finds the thing you'd have missed. It's what changes the feeling from "tidy" to "covered." |
-| **Places you write your own thinking** | A notes app, voice capture, a journal — **or nothing.** | Your own hand is the best record of your intentions. **But most people don't keep a second brain, and that's fine.** What it finds in there depends entirely on how you write: if you write to think, it'll correctly leave nearly all of it alone; if you keep a bullet journal, nearly every line is a real move. **It reads all of it and tells you what it found — it never guesses in advance which kind of writer you are.** **If you already email yourself notes, you're done — mail covers this.** |
-| **Things that can prove a fact one way or the other** | Your sent mail, a message thread, a health record, a receipt. | Each one closes **one specific blind spot** — a text that moved a time, a visit that proves a loop closed. **Only worth it if that blind spot is one you actually have.** Ask; don't assume. |
+**Hold one line of discipline while you offer them — it's the same grain as their life-areas:** name
+the **category and an example**, never one person's exact stack. *Messages, and the reader this
+package ships. A lifelog, like a wearable or a journaling app.* Not "install this product and that
+one." **Whatever is actually large in their life is the rung that matters — turn on what maps to it.**
 
-**Two things to say plainly when they ask about the third row especially:**
+| Rung | What it unlocks (on the card) | The honest cost | How to turn it on |
+|---|---|---|---|
+| **Mail** | The highest-leverage rung, and for most people the first one worth climbing. Door one stops relying on what you already knew — it catches the obligation you'd have *missed*, the thing that turns the card from "tidy" to "covered." | Mailbox **read** access — and read is all there is: the connector reads and drafts, **it has no send.** **Hosted, so it costs the morning run nothing.** | Connect Gmail or Microsoft 365 — **Phase 7.** |
+| **Messages** | A text that quietly moved one of today's plans gets caught — the plumber who texted a new time, the friend who pushed dinner an hour. | **Local:** it reads the Messages database on your Mac, so a brief that leans on it runs when your Mac is awake (**Phase 5, decision 2**). And it reads words **other people sent you** — read-only, nothing written or sent, and it never leaves your machine except into a session you started. | **Two clicks — this package ships a fixed reader.** Phase 7, the messages rung. |
+| **Notes** | Your own written intent feeds the brief — the plan you wrote to yourself becomes a block the engine can protect, instead of a line nobody acted on. | Depends where you write. **Apple Notes is local** (waking Mac); **Notion is hosted** (no cost to the run). It reads **your own hand**, no one else's. *(Already email yourself notes? Mail covers this — don't climb a second rung for it.)* | Apple Notes: **Settings > Extensions > Browse.** Notion: its connector. **Phase 7.** |
+| **A lifelog** | What was actually *said*, not just what got written down — a commitment you made out loud that never made it to a note. | **A local corpus, so a waking Mac** — and a real **bystander cost:** a lifelog captures the words of everyone around you, and they didn't opt in. Weigh that honestly; it's the reason it's off by default. | Its own connector or extension — example: a wearable or a journaling app. |
+| **Health records** | Evidence for health tasks — a lab result that proves a loop closed, a flag that surfaces into appointment prep. | Sensitive data passing through your session. Worth it when a health blind spot is one you actually have. | Its connector — example: a health-records connector. |
+| **Mac automation** | Local reads and automations no hosted connector can reach — the general-purpose rung for whatever doesn't have a purpose-built tool yet. | A **general** capability (it can do what AppleScript can), and **local** (waking Mac). **When a purpose-built read-only tool already covers the job — like the messages reader above — prefer that; reach for this when you genuinely need the breadth.** | The **"Control your Mac"** extension — **Settings > Extensions > Browse.** Phase 7. |
 
-- **None of it is load-bearing.** The engine runs without any of it and tells you in one line what
-  it couldn't reach — that's the `read 5/6` on the card. A complete pass over whatever your stack
-  happens to be reads `sources 6/6`; **the day a source goes dark, the number drops and the
-  receipts name it.**
+**Two things to say plainly, every time a rung carries a local cost:**
+
+- **None of it is load-bearing.** The engine runs without any rung and tells you in one line what it
+  couldn't reach — that's the `read 5/6` on the card. A complete pass over whatever you've turned on
+  reads `sources 6/6`; **the day a source goes dark, the number drops and the receipts name it.**
 - **Anything that reads this machine puts the morning run at risk** — and the vendor's own docs
-  disagree about exactly how. That's the real price, it's invisible otherwise, and it's in
-  **Phase 5, decision 2.** Name it every time.
+  disagree about exactly how. That's the real price of the local rungs, it's invisible otherwise, and
+  it's in **Phase 5, decision 2.** Name it every time — as the honest cost of that rung, not as a
+  reason to skip it.
 
-**Where it runs — cloud or this machine — is a separate question with its own answer in Phase 5. It
-is not a level and it never was.**
+**Where a rung runs — cloud or this machine — is the cost column above, answered in full in Phase 5.
+It's not a separate level; it's the price of the local rungs, and it's theirs to weigh, not yours to
+decide for them.**
 
 ---
 
@@ -1366,57 +1380,81 @@ hand *wherever it already is*.
 | **A voice recorder / lifelog** | First-person transcripts only. |
 | **Nothing** | **Genuinely fine. Skip it.** Say it without a hint of disappointment. |
 
-#### The two that install somewhere else entirely — Apple Notes and iMessage
+#### Two Apple surfaces, two different doors — Apple Notes, and Messages
 
-**These two share an install door and nothing else. Do not let the shared door file them together.**
+**People lump these together because both are local Apple things. They answer different questions,
+and they install by different doors now — so keep them apart.**
 
 - **Apple Notes is a notes surface.** It belongs to the question this section is asking — *where do
-  you write your own thinking?*
-- **iMessage is not, and it never was.** It's a **thing that can prove a fact** — Phase 6's third
-  row. Somebody asking *"can it check what he actually said about moving the time?"* is asking
-  whether a claim can be settled, not where they keep their own hand. **They are on the wrong page,
-  and it isn't their fault: it's here only because it installs through the same door as Apple
-  Notes.** Answer the question they asked — one blind spot, closed, if it's a blind spot they
-  actually have — and price it there. **Never route someone to "your notes" because the tool they
-  named got filed under a heading.**
+  you write your own thinking?* You turn it on through the official extension in the browse directory.
+- **Messages is not a notes surface, and it never was.** It's a **thing that can prove a fact** —
+  Phase 6's messages rung. Somebody asking *"can it check what he actually said about moving the
+  time?"* is asking whether a claim can be settled, not where they keep their own hand. Answer the
+  question they asked — one blind spot, closed, if it's a blind spot they actually have. **And for
+  Messages, this package ships its own reader; nobody has to go hunting for it.**
 
-**Say this before they go looking in the connector list and can't find either one.** They're
-**extensions**, not connectors, and **a plugin cannot install one** — different channel, by design.
-**Both are official Anthropic extensions**; you're not sending them to a stranger's code.
+**Apple Notes — the official extension.** It's an **extension**, not a connector, so it isn't in the
+connector list, and **a plugin can't install one** — different channel, by design. It's an **official
+Anthropic extension**, so you're not running a stranger's code.
 
-- **Where:** **Settings > Extensions > Browse.** These are Anthropic-reviewed. **Read the current
-  path from VOLATILE.**
-- **iMessage additionally needs Full Disk Access**, which only they can grant, in macOS settings.
-- **Both are local**, so both put the morning run at risk — **Phase 5, decision 2.** Say it again
-  here, and say it in that shape: the docs disagree about the mechanism, not about the risk.
-- ⚠️ They **appear** to work on Claude Free, but that isn't documented anywhere — **don't promise
-  it.** If they're on Free, say "try it, it may work" and nothing stronger.
+- **Where:** **Settings > Extensions > Browse.** Anthropic-reviewed. **Read the current path from
+  VOLATILE.**
+- **It's local**, so it puts the morning run at risk — **Phase 5, decision 2.** Same shape as always:
+  the docs disagree about the mechanism, not about the risk.
+- ⚠️ It **appears** to work on Claude Free, but that isn't documented — **don't promise it.** On Free,
+  say "try it, it may work" and nothing stronger.
 
-#### "Can it control my Mac?" — the answer is no, and give them the reason
+**Messages — the fixed reader this package ships, installed in two clicks.** Claude's stock iMessage
+connector has two real defects that make it silently miss messages: it forced a `+1` prefix, so
+short-code and bare-number handles never matched, and it lost message text to `attributedBody`
+encoding. **This package bundles a read-only reader that fixes both**, and adds thread enumeration,
+named-chat reads, and attachments. It's MIT-licensed and self-contained.
 
-**Somebody will ask, and somebody will have already installed a general-purpose shell extension.**
-**Never recommend one. Never walk them through installing one.** Answer straight:
+- **Install (about two minutes):** double-click **`companions/imessage-fixed/imessage-fixed.dxt`** →
+  Claude Desktop opens and offers to install it → grant **Full Disk Access** (System Settings >
+  Privacy & Security > Full Disk Access > turn on **Claude**) → quit and reopen Claude Desktop. Then
+  ask *"list my recent iMessage threads"* to confirm it works.
+- **The full doc lives beside the tool** — **`companions/imessage-fixed/README.md`** covers every
+  tool, the build-it-yourself path, and the rest. Point them there rather than restating it.
+- **What it reads, said once so they can decide:** it opens your Messages database **read-only** — it
+  cannot send, edit, or delete anything, and there is no write path in the code. That database holds
+  **words other people sent you**; reading it makes those visible to the model in your session, on
+  your machine. Nothing leaves your computer except what you send into a session you started. That's
+  the honest fact, and it's the reason this is opt-in rather than on by default.
+- **It's local**, so it puts the morning run at risk — **Phase 5, decision 2.**
+- **Full Disk Access is a real macOS gate** you grant deliberately. Nothing — not this reader, not the
+  stock connector — can read Messages until you do, and that gate is macOS protecting you.
 
-> No — and I want to give you the actual reason rather than a policy voice.
->
-> Extensions **run fully unsandboxed on your machine, with full system permissions.** There's no
-> box around them. And that isn't a worry about what someone might find — it's the design. **Nothing
-> is watching an extension, on purpose**, because the trust model says an extension you installed
-> locally is one you chose to trust. **You are the sandbox.**
->
-> Which puts the whole weight on where its input comes from. Zero-click compromise of unsandboxed
-> extensions **via nothing but a malicious calendar invite** is a demonstrated class of attack, not a
-> theory — and the reason it keeps working is structural: **an invite is text a stranger writes into
-> your calendar, and an unsandboxed extension is code with no boundary around it.** Both halves stay
-> true no matter who patches what.
->
-> Now look at what this thing does every single morning: **it reads your calendar invites.** Strangers
-> put text in there. So handing that same run a general-purpose shell is the one combination I'm not
-> going to help you build.
+#### "Can it control my Mac?" — yes, and here's how to turn it on
 
-**If they already have one installed, that's their call and you don't lecture them** — but say what
-changes: it's a live rule about what the engine may touch, and the engine still never uses it to
-work around a missing capability. **Setup does not recommend it. That is the line.**
+**Somebody will ask, and the honest answer is yes — this is a rung on the ladder, and setup helps you
+climb it with your eyes open.** It unlocks **local reads and automations no hosted connector can
+reach** — the general-purpose capability for whatever doesn't have a purpose-built tool yet.
+
+**How to turn it on:** the **"Control your Mac"** extension. Install it through
+**Settings > Extensions > Browse** — it's listed in the official directory. **Read the current path
+from VOLATILE**, since that screen moves.
+
+**Represent it accurately, because it isn't an Anthropic-built tool:**
+
+> This one's **community-authored** — it's by Kenneth Lien (k6l3), it's **open-source and
+> MIT-licensed** (github.com/k6l3/osascript-dxt), and it's listed in Claude's official
+> **Settings > Extensions > Browse** directory. So you're not handing your Mac to a stranger's closed
+> binary — you can read every line of what it does — but it also isn't Anthropic's, and I'd rather you
+> know that than assume it.
+
+**Then one piece of honest guidance — informed choice, not a rule against it:**
+
+> It's a **general** capability: it can do what AppleScript can, which is a lot. That breadth is the
+> whole point when nothing purpose-built exists — and it's exactly why you'd reach for a
+> **purpose-built read-only tool first when one does.** For your messages, the reader this package
+> ships is precisely that: one job, read-only, can't do anything else. So prefer that for messages,
+> and turn to general Mac automation when you actually need the breadth. That's your call, and now
+> you've got what you need to make it.
+
+**If they've already got it installed, good** — the engine treats it as a live capability it may use,
+and still never reaches for it to paper over a connector they haven't set up. **Turning it on is a
+choice setup supports; which tool to use for a given job is theirs to make.**
 
 ---
 
@@ -1551,7 +1589,7 @@ one calendar. **That's the whole footprint, and now they've seen all of it.**
 | **"An event I made disappeared from my calendar"** | **Did you title it starting with `✓`?** On the calendar your task list projects onto, that's the ghost sweep's delete signal and it can't tell your event from a leftover. Nothing else there is ever deleted, and no other calendar is ever touched. |
 | **"It made a duplicate"** | The completed-row query is unavailable, or a create was retried. |
 | **"It moved a block I placed"** | **It should never do this, in either mode.** A row you placed or touched is yours, permanently. If your list records what wrote each row, this is a bug — report it. If it doesn't, the engine shouldn't have been editing *anything*, so it's a worse bug. Either way it's ours, not yours. |
-| **"Can it control my Mac / run shell commands?"** | **No, and setup won't help you add that.** Extensions run **unsandboxed with full system permissions** — by design, because the trust model treats what you installed as what you trust. **Zero-click compromise through a single calendar invite is a demonstrated class**, and this engine reads calendar invites for a living. Nothing about that combination depends on a patch. See Phase 7. |
+| **"Can it control my Mac / run shell commands?"** | **Yes — through the "Control your Mac" extension, and setup will help you turn it on.** It's community-authored by k6l3, open-source and MIT-licensed, and listed in the official **Settings > Extensions > Browse** directory — not an Anthropic-built tool, and read the current path from VOLATILE. It unlocks local reads and automations no hosted connector can reach. It's a **general** capability, so when a purpose-built read-only tool already covers the job — like the bundled iMessage reader — prefer that, and reach for general automation when you need the breadth. **Phase 7 has the enable path and the honest trade-off.** |
 | **"It says my calendar is clean and it isn't"** | Poll lag on a subscribed feed — hours on a public ICS link, minutes on a paid sync. The engine only sees what synced. |
 | **"Nothing shows up from my notes"** | **First, check the connector responded at all — an unread source and an empty one are different**, and only one of them is a bug. If it read them and found nothing, that is very often the right answer, **but not because "notes rarely contain tasks."** Whether your notes hold commitments is a fact about *you*: someone who writes to think has almost none, and someone who keeps a bullet journal has pages that are nearly all of them. **Every note in the window gets read and gets the same test; what comes back is a count, not an expectation.** So a quiet result is a finding about your notes — never a prediction about notes. |
 | **"It's asking about things I already decided"** | The parked row isn't being read, or the decision never landed on the list. **Decisions live on the list, not in chat.** |

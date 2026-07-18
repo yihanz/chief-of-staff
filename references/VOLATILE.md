@@ -621,6 +621,44 @@ Access**. **Source:** https://support.claude.com/en/articles/10065433-install-cl
 *Why this matters here:* extensions are the one capability a **Free** user can have that a plugin
 user cannot, and they are also the one that forfeits the overnight run — see Scheduling below.
 
+### "Control your Mac" — a community osascript extension (NOT Anthropic-built)
+
+**Added 2026-07-17.** A third-party Desktop Extension that runs AppleScript on your Mac through
+`osascript`. Recorded here because it is the general-purpose AppleScript bridge some people already
+have installed, and it can stand in for AppleScript-driven readers (Apple Notes, Reminders, Messages)
+in one extension. **Everything below except the in-app directory listing was verified from the
+extension's own `manifest.json` and its public repo on 2026-07-17.**
+
+- **Display name:** **"Control your Mac"** — the manifest's `"name"`. Its `"description"` is
+  *"Execute AppleScript to automate tasks on macOS."*
+- **Author:** **Kenneth Lien** (GitHub **k6l3**, homepage kennethlien.com) — an individual developer.
+  **Community-authored, NOT built by Anthropic.** The repo lives under a personal account, not the
+  `anthropics` org; the manifest only references Anthropic's `dxt` tooling as the *build* mechanism.
+- **License:** **MIT** — manifest `"license": "MIT"`, and the repo carries an MIT license.
+- **Open-source:** **https://github.com/k6l3/osascript-dxt** — confirmed resolving on 2026-07-17
+  (public, 156 stars; the single tool it exposes is `osascript`, described as *"Execute `osascript -e
+  <script>`"*).
+- **What it does:** executes arbitrary AppleScript through macOS `osascript`, so it can drive
+  scriptable apps and change system settings on the machine.
+- **Install:** the Desktop-Extension channel — **Claude Desktop → Settings → Extensions → Browse.**
+- **⚠ NOT VERIFIED — the directory listing itself.** That it appears in the Anthropic-reviewed
+  **Browse extensions** directory is reported but could **not** be confirmed from the manifest, the
+  repo, or a web search on 2026-07-17 (the Browse directory is in-app and not web-indexed). **Confirm
+  it in-app** at Settings → Extensions → Browse before telling anyone it is listed there. The
+  authorship, license, open-source URL, and osascript behaviour above **are** verified; only the
+  in-app listing is not.
+
+*Why this matters here:* an extension that can run arbitrary AppleScript is a broad capability, and it
+is **local** — so the capability ladder's schedule cost applies (a brief that leans on it runs on a
+waking Mac), and the same caution any "let a model drive my machine" capability deserves applies too.
+Being installable from the Browse directory, if confirmed, is a distribution fact — **not** an
+authorship or endorsement one.
+
+**Sources:**
+- Manifest (name, author, license, `osascript` tool):
+  https://raw.githubusercontent.com/k6l3/osascript-dxt/main/manifest.json
+- Repository (public, MIT, community-authored): https://github.com/k6l3/osascript-dxt
+
 ---
 
 ## Scheduling — where a task runs

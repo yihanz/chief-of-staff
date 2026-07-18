@@ -1,7 +1,8 @@
 # The stack — what this needs, what each piece does, and what substitutes for it
 
-> **Where it runs is a picture:** `assets/where-it-runs.mermaid` — the cloud-vs-local fork, and why
-> every local reader you add costs you the schedule. Read it beside the cloud/local section below.
+> **Where it runs is a picture:** `assets/where-it-runs.mermaid` — the cloud-vs-local fork, and what
+> each local reader you add gains you as well as what it costs the schedule. Read it beside the
+> cloud/local section below.
 
 Everything about connectors in one place: what each role is for, what actually fills it, what
 happens when you swap something out, and what provably cannot be bundled.
@@ -506,16 +507,18 @@ at the self-sent thread and **skip a connector entirely.** No new app, no new pe
 subscription, no schedule cost. **For a large number of people this is the correct answer and they
 should not be talked out of it.**
 
-**Continuous recorders: most people should not add one, and setup should say so without a hint of
-disappointment.** What one buys is **corroboration, not capability** — the commitment you made out
-loud that left no written trace. The engine still finds every obligation that *did* leave one, which
-is nearly all of them, so the blind spot is narrow. What it costs is paid by other people: **it
-records anyone who happens to be in the room, including people who never interacted with you, in
-places where they had every reason to assume they weren't being recorded.** `RISK.md` covers a
-message reader — a database of everyone who ever texted you. **This is broader and sharper:** a
-message reader captures people who *chose* to write to you. **That is a decision about other people,
-made without them, and it should be made deliberately or not at all.** **"Nothing" is the right
-answer for the large majority.**
+**Continuous recorders: a real but narrow gain whose cost is paid by other people, so it is a
+deliberate choice rather than a default one.** What one buys is **corroboration** — not a new class of
+obligation the engine can find, but the commitment you made out loud that left no written trace. The
+engine already finds every obligation that *did* leave one, which is nearly all of them, so this rung
+is narrow but genuine: it catches the spoken word nothing else kept. What it costs is paid by other
+people: **it records anyone who happens to be in the room, including people who never interacted with
+you, in places where they had every reason to assume they weren't being recorded.** `RISK.md` covers
+a message reader — a database of everyone who ever texted you. **This is broader and sharper:** a
+message reader captures people who *chose* to write to you; a recorder captures people who did not.
+**That is a decision about other people, made without them — so make it deliberately, with their
+interests in view.** If you want the corroboration and can carry that cost honestly, enable it; if
+not, the engine runs fine without it.
 
 **One engine constraint, and it binds every `~~evidence[]` member:** the engine ingests
 **first-person** content only, and **never treats an AI-derived summary as a commitment.** A summary
@@ -537,8 +540,10 @@ Nothing to install. OAuth, one click, works on any machine, **and keeps the engi
 Both contracts have hosted options, and `~~intent[]` does too.
 
 **A build using only hosted connectors is the transfer-grade product.** It runs in the cloud, fires
-with the computer off, and installs in minutes. **This is what a novice should start with, and most
-people should stop here.**
+with the computer off, and installs in minutes. **This is the fastest path to a working brief and
+where everyone starts** — a complete product on day one, not a stepping stone you are meant to leave.
+**The local rungs below are there to climb whenever a capability is worth its cost to you** — the
+capability ladder under "Where it runs" lays out each one.
 
 ### Local servers and extensions — NOT bundlable, and machine-pinning
 
@@ -548,6 +553,20 @@ people should stop here.**
 | **Apple Notes** | Desktop Extension, AppleScript | Same channel problem; macOS-only; needs automation permission. |
 | **A local notes server** (e.g. Reflect) | An **HTTP server the notes app itself runs** on a loopback port | The dependency is *the app running on your machine.* A plugin cannot ship another vendor's desktop app. |
 | **A lifelog server** (e.g. Bee) | A binary plus virtualenvs holding **your own downloaded data** | The venv is not a library — it is your corpus. Shipping it would ship your life. |
+
+**The one message reader this package DOES ship — and it is a first-class source, not a fallback.**
+`companions/imessage-fixed/` is a read-only, MIT-licensed, Python-standard-library-only iMessage
+reader included in the package. It exists because the stock connector has two defects that make it
+miss real messages: **(a)** short-code and bare-number handles never matched — the stock reader
+forces a `+1` prefix, so a 2FA code from `123456` or a number saved without `+1` came back empty;
+**(b)** message text was lost when Messages stored the real sentence in an `attributedBody`
+typedstream and left the `text` column empty or holding only a URL. It fixes both, and adds **thread
+enumeration, named-chat reads, and attachment filenames.** That is what turns messages into a real
+`~~inbound[]` and `~~evidence[]` source — the thing the brief reads to answer *"did a text move one
+of today's plans?"* **It still installs through the extension channel** (double-click the bundled
+`.dxt`) **or runs as a raw local MCP server** — either way it is local, so the ladder's schedule cost
+applies. **Install and tool detail live in `companions/imessage-fixed/README.md`; this file does not
+restate them.**
 
 ### What CAN legitimately be bundled
 
@@ -575,12 +594,13 @@ claiming otherwise is lying about what a zip file can do.
 | **Access to local files/apps** | **No** | **Yes** |
 | MCP servers | connectors on your Claude account | config files + connectors |
 
-**⚠️ THE MECHANISM UNDER THIS TABLE IS NOT SETTLED, AND THIS SECTION USED TO PRETEND IT WAS.** This
-file previously quoted *"If a scheduled task requires local files or apps, it will only run locally"*
-as **the reconciling rule**. **That sentence is real. The same Anthropic article also says scheduled
-tasks "can't be tied to a folder on your computer."** Both quotes, both URLs, and the reasons not to
-resolve it by picking a side are **in VOLATILE, under Scheduling.** **Do not quote either sentence as
-the rule until someone probes it.**
+**⚠️ THE MECHANISM UNDER THIS TABLE IS NOT SETTLED.** Anthropic's own scheduled-tasks article
+contradicts itself on local-folder binding. One sentence reads *"If a scheduled task requires local
+files or apps, it will only run locally"*; the same article also says a scheduled task *"can't be
+tied to a folder on your computer."* **Both are real, and they cannot both be the whole rule.** Both
+quotes, both URLs, and the reasons not to resolve it by picking a side are **in VOLATILE, under
+Scheduling.** **Probe it before relying on either reading; quote neither sentence as the rule until
+someone does.**
 
 **What survives the contradiction — and it is the whole recommendation, so this section loses nothing
 that matters:**
@@ -608,16 +628,23 @@ reader makes the schedule safer.** So:
 and the setup skill. **Neither is this file's to edit.** Whoever owns them should read VOLATILE's
 Scheduling entry before the next person quotes that sentence to a stranger as the rule.
 
-### The real cost of each local surface
+### The capability ladder — each local surface is a rung you can choose to climb
 
-| You gain | You pay |
-|---|---|
-| Messages: a text that moved a time | **Cloud eligibility.** The brief now depends on the laptop being awake. |
-| Lifelog: what was actually said | A local corpus to maintain, a sync that can rot, **and a privacy cost paid by other people** |
-| Local notes: your own hand | The notes app must be running |
+**A ladder, not a warning label.** Every rung adds something the hosted-only build cannot see, and
+every one carries a single honest cost. **Climb as far as the capability is worth to you** — the
+costs are printed here so you choose with your eyes open, not so you stay on the ground floor.
 
-**Recommendation: start with hosted connectors only. Add a local dependency only when you can name
-the blind spot it closes AND you accept a brief that fires on wake instead of on time.**
+| The rung | What you gain | What it costs — stated plainly |
+|---|---|---|
+| **Messages** | a text that moved a time — the plumber who pushed the appointment, the friend who moved dinner. The package ships a fixed reader for exactly this: `companions/imessage-fixed/`. | The brief runs on a **waking Mac** instead of the cloud. Worth it when the messages you want caught are worth a brief that waits for your laptop. |
+| **Local notes** | your own hand, at full fidelity | The notes app has to be running. |
+| **Lifelog** | what was actually *said* — the spoken commitment that left no written trace | A local corpus to maintain, a sync that can rot, **and a privacy cost paid by people in the room who did not consent.** A decision about other people; make it deliberately. |
+
+**How to climb: start wherever you like, add a rung the moment its gain is worth its cost, and stop
+wherever you want.** A hosted-only build is already a complete product — it runs in the cloud and
+fires with the computer off. Each rung above trades a piece of that reach for something the cloud
+cannot touch. **Name the gain, accept the cost, enable it. That is informed consent, not a dare —
+and nobody has to climb past the rung that serves them.**
 
 ---
 

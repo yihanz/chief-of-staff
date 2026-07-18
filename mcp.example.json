@@ -13,14 +13,18 @@
     "          corpus. Cannot install a Desktop Extension (.mcpb) — that is a SEPARATE CHANNEL,",
     "          enforced: admin controls can disable .mcpb installs while leaving plugins untouched.",
     "",
-    "SO: the iMessage reader is NOT bundled here, and it CANNOT BE. Neither can Apple Notes.",
-    "Both are Desktop Extensions. Install them at Settings > Extensions > Browse extensions.",
-    "iMessage additionally needs Full Disk Access, which only you can grant.",
+    "SO: Anthropic's STOCK iMessage extension and Apple Notes are Desktop Extensions — a plugin",
+    "cannot install them, and neither can this file. Install those at Settings > Extensions > Browse.",
     "",
-    "THE COST NOBODY TELLS YOU: every local server here PINS YOUR BRIEF TO A SLEEPING LAPTOP.",
-    "A scheduled task that needs local files or apps ONLY RUNS LOCALLY, and a local task is",
-    "SKIPPED when the machine is asleep. You trade the 7am brief for the corroboration.",
-    "Connect nothing here unless you can name the blind spot it closes and accept that trade.",
+    "BUT this package SHIPS its own fixed iMessage reader in companions/imessage-fixed/, and that one",
+    "is a plain Python (standard-library) server that CAN run as a raw local MCP server — see the",
+    "_imessage_fixed_reader example below. Either route needs Full Disk Access, which only you grant.",
+    "",
+    "THE HONEST COST: every local server here ties your brief to THIS machine — a scheduled brief",
+    "that depends on it runs on a waking Mac, not the cloud, so it fires on wake instead of on time.",
+    "(The vendor's own docs disagree on the exact mechanism; see references/VOLATILE.md, Scheduling.)",
+    "Enable a rung here when its capability is worth that trade: name the gain, accept the cost, turn",
+    "it on. That is the whole decision.",
     "See references/STACK.md and assets/where-it-runs.mermaid.",
     "",
     "NEVER PUT A SECRET IN THIS FILE. Anyone on the machine can read it. Use ${ENV_VAR}."
@@ -28,9 +32,17 @@
 
   "mcpServers": {
 
+    "_imessage_fixed_reader": {
+      "_what": "The package's own read-only iMessage reader (companions/imessage-fixed/) run as a raw local MCP server. Fills ~~inbound[] and ~~evidence[] slots — a text that moved a plan.",
+      "_alt": "ALTERNATIVE to the .dxt install: instead of double-clicking imessage-fixed.dxt, point a raw MCP config at server/main.py. Same code either way. Needs Full Disk Access, which only you can grant.",
+      "_honest": "Local: the Messages database lives on your Mac, so a scheduled brief that reads it runs on a waking Mac, not the cloud. Python standard-library only, no network, no writes.",
+      "command": "python3",
+      "args": ["/absolute/path/to/companions/imessage-fixed/server/main.py"]
+    },
+
     "_lifelog": {
       "_what": "A wearable that records your conversations. Fills an ~~evidence[] slot.",
-      "_honest": "There is no drop-in replacement and the blind spot is narrow. Most people should not add this. It also records everyone around you, most of whom did not consent.",
+      "_honest": "There is no drop-in replacement and the blind spot is narrow. It records everyone around you, most of whom did not consent, so it is a deliberate choice rather than a default one — enable it if the corroboration is worth that cost to the people in the room.",
       "_install": "Vendor's own installer, then its CLI. This plugin cannot install it.",
       "_why_example": "The paths below are examples. A venv path is not a library — it is one person's data corpus. The leading underscore documents; it does not disable — renaming this file to .mcp.json would make every entry here live.",
       "command": "/opt/homebrew/bin/EXAMPLE-lifelog-cli",
