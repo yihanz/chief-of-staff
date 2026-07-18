@@ -1174,6 +1174,28 @@ real counterparty and a real deadline, so the gate *passes* it — and rebuilds 
 killed. **Read the Someday project before you create anything. A parked row is a decision: never
 surface it, never nag it, never re-stage it.**
 
+**And it may already be done in the world — not just in the task system.** The three queries above
+ask the task list whether this loop already exists. They are blind to the fourth answer: **the move
+was already made in reality, and no row records it.** An inbound trigger — a request, a reminder, a
+"ready for you" notice — proves a thing was owed **when it was sent**; it never proves the thing is
+**still** owed now. **Before minting any loop from a trigger, verify it is still outstanding in the
+source that owns the current state — never in the trigger, which cannot know what they did after it
+left.**
+- **The ask and the answer travel different channels — that is the trap.** They are told "email us
+  the photos"; they *email* the photos, and the originating thread stays silent. A reply / submit /
+  pay / confirm request → their own sent record and the counterparty's acknowledgement. A fulfillment
+  notice ("ready for pickup," "out for delivery") → the fulfillment record, or their word. Reading
+  the channel the trigger arrived on, seeing nothing, and calling the loop open is not checking — it
+  is re-reading the envelope (§10).
+- **This is the same shape as the Someday rule above.** A live obligation dies two ways, and both
+  still name a counterparty and a clock, so both pass the positive test: they **did it** (discharged),
+  or they **decided against it** (parked). Someday guards the second; this guards the first.
+  **Still-owed is a separate fact from was-owed — owned by the record of what they actually did, never
+  by the party who made the request (I0).**
+- **Creation-time only, never a patrol.** This tests a candidate loop before it is written. It is
+  never licence to re-audit an existing row or reopen a close — their word is closure (§9) stands
+  untouched.
+
 ### Closure — theirs, and yours
 
 - **Their action is the source that owns the fact — this is I0, not a courtesy.** On the question
@@ -1508,7 +1530,11 @@ every artifact it points at.
 - Metadata is not content, and it fails both ways. Under-calling and over-calling are one defect.
 - The cover text often names where the answer is. Listen to it.
 - **Read the thread forward to its latest message. Check for their own sent reply** before concluding
-  they still owe one.
+  they still owe one. **And the reply may not be in this thread — or even in this
+  channel.** If the message routed the answer elsewhere ("email us at X," "upload to the portal,"
+  "call this number"), the discharge lives in THAT channel, and a quiet originating thread proves
+  nothing. A request that arrived by SMS is discharged by the email it told them to send — read their
+  sent record before you write the row (§9's fourth existence-check).
 - **Attachments: read the content, not the filename.** An attachment can be evidentially empty, which
   you learn only by opening it. "Cannot fetch" is a capability claim — §13 says attempt it before you
   write it down.
