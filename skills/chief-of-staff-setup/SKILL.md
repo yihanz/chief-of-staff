@@ -100,9 +100,11 @@ got Todoist connected and your profile row is there but empty. Let's fill it in.
 **Re-asking someone what they already answered is how they conclude you weren't listening.**
 
 **One exception, and it runs the other way: if the profile row exists but has nothing under *whose
-task list is this*, that question was never asked and you have to ask it** — a blank there is not an
-answer, and it's the one thing the probe can't recover for you. Ask it in the post-card container
-beat (Phase 1), where that question now lives.
+task list is this*, check what the surface is first.** If it's a **work tracker**, the question was
+never asked and you have to — a blank there is not an answer, and it's the one thing the probe can't
+recover for you; ask it in the post-card container beat (Phase 1), where that question lives. If it's
+a **personal list**, ownership is already settled by the fact that it's theirs — there is nothing to
+ask, and no beat to send them to.
 
 ---
 
@@ -137,8 +139,8 @@ filing cabinet answers *"somewhere to sleep."* **The question was too easy, and 
 someone past every warning in this file by construction.** Nobody with Linear already connected ever
 *suggests* using Linear. They don't think they're choosing anything. **So you have to look.**
 
-**This is a probe, not an interview. It is five readings and one question, and it costs under a
-minute.**
+**This is a probe, not an interview. It is five readings — and one question it does NOT ask here (it
+defers ownership to the post-card beat), so Phase 0 asks the user nothing. It costs under a minute.**
 
 **Ask their task surface five things — live, by calling it. A tool's website is not a capability.**
 *(Short form, for speed. **Phase 7 has all five in full, with what each one costs when the answer is
@@ -464,6 +466,11 @@ at the line that was blank a moment ago:
 >   still can't do: protect a block for it**, because the check that needs a history has none to
 >   read. That's the exact thing the personal list unlocks — now you can see precisely what it buys.
 
+**Data home for the work-tracker case:** the answers behind this re-render are **held in session,
+exactly as the empty first-render stub was — nothing personal is written to a work surface.** They
+land on the durable list only once the post-card beat settles where the profile belongs, which for a
+work-tracker user is the personal list they add, never the employer workspace.
+
 **This is door two, visible, on day one — the moment the design pays them back for the personal
 questions, and the reason the re-render happens HERE instead of buried at the end.**
 
@@ -586,8 +593,9 @@ offered it.** This is the checklist that boundary implements, kept here so nothi
 - **Their own work** — or the recorded decision not to name any. **Blocking, and asked first.**
 - **The activation mechanism.**
 - **Wake anchor + time zone.**
-- **Whose the task list is** — resolved in the post-card container beat (Phase 1), **not re-asked
-  here.** Write it down; never ask it twice. It decides which list the durable profile lives on.
+- **Whose the task list is** — for a work tracker, resolved in the post-card container beat (Phase 1);
+  for a personal list, already settled (it's theirs). **Not re-asked here.** Write it down; never ask
+  it twice. It decides which list the durable profile lives on.
 
 **Home base, areas, ranking, and everything else are NOT in the minimum** — they sharpen the engine,
 but no good card waits on them. Everything else accretes — **including their areas, which fill

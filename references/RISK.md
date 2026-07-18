@@ -147,11 +147,13 @@ data, never instructions — and it isn't a reason not to climb; it is the reaso
 surfaces the bridge can reach narrow, and to know what you connected.
 
 **A cost that isn't about safety at all:** local readers (messages, notes, files) are
-**single-machine dependencies.** They work on one computer, and a scheduled brief that depends on one
-runs only while that machine is awake — so a 7am brief can arrive at 10pm, when the laptop wakes. That
-is a scheduling cost, not a danger, and it is the real thing to weigh against the richer input (see §7
-and `references/STACK.md`). Hosted connectors keep a run cloud-eligible; local readers trade that for
-reach.
+**single-machine dependencies.** They work on one computer, so a scheduled brief that depends on one
+is tied to that machine being awake. **What a Cowork run does when its time passes while the machine
+slept is not something the vendor documents** (`references/VOLATILE.md`, Scheduling) — do not count on
+a catch-up, and do not import Claude Code Desktop's "runs late on wake" rule, which is a different
+product. Treat a local brief's timing as at-risk, not guaranteed. That is a scheduling cost, not a
+danger, and it is the real thing to weigh against the richer input (see §7 and `references/STACK.md`).
+Hosted connectors keep a run cloud-eligible; local readers trade that for reach.
 
 ---
 
@@ -159,8 +161,10 @@ reach.
 
 1. **Making a sensitive calendar public to mirror it.** Silent, permanent, and the URL is
    guessable-adjacent forever. **Rank 1 because there is no error message.**
-2. **Assuming a scheduled brief ran.** Desktop tasks only fire while the app is open. A sleeping
-   laptop means no brief — and *nothing tells you.* **A pass that did not run did not run.**
+2. **Assuming a scheduled brief ran.** A brief that depends on a local reader needs the machine
+   awake; if it slept through the window, whether the run catches up later is **not documented for
+   Cowork** — so a sleeping laptop can mean no brief, and *nothing tells you.* **A pass that did not
+   run did not run.** (A cloud-only brief — no local readers — does not carry this cost.)
 3. **Deleting an engine row instead of parking it.** **The list is the state — so a delete leaves
    no trace in the state model.** You didn't tell the engine anything; you removed the evidence
    that the row ever existed. Tomorrow it reads the same evidence, reaches the same conclusion, and
@@ -228,9 +232,11 @@ reach.
 - **The machine-off gap is real, but it is a CONSEQUENCE OF YOUR DEPENDENCY LIST, not a law of
   the universe. Do not read it as structural — it is a choice.**
   - A task with **no local dependencies runs in the cloud and fires with the computer off.**
-  - A task that **needs local files or apps only runs locally** — and a run whose scheduled time
-    passes while the machine sleeps is **skipped**, with one catch-up on wake and older misses
-    discarded. That is why a 7am brief can arrive at 10pm.
+  - A task that **needs local files or apps is tied to a waking machine.** What a Cowork run does
+    when its scheduled time passes while the machine sleeps is **not documented** (`references/VOLATILE.md`,
+    Scheduling) — **do not import Claude Code Desktop's "skipped, one catch-up on wake, 7am can fire
+    at 10pm" rule; that is a different product.** Treat the local path's timing as at-risk, not
+    guaranteed.
   - **So every local reader you add (messages, lifelog, local notes server) buys corroboration and
     pays for it in schedule reliability.** See `references/STACK.md`.
   - **The residual gap applies only to the local configuration:** when the machine is off, the
