@@ -364,10 +364,11 @@ and there is no wrong number:
   naming a blind spot out loud: *"iMessage didn't answer, so anything that moved a time by text is
   unknown."* Add the reader this package ships (`companions/imessage-fixed`) and that line closes —
   the plumber who texted a new time and the friend who moved dinner both get caught, and the coverage
-  token reads `read 7/7`. It's a first-class capability here, not a bolt-on: it fixes two real defects
-  in the stock iMessage connector on the way — short-code and bare-number handles that never matched,
-  and message text lost to `attributedBody` encoding — and it is **read-only: no send, no writes, no
-  network.** `companions/imessage-fixed/README.md` is its own doc. **Its cost is schedule, not
+  token reads `read 7/7`. It's a first-class capability here, not a bolt-on: it fixes real defects in
+  the stock iMessage connector on the way — most importantly it **reads the messages you sent**, which
+  the stock reader drops by ~95% (your sent side has no handle to join on), plus short-code handles,
+  text lost to `attributedBody` encoding, and blank Apple Cash messages — and it is **read-only: no
+  send, no writes, no network.** `companions/imessage-fixed/README.md` is its own doc. **Its cost is schedule, not
   safety:** reading messages is local, so a brief that leans on it runs on a waking Mac (see the
   honest cost below).
 - **A place you write your own thinking** — a notes app, voice capture, a journal, **or nothing.**
@@ -420,8 +421,9 @@ lists, one direction, never synced.** `references/STACK.md` has the full argumen
 - **`references/PROFILE.template.md`** — only if you'd rather see the questions before you're
   asked. Setup fills it in with you; you don't need to open it.
 - **`companions/imessage-fixed/README.md`** — the bundled **read-only iMessage reader** this package
-  ships: the two stock-connector defects it fixes, its two-click Desktop-Extension install, and its
-  blast radius. A first-class capability, not an afterthought.
+  ships: the stock-connector defects it fixes (starting with reading your own sent messages), its
+  two-click Desktop-Extension install, and its blast radius. A first-class capability, not an
+  afterthought.
 - **`assets/architecture.svg`** (source: `assets/architecture.mermaid`) — the design on one page.
 - **`mcp.example.json`** — **you don't need to open it, and it's here for completeness.** It isn't
   loaded, and it describes only *local* servers, which your connectors aren't. See the connector

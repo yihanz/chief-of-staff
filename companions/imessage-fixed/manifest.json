@@ -2,8 +2,8 @@
   "dxt_version": "0.1",
   "name": "imessage-fixed",
   "display_name": "iMessage Fixed Reader",
-  "version": "1.2.0",
-  "description": "Read-only iMessage reader: fixes short-code handles + attributedBody decoding (Unicode-aware), adds thread enumeration, named-chat reads, and attachments. Stdlib-only, schema-aware, tested.",
+  "version": "1.4.0",
+  "description": "Read-only iMessage reader that reads BOTH sides of a conversation — the stock reader silently drops ~95% of the messages you send. Also fixes short-code handles and attributedBody decoding, surfaces Apple Cash / payment messages, and adds thread enumeration, named-chat reads, and attachments. Stdlib-only, schema-aware, tested.",
   "author": { "name": "Yihan Zhao" },
   "license": "MIT",
   "server": {

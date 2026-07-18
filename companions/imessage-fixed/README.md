@@ -1,34 +1,59 @@
 # iMessage Fixed Reader
 
 A read-only iMessage reader for Claude on macOS. It exists because the stock
-iMessage connector has two defects that make it miss real messages, and this
-fixes both. It is independently useful — you do not need the chief-of-staff
-brief to want it — and it is what that brief reads when it asks "did a text
-move one of today's plans?"
+iMessage connector has defects that make it miss real messages, and this fixes
+them. It is independently useful — you do not need the chief-of-staff brief to
+want it — and it is what that brief reads when it asks "did a text move one of
+today's plans?"
 
 MIT-licensed and self-contained: one Python file, standard library only, no
-network, no writes.
+network, no writes. It ships with a 40-case test suite (`test_reader.py`, run it
+with `python3 test_reader.py`) covering the sent-side fix, handle matching,
+decoding, payments, exclusions, schema variants, malformed-input survival, and
+the JSON-RPC lifecycle.
 
 ---
 
 ## What it fixes
 
-**1. Short-code and bare-number handles never matched.** The stock reader
+**1. It reads the messages you SENT — the stock reader drops almost all of them.**
+This is the big one. In the Messages database, a message you send is stored with
+`handle_id = 0` (there's no external "sender" — it's you). Any reader that finds
+messages by joining on `handle_id`, as the stock one does, therefore discards
+your entire side of every conversation. Measured on a real 207,000-message
+database: of 92,925 sent messages, the old join returned **5,005** — it was
+losing **95%** of everything the owner had ever said. A conversation read that
+way is half a transcript, and you cannot tell who said what. This reader resolves
+a thread through its **chat membership** instead of the handle, and `LEFT JOIN`s
+everywhere, so sent and received both come back, each marked `from_me`. On that
+same database it now returns all **92,925**.
+
+**2. Short-code and bare-number handles never matched.** The stock reader
 forces a `+1` country prefix onto the handle it queries, so a two-factor code
 from `123456`, or a number saved without `+1`, returned nothing — the message
 was there and the tool said empty. This matches the handle in every shape it
 actually takes: exact, `+1`-prefixed, and de-prefixed.
 
-**2. Message text was lost to encoding.** Modern Messages often stores the
+**3. Message text was lost to encoding.** Modern Messages often stores the
 real sentence in an `attributedBody` blob (an NSArchiver typedstream) and
 leaves the `text` column empty or holding only a URL. The stock reader returned
 the raw hex or the bare URL — the actual words gone. This decodes the
 typedstream properly (Unicode-aware, multi-paragraph safe) and prefers
 whichever source is more complete.
 
-It also adds what the stock reader lacks: **thread enumeration** (discover who
-has been messaging you without knowing their number first), **named-chat reads**
+**4. Apple Cash and other app messages came back blank.** A payment or an
+iMessage-app message keeps its content in `payload_data`, not `text`, so it read
+as an empty line or vanished. Payments are now surfaced as `[Apple Cash: $50.00]`
+(the amount when it can be read cleanly, otherwise `[Apple Cash payment]`), and
+other app balloons get a short label instead of a blank.
+
+It also adds what the stock reader lacks: **thread enumeration** (discover which
+conversations are active without knowing a number first), **named-chat reads**
 (a group chat or contact by name), and **attachment filenames**.
+
+Reactions (tapbacks) and system rows (someone renamed the group, joined, left)
+are deliberately filtered out — they are not conversation, and for reading a
+thread they are noise.
 
 ---
 

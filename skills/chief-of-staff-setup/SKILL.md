@@ -1408,10 +1408,14 @@ Anthropic extension**, so you're not running a stranger's code.
   say "try it, it may work" and nothing stronger.
 
 **Messages — the fixed reader this package ships, installed in two clicks.** Claude's stock iMessage
-connector has two real defects that make it silently miss messages: it forced a `+1` prefix, so
-short-code and bare-number handles never matched, and it lost message text to `attributedBody`
-encoding. **This package bundles a read-only reader that fixes both**, and adds thread enumeration,
-named-chat reads, and attachments. It's MIT-licensed and self-contained.
+connector silently misses messages, and the worst case is the one that matters most for reading a
+conversation: **it drops almost everything you SENT** — a sent message is stored with no sender
+handle, and the stock reader finds messages by that handle, so it discards your whole side (measured
+on a real database: 5,005 of 92,925 sent messages returned — a 95% loss). It also forced a `+1`
+prefix so short-code and bare-number handles never matched, lost message text to `attributedBody`
+encoding, and returned Apple Cash messages blank. **This package bundles a read-only reader that
+fixes all of it** — both sides of every thread, short codes, decoded text, labeled payments — and
+adds thread enumeration, named-chat reads, and attachments. It's MIT-licensed and self-contained.
 
 - **Install (about two minutes):** double-click **`companions/imessage-fixed/imessage-fixed.dxt`** →
   Claude Desktop opens and offers to install it → grant **Full Disk Access** (System Settings >

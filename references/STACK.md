@@ -561,12 +561,17 @@ capability ladder under "Where it runs" lays out each one.
 
 **The one message reader this package DOES ship — and it is a first-class source, not a fallback.**
 `companions/imessage-fixed/` is a read-only, MIT-licensed, Python-standard-library-only iMessage
-reader included in the package. It exists because the stock connector has two defects that make it
-miss real messages: **(a)** short-code and bare-number handles never matched — the stock reader
-forces a `+1` prefix, so a 2FA code from `123456` or a number saved without `+1` came back empty;
-**(b)** message text was lost when Messages stored the real sentence in an `attributedBody`
-typedstream and left the `text` column empty or holding only a URL. It fixes both, and adds **thread
-enumeration, named-chat reads, and attachment filenames.** That is what turns messages into a real
+reader included in the package. It exists because the stock connector misses real messages, and the
+worst case decides it: **(a)** it drops the messages you SENT — a sent message has no sender handle
+(`handle_id = 0`), the stock reader finds messages by that handle, so it discards your whole side
+(measured on a real database: 5,005 of 92,925 sent messages returned, a 95% loss). This reader
+resolves a thread by its chat, not the handle, and returns both sides. **(b)** short-code and
+bare-number handles never matched — the stock reader forces a `+1` prefix, so a 2FA code from
+`123456` or a number saved without `+1` came back empty; **(c)** message text was lost when Messages
+stored the real sentence in an `attributedBody` typedstream; **(d)** Apple Cash / payment messages
+came back blank because the amount is in `payload_data`, now surfaced as a label. It fixes all of it,
+and adds **thread enumeration, named-chat reads, and attachment filenames** (reactions and system
+rows are filtered as noise). That is what turns messages into a real
 `~~inbound[]` and `~~evidence[]` source — the thing the brief reads to answer *"did a text move one
 of today's plans?"* **It still installs through the extension channel** (double-click the bundled
 `.dxt`) **or runs as a raw local MCP server** — either way it is local, so the ladder's schedule cost

@@ -86,8 +86,8 @@ line what it could not reach.
   people's words are visible in your session; it is read-only and never leaves your machine.
 - **Enable:** this repo ships a fixed reader — double-click
   `companions/imessage-fixed/imessage-fixed.dxt`, grant Full Disk Access, restart. Full
-  steps and the two stock-connector defects it fixes are in
-  `companions/imessage-fixed/README.md`.
+  steps and the stock-connector defects it fixes — starting with reading the messages you
+  sent, which the stock reader drops by ~95% — are in `companions/imessage-fixed/README.md`.
 - **Credential:** Full Disk Access (macOS gate, you grant it).
 
 ### Notes / second brain — `~~intent[]`
