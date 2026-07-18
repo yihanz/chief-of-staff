@@ -1434,10 +1434,9 @@ named-chat reads, and attachments. It's MIT-licensed and self-contained.
 climb it with your eyes open.** It unlocks **local reads and automations no hosted connector can
 reach** — the general-purpose capability for whatever doesn't have a purpose-built tool yet.
 
-**How to turn it on:** the **"Control your Mac"** extension — look for it in
-**Settings > Extensions > Browse.** That screen moves, and whether the extension is listed there is
-the one thing VOLATILE hasn't independently confirmed, so if it isn't in Browse its open-source repo
-has the install. **Read the current path from VOLATILE.**
+**How to turn it on:** the **"Control your Mac"** extension — install it from
+**Settings > Extensions > Browse**, where it's listed. That screen moves, so **read the current path
+from VOLATILE**; and if a directory ever drops it, its open-source repo carries the install too.
 
 **Represent it accurately, because it isn't an Anthropic-built tool:**
 
