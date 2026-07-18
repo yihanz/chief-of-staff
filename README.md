@@ -190,13 +190,19 @@ held would be worthless to you. See the licence note at the bottom.
 
 ## Install
 
-**This is distributed as a file — `chief-of-staff.plugin`. There's no marketplace for it yet, and
-no public link.** **Plugins also need a paid Claude plan** — Pro, Max, Team or Enterprise. **Skills
+**This is distributed as one file — `chief-of-staff.plugin` — from the public repo at
+github.com/yihanz/chief-of-staff. There's no Claude marketplace listing for it yet.** **Plugins
+also need a paid Claude plan** — Pro, Max, Team or Enterprise. **Skills
 don't.** If you're on Free, skip to the next section; you can have nearly all of this.
 
-1. Go to **claude.ai** → **Customize** → **Plugins**.
-2. Choose the option to **upload a custom plugin file**, and pick `chief-of-staff.plugin`.
-3. **If the picker refuses the file, rename it to `chief-of-staff.zip` and try again.** It's the
+1. **Get the file.** It's committed at the repo root as `chief-of-staff.plugin` — download that
+   one file. (Prefer to build it yourself, or the download looks stale? From a checkout of the repo,
+   one command rebuilds it: `zip -r chief-of-staff.plugin . -x '.git/*' 'chief-of-staff.plugin'
+   '*.DS_Store' '*__pycache__*'`. The build is the source of truth; the committed file is a
+   convenience copy of it.)
+2. Go to **claude.ai** → **Customize** → **Plugins**.
+3. Choose the option to **upload a custom plugin file**, and pick `chief-of-staff.plugin`.
+4. **If the picker refuses the file, rename it to `chief-of-staff.zip` and try again.** It's the
    same archive either way, and some pickers only accept `.zip`.
 
 **These screens move, and this one isn't in `references/VOLATILE.md`** — that file carries the dated,
@@ -377,9 +383,11 @@ and there is no wrong number:
   whole weighing.
 
 **The honest cost of the local rungs, kept in plain sight:** anything the engine reads *locally* —
-messages, local notes, files on your disk — pins that brief to a machine that is awake. A 7am run
-whose slot passes while the laptop sleeps arrives when it wakes, which is why a morning brief can
-land at night. Hosted connectors don't carry this cost; local reach trades schedule reliability for
+messages, local notes, files on your disk — takes that brief off the reliable cloud schedule and
+onto a machine that has to be awake. What a missed local run does *exactly* — catches up on wake, or
+just doesn't fire — the vendor's own docs don't settle for this kind of task, so treat a local
+brief's timing as at-risk rather than guaranteed (`references/VOLATILE.md` → Scheduling has both
+readings). Hosted connectors don't carry this cost; local reach trades schedule reliability for
 signal no cloud connector can see. **That's the trade, and it's yours to make** — climb for the
 signal, or stay hosted for the timing; both are legitimate.
 
@@ -457,8 +465,9 @@ if you breach it.** **It comes with no warranty and no liability** — an AI wri
 and task list unattended, it can be wrong, and what it does under your credentials is your
 responsibility.
 
-**There's no public link to send anyone yet.** The licence asks you not to pass copies around; if
-someone wants one, **point them at whoever sent this to you** rather than at your copy.
+**The source is public at github.com/yihanz/chief-of-staff.** If someone wants it, **send them
+there** rather than passing around or rehosting your own copy — the licence still forbids reselling
+it, mirroring it, or rolling it out across an organization.
 
 **And where `LICENSE` contradicts the Won't list above, it's contradicting it on purpose.** The
 licence says the agent can create, modify and delete entries in your task list and calendar, and can

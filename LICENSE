@@ -45,10 +45,12 @@ No fee is required. No registration is required.
       Software or for any work substantially derived from it.
 
   (b) REDISTRIBUTE. You may not publish, host, mirror, bundle, or otherwise
-      distribute the Software or a derivative of it to any third party. If
-      someone wants a copy, point them at whoever gave you yours. (There is no
-      public download at the time of writing; do not treat this clause as
-      requiring you to find one.)
+      redistribute the Software or a derivative of it to any third party. The
+      Software is source-available: the author's public repository at
+      https://github.com/yihanz/chief-of-staff is the one canonical copy, and
+      the fact that its source is publicly viewable there does not grant any
+      right to redistribute it. If someone wants a copy, point them at that
+      repository rather than passing around or rehosting your own.
 
   (c) DEPLOY ORGANIZATIONALLY. You may not install, provision, or operate the
       Software for or on behalf of an organization, team, or group — including
