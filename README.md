@@ -404,7 +404,10 @@ lists, one direction, never synced.** `references/STACK.md` has the full argumen
 ## The docs, and when to read them
 
 - **`references/RISK.md`** — before you grant write access. **The one required read.**
-- **`references/STACK.md`** — when you're picking a connector, or want to know what substitutes.
+- **`references/DEPENDENCIES.md`** — the whole menu: every connector this can use, which two you
+  need, and the exact way to turn each on. Start here when you're deciding what to enable.
+- **`references/STACK.md`** — the argument behind the menu: why each role matters and what
+  disqualifies a surface.
 - **`references/VOLATILE.md`** — when a price or a click path doesn't match what you see on screen.
 - **`references/PROFILE.template.md`** — only if you'd rather see the questions before you're
   asked. Setup fills it in with you; you don't need to open it.

@@ -663,8 +663,7 @@ authorship or endorsement one.
 
 ## Scheduling — where a task runs
 
-**FIRST, THE THING THIS SECTION USED TO GET WRONG: these are TWO DIFFERENT PRODUCTS and this file
-used to run them into one table.** **Cowork scheduled tasks** (`/schedule` in a Cowork task) are not
+**These are THREE DIFFERENT PRODUCTS — do not run them into one table.** **Cowork scheduled tasks** (`/schedule` in a Cowork task) are not
 **Claude Code Desktop scheduled tasks**, and neither is a **Claude Code cloud routine**. **This
 system's brief is a Cowork scheduled task.** The Claude Code rows below are a comparison, not this
 system's runtime — the catch-up rule and the "9am might run at 11pm" line are **Claude Code Desktop's
@@ -696,11 +695,11 @@ exception"* — **is reasoning, not a source.** No Anthropic page states which s
 plausible reconciliation written down as fact is exactly the failure this file exists to prevent**,
 and it would be a comfortable one, because the reading that suits this package is available.
 
-**What this package currently does with it, and why that is now a live risk.** *"If a scheduled task
-requires local files or apps, it will only run locally"* is quoted as settled law in **STACK's
-where-it-runs section**, in **setup**, and in **`assets/where-it-runs.mermaid`**. **That sentence is
-real and correctly transcribed — the problem is that the same article contradicts it**, so every
-place that quotes it as the reconciling rule is resting on one of two sentences that disagree.
+**Why this governs how the package may talk about scheduling.** *"If a scheduled task requires local
+files or apps, it will only run locally"* **is real and correctly transcribed — the problem is that
+the same article contradicts it.** So it must not be quoted anywhere as the reconciling rule: every
+place this package describes where a brief runs presents the contradiction and says to probe it,
+never this one sentence as settled law.
 
 **The honest posture, and it costs this package almost nothing:** the *architecture* survives either
 way. **Under EITHER sentence, a local dependency is what puts the brief at risk** — either it pins

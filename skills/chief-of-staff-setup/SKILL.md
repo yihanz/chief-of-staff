@@ -1,6 +1,6 @@
 ---
 name: chief-of-staff-setup
-description: Set up, extend, troubleshoot, or remove the chief-of-staff system. Use when the user installs this plugin or says "set up my chief of staff", "get me started", "onboard me", "what do I need to connect", "how much does this cost", "can I use this on the free plan", "where is Cowork", "why isn't my brief running", "it recreated a task I deleted", "everything is an all-day banner", "add my calendar", "my calendar is iCloud", "I use Outlook", "I don't use Todoist — what else works", "my tasks are in Linear or Jira", "my own work never gets a block", "where do I configure my connectors", "I uploaded the skill and nothing happened", "can it control my Mac", "read my messages", or "how do I uninstall this". Runs onboarding as a guided conversation — probe what exists and test whether it qualifies, not just whether it answers; run a real pass before asking for anything; build the profile by interview, their own work first; write it where the engine can reach it; teach the required behaviours; schedule the run.
+description: Set up, extend, troubleshoot, or remove the chief-of-staff system. Use when the user installs this plugin or says "set up my chief of staff", "get me started", "onboard me", "what do I need to connect", "how much does this cost", "can I use this on the free plan", "where is Cowork", "why isn't my brief running", "it recreated a task I deleted", "add my calendar", "my calendar is iCloud", "I use Outlook", "I don't use Todoist — what else works", "my tasks are in Linear or Jira", "my own work never gets a block", "where do I configure my connectors", "I uploaded the skill and nothing happened", "can it control my Mac", "read my messages", or "how do I uninstall this". Runs onboarding as a guided conversation — probe what exists and test whether it qualifies, not just whether it answers; run a real pass before asking for anything; build the profile by interview, their own work first; write it where the engine can reach it; teach the required behaviours; schedule the run.
 ---
 
 # Setup — a guided onboarding, start to finish
@@ -716,13 +716,12 @@ it. Don't ask twice.**
 | **Access to local files and apps** | **No** | **Yes, wherever it runs at all** |
 | Finest published cadence | hourly | — |
 
-**This section used to carry one vendor sentence as the rule that ties the two halves of setup
-together. It is not a rule — the vendor's own article contradicts itself about it, in the same
-article, and this package had been leaning on the half it liked.** **`references/VOLATILE.md` →
-Scheduling carries both positions, quoted, dated and sourced, with the probe that would settle it.
-Read it there. Do not restate it from here** — that is this file's own rule, and a contested vendor
-quote is the case it exists for. **Nobody has probed it yet, so quote neither sentence as the rule;
-quote the behaviour instead, and cite VOLATILE.**
+**Where a scheduled task runs is not a settled rule — the vendor's own article contradicts itself
+about it, in the same article.** **`references/VOLATILE.md` → Scheduling carries both positions,
+quoted, dated and sourced, with the probe that would settle it. Read it there. Do not restate it from
+here** — that is this file's own rule, and a contested vendor quote is the case it exists for.
+**Nobody has probed it yet, so quote neither sentence as the rule; quote the behaviour instead, and
+cite VOLATILE.**
 
 **And here is why the contradiction costs this conversation almost nothing.** The recommendation is
 the same under either reading:
@@ -879,6 +878,10 @@ one." **Whatever is actually large in their life is the rung that matters — tu
 | **A lifelog** | What was actually *said*, not just what got written down — a commitment you made out loud that never made it to a note. | **A local corpus, so a waking Mac** — and a real **bystander cost:** a lifelog captures the words of everyone around you, and they didn't opt in. Weigh that honestly; it's the reason it's off by default. | Its own connector or extension — example: a wearable or a journaling app. |
 | **Health records** | Evidence for health tasks — a lab result that proves a loop closed, a flag that surfaces into appointment prep. | Sensitive data passing through your session. Worth it when a health blind spot is one you actually have. | Its connector — example: a health-records connector. |
 | **Mac automation** | Local reads and automations no hosted connector can reach — the general-purpose rung for whatever doesn't have a purpose-built tool yet. | A **general** capability (it can do what AppleScript can), and **local** (waking Mac). **When a purpose-built read-only tool already covers the job — like the messages reader above — prefer that; reach for this when you genuinely need the breadth.** | The **"Control your Mac"** extension — **Settings > Extensions > Browse.** Phase 7. |
+
+**The complete named menu — the real tool for each rung, which two are required, and the exact
+enable path for every one — is `references/DEPENDENCIES.md`.** Keep the offer here at the category
+level; when they want "so what do I actually click," that file is the answer, not a recital from you.
 
 **Two things to say plainly, every time a rung carries a local cost:**
 
@@ -1431,17 +1434,17 @@ named-chat reads, and attachments. It's MIT-licensed and self-contained.
 climb it with your eyes open.** It unlocks **local reads and automations no hosted connector can
 reach** — the general-purpose capability for whatever doesn't have a purpose-built tool yet.
 
-**How to turn it on:** the **"Control your Mac"** extension. Install it through
-**Settings > Extensions > Browse** — it's listed in the official directory. **Read the current path
-from VOLATILE**, since that screen moves.
+**How to turn it on:** the **"Control your Mac"** extension — look for it in
+**Settings > Extensions > Browse.** That screen moves, and whether the extension is listed there is
+the one thing VOLATILE hasn't independently confirmed, so if it isn't in Browse its open-source repo
+has the install. **Read the current path from VOLATILE.**
 
 **Represent it accurately, because it isn't an Anthropic-built tool:**
 
-> This one's **community-authored** — it's by Kenneth Lien (k6l3), it's **open-source and
-> MIT-licensed** (github.com/k6l3/osascript-dxt), and it's listed in Claude's official
-> **Settings > Extensions > Browse** directory. So you're not handing your Mac to a stranger's closed
-> binary — you can read every line of what it does — but it also isn't Anthropic's, and I'd rather you
-> know that than assume it.
+> This one's **community-authored** — by Kenneth Lien (k6l3), and **open-source and MIT-licensed**
+> (github.com/k6l3/osascript-dxt). So you're not handing your Mac to a stranger's closed binary — you
+> can read every line of what it does — but it also isn't Anthropic's, and I'd rather you know that
+> than assume it.
 
 **Then one piece of honest guidance — informed choice, not a rule against it:**
 

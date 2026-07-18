@@ -27,7 +27,11 @@
     "it on. That is the whole decision.",
     "See references/STACK.md and assets/where-it-runs.mermaid.",
     "",
-    "NEVER PUT A SECRET IN THIS FILE. Anyone on the machine can read it. Use ${ENV_VAR}."
+    "NEVER PUT A SECRET IN THIS FILE. Anyone on the machine can read it. Use ${ENV_VAR}.",
+    "",
+    "THE NAMED MENU is references/DEPENDENCIES.md — every real connector (Todoist, Gmail, Bee,",
+    "Reflect, Hevy, health, notes, Mac automation), which are required, and the exact path to turn",
+    "each on. This file only shows the SHAPES a local server takes; that file tells you what to pick."
   ],
 
   "mcpServers": {
@@ -55,6 +59,15 @@
       "_substitute": "Notion (hosted, no local server), Apple Notes (extension), a folder of Markdown, or mail-to-yourself — which needs no connector at all because the mail role already covers it.",
       "type": "http",
       "url": "http://127.0.0.1:PORT/mcp"
+    },
+
+    "_npx_published_package": {
+      "_what": "The most common shape for a community connector: a published npm package launched with npx. Covers fitness logs (e.g. Hevy), a bridge to a notes app's local endpoint (mcp-remote), and most third-party MCPs. Fills whatever role the tool serves — often ~~evidence[].",
+      "_honest": "Runs locally, so a brief that depends on it pins to a waking Mac. The package is public; your API key is not — keep it in env, never in this file.",
+      "_install": "Nothing to install ahead of time — npx fetches the package on first run. You still need the account and key from the vendor.",
+      "command": "npx",
+      "args": ["-y", "EXAMPLE-connector-mcp"],
+      "env": { "EXAMPLE_API_KEY": "${EXAMPLE_API_KEY}" }
     },
 
     "_python_bridge": {

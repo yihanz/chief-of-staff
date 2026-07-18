@@ -7,6 +7,11 @@
 Everything about connectors in one place: what each role is for, what actually fills it, what
 happens when you swap something out, and what provably cannot be bundled.
 
+> **Want the menu, not the argument?** `references/DEPENDENCIES.md` is the scannable list — every
+> connector, which two are required, and the exact way to turn each on. This file is the *why*
+> underneath it: the role each fills and what disqualifies a surface. Pick from the menu; come here
+> when you want the reasoning.
+
 **No prices and no click paths live here.** They are in `references/VOLATILE.md`, dated and cited.
 This file carries the *shapes* and the *arguments*. **The numbers move; the arguments don't.**
 
@@ -623,10 +628,6 @@ reader makes the schedule safer.** So:
 - **⚠️ What a Cowork scheduled task does when it MISSES a run is not documented anywhere.** No
   catch-up rule, no skip rule. **That is a hole, and it is a hole in the reliability story this
   package sells.** Nobody should be told their brief will catch up.
-
-**⚠️ TWO OTHER FILES STILL QUOTE THE CONTRADICTED SENTENCE AS SETTLED LAW** — `assets/where-it-runs.mermaid`
-and the setup skill. **Neither is this file's to edit.** Whoever owns them should read VOLATILE's
-Scheduling entry before the next person quotes that sentence to a stranger as the rule.
 
 ### The capability ladder — each local surface is a rung you can choose to climb
 

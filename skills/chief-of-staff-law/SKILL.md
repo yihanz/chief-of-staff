@@ -243,12 +243,13 @@ and it will keep answering that one because that is what its buyers ask. A *pers
 client field because *"which of my devices did this?"* is a real question in a personal tool.
 
 *(Type case: the client field was probed live across the connected surfaces rather than read out of
-docs. Exactly one returned it — Todoist's activity log, whose client string named the writing agent
-by name, `Claude` or `ChatGPT` or the phone app, **while the actor on all three was identical: the
-user.** The work trackers returned an actor and no client; several exposed no history tool at all;
-one hosted-database surface returned a last-edited-by that resolves to the *person*, which is the
-actor trap wearing a friendlier name. The finding is not "use that product" — §9c exists so that the
-law never resolves to a product name. The finding is that **an actor field passed every doc-read and
+docs. Exactly one returned it — a personal task manager's activity log, whose client string named the
+writing agent by name — one agent, another agent, or the phone app — **while the actor on all three
+was identical: the user.** The work trackers returned an actor and no client; several exposed no
+history tool at all; one hosted-database surface returned a last-edited-by that resolves to the
+*person*, which is the actor trap wearing a friendlier name. The finding is not "use that product" —
+§9c exists so that the law never resolves to a product name; the live proof, with the surfaces
+named, lives in STACK, not here. The finding is that **an actor field passed every doc-read and
 failed the only test that mattered.**)*
 
 **And `~~state` must be PERSONAL and DURABLE. This is a test of the container, not of the feature
