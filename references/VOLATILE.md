@@ -1,6 +1,8 @@
 # Volatile facts — prices, plans, and click paths
 
-**As of 2026-07-17.** Every fact below was verified against the vendor's own page on that date, and
+**As of 2026-07-17, with one block added and verified 2026-07-18** — *Plugin distribution —
+marketplace install, the public directory, and bundled connectors*, marked inline with its own date
+and horizon. Every fact below was verified against the vendor's own page on the date it carries, and
 each one carries the URL it came from. Nothing here is remembered, inferred, or carried over from a
 previous version of this file.
 
@@ -561,7 +563,9 @@ is not what either page says.** **Do not promise plugins on mobile; do not deny 
 **More plugin facts, verbatim and current:**
 - **Hooks and sub-agents:** *"Hooks and sub-agents run only in Cowork, so they appear grayed out in
   chat."*
-- **Marketplaces:** *"Sync a marketplace from a GitHub repository or git URL."*
+- **Marketplaces:** *"Sync a marketplace from a GitHub repository or git URL."* **(Full dated
+  treatment — the from-a-repository install, the git-only-relative-paths caveat, and connector
+  bundling — is in *Plugin distribution* below.)**
 - **⚠ THE COWORK CONNECTOR CAVEAT, and it kills localhost:** *"In Cowork, connectors reach external
   services through Anthropic's cloud, not through your local network. **A custom connector must point
   to a server that's reachable over the public internet from Anthropic's IP ranges.**"*
@@ -578,6 +582,72 @@ needs a paid Slack plan and a Slack admin; **Microsoft 365** needs an Entra work
 personal Outlook accounts entirely. *Why this matters here:* "connectors work on every plan" is true
 of the feature and false of the specific connector someone is about to try, and that gap is where a
 setup conversation dies.
+
+### Plugin distribution — marketplace install, the public directory, and bundled connectors
+
+**Added and verified 2026-07-18** against the two Anthropic pages cited at the end of this block.
+**These facts carry their own horizon: re-verify after 2026-10-18**, one day past the rest of this
+file's 2026-10-17 line.
+
+**1. One-click install from a GitHub repo, via a marketplace — no file download or upload.** A plugin
+marketplace can be added straight from a repository and the plugin installed in place. The path, from
+the plugins article: **Customize → Plugins → Personal plugins → "+" → Add marketplace → Add from a
+repository**, then **Install** the plugin. Verbatim: *"Add from a repository: Sync a marketplace from
+a GitHub repository or git URL."* And the install steps: *"Open the Customize menu… Open the Plugins
+tab… Click 'Browse plugins'… Click 'Install' on the plugin you want."* *Why this matters here:* this
+is the one-click on-ramp the README now leads with — add `yihanz/chief-of-staff` as a marketplace,
+click Install, done. No `.plugin` file to handle.
+
+**2. THE CAVEAT THAT DECIDES THE INSTRUCTION — add it from the repository (git), NOT from a
+`marketplace.json` URL.** The marketplaces doc states the mechanism directly: *"Relative paths resolve
+against a local copy of the marketplace, so they work when users add your marketplace from a git
+source or a local directory. If users add your marketplace via a direct URL to the `marketplace.json`
+file, relative paths fail…"* — because *"relative paths in the marketplace entry reference files on
+the remote server that were not downloaded."* This plugin references its files by relative path, **so
+a raw `marketplace.json` URL fetches the manifest alone and the plugin's own files come back
+missing.** *Why this matters here:* the README's instruction must say **"Add from a repository, paste
+`yihanz/chief-of-staff`,"** and must never say "paste a marketplace.json URL." One works; the other
+silently ships a broken plugin.
+
+**3. There is a public plugin directory, with open submission.** Anthropic ships a browsable directory
+of skills, connectors, and plugins, and Claude includes a *"growing library of plugins for common
+knowledge work."* *Why this matters here:* the old "there's no marketplace listing / no public link
+yet" line in the README is dead — there is now both this repo-as-marketplace and a public directory.
+**⚠ The exact open-submission process and any listing bar for a third-party plugin are NOT pinned to a
+verbatim vendor step here.** Treat "open submission" as directionally true — the directory exists and
+accepts submissions — but confirm the submission path in-product before telling anyone to submit.
+
+**4. Plugins can bundle connectors (opt-in).** Verbatim from the plugins article: *"Plugins can also
+bundle connectors, so the right services are set up for a workflow without you connecting each one.
+Claude connects to services like Google Drive, Gmail, Slack, DocuSign, and many more."* A bundled
+connector can be **opt-in (`defaultEnabled:false`)**; bundling one **never ships a credential** —
+OAuth stays the user's to complete, once per connector — **and never makes a hosted connector
+local**: it stays hosted and cloud-eligible. *Why this matters here:* it retires the package's old
+reasoning that *"a connector named in a bundled file would be local and would pin your schedule."*
+That was true of *local* MCP servers, **not** of hosted connectors, which can now be bundled and stay
+cloud-eligible. **What this package does today: it connects hosted connectors during onboarding and
+does NOT bundle them.** Bundling the hosted ones is a verified roadmap improvement, not a shipped one
+— README, STACK, DEPENDENCIES and `mcp.example.json` all now say so.
+
+**⚠ NOT VERIFIED — a reported first-party-connector bundling snag, and Todoist's absence from the
+named list.** The bundling capability in fact 4 is verified. What is **not** verified: (a) a report
+that bundling a **first-party** connector currently fails OAuth (an Anthropic-side bug) — **no vendor
+page states this**, so it is carried as a flag, not a fact, and it is a second honest reason this
+package treats bundling as roadmap rather than shipped; and (b) whether **Todoist** — the reference
+task surface — can be bundled at all, since Anthropic's named bundle-able services are **Google Drive,
+Gmail, Slack, DocuSign**, and Todoist is not among them. Do not quote either as established; probe
+before relying on them.
+
+**Sources:**
+- https://support.claude.com/en/articles/13837440-use-plugins-in-claude — the plugins article (page
+  dated **May 29, 2026**): the connector-bundling quote, the install steps, the *Add from a
+  repository* step, and the *"growing library of plugins"* line.
+- https://code.claude.com/docs/en/plugin-marketplaces — the relative-paths mechanism (git source or
+  local directory vs. a direct `marketplace.json` URL).
+- https://support.claude.com/en/articles/14328846-browse-skills-connectors-and-plugins-in-one-directory
+  — the one-directory listing, referenced from the plugins article's Related Articles.
+- Public directory entry point commonly cited as **claude.com/plugins** (front door; the vendor
+  articles above are the sourced record).
 
 ### The free path — the widest-reach fact in this package
 

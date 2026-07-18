@@ -101,7 +101,8 @@ got Todoist connected and your profile row is there but empty. Let's fill it in.
 
 **One exception, and it runs the other way: if the profile row exists but has nothing under *whose
 task list is this*, that question was never asked and you have to ask it** — a blank there is not an
-answer, and it's the one thing in Phase 0 the probe can't recover for you.
+answer, and it's the one thing the probe can't recover for you. Ask it in the post-card container
+beat (Phase 1), where that question now lives.
 
 ---
 
@@ -152,27 +153,19 @@ no** — say those there, not here.)*
    Never the field's name. No hour → **degraded, not disqualified.**
 5. **How long does this take — in minutes?** Story points are not minutes. No minutes → no length.
 
-**Those five are about features. The next one is about the container — and a surface can answer all
-five perfectly and still fail it.** That is not a technicality; it is the entire reason this fork
-exists. **A place your life lives has to be yours, and it has to outlive your job.** The second half
-is the one that decides it and it has no exception.
+**Those five are about features. There is a sixth thing — the container the tool IS — and a surface
+can answer all five perfectly and still not be where a life belongs: a place your life lives has to
+be yours, and it has to outlive your job.** That test is real and it decides something. **It decides
+nothing about the FIRST card, and running it now is the exact mistake this file exists to prevent.**
 
-**And no probe on earth can answer it, so ask it out loud.** It is the only new thing this setup asks
-that a machine could not have found for itself, and it takes five seconds:
-
-> Quick one — and it's the only thing about your setup I genuinely can't work out by looking. That
-> **[Linear / Asana / Notion / whatever they showed you]** — **is that your own workspace, or your
-> employer's?**
-
-**Why you cannot look it up: the connector returns identical bytes either way.** A solo founder on
-her own workspace and an employee on her company's seat are the same rows, the same endpoints, the
-same admin screen. **The answer changes everything and nothing on the wire carries it.**
-
-**Ask it of anything that has workspaces or teams at all** — every work tracker, Notion, and any task
-app with a business tier. **Skip it only where an employer's version cannot exist** (Apple Reminders,
-Things). **The product's tier is a hint and never the answer:** plenty of people run a company on a
-personal-tier tool, and plenty of employers hand out seats on one. **Take their word, don't debate
-it, and write it into the profile when you build it** — it has a section of its own.
+**No probe can answer it, so it has to be asked out loud — but NOT here, and NOT before the card.**
+The connector returns identical bytes whether the workspace is theirs or their employer's: a solo
+founder on her own account and an employee on a company seat are the same rows, the same endpoints,
+the same admin screen. So the question is real and unavoidable. **It also feeds exactly one thing —
+the container argument — and that argument is now a post-card beat (Phase 1).** Asking *"is this your
+employer's?"* before you have shown them a single artifact is asking before value, and asking before
+value is what made a real person quit this three minutes in. **Defer it. You ask it in the post-card
+beat, and you write it into the profile then** — it has a section of its own.
 
 ### Then fork — on what the probe found, never on what answered
 
@@ -187,35 +180,33 @@ it, not how you say it — no role names, no jargon, no piles named out loud.** 
 >
 > That's enough to run. Give me thirty seconds and I'll just show you.
 
-**Then ask only about what the probe could not resolve — and fork on three outcomes, not two:**
+**Then fork on three outcomes — and every one of them reaches a card before it reaches an argument:**
 
-- **A personal list that outlives their job, and both of the two answered → Phase 1. Run it.** Do not
-  explain first, do not ask first.
-- **A work tracker, or an employer's workspace → go to Phase 7's task-list section and say the
-  container argument there, now, before anything else.** **Their floor is not missing — that is
-  precisely why this fork has to exist.** Something answered, and it was the wrong thing, and every
-  later phase would have treated it as settled. **Then Phase 1, on the list they own.**
-- **Either of the two missing → Phase 2** for the sixty seconds, **Phase 7** for the connect path,
-  then **come straight back to Phase 1.** The run still comes before the interview.
+- **A personal list, both of the two present → Phase 1. Run it.** Do not explain first, do not ask
+  first.
+- **A work tracker (Asana, Linear, Jira) → Phase 1 ANYWAY, and run it FIRST.** A work tracker is a
+  real task surface: it lists rows and answers *"what's open,"* so the engine renders the door-one
+  card exactly as it does for anyone — with the container concern demoted to one honest line in the
+  receipts, not a hard stop. The engine also reads the work tracker the way it reads mail: a place
+  other people put obligations on you (*assigned-to-me*), which is exactly the door-one signal it
+  wants. **Do NOT stop to argue the container. Do NOT send them off to sign up for anything. Show the
+  card, THEN have the container conversation as a post-card beat (Phase 1), reframed from teardown to
+  upgrade.** Their floor is not missing; it is the wrong shape — and the wrong shape still renders a
+  card. *(The old build forked here into a forty-year-horizon lecture plus a "go get Todoist, open a
+  new chat, start over" detour, all before any artifact. That is the churn. It is deleted.)*
+- **Either of the two missing → Phase 2** for the sixty seconds, **Phase 7** for the one connect path
+  that unblocks a run, then **straight to Phase 1.** Keep the connect minimal and promise the card on
+  the far side of it — the run still comes before the interview.
 
-**This fork is not a formality and it cannot be recovered later — this is the only place in the whole
-system where the sentence is allowed to be said.** Once the engine is running it may propose dropping
-a source it can see; **it may never propose that they go acquire one it can't.** That rule is
-deliberate and it is what keeps the morning brief from turning into a shop. **The consequence is
-this: nothing downstream of here will ever tell them to get a personal task list.** Not on day one,
-not in a year, not when it starts failing them. **Here or nowhere.**
-
-**Say it as a fit problem, not a verdict on their tool** — you are three minutes into their first
-conversation and their tool is fine:
-
-> Before I run anything — one thing I want to flag now rather than in a month, because it's the kind
-> of thing that's cheap today and expensive later. Your **[Linear]** is doing the job of *"somewhere
-> my tasks live,"* and it'll answer me when I ask it things. But it's a **work** tracker, and I'm
-> about to start putting your life in it. Give me sixty seconds on why that's the one thing I'd
-> change, and then I'll show you the thing regardless.
-
-**Then Phase 7. Then come back and run it.** They still get a card in the first few minutes — the
-fork costs a minute, not the demo.
+**The container argument still cannot be recovered later, and that constraint is real — but "later"
+is the trap, never "the card." THIS setup conversation is the only place in the whole system where
+the engine may say "go get a personal list":** once it is running it may propose dropping a source it
+can see, but **it may never propose acquiring one it cannot** — not on day one, not in a year, not
+when it starts failing them. That asymmetry is what keeps the morning brief from turning into a shop.
+**So the sentence must be said here, in this conversation — but AFTER the card, not before it.**
+In-this-conversation, yes. Before-you-have-shown-them-anything, no. **Moved to the post-card beat, it
+is still said exactly once, in the only place it is allowed; it just arrives after they have seen the
+thing they came for.**
 
 ---
 
@@ -242,6 +233,16 @@ Say what you did in one line. No ceremony:
 > I've put a row on your task list called **Chief of Staff — Profile**. It's empty — that's fine
 > for now. Watch.
 
+**One wrinkle, and it touches only WHERE the row lives, never whether the card runs: a work tracker
+as their only task surface.** The engine reads a work tracker as a real task surface, so the card
+runs on it exactly as it runs for anyone. **Keep the stub EMPTY of personal facts and put it wherever
+is cheapest for now** — on the work tracker, or held in session for this first render — because the
+question that decides its durable home (*is this yours or your employer's?*) is deferred to the
+post-card beat below. An empty headings-only stub is safe to park anywhere; their physiology and
+their own-work declaration are not, and those wait until the beat has settled where the profile
+belongs. **For a personal list, none of this applies — make the row now, on their own list, as
+above.**
+
 ### Then run the engine, and show them the card
 
 **The card will be thin. Do not apologise for it and do not pad it.** It will read their calendar
@@ -255,6 +256,47 @@ Point straight at it:
 >
 > But look at that line. **Your own work: not declared.** That one's blank because I don't know
 > what your own work is, and it's the one thing on here that nobody but you can tell me.
+
+### The post-card container beat — work-tracker users only, and only now that the card exists
+
+**This is where the container conversation goes: AFTER the card, never before it.** The card just ran
+on their work tracker and proved the point without an argument. Now — and only for someone whose task
+surface is a work tracker or an employer's workspace — have the conversation, and **lead with the
+promotion, not the problem.**
+
+**Upsell their tool first, because that half is simply true and it reframes everything after it:**
+
+> Let me tell you what your **[Linear]** just did for me, because I've been underselling it. The
+> question I almost never get a clean answer to is *"what did people actually ask of me?"* — most
+> tools make me go searching, so I miss the thing you'd have wanted me to catch. Mail is one
+> exception. **Your work tracker is the other.** Assigned-to-you is a list of people putting things
+> on you on purpose, with their names attached — the single cleanest *"someone is waiting on you"*
+> signal in your whole setup. So I don't want you to stop using it. **I want to read it.**
+
+**Then — and only then — the one thing it can't do, framed as an upgrade they can take whenever they
+want it, never as a reason to start over:**
+
+> There's exactly one thing this surface can't do, and it's the half that's about *you*. To protect a
+> block for your own work, I first have to check I didn't already try it and get overruled — and that
+> check reads a history your work tracker doesn't hand me. No history, no check, no protected block.
+> That isn't a setting or a paid tier; it's the shape of the tool. **The fix is a two-minute add
+> whenever you like: a personal list on your own account, living beside the work one, that never
+> syncs with it. Work stays where it is and I read it; your life gets a list nobody can switch off.**
+> Not now, not to start — the card in front of you already runs. Just so you know the one upgrade
+> that unlocks the rest.
+
+**Now ask the ownership question — deferred from the probe to exactly this moment, because this is the
+first place its answer is load-bearing:**
+
+> One quick thing so I file this right: that **[Linear]** — your own workspace, or your employer's?
+
+**Take their word, write it into the profile's own section when you build it, and let it route the
+durable profile:** their own workspace and they want it for life too → the profile may live there;
+their employer's, or they take the personal list → the durable profile lives on the personal list and
+you delete any empty stub you parked on the work tracker. **The full container argument — the
+forty-year horizon, the two-lists-one-direction shape, exactly what degrades — is Phase 7's task-list
+section. Go there for the depth if they want it; never make the depth a prerequisite for the card
+they already have.** **For a personal-list user there is no beat here — go straight on.**
 
 **Then Phase 2 — sixty seconds on why that line exists — and it lands now, because they are looking
 at the evidence instead of taking your word for it.**
@@ -379,10 +421,11 @@ nothing, **write the choice down explicitly** rather than leaving an empty secti
 **Blank must never be the resting state.** Either their own work, or a recorded decision. Never
 silence.
 
-### Then the rest, in this order
+### Then finish the minimum viable profile — activation, then wake and time zone
 
 Each question below gets one line of *why* if they ask — and offer it if they hesitate. People
-answer honestly when they know what the answer is for.
+answer honestly when they know what the answer is for. **These next few complete the minimum viable
+profile; after them you re-render the card, and only then continue.**
 
 **The activation mechanism — the second most important thing in the profile:**
 
@@ -393,12 +436,60 @@ answer honestly when they know what the answer is for.
    end-walls, not start-times."* · *"I work best against another person waiting."*
 7. **"What reliably makes something NOT happen for you?"**
 
+**Then the last two facts the first useful card needs — wake and time zone. Pull them forward here;
+they are one-liners, and they are what lets the re-render below light the second door:**
+
+- **"When do you wake?"** *(The wake anchor — the engine measures the whole day from it, and door
+  two's protected block is placed against it. This is Q13's first half, asked now; the sleep end
+  waits for the rest.)*
+- **"And your time zone?"** *(This is Q10, asked now. The remaining body questions wait for the
+  rest.)*
+
+### Now RE-RENDER the card — the payoff, BEFORE the rest of the interview
+
+**You now have the four answers that most change the card: their own work, what makes them start,
+when they wake, where in time they are. Run the engine again and show the new card.** Point straight
+at the line that was blank a moment ago:
+
+> Look at that same line. **Your own work** — it isn't blank anymore. [Then say whichever is true:]
+>
+> - *(personal list, the lane is starving)* **It's got a protected block on it now** — the engine
+>   defended room for it ahead of the reactive stuff, because you told me it's been starving and
+>   nobody else will defend it. **That block is the whole difference between this and a to-do list,
+>   and you got it from four answers.**
+> - *(personal list, lane not yet starving)* **It's declared, and I'm counting dark days against it**
+>   — the number that tells you the moment it starts slipping. That counter did not exist a minute
+>   ago.
+> - *(work tracker, no readable history)* **It's declared — and here's the one thing this surface
+>   still can't do: protect a block for it**, because the check that needs a history has none to
+>   read. That's the exact thing the personal list unlocks — now you can see precisely what it buys.
+
+**This is door two, visible, on day one — the moment the design pays them back for the personal
+questions, and the reason the re-render happens HERE instead of buried at the end.**
+
+### Then offer to continue — and make "the rest" honestly optional now
+
+**They have a working, differentiated card. Everything below is progressive profiling: it sharpens
+the engine, and none of it blocks a good card tomorrow.** Say it plainly:
+
+> That's the core of it — genuinely enough to run well. The rest just sharpens the edges: where your
+> body is so I can do the appointment math, how your life splits into areas so I file things in the
+> right place, the windows that look free and aren't. **We can do it now, or fill each one in the
+> first time it actually matters.** Your call — what's your appetite?
+
+**If they want to stop, they already have a real profile: write down what you have (below) and go. If
+they continue, keep the two-or-three-at-a-time pace and present the rest as optional, never as a form
+to finish.**
+
+### The rest — optional now, each one fills in the first time it matters
+
 **Where your body is:**
 
 8. **"Where do you start most days?"** *(Home base — envelopes are computed from it.)*
 9. **"How do you usually get around, and how long does it really take door-to-door to the places
    you actually go?"** *(Real times, not map times.)*
-10. **"Time zone?"**
+10. **Time zone** — **already captured in the minimum viable profile above.** Skip it if you have it;
+    confirm it if you're unsure.
 
 **The map of your life — and this one has to come before the ranking, because a ranking needs
 something to rank:**
@@ -429,7 +520,8 @@ something to rank:**
 
 **What makes a free slot not actually free:**
 
-13. **"When do you wake, and when are you trying to sleep?"**
+13. **"When are you trying to sleep?"** *(The wake anchor is already in the minimum viable profile
+    above; this just adds the sleep end.)*
 
 **Now the body questions — and say the opt-out AT the question, not later:**
 
@@ -486,19 +578,21 @@ something to rank:**
     same rules, same reasons in all three — only the surface changes.** Record their answer in the
     profile. If they don't care, write `card` and move on.
 
-### The minimum viable profile
+### The minimum viable profile — for reference; you already asked it, up front
 
-**Do not let them stall out on completeness.** They can stop when they have:
+**The stop-point is not here at the end — it is the re-render boundary above, and you have already
+offered it.** This is the checklist that boundary implements, kept here so nothing gets lost:
 
-- **Whose the task list is** — already answered back in Phase 0. **Write it down; never ask it
-  twice.** It's first here because it decides *which list the rest of this even lives on.*
-- **Their own work** — or the recorded decision not to name any. **Blocking.**
+- **Their own work** — or the recorded decision not to name any. **Blocking, and asked first.**
 - **The activation mechanism.**
-- **Home base + time zone.**
-- **Wake anchor.**
+- **Wake anchor + time zone.**
+- **Whose the task list is** — resolved in the post-card container beat (Phase 1), **not re-asked
+  here.** Write it down; never ask it twice. It decides which list the durable profile lives on.
 
-Everything else accretes — **including their areas, which fill themselves in as rows arrive.** Say:
-*"That's enough to run. The rest we can fill in the first time it matters."*
+**Home base, areas, ranking, and everything else are NOT in the minimum** — they sharpen the engine,
+but no good card waits on them. Everything else accretes — **including their areas, which fill
+themselves in as rows arrive.** If they stopped at the re-render, that was already a complete, honest
+profile — *"enough to run; the rest we fill in the first time it matters."*
 
 ### Now write it down — and the profile is a row, not a file
 
@@ -506,10 +600,11 @@ Everything else accretes — **including their areas, which fill themselves in a
 interview that ends in a nice conversation and nothing written is the single worst outcome
 available here: they paid the whole cost and got none of it.
 
-**Fill in the stub row you made in Phase 1** — same row, same label, their answers under the
-template's headings in its description. **Phase 0's answer about whose task list it is goes in too —
-it has a heading of its own. Don't ask it again; you already have it.** Then **read it back and
-confirm it:**
+**Fill in the stub row from Phase 1** — same row, same label, their answers under the template's
+headings in its description. *(For a work-tracker user whose stub was held in session, this is where
+you write the durable row — onto the surface the post-card beat settled on.)* **The post-card beat's
+answer about whose task list it is goes in too — it has a heading of its own. Don't ask it again; you
+already have it.** Then **read it back and confirm it:**
 
 > Done — it's all in that **Chief of Staff — Profile** row on your list. Here's what I wrote.
 > [read it back] Anything wrong?
@@ -901,10 +996,11 @@ decide for them.**
 
 ## Phase 7 — The connect paths
 
-**This is reference, not a walk.** Come here from **Phase 0** when the floor is missing **or when the
-probe found a work tracker**, or from Phase 6 when they want to add something else. For each one:
-**required or optional → what it does → why → what it asks → the actual clicks.** Real numbered
-paths. Never "go check the docs."
+**This is reference, not a walk.** Come here from **Phase 0** when the floor is missing, from
+**Phase 1's post-card beat** when a work-tracker user wants the full container argument — **after the
+card, never before it; the pre-card lecture is deleted** — or from Phase 6 when they want to add
+something else. For each one: **required or optional → what it does → why → what it asks → the actual
+clicks.** Real numbered paths. Never "go check the docs."
 
 **And before you dictate any of them: read `references/VOLATILE.md`.** Every screen below belongs
 to somebody else and they redesign it without telling us.
@@ -960,17 +1056,22 @@ capability, the call is.**
 - **Is it yours, not your employer's?**
 - **Will it outlive your job?** ← **this is the one that decides it, and it has no exception.**
 
-#### Why a work tracker cannot be the place your life lives — say this whenever the probe finds one
+#### The container argument — the DEPTH behind Phase 1's post-card beat, delivered promotion-FIRST
 
-**Not when they suggest one. When you find one.** That distinction is the whole reason this section
-reaches anybody: **the person who most needs this paragraph never suggests anything.** They had
-Linear open before they met you, it answered the probe, and they don't experience themselves as
-having made a choice. **A warning that waits to be invited is a warning that only ever reaches the
-people who didn't need it.** Phase 0's probe is the trigger. This is the destination.
+**When you deliver this to a user, you have already shown them a card and already led with the
+promotion (Phase 1's post-card beat).** This section is the depth — the full teardown — and it is the
+**optional upgrade, never the opener.** Lead with *"I want to read your work tracker"*; reach for the
+forty-year-horizon argument below only when they want to understand the one thing it can't do.
+**Never deliver any of this before a card. The pre-card version of this lecture is exactly what
+churned a real user.**
 
-**And say it to the person whose workspace turned out to be their employer's, even if their tool is
-otherwise perfect** — that answer is the one thing here with no exception, and it never arrives on
-its own.
+**It reaches everyone whose task surface is a work tracker or an employer's workspace — including the
+person who never "suggested" anything and doesn't experience themselves as having chosen.** They had
+Linear open before they met you and it answered the probe. **A warning that waits to be invited only
+ever reaches the people who didn't need it — so Phase 1's post-card beat is the trigger now, and this
+is the destination.** And it reaches the person whose workspace turned out to be their employer's
+even if the tool is otherwise perfect: that answer is the one thing here with no exception, and it
+never arrives on its own.
 
 **Don't wave them off with a feature comparison — the argument that actually lands is the
 container:**
@@ -1466,12 +1567,16 @@ choice setup supports; which tool to use for a given job is theirs to make.**
 
 ## Phase 8 — Close the loop
 
-**They've already seen a card — that was Phase 1, and it was thin on purpose. Run it again now
-that the profile is real, and walk them through what changed:**
+**They have already seen door two light — that was the re-render at the minimum-viable-profile
+boundary (Phase 3). So this is the close, not the reveal.** If they went on to fill in the rest, run
+the pass once more on the fuller profile and walk them through what the extra answers changed; if they
+stopped at the MVP, the card is already current, so just close the loop on what's in front of them.
+Either way, name these three things:
 
-- **Point at the line that used to be blank.** Their own work, declared, with a block protected or
-  a dark-day count beside it. **This is door two, visible, on day one — it's why they answered the
-  personal questions, and it's the moment the whole thing pays them back.**
+- **Point at the line that was blank in Phase 1.** Their own work, declared, with a block protected
+  or a dark-day count beside it. **That's door two — first lit at the re-render, and this is where it
+  becomes an everyday habit rather than a one-time trick. It's why they answered the personal
+  questions.**
 - **Point at what it refused to create.** That's the gate working, and it's the thing that makes
   the card short. If they don't see it, they'll think the engine missed things.
 - **Point at what it couldn't reach.** Coverage honesty is a feature. Silence about a failure is

@@ -81,13 +81,28 @@
 
   "_NOT_HERE_ON_PURPOSE": {
     "hosted_connectors": [
-      "Gmail, Google Calendar, Todoist, Notion, Slack, Linear and the rest are NOT declared here.",
-      "They are not local servers — you add them once in Claude's own connector settings, they work",
-      "on every surface including mobile, and they keep your brief cloud-eligible. That is strictly",
-      "better than anything this file can do.",
-      "Each one still sets its own plan/admin gate on top: Slack is paid-plans-only and also needs a",
-      "Slack admin; Microsoft 365 needs a work tenant. Setup walks you through them, and",
-      "references/VOLATILE.md carries the current gates and click paths, dated and sourced."
+      "Gmail, Google Calendar, Todoist, Notion, Slack, Linear and the rest are NOT declared in THIS",
+      "file, and never should be. They are not local servers: you add them once in Claude's own",
+      "connector settings, they work on every surface including mobile, and they keep your brief",
+      "cloud-eligible. A local .mcp.json like this one cannot improve on that — this file is for",
+      "local servers only.",
+      "",
+      "WHAT CHANGED, and why this is a note and not a silence: a PLUGIN MANIFEST (a different file",
+      "and channel than this local .mcp.json) CAN now bundle hosted connectors, so a workflow's",
+      "services arrive teed-up instead of hunted for in the catalog. A bundled connector can be",
+      "opt-in (defaultEnabled:false), and bundling one NEVER ships a credential or makes it local —",
+      "you still complete OAuth yourself, once per connector, and it stays hosted and cloud-eligible.",
+      "The old idea that 'a declared connector would be local and would pin your schedule' was true",
+      "of the local servers above, and was never true of a hosted connector.",
+      "",
+      "WHAT THIS PACKAGE DOES TODAY: it connects the hosted connectors during onboarding and does",
+      "NOT bundle them. Bundling the hosted ones into the plugin is a verified roadmap improvement,",
+      "not a shipped one — do not read this file, or any manifest in this package, as already doing",
+      "it.",
+      "",
+      "Each connector still sets its own plan/admin gate on top: Slack is paid-plans-only and also",
+      "needs a Slack admin; Microsoft 365 needs a work tenant. Setup walks you through them, and",
+      "references/VOLATILE.md carries the current gates, click paths, and the dated bundling capability."
     ]
   }
 }

@@ -190,46 +190,73 @@ held would be worthless to you. See the licence note at the bottom.
 
 ## Install
 
-**This is distributed as one file — `chief-of-staff.plugin` — from the public repo at
-github.com/yihanz/chief-of-staff. There's no Claude marketplace listing for it yet.** **Plugins
-also need a paid Claude plan** — Pro, Max, Team or Enterprise. **Skills
-don't.** If you're on Free, skip to the next section; you can have nearly all of this.
+**Two ways in, and the first is one click. Both need a paid Claude plan** — Pro, Max, Team or
+Enterprise. **Skills don't** — if you're on Free, skip to the next section; you can have nearly all
+of this.
 
-1. **Get the file.** It's committed at the repo root as `chief-of-staff.plugin` — download that
-   one file. (Prefer to build it yourself, or the download looks stale? From a checkout of the repo,
-   one command rebuilds it: `zip -r chief-of-staff.plugin . -x '.git/*' 'chief-of-staff.plugin'
+**The one-click path: add this repo as a marketplace, then Install.** This repo *is* a plugin
+marketplace, so Claude pulls the plugin straight from GitHub — nothing to download, nothing to
+upload.
+
+1. In **claude.ai** → **Customize** → **Plugins**, find **Personal plugins**, click **"+"**, and
+   choose **Add marketplace**. *(In Cowork, open the **Cowork** tab first, then **Customize**.)*
+2. Choose **Add from a repository** and paste **`yihanz/chief-of-staff`**. Click **Add**.
+3. The plugin now appears in the catalog — click **Install**.
+4. Open a **chat or Cowork task** and say `set up my chief of staff`.
+
+**One caveat decides step 2: add it *from the repository*, never from a `marketplace.json` URL.** The
+plugin's files are referenced by relative path, and **those paths only resolve when Claude has the
+whole repo** — which it does when you add it as a GitHub repository, and does *not* when you paste a
+raw `marketplace.json` link (that route fetches the manifest alone and the plugin's own files come
+back missing). Same file, wrong door. So the instruction is *"Add from a repository, paste
+`yihanz/chief-of-staff`"* — not a URL paste.
+
+**Or, if you'd rather, download the built file and upload it.** Same plugin, manual door:
+
+1. **Get the file.** It's committed at the repo root as `chief-of-staff.plugin` — download that one
+   file. (Prefer to build it yourself, or the download looks stale? From a checkout of the repo, one
+   command rebuilds it: `zip -r chief-of-staff.plugin . -x '.git/*' 'chief-of-staff.plugin'
    '*.DS_Store' '*__pycache__*'`. The build is the source of truth; the committed file is a
    convenience copy of it.)
-2. Go to **claude.ai** → **Customize** → **Plugins**.
-3. Choose the option to **upload a custom plugin file**, and pick `chief-of-staff.plugin`.
-4. **If the picker refuses the file, rename it to `chief-of-staff.zip` and try again.** It's the
-   same archive either way, and some pickers only accept `.zip`.
+2. In **claude.ai** → **Customize** → **Plugins**, choose the option to **upload a custom plugin
+   file**, and pick `chief-of-staff.plugin`.
+3. **If the picker refuses the file, rename it to `chief-of-staff.zip` and try again.** It's the same
+   archive either way, and some pickers only accept `.zip`.
 
-**These screens move, and this one isn't in `references/VOLATILE.md`** — that file carries the dated,
-sourced paths for connectors and plans, not this. So if what's on your screen disagrees with the
-three steps above, **trust the screen.**
+**These screens move, and the click-paths above aren't the sourced record** — `references/VOLATILE.md`
+now carries the dated marketplace facts (the *Add from a repository* route, the git-only caveat, the
+public plugin directory), but the screens themselves rot faster than any file. So if what's in front
+of you disagrees with the steps above, **trust the screen.**
 
-Then, in a **new chat** — plugins only load when a conversation starts — type `set up my chief of
-staff`. Setup shows you a card first, then probes what you already have, tells you what's missing
-and whether it's worth adding, interviews you, and walks you through creating a scheduled task
-(**a plugin cannot ship a schedule**). **A task list and a calendar is the whole floor** —
-everything else is whatever you already have. There's one paid upgrade setup will argue for; you
-can say no.
+**Either way, the plugin loads when a conversation starts** — so say `set up my chief of staff` in a
+**new** chat or Cowork task, not the one you installed from. Setup shows you a card first, then probes
+what you already have, tells you what's missing and whether it's worth adding, interviews you, and
+walks you through creating a scheduled task (**a plugin cannot ship a schedule**). **A task list and a
+calendar is the whole floor** — everything else is whatever you already have. There's one paid upgrade
+setup will argue for; you can say no.
 
 **Where the scheduling lives, since this is where people get lost: Cowork is a toggle, not an app.**
 Go to **claude.ai**, find the message box, and **select "Cowork" in the bottom left corner.** Same
 site, same login, nothing to download, nothing extra to buy. There is no "web version vs. Cowork" —
 Cowork *is* on the web.
 
-**"Where do my connectors go?" Nowhere — and that's the good news.** Your task list, your calendar,
-your mail are **hosted connectors: you add each one once, in Claude's own connector settings, and
-it's live on every surface you use — including mobile, including the unattended 7am run.** Nothing
-about them is declared in a file here, and that's deliberate rather than missing: a connector named
-in a bundled file would be a *local* one, and a local one **pins your brief to a machine that has to
-be awake.** Hosted keeps the run cloud-eligible, which for schedule reliability beats any local connector a
-bundled file could declare — a different question from the local *reach* the capability ladder below
-invites, which is a deliberate trade, not a downgrade. **The archive does contain `mcp.example.json` — it isn't loaded, it's named that on
-purpose, and it covers only that local kind. You don't need to open it.**
+**"Where do my connectors go?" Into Claude's own connector settings — and they stay in the cloud.**
+Your task list, your calendar, your mail are **hosted connectors: you add each one once and it's live
+on every surface you use — including mobile, including the unattended 7am run — because it runs
+through Anthropic's cloud, not your machine.** That cloud-eligibility is the whole reason the brief
+can fire with your computer off, and **setup walks you through connecting each one during
+onboarding.** That is how it works today.
+
+**A plugin *can* now also bundle hosted connectors** — Claude's own plugin docs say so plainly — and
+a bundled connector can ship **opt-in (`defaultEnabled:false`)**, so nothing turns on behind your
+back. Bundling would tee up the right services for the workflow without you hunting the catalog;
+**you'd still complete OAuth yourself, once per connector, because a credential can't travel in a
+file** — and **bundling a hosted connector keeps it hosted and cloud-eligible; it never makes it
+local.** **This package doesn't bundle them yet** — it connects them in onboarding — and bundling the
+hosted ones is a verified improvement on the roadmap, not something already shipped. Better to tell
+you the current state than claim the finished one. **The archive does contain `mcp.example.json` — it
+isn't loaded, it's named that on purpose, and it covers only *local* servers, which your hosted
+connectors are not. You don't need to open it.**
 
 ### On the free plan? You can have almost all of this.
 

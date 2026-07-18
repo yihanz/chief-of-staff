@@ -539,10 +539,28 @@ is a claim about what was said, not evidence of an obligation. Only your own wor
 fact, because **the things that can't be bundled are the same things that stop your brief arriving at
 7am.**
 
-### Hosted connectors — bundled by declaration, cloud-eligible
+### Hosted connectors — cloud-eligible, and now bundle-able (opt-in)
 
 Nothing to install. OAuth, one click, works on any machine, **and keeps the engine cloud-eligible.**
 Both contracts have hosted options, and `~~intent[]` does too.
+
+**A plugin can now declare hosted connectors so they arrive teed-up.** Claude's plugin docs put it
+plainly: a plugin bundles connectors *"so the right services are set up for a workflow without you
+connecting each one."* A bundled connector can ship **opt-in (`defaultEnabled:false`)**, proposing
+the service rather than switching it on behind you. **Two things bundling does NOT change:** it does
+not ship a credential — **you still complete OAuth yourself, once per connector, because a secret
+can't travel in a file** — and it does not make the connector local. **Declaring a hosted connector
+in a manifest keeps it hosted and cloud-eligible; it does not pin the brief to a machine.** That old
+worry — *"a declared connector must be a local one, and a local one pins your schedule"* — was true
+of the *local* servers below, and was **never** true of a hosted connector. It is retired here.
+
+**What this package does today: it connects them in onboarding; it does not yet bundle them.** Setup
+probes what you have and walks you through what's missing. Bundling the hosted connectors into the
+plugin — opt-in, with OAuth still yours to complete — is a **verified, roadmap** improvement, not a
+thing already shipped. This file will say so the day it changes; until then, onboarding is the honest
+description. *(VOLATILE carries the capability, dated and sourced, plus a NOT-VERIFIED note on a
+reported first-party-connector bundling snag and the fact that Anthropic's named bundle-able services
+do not include Todoist.)*
 
 **A build using only hosted connectors is the transfer-grade product.** It runs in the cloud, fires
 with the computer off, and installs in minutes. **This is the fastest path to a working brief and

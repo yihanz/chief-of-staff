@@ -35,9 +35,13 @@ transcript of one person's setup.
 | Fitness / workouts | `~~evidence[]` | Optional | Local server (npm) | You bring one |
 | Mac automation | capability enabler | Optional | Extension (Browse) | You bring one |
 
-"You bring one" is not a dodge — the next section gives the exact steps for each. Only
-one capability could honestly be packaged into this plugin, and it was; the reasoning
-for the rest is at the bottom.
+"You bring one" is not a dodge — the next section gives the exact steps for each. As
+this package ships today, exactly one capability is packaged into the plugin — the
+iMessage reader — and the reasoning for the rest is at the bottom. **One recent change
+worth flagging up front: a plugin *can* now bundle hosted connectors too (opt-in), so
+those could ship teed-up as well. This package doesn't do that yet — it connects them
+during onboarding — and that bundling is a roadmap item, laid out under the enable paths
+below.**
 
 ---
 
@@ -155,7 +159,9 @@ confusion of looking for a connector that is actually an extension:
 
 1. **Hosted connector** — claude.ai → Settings → Connectors. OAuth, one click, works on
    every surface including mobile, keeps the brief cloud-eligible. Mail, calendar,
-   task list, Notion, health. *Prefer these.*
+   task list, Notion, health. *Prefer these.* *(A plugin can now also **bundle** a hosted
+   connector so it arrives teed-up — opt-in, OAuth still yours to complete. See the note
+   after this list; this package doesn't bundle them yet.)*
 2. **Desktop Extension** — the desktop app → Settings → Extensions → Browse (or a
    bundled `.dxt` you double-click). Runs locally. Apple Notes, Control your Mac, the
    bundled iMessage reader.
@@ -171,6 +177,20 @@ themselves on exactly how (it either pins the run to a waking Mac, or the schedu
 can't reach the local file at all, which is worse), and under either reading a local
 reader is what costs you the reliable morning. The whole picture, both readings, is in
 `assets/where-it-runs.mermaid` and `references/VOLATILE.md` → Scheduling.
+
+**One update to the hosted path, because the capability moved and this package's honest
+state hasn't caught up to it.** A plugin can now **bundle** hosted connectors — Claude's
+plugin docs describe it as setting up *"the right services… without you connecting each
+one"* — and a bundled connector can be **opt-in (`defaultEnabled:false`)**. What bundling
+buys is skipping the catalog hunt. **What it never does is ship your credential — OAuth
+stays yours, once per connector** — and **a bundled hosted connector stays hosted and
+cloud-eligible; declaring one never makes it local or pins the brief to a machine.** So
+the old reasoning that a declared connector "would be local" is wrong for hosted ones and
+is not used here. **This package does not bundle them today** — it connects them in
+onboarding — and bundling the hosted ones is a **verified roadmap** item, not a shipped
+one. VOLATILE carries the dated capability, plus a NOT-VERIFIED note on a reported
+first-party-connector snag (and that Anthropic's named bundle-able services don't include
+Todoist).
 
 ---
 
@@ -193,3 +213,9 @@ only one capability passes all three:
 So: the iMessage reader is bundled because it is universal, corrective, and clean.
 Everything else is mapped, with the real path to turn it on, because that is what it
 honestly is — a great tool you connect, not one we can hand you.
+
+*(One scope note, because the capability changed: the three tests above are about
+**local** tools — the things a zip would otherwise have to carry, like a Bee index or a
+Reflect bridge. Hosted connectors are a separate, newer question — a plugin can now
+bundle those too, opt-in — but this package still connects them in onboarding rather than
+bundling them. The enable-paths note above has the detail.)*

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "chief-of-staff",
+  "owner": {
+    "name": "Yihan Zhao"
+  },
+  "metadata": {
+    "description": "Chief of Staff — an unattended daily brief. Add this marketplace from the repo, then one-click install the plugin.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "chief-of-staff",
+      "source": "./",
+      "description": "An unattended daily brief. It reads what you have connected, works out what you actually owe today, places it where you can physically do it, and hands you one card. It creates almost nothing on purpose. A task list and a calendar is the whole floor.",
+      "version": "0.1.0",
+      "category": "productivity",
+      "keywords": ["daily-brief", "task-management", "calendar", "inbox", "personal-automation", "executive-function"]
+    }
+  ]
+}
