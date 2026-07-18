@@ -31,35 +31,56 @@ mentions it. It detects, then acts, then reports what it could not reach.
 
 ## The roles — two CONTRACTS, three SETS
 
-This mirrors the law's §0b exactly. **A CONTRACT is a set of capabilities a tool either has or does
-not have — testable, universal, asked of every person on earth. A SET is whatever this person
-happens to have.** *Mail, notes, messages, a lifelog* are set members — each one a product somebody
-connected, never a first-class role. **A role named after one person's sources is a stack wearing
-the syntax of an architecture, and it is wrong about the second person who reads it.**
+This mirrors §0b's contract. **A CONTRACT is a set of capabilities a tool either has or does not
+have — testable, universal, asked of every person on earth. A SET is whatever this person happens to
+have.**
+
+*Mail, notes, messages, a lifelog* are set members — each one a product somebody connected, never a
+first-class role. **A role named after one person's sources is a stack wearing the syntax of an
+architecture, and it is wrong about the second person who reads it.**
 
 ### The two contracts — mandatory, capability-tested, identical for everyone
 
 **`~~state`** (alias: `~~task surface`) — **the engine's database.** The engine keeps no cache and no
-memory between runs; **the list is the state.** Four questions, and the answers are not all
+memory between runs; **the list is the state.** Five questions, and the answers are not all
 pass/fail:
 
-1. **What is open?** Every task manager answers this. It is the least of the four, and it is the only
+1. **What is open?** Every task manager answers this. It is the least of the five, and it is the only
    one most people check before choosing a tool.
 2. **What did you already complete?** An open-row search cannot answer an existence question.
    Without this the engine rebuilds a row you closed an hour ago, forever. **Required.**
 3. **Who placed this row — the engine, or you?** Answerable **only by a CLIENT field on the activity
    log.** **Not pass/fail — the answer selects the mode.** See the finding below; it is the fact
    everything else on this page turns on.
-4. **What does it cost — a duration on a row?** A block has a length. Without a duration the engine
-   cannot state the cost or enforce the 30-minute floor — so task-derived rows get the `—` gutter,
-   and the floor is reported as unenforceable rather than silently broken. **That is a fact about the
-   ENGINE, and it is the only part of this anyone here owns.** What a duration-less *timed* row draws
-   on a calendar is a property of that task app and that person's own sync; **probe it and report what
-   the probe found** (§13's method) — never predict it. **Not pass/fail:** the surface is present,
-   time-blocking is not.
+4. **Does a TIME OF DAY stick — an hour on a row?** **Ask this BEFORE the duration, always.
+   Placement needs to know WHEN before it needs to know HOW LONG.** The entire calculus — the
+   envelope, captive windows, the anchors, the stagger, the ladder, door two's container — resolves
+   to **an hour**, and on a date-only surface there is **no field to write it into.** A length is
+   what you write *second*.
+   **Prove it with a disposable row — write an hour, read the field BACK, delete it. Never read a
+   field's NAME as the answer** (§13): a field called *due date* may take a datetime, and one
+   documented as a datetime may drop the time on write. **A write that returns success and silently
+   drops the hour is the whole failure mode**, and only the read-back catches it.
+   **Not pass/fail, and not a hard stop — no time of day is a DEGRADED mode.** A surface that cannot
+   carry an hour makes this engine **narrower, never wrong**: it reads the same physical narrative,
+   computes the same envelope, and writes fewer fields. **§6's third flip-condition is what that
+   costs.**
+5. **What does it cost — a duration on a row?** A block has a length. Without a duration the engine
+   cannot state the cost or enforce **the floor** — so task-derived rows get the `—` gutter, and the
+   floor is reported as unenforceable rather than silently broken. **That is a fact about the ENGINE,
+   and it is the only part of this anyone here owns.** What a duration-less *timed* row draws on a
+   calendar is a property of that task app and that person's own sync; **probe it and report what the
+   probe found** (§13's method) — never predict it. **Not pass/fail:** the surface is present,
+   time-blocking is not. **An unwritable hour subsumes this question** — a row you cannot place at a
+   time cannot carry a meaningful cost either, because a length with no start is a number about
+   nothing. **Ask 4 first and this one may already be answered.**
+   *(**The floor is 30 minutes by DEFAULT, and the default names its override: the PROFILE's grain,
+   `Your units`, wherever they state one** (§0c). Nobody is asked their grain at onboarding — the law
+   says thirty and gets on with it, and the one person for whom thirty is wrong has a named place to
+   say so. **Say "the floor," not a number**: this file does not own its value.)*
 
 **And `~~state` must be PERSONAL and DURABLE** — a test of the container, not the feature list. A
-surface can answer all four and still fail it. That argument is below.
+surface can answer all five and still fail it. That argument is below.
 
 **`~~container`** (alias: `~~calendar`) — **the physical narrative of where your body is.** Four
 capabilities: events over a window (read); **write, proven by attempt, never inferred**; multiple
@@ -121,22 +142,46 @@ modes below are that rule followed to its conclusion and given a name.
 
 **Ⓔ = established by a live call. ⚠️ = NOT VERIFIED.**
 
-| Surface | Official MCP/connector | Completed query | Activity log → actor / **CLIENT** | Duration | Gate | Type |
-|---|---|---|---|---|---|---|
-| **Todoist** | ✅ | ✅ Ⓔ | ✅ Ⓔ / **✅ Ⓔ `extraData.client`** | ✅ Ⓔ | log capped on free; duration paid — VOLATILE | Personal |
-| Asana | ✅ `mcp.asana.com/v2/mcp` | ✅ | ❌ / ❌ — **no stories/activity tool in the V2 set** | ⚠️ start+due, no minutes | `search_tasks` Premium | Team |
-| Linear | ✅ `mcp.linear.app/mcp` | ✅ via status | ❌ / ❌ — **no history tool** ⚠️ | ❌ estimate = **story points** | private teams **Business+** | Team |
-| ClickUp | ✅ `mcp.clickup.com/mcp` | ⚠️ | ❌ / ❌ no activity tool | ⚠️ | audit **Enterprise** | Team |
-| Monday | ✅ `mcp.monday.com/mcp` | ✅ | ✅ `get_board_activity` / **❌ no client** | ⚠️ | private boards **Pro+** | Team |
-| Notion | ✅ first-party | ✅ | ❌ / ❌ — audit = **Enterprise owners**; `last_edited_by` = the person Ⓔ | ✅ date ranges ⚠️ | SQL **Business+ w/ Notion AI** | Both |
-| Things 3 | ❌ *"We don't offer a direct connection with Claude at this time."* | local only | ❌ | ❌ **no duration** | one-time | Personal |
-| Apple Reminders | ❌ | local only | ❌ | ❌ **no duration** (EKReminder) | free | Personal |
-| TickTick | ✅ `mcp.ticktick.com` | ✅ | ❌ | ⚠️ no estimate; focus = *elapsed* | Premium | Personal |
-| MS To Do | ❌ official | ✅ | ✅ Purview / ⚠️ | ❌ **no duration** | audit **Project Plan 1+**, tenant | Personal |
-| Motion | ❌ **see trap** | API only | ❌ UI-only feed | ✅ richest — **unreachable** | no free tier | Personal |
-| Akiflow | ✅ `akiflow.com/mcp` | ✅ | ❌ **zero ownership proof** | ✅ | no free tier | Personal |
-| Sunsama | ✅ beta, no published tool list ⚠️ | ⚠️ | ❌ | ⚠️ | no free tier | Personal |
-| Amie | ✅ `mcp.amie.so` (**shipped days before this probe — volatile**) | ⚠️ | ❌ | ⚠️ | free tier | Personal |
+| Surface | Official MCP/connector | Completed query | Activity log → actor / **CLIENT** | **Time of day** | Duration | Gate | Type |
+|---|---|---|---|---|---|---|---|
+| **Todoist** | ✅ | ✅ Ⓔ | ✅ Ⓔ / **✅ Ⓔ `extraData.client`** | **✅ Ⓔ — due *datetime*, written and read back** | ✅ Ⓔ | log capped on free; duration paid — VOLATILE | Personal |
+| Asana | ✅ `mcp.asana.com/v2/mcp` | ✅ | ❌ / ❌ — **no stories/activity tool in the V2 set** | ⚠️ never probed | ⚠️ start+due, no minutes | `search_tasks` Premium | Team |
+| Linear | ✅ `mcp.linear.app/mcp` | ✅ via status | ❌ / ❌ — **no history tool** ⚠️ | ⚠️ **NOT VERIFIED — `dueDate` NEVER PROBED. See note.** | ❌ estimate = **story points** | private teams **Business+** | Team |
+| ClickUp | ✅ `mcp.clickup.com/mcp` | ⚠️ | ❌ / ❌ no activity tool | ⚠️ never probed | ⚠️ | audit **Enterprise** | Team |
+| Monday | ✅ `mcp.monday.com/mcp` | ✅ | ✅ `get_board_activity` / **❌ no client** | ⚠️ never probed | ⚠️ | private boards **Pro+** | Team |
+| Notion | ✅ first-party | ✅ | ❌ / ❌ — audit = **Enterprise owners**; `last_edited_by` = the person Ⓔ | ⚠️ never probed | ✅ date ranges ⚠️ | SQL **Business+ w/ Notion AI** | Both |
+| Things 3 | ❌ *"We don't offer a direct connection with Claude at this time."* | local only | ❌ | ⚠️ never probed — no connector to probe with | ❌ **no duration** | one-time | Personal |
+| Apple Reminders | ❌ | local only | ❌ | ⚠️ never probed — no connector to probe with | ❌ **no duration** (EKReminder) | free | Personal |
+| TickTick | ✅ `mcp.ticktick.com` | ✅ | ❌ | ⚠️ never probed | ⚠️ no estimate; focus = *elapsed* | Premium | Personal |
+| MS To Do | ❌ official | ✅ | ✅ Purview / ⚠️ | ⚠️ never probed | ❌ **no duration** | audit **Project Plan 1+**, tenant | Personal |
+| Motion | ❌ **see trap** | API only | ❌ UI-only feed | ⚠️ never probed — **unreachable anyway** | ✅ richest — **unreachable** | no free tier | Personal |
+| Akiflow | ✅ `akiflow.com/mcp` | ✅ | ❌ **zero ownership proof** | ⚠️ never probed | ✅ | no free tier | Personal |
+| Sunsama | ✅ beta, no published tool list ⚠️ | ⚠️ | ❌ | ⚠️ never probed | ⚠️ | no free tier | Personal |
+| Amie | ✅ `mcp.amie.so` (**shipped days before this probe — volatile**) | ⚠️ | ❌ | ⚠️ never probed | ⚠️ | free tier | Personal |
+
+**READ THE TIME-OF-DAY COLUMN AS THIRTEEN HOLES AND ONE FACT, because that is what it is.** Exactly
+one cell in it is established: Todoist's. **Every other row says "never probed" — and that is the
+column's honest state, not a backlog apology.** The column exists because §0b's fourth question
+exists; **an empty column that names its emptiness is worth more than a filled one that guesses**,
+because the guesses would all be reasonable and some of them would be wrong.
+
+**⚠️ LINEAR'S `dueDate` — NOT VERIFIED, and this file will not guess it either way.** It is
+*suspected* to be a **date, not a datetime**, which if true would mean **no life-row on Linear can
+carry an hour** and the surface fails §0b's fourth question as well as its fifth. **That suspicion has
+never been probed and is not stated as a fact here.** Linear's schema reference is served through
+Apollo Studio, which is a JS app and could not be read on 2026-07-17; **the doc-read that would settle
+it was attempted and failed.** And a doc-read would not settle it anyway — **§13's whole point is that
+a field documented as a datetime may drop the time on write.** **One disposable issue answers this:
+write a `dueDate` with an hour in it, read it back, delete it.** Until someone does, Linear's row
+carries a hole, and **the work-tracker verdict below does not rest on it** — Linear already fails
+questions 3 and 5 on established grounds.
+
+**⚠️ AND THE DEFECT THIS COLUMN EXISTS TO CATCH — the README committed it.** The README generalizes
+**Todoist's due-*datetime*** into a claim about **"task lists"** in general. **That is one probe, of
+one product, promoted to a universal** — the exact move §0b exists to kill: *a stack wearing the
+syntax of an architecture, wrong about the second person who reads it.* **Todoist's datetime is a fact
+about Todoist.** The thirteen ⚠️ cells above are what the generalization was actually standing on.
+**Whoever owns the README should cut it to Todoist or cut it to nothing.**
 
 **Notion's cell is the actor trap wearing a friendlier name.** `last_edited_by` resolves to the
 *person* Ⓔ — it is an actor field, and an agent writing through your token is you. The real audit log
@@ -163,7 +208,9 @@ duration model. Connecting it gets you an ad dashboard.
 
 ## The work-tracker verdict
 
-**Three independent disqualifiers. Any one of them is fatal on its own.**
+**Three independent disqualifiers. Any one of them is fatal on its own — and then a fourth section,
+which is not a fourth disqualifier but the CONSEQUENCE the first three imply and never say: door two
+cannot run here at all.**
 
 ### 1. The rows aren't yours
 
@@ -209,13 +256,54 @@ private "Life" team. Privacy: fine. Durability: fine. Both of the above are answ
 - **Question 3 dies.** Linear's GraphQL API *has* `IssueHistory`, with `actor` **and `botActor`** —
   the richest ownership model of any surface here. **The MCP exposes no history tool at all.** ⚠️ The
   capability exists and is unreachable, which is the same as absent.
-- **Question 4 dies.** Linear's `estimate` is **story points, not minutes.** There is no minute field
+- **Question 5 dies.** Linear's `estimate` is **story points, not minutes.** There is no minute field
   to place a block with — so **no life-row on this surface can carry a length the engine can state or
   a floor it can hold.** Every one of them gets the `—` gutter. Placement is the entire product, and
   this surface cannot express it.
+- **Question 4 is a hole, not a verdict.** Whether Linear's `dueDate` carries an hour has **never
+  been probed** — see the table's note. **It is not needed here.** The steelman is already dead twice
+  over; adding a suspicion to a finished argument would weaken it, not strengthen it.
 
 **A surface that fails on the steelman does not fail because of the employer. It fails on the
 contract.**
+
+### 4. And the sharpest consequence, which the three disqualifiers above only imply: DOOR TWO IS DEAD
+
+**§2 above is the strongest DISQUALIFIER. This is the strongest SENTENCE — they are not competing,
+and this one is downstream of the table rather than of the employer.** It follows from a single cell:
+**the work trackers have no reachable activity log.** Asana — no stories or activity tool in the V2
+set. Linear — no history tool. ClickUp — no activity tool.
+
+**Follow it through.** §9b's second door — the one that places your own undeadlined work, the whole
+reason this system exists rather than being a nicer inbox — **has three conditions, and the third one
+is: *"The activity log shows no engine-created container for this lane deleted or dismissed inside
+the cadence window. Cannot check the log → do not place."*** And **"cannot name all three →
+nothing. Not a nudge. Not a p4. Nothing."**
+
+**No activity log → condition 3 can never be satisfied → the door never opens. Not once. Not ever.**
+
+**Three things make this worse than it first sounds, and each one closes an escape route:**
+
+- **Write-once mode does not rescue it.** The obvious hope is that this is a client-field problem, and
+  client-field problems degrade gracefully into write-once. It isn't. §9b's third condition **finds
+  engine work by the reserved label, not by a client field** — so it works in *both* modes, and
+  **needs the log in both.** The law says so directly: *"it still needs the log: cannot check the log
+  → do not place, in either mode. Write-once does not exempt the second door from its third
+  condition."* **The graceful-degradation story that saves everything else on this page does not save
+  this.**
+- **Money does not rescue it.** The missing thing is not a plan tier — **it is a tool in the MCP
+  surface.** Linear's history exists in GraphQL and is unreachable through the connector; ClickUp's
+  audit log is Enterprise *and* has no activity tool exposed. **You cannot buy your way to a tool that
+  isn't in the tool list.** Door two is dead **at any price**, on **every** work tracker here.
+- **And it fails silently, which is I5's suppression face.** The door not opening produces **no error
+  and no row.** The card renders every morning, correct in every particular, made **entirely of other
+  people's demands** — and nothing on it says the half of the product that was supposed to defend your
+  own work never ran. **You cannot see an absence.**
+
+**So the verdict is not "a work tracker is a degraded life surface." It is that a work tracker can run
+door one forever and door two never, and never say so.** The three disqualifiers above each have a
+shape — an exception, a horizon, a contract. **This one has a consequence: the thing you installed
+this for is the exact thing that cannot work.**
 
 ---
 
@@ -228,7 +316,7 @@ to overrule it. **The work tracker is excellent at work. Keep it.**
 - **Work stays in the work tracker, and the work tracker becomes an `~~inbound[]` source.**
   Assigned-to-me is another person putting an obligation on you — which is exactly what that set is
   for.
-- **Life gets a personal `~~state`.** The four questions and both container tests bind that surface
+- **Life gets a personal `~~state`.** The five questions and both container tests bind that surface
   only.
 - **When work needs a time-block, the engine writes a personal row whose description carries a
   POINTER — the work item's URL — never a copy.** A pointer cannot go stale against the thing it
@@ -359,9 +447,10 @@ problem, and no amount of connecting more surfaces fixes it.
   costs nothing.**
 - **Free tiers cap activity history and withhold durations.** Both are load-bearing, and **both
   failures are silent.** Past the cap the engine cannot prove ownership, so it stops re-placing
-  anything — safe, silent, and inert. Without a duration it cannot state a cost or hold the
-  30-minute floor, so the gutter reads `—` and the floor is reported unenforceable — **rows are still
-  placed at their hour; the length is what's missing.** Numbers in VOLATILE.
+  anything — safe, silent, and inert. Without a duration it cannot state a cost or hold **the floor**
+  (30 minutes by default, or the profile's grain where they state one — §0c), so the gutter reads `—`
+  and the floor is reported unenforceable — **rows are still placed at their hour; the length is
+  what's missing.** Numbers in VOLATILE.
 
 ### When your mail is somewhere the connectors don't reach
 
@@ -402,6 +491,14 @@ hand, at identical fidelity — swapping one changes *nothing* about what the en
 is an export: these surfaces export Markdown, so export it, drop it where the new home is, and point
 `~~intent[]` there. **A hosted notes surface is also the one place a profile-in-a-note works well**,
 because it carries no local dependency.
+
+**And the mechanism under "local pins the brief," now sourced rather than asserted.** Anthropic's
+plugins documentation states it directly: *"In Cowork, connectors reach external services through
+Anthropic's cloud, not through your local network. **A custom connector must point to a server that's
+reachable over the public internet from Anthropic's IP ranges.**"* **A notes app serving on a loopback
+port is not reachable from Anthropic's IP ranges** — it reaches Claude only through the desktop app,
+as a local connector. So the cost is sharper than "pins the brief to the machine": **in a remote
+session the local notes server is not slow or degraded, it is absent.** Quote and URL in VOLATILE.
 
 **Email-to-self is legitimate and common, and it deserves better than a footnote.** If you already
 mail yourself notes, **a mail member of `~~inbound[]` already covers `~~intent[]`.** Point the engine
@@ -471,22 +568,45 @@ claiming otherwise is lying about what a zip file can do.
 
 **This is not a tier and it is not a preference.** It is decided by what you connected.
 
-| | Cloud routine | Desktop task |
+| | Cloud / remote | Local / machine-pinned |
 |---|---|---|
 | Runs on | Anthropic infrastructure | Your machine |
-| **Fires with the computer off** | **Yes** | **No — the run is skipped** |
+| **Fires with the computer off** | **Yes** | **No** |
 | **Access to local files/apps** | **No** | **Yes** |
-| MCP servers | connectors configured per task | config files + connectors |
-| Minimum interval | 1 hour | 1 minute |
+| MCP servers | connectors on your Claude account | config files + connectors |
 
-And the reconciling rule, from the Cowork docs verbatim: **"If a scheduled task requires local files
-or apps, it will only run locally."**
+**⚠️ THE MECHANISM UNDER THIS TABLE IS NOT SETTLED, AND THIS SECTION USED TO PRETEND IT WAS.** This
+file previously quoted *"If a scheduled task requires local files or apps, it will only run locally"*
+as **the reconciling rule**. **That sentence is real. The same Anthropic article also says scheduled
+tasks "can't be tied to a folder on your computer."** Both quotes, both URLs, and the reasons not to
+resolve it by picking a side are **in VOLATILE, under Scheduling.** **Do not quote either sentence as
+the rule until someone probes it.**
 
-**So every local dependency you add silently converts a reliable cloud brief into a machine-pinned
-one that gets skipped whenever the laptop is asleep.** Desktop then runs *one* catch-up on wake and
-discards older misses — **which is why a 7am brief can arrive at 10pm.**
+**What survives the contradiction — and it is the whole recommendation, so this section loses nothing
+that matters:**
 
-**Local readers do not merely cost portability. They cost the schedule.**
+**Under EITHER reading, a local dependency is what puts the brief at risk.** Either it pins the run
+to a machine that has to be awake, **or** the scheduled task cannot reach the folder at all — which
+is *worse*, and fails *harder*. **There is no reading of the vendor's docs in which adding a local
+reader makes the schedule safer.** So:
+
+**Local readers do not merely cost portability. They cost the schedule** — and the ⚠️ above is about
+*how*, never *whether*.
+
+**Two things this table must not be read as saying:**
+
+- **"Cloud routine" and "Desktop task" above are Claude Code's products, and this system's brief is a
+  Cowork scheduled task — a third thing.** The famous consequences — *one* catch-up run on wake, older
+  misses discarded, **"a task scheduled for 9am might run at 11pm if your computer was asleep all
+  day"** — are **Claude Code Desktop's documented behaviour.** They are quotable, they are in
+  VOLATILE, and **they are not documented for Cowork.** Do not narrate them as this system's.
+- **⚠️ What a Cowork scheduled task does when it MISSES a run is not documented anywhere.** No
+  catch-up rule, no skip rule. **That is a hole, and it is a hole in the reliability story this
+  package sells.** Nobody should be told their brief will catch up.
+
+**⚠️ TWO OTHER FILES STILL QUOTE THE CONTRADICTED SENTENCE AS SETTLED LAW** — `assets/where-it-runs.mermaid`
+and the setup skill. **Neither is this file's to edit.** Whoever owns them should read VOLATILE's
+Scheduling entry before the next person quotes that sentence to a stranger as the rule.
 
 ### The real cost of each local surface
 

@@ -32,10 +32,13 @@ the whole relationship.
 
 - **Task durations are a PAID feature (Pro and above).** *(That is what the sources below establish,
   and it is all they establish.)* *Why this matters here:* **without a duration the engine cannot
-  state what a thing costs and cannot enforce the 30-minute floor**, so task-derived rows render a
-  `—` time gutter rather than an hour with nothing behind it. On Beginner the engine still runs and
-  still places rows at their hour; **what the upgrade buys is the visible length and the enforceable
+  state what a thing costs and cannot enforce the floor**, so task-derived rows render a `—` time
+  gutter rather than an hour with nothing behind it. On Beginner the engine still runs and still
+  places rows at their hour; **what the upgrade buys is the visible length and the enforceable
   floor.**
+  **Say "the floor," never a number — this file does not own that value.** It is 30 minutes by
+  default and the profile's grain wherever the person states one (§0c). A number here would be a
+  calibration wearing this file's date and citation, and no source below establishes it.
   **What a Beginner-tier timed row with no duration draws on a calendar is NOT a fact this file
   carries.** No source below speaks to it — it depends on the user's own task↔calendar sync, which is
   not observable from a pricing page. **The engine probes it on the first run and reports what it
@@ -192,6 +195,13 @@ creates it. The gate, the envelopes, and the brief work identically.
 
 ## Slack → Claude — and the 2026-08-03 cutover
 
+**✅ RE-VERIFIED 2026-07-17 — every quote in this section was checked against its source and is
+current. Nothing changed. 17 days to the cutover.** The date, both plan-gate quotes, the
+Owner/Primary-Owner setup restriction, the Enterprise-only role restriction, the connector's
+all-paid-plans gate, the install-first prerequisite, and the Owner-enables-first rule for Team and
+Enterprise members all appear verbatim on the vendor's pages as quoted below. **The unresolved
+consequence below is still unresolved** — re-read after 2026-08-03.
+
 **Two different products share the word "Slack," and telling them apart is the whole entry.**
 
 | | What it is | Plan gate, verbatim |
@@ -337,6 +347,87 @@ iCloud is where someone's life actually is, this is the honest recommendation.
 
 ---
 
+## The auto-schedulers — what the market leaders' own defaults concede
+
+**Why these live here and not in the README.** The README argues the shape — that **door two** (work
+with no counterparty and no deadline) is the whole point, and that the incumbents' defaults concede
+it. **The shape doesn't rot. These citations do.** They are dated vendor facts about a competitor's
+default setting, which is precisely the kind of thing that changes in a release nobody announces.
+**The README carries the argument; this file carries the quotes and the date. If the README states one
+of these as a fact, the README is wrong by construction.**
+
+### Reclaim — the default is that Reclaim's own work never wins
+
+**Verbatim, from Reclaim's own help centre (article updated 2026-06-12):**
+
+> "By default, all non-Reclaim events on your calendar will always be set to Critical (P1) priority,
+> so they will never be overbooked by any Reclaim events"
+
+> "Your non-Reclaim events manually set to a lower priority level can only ever be overbooked by
+> higher-priority Scheduling Links which will show that time as available — **non-Reclaim events will
+> never be overscheduled by Habits, Tasks, or Smart Meetings, regardless of priority levels**"
+
+**Source:** https://help.reclaim.ai/en/articles/6207587-how-reclaim-manages-your-schedule-automatically
+
+**Read the second quote carefully, because it is stronger than the first and it is the one that
+matters.** The default (P1) is only half of it. **Even when a user manually downgrades a non-Reclaim
+event, Reclaim's own Habits, Tasks and Smart Meetings still cannot overbook it — "regardless of
+priority levels."** The single documented exception is a **Scheduling Link**, which offers the time
+to *someone else* rather than to your own work. **So on the market leader, work you scheduled for
+yourself loses to anything a counterparty put on your calendar, by construction, and the priority
+system cannot reverse it.** That is the concession, and it is structural rather than a default.
+
+**BE FAIR ABOUT THIS — the design is defensible and this file does not get to sneer at it.** A tool
+that moves a meeting somebody else is expecting you at breaks a promise to a third party who never
+agreed to be managed by your scheduler. Reclaim declining to do that is a **correct** call about
+consequences, not an oversight, and the same reasoning is why the engine here treats a counterparty's
+claim on your time as an envelope rather than a suggestion. **The disagreement is about scope, not
+about whether they got it wrong.** Reclaim answers "protect my focus time around my commitments."
+Door two asks the different question: what happens to the work nobody is waiting for.
+
+**⚠ TWO CAVEATS, both real:**
+- **This is the Reclaim 1.0 documentation, and the page says so:** *"This article refers to Reclaim
+  1.0 features and workflows"*, with a separate doc collection for **Reclaim 2.0**. **These quotes may
+  not describe 2.0.** Re-verify against 2.0 before putting this in front of anyone who uses it.
+- **⚠ NOT VERIFIED: auto-decline.** It is sometimes claimed that Reclaim offers auto-decline as an
+  opt-in, which would soften the concession above. **No such feature appears on this page** and
+  nothing here establishes it. **Do not include it in the argument without a source.**
+
+### Motion — the hierarchy is verified; the conclusion drawn from it is NOT
+
+**Verbatim, Motion's published scheduling hierarchy** — verified 2026-07-17 at
+https://www.usemotion.com/help/time-management/auto-scheduling.md:
+
+> 1. **ASAP** · 2. **Hard deadlines** · 3. **Deadlines (soft/flexible)** · 4. **Priority** ·
+> 5. **Duration** · 6. **Start dates** · 7. **Recurrence**
+
+**That list is real and correctly ordered. The inference "recurrence is LAST, therefore work with no
+counterparty and no deadline sits at the bottom by construction" IS CONTRADICTED BY THE SAME PAGE, and
+must not be written.** Position 7's own description says the opposite of what its position implies:
+
+> "**Recurrence** → Recurring tasks are placed **ahead of** one-off tasks to maintain cadence."
+
+And twice more on the same page: *"Recurring tasks (like daily routines) **may be scheduled first** if
+they are the only ones that fit into available time slots, even if a one-off task has a higher
+priority"*, and *"Motion auto-schedules recurring tasks **ahead of** one-off tasks with lower priority
+to ensure they always fit."*
+
+**The list is an ordering of TIE-BREAK CRITERIA, not a ranking of the work.** Recurrence being the
+last criterion consulted does not put recurring work last — the criterion, when it is consulted,
+**favours** recurring tasks. **Reading the list position as the work's rank is a misreading, and it is
+the flattering one.** Do not ship it. *(Motion's page is also internally loose here: the hierarchy
+list and the hint box below it disagree about whether priority or deadlines come first. Treat the
+whole hierarchy as a published guideline — the page itself calls it a "guideline" and says
+auto-scheduling "doesn't follow a single linear rule" — rather than as a specification.)*
+
+**What Motion's page DOES support, and it is enough:** deadlines and priority dominate the ordering,
+**and a task with neither a deadline nor an ASAP flag is ordered only by what is left** — priority,
+duration, start date, recurrence. **The argument door two needs is that undeadlined personal work is
+ranked by the fields it doesn't have. That is visible in the hierarchy without overclaiming what
+position 7 means.**
+
+---
+
 ## Dictation (unrelated to this system — neither app connects to it)
 
 ### Wispr Flow
@@ -402,17 +493,83 @@ obviously help the person in front of you. If they like typing, it does nothing 
 **Cowork is a toggle at claude.ai.** Not a separate app, not a separate purchase, nothing to
 download. **Source:** https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile
 
+### Cowork availability — GA on desktop, beta on web/mobile
+
+**Verbatim:** *"Claude Cowork is available for paid plans (Pro, Max, Team, Enterprise)"* — on Claude
+Desktop for macOS and Windows, Web at claude.ai, and Claude Mobile (iOS/Android).
+
+**Verbatim:** *"Claude Cowork is in beta on web and mobile, and rolling out over the next several
+weeks starting with the Max plan, with more plans to follow."*
+
+**The help centre does NOT call Cowork a research preview.** Checked on both the Get-started and the
+surfaces articles on 2026-07-17. *(The phrase does still appear on that page, but attached to a
+different feature: "Computer use is a research preview for Pro and Max plans." Do not transplant it
+onto Cowork.)* **This file never claimed otherwise — no correction was needed.**
+
+**Sessions run remotely by default (in beta).** Verbatim: *"Work continues if you close your laptop,
+and you can open the same session from any surface."*
+
+**The desktop app is still required for four things, verbatim:** *"Local file access. Local
+connectors. Browser use. Computer use."* — *"These capabilities reach things on your computer, so
+they need the app even though your session runs remotely."*
+
+**⚠ LOAD-BEARING LIMITATION — chat memory does not reach Cowork. Verbatim:**
+
+> "**Memory:** What Claude remembers about you in chat doesn't carry into Cowork sessions yet.
+> Within Cowork, memory is supported in projects only."
+
+*Why this matters here — this is the most important line in this file for this system's
+architecture.* **The profile lives in a `cos-profile` row on a connected surface, not in chat
+memory.** That was an architectural choice made before this limitation was documented; the vendor has
+now confirmed it was the only correct one. **A profile in chat memory would be invisible to every
+scheduled Cowork run** — the exact surface the morning brief fires from. The choice is not defensive
+and it is not a workaround. It is the only design the vendor's own limitation permits. **Do not
+"simplify" it into memory.**
+
+**Auto mode will not approve creating a scheduled task.** Verbatim: *"Auto mode won't approve certain
+sensitive actions like allowing Cowork to access additional folders on your computer, allowing Cowork
+to delete files in a given folder it has access to, **creating scheduled tasks**, and others."*
+*Why this matters here:* setup ends by creating a scheduled task. **That step needs a human click no
+matter what mode they are in.** Say so before it stalls, or setup looks broken at the last step.
+
+**Sources:**
+- https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork
+- https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile
+
 ### The real gates
 
 | Capability | Plan | Surface |
 |---|---|---|
-| **Skills** | **Free, Pro, Max, Team, Enterprise** (needs code execution enabled) | all |
-| **Plugins** | **Paid only** — *"available to all paid plans (Pro, Max, Team, Enterprise)"* | web, Desktop Chat tab, Cowork. Mobile ⚠️ contradicted across docs |
+| **Skills** | **Free, Pro, Max, Team, Enterprise** — *"Skills are available for users on Free, Pro, Max, Team, and Enterprise plans. This feature requires code execution to be enabled."* | all |
+| **Plugins** | **Paid only** — *"Plugins are available to all paid plans (Pro, Max, Team, Enterprise)."* | web, Desktop Chat tab, Cowork. Mobile ⚠️ contradicted across docs — see note |
 | **Connectors** | **all plans, all surfaces incl. mobile** (Free capped at one custom connector) ⚠️ *the capability, not each connector — see note* | all |
-| **Scheduled tasks** | **Cowork only, paid only** | Cowork |
+| **Scheduled tasks** | **Cowork, all paid plans** — *"Scheduled tasks are available in Cowork for all paid plans (Pro, Max, Team, Enterprise)."* | Cowork |
 | **Desktop Extensions (.mcpb)** | no stated gate ⚠️ — appears to work on Free | **Claude Desktop / Claude Code only** |
 
-**Sources:** https://support.claude.com/en/articles/13837440-use-plugins-in-claude · https://support.claude.com/en/articles/12512180-use-skills-in-claude · https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities
+**All four quoted rows re-verified against the vendor's pages on 2026-07-17. Unchanged.**
+
+**Sources:** https://support.claude.com/en/articles/13837440-use-plugins-in-claude · https://support.claude.com/en/articles/12512180-use-skills-in-claude · https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities · https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork
+
+**⚠️ THE PLUGINS-ON-MOBILE CONTRADICTION, now pinned to both sides rather than left vague.** The
+plugins article enumerates the surfaces and mobile is not among them: *"You can install and use
+plugins in chat on the web, the Chat tab in Claude Desktop, and Claude Cowork."* The surfaces
+article's per-surface table gives **"Skills and plugins" a ✅ under Mobile.** **Both are Anthropic
+pages and they do not reconcile.** The likeliest reading — that the plugins article is enumerating
+*chat* surfaces while the table is describing *Cowork* on mobile — **is a reading, not a fact, and it
+is not what either page says.** **Do not promise plugins on mobile; do not deny them. Probe it.**
+
+**More plugin facts, verbatim and current:**
+- **Hooks and sub-agents:** *"Hooks and sub-agents run only in Cowork, so they appear grayed out in
+  chat."*
+- **Marketplaces:** *"Sync a marketplace from a GitHub repository or git URL."*
+- **⚠ THE COWORK CONNECTOR CAVEAT, and it kills localhost:** *"In Cowork, connectors reach external
+  services through Anthropic's cloud, not through your local network. **A custom connector must point
+  to a server that's reachable over the public internet from Anthropic's IP ranges.**"*
+  *Why this matters here:* a notes app running an HTTP server on a **loopback port** is not reachable
+  from Anthropic's IP ranges. **A local notes server does not cost the schedule at the margin — in a
+  remote Cowork session it is not reachable at all**, and reaches Claude only through the desktop app
+  as a local connector. STACK's "every local one pins the brief to the machine" is the right shape;
+  this is the mechanism under it.
 
 **⚠️ Read the Connectors row as the *capability*, not a promise about any one connector. Each
 connector sets its own gate on top.** Two in this file already do: the **Slack** connector is
@@ -428,6 +585,28 @@ setup conversation dies.
 folder under `skills/` and upload it at `claude.ai/customize/skills`**, connect Gmail / Google
 Calendar / their task list as ordinary connectors, and run the pass by asking for it. **They get
 everything except the packaged install and the automatic morning run.**
+
+**The Free upload path, from the vendor's own steps — note the intermediate click, which is easy to
+miss and is where a dictated path goes wrong:**
+
+1. **Settings > Capabilities** → enable **Code execution and file creation**. *(Free, Pro, Max. On
+   Team/Enterprise an Owner enables it in Organization settings > Skills instead.)*
+2. Go to **Customize > Skills** (`claude.ai/customize/skills`).
+3. Click the **"+"** button, then **"+ Create skill"**.
+4. Select **"Upload a skill."**
+5. Upload a **ZIP containing your skill folder**.
+
+**Source:** https://support.claude.com/en/articles/12512180-use-skills-in-claude
+
+**⚠ NOT VERIFIED — the ZIP size limit is NOT PUBLISHED, and this is a real hole in the free path this
+package markets.** The vendor lists *"ZIP file exceeds size limits"* first among its documented
+upload failures **and never states the limit.** No byte figure appears on that page or on the
+create-custom-skills page. **Do not quote a number — not from a roundup, not from an inference about
+other upload limits in this file.** The honest line to a Free user is: *if the upload fails, size is
+the vendor's first suspect and the threshold is unpublished — try a smaller skill folder.* **The
+other documented failure causes are quotable and worth saying first**, because they are likelier and
+they are checkable: *"Skill folder name doesn't match the skill name"*, *"Missing required skill.md
+file"*, *"Invalid characters in skill name or description."*
 
 ### Desktop Extensions — the channel a plugin cannot reach
 
@@ -446,23 +625,105 @@ user cannot, and they are also the one that forfeits the overnight run — see S
 
 ## Scheduling — where a task runs
 
-| | Cloud routine | Desktop task |
+**FIRST, THE THING THIS SECTION USED TO GET WRONG: these are TWO DIFFERENT PRODUCTS and this file
+used to run them into one table.** **Cowork scheduled tasks** (`/schedule` in a Cowork task) are not
+**Claude Code Desktop scheduled tasks**, and neither is a **Claude Code cloud routine**. **This
+system's brief is a Cowork scheduled task.** The Claude Code rows below are a comparison, not this
+system's runtime — the catch-up rule and the "9am might run at 11pm" line are **Claude Code Desktop's
+documented behaviour and are not documented anywhere for Cowork.** Keeping them straight is the
+difference between a sourced fact and a plausible one.
+
+### ⚠️⚠️ UNRESOLVED CONTRADICTION — Anthropic's own scheduled-tasks article contradicts itself, and this package leans on the half it likes
+
+**Both quotes are from the SAME article, verified 2026-07-17:**
+https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork
+
+> **Top of the article, in the "How scheduled tasks work" note:** "Scheduled tasks use the built-in
+> schedule options and work with your connectors and the files saved to your Claude account. **They
+> can't be tied to a folder on your computer.**"
+
+> **The manual setup flow, further down the SAME article**, lists among the fields of the *Create
+> scheduled task* modal: "**Which folder Claude should work in [optional]**" — carrying the note:
+> "**If a scheduled task requires local files or apps, it will only run locally.**"
+
+**These cannot both be fully true.** One says a scheduled task **cannot** be tied to a folder on your
+computer. The other offers a field for **choosing the folder** and describes what happens when the
+task needs local files. **A third sentence in the same article** — *"Scheduled tasks run remotely, so
+they run on their cadence even when your computer is asleep or the Claude Desktop app is closed."* —
+is stated flatly, with no local-task exception carved out of it.
+
+**This is recorded as a contradiction, not resolved.** The tempting resolution — *"the folder picker
+is vestigial"* or *"'can't be tied to a folder' means the remote runner, and the local path is the
+exception"* — **is reasoning, not a source.** No Anthropic page states which sentence governs. **A
+plausible reconciliation written down as fact is exactly the failure this file exists to prevent**,
+and it would be a comfortable one, because the reading that suits this package is available.
+
+**What this package currently does with it, and why that is now a live risk.** *"If a scheduled task
+requires local files or apps, it will only run locally"* is quoted as settled law in **STACK's
+where-it-runs section**, in **setup**, and in **`assets/where-it-runs.mermaid`**. **That sentence is
+real and correctly transcribed — the problem is that the same article contradicts it**, so every
+place that quotes it as the reconciling rule is resting on one of two sentences that disagree.
+
+**The honest posture, and it costs this package almost nothing:** the *architecture* survives either
+way. **Under EITHER sentence, a local dependency is what puts the brief at risk** — either it pins
+the run to the machine (sentence two), or the scheduled task **cannot reach the folder at all**
+(sentence one), which is *worse* and fails *harder*. **"Start with hosted connectors only" is the
+correct recommendation under both readings.** The recommendation does not need the contradiction
+resolved. **The claim about mechanism does.**
+
+**→ PROBE IT: create a Cowork scheduled task, try to give it a folder, and see what the modal
+actually offers.** One run answers it. **Until someone does, quote neither sentence as the rule** —
+quote the *behaviour* ("a local dependency puts the scheduled run at risk; the vendor's docs disagree
+about exactly how") and cite this entry.
+
+### Cowork scheduled tasks — what IS verified
+
+- **Gate:** *"Scheduled tasks are available in Cowork for all paid plans (Pro, Max, Team,
+  Enterprise)."*
+- **Cadences:** **hourly, daily, weekly, weekdays, or manually.** That is the full published list —
+  **there is no minutes-level option**, and "manually" means no schedule, run on demand.
+- **Remote by default:** *"Scheduled tasks run remotely, so they run on their cadence even when your
+  computer is asleep or the Claude Desktop app is closed."* Also, from the surfaces article:
+  *"Scheduled tasks run with no device online."*
+- **Creating one is not auto-approvable** — see the Cowork section above. Auto mode won't do it.
+- **⚠ NOT DOCUMENTED ANYWHERE: what a Cowork scheduled task does when it MISSES a run.** No
+  catch-up rule, no skip rule, no retry rule is published for Cowork. **Do not import Claude Code
+  Desktop's catch-up rule below and dress it as Cowork's.** It is a different product's documentation.
+
+### Claude Code — cloud routines vs Desktop tasks (a comparison, not this system's runtime)
+
+| | **Cloud routine** | **Desktop scheduled task** |
 |---|---|---|
-| **Fires with the computer OFF** | **Yes** | **No — the run is SKIPPED** |
-| **Access to local files / apps** | **No** | **Yes** |
+| Runs on | Anthropic cloud | Your machine |
+| **Requires the machine on** | **No** | **Yes** |
+| **Access to local files** | **No — "(fresh clone)"** | **Yes** |
+| **Minimum interval** | **1 hour** — *"expressions that run more frequently are rejected"* | **1 minute** |
+| Permission prompts | **None — *"runs autonomously"*** | Configurable per task |
+| Maturity | **⚠ *"Routines are in research preview."*** | no stated preview label |
+| Shape | **Repo-centric** — *"Each repository you add is cloned on every run"* | folder-centric; a folder is **required** to save the task |
+| Cap | **⚠ *"routines have a daily cap on how many runs can start per account"*** — the number is **not published**; the vendor points you at your own usage page | none stated |
+| Gate | Pro, Max, Team, Enterprise **with Claude Code on the web enabled** | — |
 
-**A skipped desktop run gets ONE catch-up on wake. Older misses are discarded.** That is why a 7am
-brief can arrive at 10pm.
+**⚠ THE ROUTINES TRAP, verbatim, and it silently breaks a working local setup:** *"MCP servers you
+added locally in the CLI with `claude mcp add` are stored on your machine rather than your claude.ai
+account, **so they do not appear in the connectors list**."* **A connector that works in your terminal
+does not exist to a cloud routine.** To use one there it must be added at
+`claude.ai/customize/connectors` or declared in a committed `.mcp.json`.
 
-**The reconciling rule, verbatim from the Cowork docs:**
+**Desktop's sleep behaviour, verbatim — this is the "7am brief at 10pm" fact and it belongs to Claude
+Code Desktop, not to Cowork:**
 
-> "If a scheduled task requires local files or apps, it will only run locally."
+> "Tasks only run while the desktop app is running and your computer is awake. **If your computer
+> sleeps through a scheduled time, the run is skipped.**"
 
-*Why this matters here:* this is the rule that ties the two halves of setup together. **Every local
-dependency added silently converts a reliable cloud brief into a machine-pinned one that gets
-skipped whenever the laptop sleeps.** Local readers don't merely cost portability — they cost the
-schedule. That price is invisible unless someone says it out loud.
+> "Desktop checks whether each task missed any runs **in the last seven days**. If it did, Desktop
+> starts **exactly one catch-up run for the most recently missed time and discards anything older.**
+> A daily task that missed six days runs once on wake."
+
+> "**A task scheduled for 9am might run at 11pm if your computer was asleep all day.**"
 
 **Sources:**
 - https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork
+- https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile
 - https://code.claude.com/docs/en/desktop-scheduled-tasks
+- https://code.claude.com/docs/en/routines

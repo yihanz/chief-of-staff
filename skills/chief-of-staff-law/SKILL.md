@@ -7,9 +7,12 @@ description: The operating law for a personal chief-of-staff system — how a ta
 
 How a personal task list and calendar work, and how to keep them working.
 
-**This file is the law. It is universal — it contains no facts about any particular person.**
-Everything person-specific lives in the PROFILE (§0). The law without a profile is inert; the
-profile without the law is a diary.
+**This file is the law, and the honest claim is narrower than it looks: it is universal in its
+epistemics and its mechanisms. Its calibration is defaulted — and every calibrated value names
+where it yields (§0c).** The governing idea, because it decides the whole design: **a system that
+cannot know its environment cannot have a reasonable default — so it must either narrow its claim
+or name its assumptions. This file names them.** Everything person-specific lives in the PROFILE
+(§0). The law without a profile is inert; the profile without the law is a diary.
 
 **This is executional: call the tool.** Do, don't advise. Every rule attaches to an action against
 `~~state`, `~~container`, or a connected source (§0b) — then read back and verify. When a rule says
@@ -108,7 +111,7 @@ their eyes, their body, the exam room's clock, and their nervous system are exac
 | **I2** | Will it fit? What must receive this — measured in its own units: minutes of a visit, height of a row, seconds of attention? | 30-min floor · ≤8-word titles · one venue one scope · fit the container |
 | **I3** | Can their body do it there? Not "is the cell free" — what are they physically capable of in that window? | placement calculus · captive-dead · protected corridors |
 | **I4** | Will it fire? What does it cost them to start — not to do? | trip/mode/ritual anchoring · containers · the first move pre-done · no fake dates |
-| **I5** | Is their surface right? — does what they see show exactly what they need: nothing missing, nothing spurious. Two ways to be wrong: clutter (a row they don't need) and suppression (no row for something they do). **Suppression is worse: they can see clutter and fix it; they cannot see an absence.** | the row law + dominance test · date-only ban · ghost sweep · the cockpit — the Inbox, curated short (§7) · a partial run never renders as complete |
+| **I5** | Is their surface right? — does what they see show exactly what they need: nothing missing, nothing spurious. Two ways to be wrong: clutter (a row they don't need) and suppression (no row for something they do). **Suppression is worse: they can see clutter and fix it; they cannot see an absence.** | the row law + dominance test · date-only ban · ghost sweep · the cockpit — the surface they open, curated short (§7) · a partial run never renders as complete |
 | **I6** | What does it cost them? Minutes are not the price. What does this do to their nervous system and attention? | protected corridors · envelopes biased long · alert fatigue · batch-never-drip |
 
 How to use them:
@@ -162,11 +165,21 @@ The profile supplies, at minimum:
 - Home base and travel modes. Needed to compute envelopes.
 - Day modes. The named states that change how a day is planned.
 
-Two rules that survive regardless of profile contents:
+Two rules that survive regardless of profile contents — **and they are this law's VALUES, not
+derivations. Labelled as such on purpose:** nothing in I0–I6 yields them. They are judgments about
+what a person owes and what they are owed, and they are named here so they can be argued with rather
+than mistaken for mechanism.
 
 - **A person waiting outranks a company waiting** — a company has a process; a person has been left
   hanging.
-- **Discretionary never leads.**
+- **Discretionary never leads.** Scope it or it is false: *discretionary* means an option nobody is
+  waiting on and they have not declared — `Someday / Maybe` material. **A declared offense lane is
+  not discretionary**, and §9b's door places its container *before* the reactive work by design.
+  Read the rule wider than that and it is simply wrong about the freelancer whose entire business is
+  work nobody has asked her for yet.
+
+**These two are the one exception to §0c's arbitration: the profile does not override them.**
+Everything calibrated in this file, it does.
 
 ## 0b. The roles — two CONTRACTS, three SETS · derives from I0 and I5
 
@@ -190,10 +203,10 @@ fact.**
 ### The two contracts — mandatory, capability-tested, identical for everyone
 
 **`~~state` — the state.** Not "where the todos live": the engine's **database**. It keeps no cache
-and no memory between runs; **the list is the state** (§12). Ask all four questions of it, live —
+and no memory between runs; **the list is the state** (§12). Ask all five questions of it, live —
 and the answers are not all pass/fail, so read what each one costs.
 
-1. **What is open?** Every task manager answers this. It is the least of the four, and it is the
+1. **What is open?** Every task manager answers this. It is the least of the five, and it is the
    only one most people check before choosing a tool.
 2. **What did they already complete?** An open-row search cannot answer an existence question (§9).
    Without this the engine rebuilds a row they closed an hour ago, forever. **Required.**
@@ -203,10 +216,26 @@ and the answers are not all pass/fail, so read what each one costs.
    on their own write. It looks like proof and it is not. **For a solo person, "which colleague
    changed this?" and "which client wrote this?" are different questions, and only the second one
    separates an agent from a hand.** **Not pass/fail — the answer selects the mode (§9c).**
-4. **What does it cost — a duration on a row?** §6 places blocks, and a block has a length. Without
+4. **Does a TIME OF DAY stick — an hour on a row?** **Ask this before the duration, always:
+   placement needs to know WHEN before it needs to know HOW LONG.** The whole calculus resolves to
+   an hour — the envelope, captive windows, the anchors, the stagger, the ladder, door two's
+   container (§5, §6, §9b) — and on a date-only surface there is no field to write it into. A length
+   is what you write second. **Prove it with a disposable row: write an hour, read the field BACK,
+   delete it** (§13's probe method). **Never read a field's NAME as the answer** (§13) — a field
+   called *due date* may take a datetime, and one documented as a datetime may drop the time on
+   write. **A write that returns success and silently drops the hour is the whole failure mode** —
+   §14's silent half-success, and only the read-back catches it. **Not pass/fail and not a hard stop
+   — no time of day is a DEGRADED mode.** §14's own discrimination decides it: wrong stops, narrower
+   degrades, and this surface makes the engine **narrower, never wrong**. It reads the same physical
+   narrative and computes the same envelope; it writes fewer fields. §6's third flip-condition is
+   what that costs.
+5. **What does it cost — a duration on a row?** §6 places blocks, and a block has a length. Without
    a duration the engine cannot state the cost or enforce the floor. **Probe what a duration-less
    timed row actually renders as before placing one** (§13's probe method, not a guess), and if it
-   renders as a banner, §6's authorship clause already forbids the engine that row.
+   renders as a banner, §6's authorship clause already forbids the engine that row. **An unwritable
+   hour subsumes this question:** a row you cannot place at a time cannot carry a meaningful cost
+   either — a length with no start is a number about nothing. Ask 4 first and this one may already
+   be answered.
 
 **Expect a yes to 3 almost nowhere, and do not read that as a gap that will close.** It is a shape.
 **A work tracker is built to answer "which colleague?" — the right answer to a different question**,
@@ -223,7 +252,7 @@ law never resolves to a product name. The finding is that **an actor field passe
 failed the only test that mattered.**)*
 
 **And `~~state` must be PERSONAL and DURABLE. This is a test of the container, not of the feature
-list — a surface can answer all four questions above and still be disqualified here · I5**
+list — a surface can answer all five questions above and still be disqualified here · I5**
 
 - **It must be owned by the person, not their employer.** On an employer's workspace the rows are
   not theirs: the vendors document it themselves — integrations and webhooks can expose private
@@ -246,7 +275,7 @@ is two surfaces, one direction:**
 - **Work stays in the work tracker**, and the work tracker becomes an `~~inbound[]` source.
   Assigned-to-me is another person putting an obligation on them, which is exactly what that set is
   for and exactly what §9's gate reads.
-- **Life gets a personal `~~state`.** These four questions and both container tests bind that
+- **Life gets a personal `~~state`.** These five questions and both container tests bind that
   surface only.
 - **The engine writes a personal row whose description carries a POINTER — a URL to the work item —
   never a copy.** Same mechanic and same reason as §1's render law: a pointer cannot go stale
@@ -304,6 +333,139 @@ record (a system of record) and a mail thread (a tripwire a stranger can write t
 and §9's tripwire clause binds the second while the first keeps full closure authority. **Ask §10's
 question of the source in front of you, not of the bucket it came from.**
 
+## 0c. Calibration — the numbers, and where each one yields · derives from I0
+
+§0b is this file's anti-autobiography test, and it is pointed at exactly one thing: **role names.**
+It generalizes the SOURCES — mail is `~~inbound[]`, a notes app is `~~intent[]` — and it stops
+there. **It does not reach the CALIBRATION**, and nothing else does either. **§0c is §0b pointed at
+the second half**, because a law can name its roles perfectly and still be one person's autobiography
+in its numbers.
+
+**Two ways to write a stack into a law, and §0b catches one of them.** Naming a product is the
+loud one. **The quiet one is a number** — a floor, a gap, a threshold for a busy week, a base rate,
+a list of life domains, the surface they open in the morning. Each is true of somebody. **None is
+true of everybody, and a number never announces which it is.**
+
+### The instrument — and why the two already here cannot see a parameter
+
+**§V asks: could this be wrong TOMORROW? §0c asks: could this be wrong about someone else TODAY —
+without being wrong about anyone here? If yes, it is calibration, not law.**
+
+That is the whole test, and it needs to be a third one — this is the part that keeps the defect from
+growing back. **The other two instruments here are blind to a parameter by construction, while
+looking like they are working.**
+
+- **§V's test is a test of TIME.** *"Could this line become wrong tomorrow without anyone touching
+  this file?"* — a magnificent instrument against IDs, counts, vendors, prices, dates. Point it at a
+  thirty-minute floor and it returns PASS, correctly, forever: thirty minutes will never *become*
+  wrong tomorrow. **It was wrong on day one, for somebody else.** §V passes every parameter in this
+  file *by construction* — because a parameter does not rot. It was never right.
+- **§1's test is a test of LINEAGE.** *"A rule that cannot name a parent invariant is a fossil"* — a
+  paternity test. Point it at the floor and it passes honestly: I2 asks whether an artifact fits its
+  container, I4 prices activation, and between them they derive **that a floor exists**. **The
+  derivation proves the SHAPE and the file prints the VALUE.** A paternity test cannot see a
+  well-parented constant. It is not an orphan; it is a legitimate child carrying a number its
+  parents never gave it.
+
+**So a parameter passes both, and the file reads clean — which is exactly how it stays wrong.** The
+failure mode is not a stale rule or an unparented one. **It is a legitimate, well-derived rule
+stating a specific value**, and both instruments are built to bless precisely that.
+
+**The tell, and it is always the same shape: one section states a METHOD for a quantity while
+another states a VALUE for a quantity of the same kind.** §5 says *compute the envelope, never
+assume it* and names the defect out loud — *a magic number standing in for a computation* — and it
+sits a short walk from every rule that decides how long a block is. **A file can carry the ban and
+the violation at the same time and pass every review, because no instrument here compares them.**
+So compare them yourself: **where you find a method and a constant describing the same physical
+thing, the constant is the defect.** A file cannot catch with two instruments what needs three.
+
+### The three routes — every parameter takes exactly one, and the order is the rule
+
+The order is ranked by **what it costs the person.** The cheapest correct route always wins.
+
+**1 — PROBE. The engine finds out. Costs zero questions. Always preferred.**
+
+Where the answer is *observable*, asking is a defect and assuming is a worse one. This file already
+mandates exactly that for the adjacent case — *probe what a duration-less timed row actually renders
+as before placing one* (§0b's fifth question) — §13 owns the instrument, and the engine is already
+forbidden to report a predicted render. **A parameter describing something the runtime can look at
+belongs here.** Three of this file's own take this route:
+
+- **Render legibility.** How short a block can be before its title stops rendering is a property of
+  *their* client at *their* density. §13's probe method answers it in under two minutes. Predicting
+  it is the one thing already banned.
+- **Reader state.** What a reader can absorb is a function of the hour they read at and their own
+  wake anchor. **The scheduler owns the clock; the PROFILE owns the anchor; both are already loaded
+  before you render anything. Join them.** The join costs nothing and asks no one — and the two
+  halves sitting a section apart, unjoined, is what a constant looks like from the inside.
+- **A loaded week.** *Loaded* is a percentile of their own trailing weeks, and the surface holds
+  ninety days of them. A constant describes only whoever wrote it: a nurse works five shifts a week;
+  a physician sees thirty appointments a day.
+
+**2 — DEFAULT WITH A NAMED OVERRIDE. The law KEEPS the number and names where it yields. Costs zero
+questions. This is the primary route, and most parameters take it.**
+
+**The pattern is already in this file, more than once, and it is the model.** §5's arrive-early
+component reads *the provider's own instruction, else ~5–10 min* — a source named first, a number
+behind it. §5's physiology line is the whole of this section in one sentence: *physiology states and
+day modes live in the PROFILE — verify live, never from this file.* **The distance between an honest
+parameter and a fossil is one clause: the one naming whose number it is when it isn't yours.**
+
+**The discipline, because this is exactly where the naive fix goes wrong: a default with a named
+override is NOT a knob.** It is a knob **only for the person who needed it**, and it appears in
+onboarding for nobody. Nobody is asked their grain. The law says thirty and gets on with it; the one
+person for whom thirty is wrong has a named place to say so, and a sentence here telling them it
+exists.
+
+**Which is why "move every number to the profile" is the wrong fix and would produce a worse file.**
+A profile with forty knobs is not configurable — it is unusable, and it fails at precisely the point
+§0 warns about: the most important section left empty because they quit at question nineteen. **And
+the opinions ARE the intelligence.** A law with no numbers hands the engine nothing to place with;
+it hands the user a form. **Keep the opinion. Name its price.**
+
+**3 — ASK. Only when nothing else can answer.**
+
+The bar is both halves: **a probe cannot reach it, AND a default is most likely to be wrong for
+exactly the people this law is most wrong about.** A parameter failing only the first half takes
+route 2 — that is what route 2 is for.
+
+**Exactly one thing in this file clears that bar: whether their `~~state` surface is owned by them
+or by their employer** (§0b's PERSONAL AND DURABLE test). **The API returns identical bytes for a
+solo founder's own workspace and an employee's** — same endpoints, same rows, same admin seat — so
+no probe separates them, and the two answers have opposite consequences: one person owns her
+forty-year container; the other has three years of it sitting on somebody else's revocation. **A
+default is a coin flip on the only test in §0b that has no exception, and it flips wrong for the
+employee — the person the clause exists to protect.** Unasked, that clause is dead code forever: a
+test with no probe, no field, and nobody to answer it. **It is one question. Ask it.**
+
+### Arbitration — law vs. profile
+
+Every other boundary in this package has a precedence rule: law vs. engine (§12), law vs. the live
+list (§3), a booking vs. their own word (§5). **This is the one for law vs. profile, and it is not
+symmetric — the two sides are not the same kind of claim.** The values are the part that must not
+yield; the parameters are the part that must; and everything between them is mechanism, which is not
+a preference at all.
+
+- **On calibration, the PROFILE wins.** Every number here is a default, and the profile overrides
+  it whether or not this file anticipated their case. No argument, no confirmation, no ladder.
+- **On epistemics and mechanism, the LAW wins.** The invariants, the gates, the burden of proof, the
+  probe requirement, the render law, the dominance test, the two modes, the injection boundary. A
+  profile does not get to say *close on inference* or *skip the probe*. Those are not preferences;
+  they are how the system knows anything at all. **A profile line contradicting one is a report
+  line, never an instruction.**
+- **The two labelled values (§0) survive regardless** — labelled precisely so they can be argued
+  with rather than obeyed as physics.
+- **Ambiguous → treat it as calibration.** A law written by somebody errs in one direction: it
+  over-claims about the people it has never met. Resolve the doubt against the file.
+
+### The label
+
+**Every number kept in this file names where it yields, in the sentence that states it. A number
+with no yield clause is a defect of this section — reportable as one.** The posture already exists
+here: §7s closes its own list of priors with *these are priors, not law — hold them loosely, update
+on evidence, do not defend them.* That is one section being honest about what it is. **This one asks
+the same of the rest of the file.**
+
 ## 1. Prime directive — three homes · derives from I1 and I5
 
 - **`~~state` = things you DO.** Actionable, has a done-state. The operable surface and the single
@@ -324,9 +486,16 @@ And the prior question, which I1 actually asks: **does a loop exist at all?** Ro
 downstream. This governs `~~intent[]` — their own thinking surfaces, whatever they happen to be,
 and often there are none (§0b).
 
-**Default: nothing. Most notes contain zero action items, and zero is the correct answer.** They
-write to think. Anyone reading their notes under pressure to be useful manufactures loops out of
-thinking; that is the failure this test exists to stop.
+**Default: nothing, and zero is a correct answer.** They write to think. Anyone reading their notes
+under pressure to be useful manufactures loops out of thinking; that is the failure this test exists
+to stop.
+
+**But do not carry a base rate in here** (§0c). How many of *their* notes hold a move is a fact
+about them, not about notes: a bullet-journaler's pages are nearly all action items, and a prior
+tuned to somebody who writes to think is a suppressor pointed at her. **What is universal is the
+gate, not the rate.** The four gates below decide each note on its own evidence and return whatever
+they return; a pass admitting nine notes in ten has counted, not failed. **Report the count. Never
+the expectation.**
 
 **Read every note in the window. All of it is in scope, every topic.** A topic filter cuts on the
 wrong axis — see §13's filter law.
@@ -389,11 +558,22 @@ flooding it with maybes destroys the one surface they read.**
 
 ## 3. Project architecture · derives from I5 and I6
 
-The domain map — what routes where. Health → a health lane (recurring → a cadences child). Money,
-bills, disputes, subscriptions, legal → an admin/money lane. Errands, packages, home → a home lane.
-Career → a career lane. Each venture/creative lane its own. Tooling and automation → a systems
-lane. An opportunity rather than an obligation → `Someday / Maybe`. A quick transient loop → the
-cockpit (§7).
+The domain map is a **routing RULE, and its lanes are the profile's — never this file's** (§0c).
+
+**The rule: a row goes to the lane that owns its consequence** — the lane whose objective breaks if
+the row never fires. **The lanes come from the PROFILE, and they resolve against the live project
+list.** Three routes are structural rather than lanes, so they stay here: an opportunity rather than
+an obligation → `Someday / Maybe` (§9); a quick transient loop → the cockpit (§7); a recurring
+adherence item → a cadences child of its lane (§8).
+
+**Why there is no enumeration.** A printed list of lanes — health, money, home, career, ventures,
+systems — is the map of one life wearing the syntax of a universal, and it describes a person with
+no dependents: a parent's largest domain would file beside packages, while *each venture its own
+lane* hands first-class status to something most people do not have. ***Whose consequence?*** is the
+same question asked of everyone. *Which lanes exist* is not. Ask the first; read the second.
+
+**No named lane fits → say so in one line and use the closest lane they declared. Never invent a
+lane** — an invented lane is the enumeration growing back.
 
 Group a lane as one parent with tracks underneath so it reads as one objective. Reference lives in
 `~~notes`, never in the task surface.
@@ -411,8 +591,12 @@ project you expect is missing, **the live list wins and nothing written here get
 
 ## 4. Task shape — progressive disclosure · derives from I2 and I5
 
-- Title (glanceable): the action, verb-first, ≤ ~8 words. **No emoji. No "OVERDUE:" prefix** —
-  the surface already renders overdue; theatrics are noise. **No loop-key, no internal ID.**
+- Title (glanceable): the action, verb-first, **≤ ~8 words — a default, sized to a phone row** (§0c).
+  The rule underneath it is I2: **the title must survive the truncation of the surface they actually
+  read it on, and that is a probe, not a guess** (§13). Probe it and the number is theirs; don't and
+  ~8 stands. **No emoji — also a default, and the PROFILE's standing preferences override it**; some
+  people run their whole surface on them. **No "OVERDUE:" prefix** — the surface already renders
+  overdue; theatrics are noise. **No loop-key, no internal ID.**
 - Description (one tap): the one thing to do, the number/link/script, and one compact source
   line. Evidence and reasoning belong in your reply, not in their task. **But every fact a loop
   depends on belongs here, in the row's own description** — there is no store to hold it, and a
@@ -430,8 +614,10 @@ ladder (§9) decides what priority. **The ladder's fourth row — they own it, n
 default, and it is the one that keeps getting dropped**, which lands everything at p1/p2 until the
 surface has no signal left.
 
-Labels are for slicing, and they are load-bearing. Domain tags filter a lane; context tags
-(`@call`, `@errand`, `@online`, `@waiting`) enable batching. **An untyped item cannot be planned.**
+Labels are for slicing, and they are load-bearing. Domain tags filter a lane; context tags enable
+batching. **`@call`, `@errand`, `@online`, `@waiting` are examples of the shape, never the set** —
+the tags are whatever *their* batches are, and a nurse's `@onshift` is a context tag exactly the way
+`@errand` is. **An untyped item cannot be planned.**
 
 ### Every loop ships with its first move already made · derives from I4
 
@@ -479,10 +665,10 @@ that has to hold it.
 | The container | What gets built for it | Why it fails |
 |---|---|---|
 | A 20-minute doctor's visit | 40 lab orders + 8 asks | An over-asked visit doesn't get 60% ordered — it gets a rushed clinician and nothing signed |
-| A calendar row ~15px tall | a 15-minute block | The title doesn't render — an artifact they can't read does not exist |
+| A calendar row at their client's density | a block below the height its title needs | The title doesn't render — an artifact they can't read does not exist. **The height is a probe at their density, never a prediction (§13, §0c);** a quarter-hour is where it typically bites |
 | A morning holding a 10:40 appointment across town | a "free" 10:00 block | The envelope already claimed it |
 | Four hours captive in a chair | nothing | Read as busy, because free/busy counts cells, not capacity |
-| Thirty seconds of someone who just woke up | eight paragraphs around a card | They experience the wall, not the card |
+| The attention of whoever reads this, at the hour they read it | eight paragraphs around a card | They experience the wall, not the card. **Not a guess: the scheduler owns the clock and the PROFILE owns the wake anchor — join them and the reader's state is derived (§0c).** That join returns *thirty seconds of someone who just woke up* at 7am, returns something else at 9pm, and returns nothing at all if you never run it |
 
 One mechanism: enumerate what's available, ignore the physical limit of the thing receiving it. And
 the failure is total, not proportional — which earns this its own law. A brief 2× too long
@@ -514,7 +700,11 @@ tasks is not a plan; it's the pile moved onto the calendar.
 Three anchors — identify which before scheduling anything:
 
 - Trip-anchored (errands). The cost is the trip. **Default: never schedule a standalone errand
-  trip** — it won't happen, and it teaches them the calendar lies. Extract the neighborhoods they'll
+  trip** — it won't happen, and it teaches them the calendar lies. **Where it yields: the envelope
+  says so** (§0c). A trip whose computed envelope is minutes — the shop under their building, the
+  pharmacy on the corner — is not a trip, and the zero-trip clause below already routes it. This
+  default is written for a trip costing an hour door-to-door, and their home base and travel modes
+  are one computation away from telling you which case you are in. Extract the neighborhoods they'll
   physically be in over the next 7–14 days from all calendars (appointments = anchors already paid
   for), and time each errand immediately before/after the matching anchor. **No matching anchor →
   stays undated. Never a fake date.** *Flip-condition:* a hard external deadline can justify a
@@ -522,16 +712,38 @@ Three anchors — identify which before scheduling anything:
   - Zero-trip errands (package room, lobby) attach to a departure or return.
 - Mode-anchored (desk work). The cost is the context switch. Pay it once: **all quick desk loops
   → one consolidated block.** The parent task *is* the block (timed + duration); subtasks are the
-  checklist. Inside: shortest first, don't research — just close. Anything outgrowing its slot gets
-  kicked out rather than stalling it.
+  checklist. Inside: **their order (§7), defaulted to shortest first**; don't research — just close.
+  Anything outgrowing its slot gets kicked out rather than stalling it.
 - Ritual-anchored (cadences). Attach to an existing ritual — one activation carrying five tasks.
 
 An activation they are already paying counts — and it is the cheapest available. The whole point
 of anchoring is to ride a cost already incurred, never to add one.
 
-Placement needs a container. A block floating in open time does not fire. Rank: (a) immediately
-before a hard commitment — the wall it gets done against; (b) inside an existing ritual; (c) against
-a real external deadline.
+Placement needs a container. A block floating in open time does not fire — but **which** container
+fires is the profile's answer, not this file's.
+
+**Default rank:** (a) immediately before a hard commitment — the wall it gets done against; (b)
+inside an existing ritual; (c) against a real external deadline.
+
+**And the rank READS the PROFILE's activation mechanism (§0) — this is mandatory, not a flourish.**
+That field is the profile's most important line, the thing §0 says decides everything, and **§5 is
+its only consumer in this law.** A field nothing reads is a field that was never worth asking for.
+The mechanism does not change what the containers are; it says **which of them actually fires for
+this person**, and that reorders the rank:
+
+- **Urgency and consequence** ("an unanchored plan does not fire") → the default order stands.
+- **End-walls, not start-times** ("I start easily and never finish") → **(a) dominates and (c) is
+  nearly worthless** — a deadline three weeks out is not a wall. **Place the block so its END abuts
+  the wall: start = the commitment's envelope start, minus the duration.** The calendar has no
+  end-anchor, so the anchor lives in that arithmetic — and it is the envelope's start, never the
+  appointment's time. **No wall in the horizon → the block does not fire; say so rather than place
+  it.**
+- **Another person waiting** → a forcing function with a **name** beats a date. Place against the
+  commitment where someone expects the output — a send, a review, a call already booked — and treat
+  a bare deadline as the weakest container available, not the strongest.
+- **A ritual or a streak** → **(b) dominates.** The container already fires; the work rides it.
+- **The mechanism names something this list has no route for → say so in one line and use the
+  default order.** An unconsumed mechanism is a reportable gap, never a silent default.
 
 ### The placement calculus — match demand to capacity, never to free/busy
 
@@ -565,11 +777,37 @@ never as a grid of empty cells.
   authorship and judgment; it does not kill reading an ID off a card.
 - Acute-watch — when attention belongs on their own body. **Nothing.** *Narrow exception:* a
   conversation with the clinician standing right there.
-- Alert-open — a genuine focus window. Rare and expensive. **Reserve for generative. Never burn
-  it on admin a captive window absorbs for free.**
+- Alert-open — a genuine focus window. **Reserve for generative. Never burn it on admin a captive
+  window absorbs for free.**
+- Occupied — at work. On shift, on the floor, in the chair, in the cab. **Physically active or
+  cognitively loaded, no agency over the hour, the phone may be banned outright, and it can run
+  twelve hours. Nothing goes in it.** This state exists because the five above have no name for the
+  largest block in most people's week, **and a state with no name gets no rule.** A nurse's shift is
+  the type case and it defeats every other label: not captive-dead — she is working, not waiting,
+  and the reactive-admin sweep below would otherwise pour the pile into it on the strength of *a
+  phone and patience*; not alert-open — the alertness is already spoken for; not impaired; not
+  acute-watch. **And she cannot declare it a protected corridor, because that field is defined by
+  the symptom *reads as free and is not* — her shift reads as busy.** The window is real, it is
+  hers, and the correct thing to place in it is nothing.
 
 **The law: place by matching demand to state. When a captive window exists anywhere in the horizon,
 sweep the reactive-admin pile into it before placing any of that pile anywhere else.**
+
+**And the else — because that is a conditional, and its condition is not universal.** A freelancer
+with no commute, no chair, no queue and no standing appointment has no captive window this week, and
+the pile is still real. The rule above goes silent for her, and the rule above *it* — never burn
+alert-open on admin — reads as a ban that leaves her nothing.
+
+- **It is not a ban. Read its own clause: it forbids burning alert-open on admin *a captive window
+  absorbs for free*. Nothing absorbs it here, so nothing is being burned.**
+- **No captive window in the horizon → the pile is batched into ONE consolidated block** (§5's
+  mode-anchoring) **and placed in the cheapest alert-open window rather than the best one** — the
+  tail of a focus stretch, not its head; after the generative work has had its run, never before it.
+- **Never drip it.** What the captive clause prices is N activations, not the spending of alertness
+  (I4, I6). One block spends one activation whatever state it lands in; twelve scattered admin rows
+  spend twelve, and that is the cost the rule was actually about.
+- **Say it in the output: *no captive window this horizon — the admin pile is spending alert
+  time.*** A cost they can see is a cost they can decide about.
 
 ### An appointment is an envelope, not a point in time
 
@@ -604,8 +842,10 @@ Rules that follow:
   a taxed corridor.
 
 The flip side — travel is captive-dead, so the envelope is not pure cost. But qualify the leg:
-**long enough (~20 min+), seated, and stable — and a call needs signal**, which an underground leg
-does not have.
+**seated, stable, and longer than the activation cost of whatever you put in it — and a call needs
+signal**, which an underground leg does not have. **~20 min is the default threshold, and it is a
+default: it yields to the row's own duration** (§0c). A forty-minute leg holds a half-hour call; a
+ten-minute one holds nothing worth interrupting.
 
 Not merely efficiency: two placements can cost the same 30 minutes at opposite nervous-system
 prices, and a captive window has *negative* cost — it converts boredom into closure. **A slot's
@@ -619,8 +859,13 @@ booking.**
 
 **Physiology states and day modes live in the PROFILE — verify live, never from this file.**
 
-**A loaded week (≥3 timed appointments, or any procedure ≥2h) is a fact about their capacity, not a
-statistic — surface it.**
+**A loaded week is a fact about their capacity, not a statistic — surface it. And what counts as
+loaded is theirs, and it is measurable rather than assumed** (§0c): compare the week against their
+own trailing 90 days on the surface you have already read, and surface it when it sits at the top of
+their own distribution. **≥3 timed appointments, or any procedure ≥2h, is the fallback for a surface
+with no history to read — a fallback, never the rule.** A nurse works five shifts; a physician sees
+thirty appointments in a day. Three is a heavy week for neither, and the number describes only
+whoever wrote it.
 
 Taxonomy precedes batching. You cannot cluster what isn't typed. An errand is only findable as
 an errand if it carries a context tag + a location. When you touch an untyped location-bound item,
@@ -653,29 +898,72 @@ rest. **Check the task set, not just the calendar — absence from the grid is n
 The task surface is the database and the operable surface; the calendar is the projection.
 
 - Timed task + duration → a real calendar block. This is the operable form.
-  - **30-minute floor — no slivers. Never write a block shorter than 30 minutes.** Round up; never
-    down. A 15-minute block fails twice: its title doesn't render at that height, so it is as
-    inoperable as an all-day banner; and it lies about the cost, because the price is activation. A
-    call is 30m. An errand 45m. A doc session 45m.
+  - **The 30-minute floor — no slivers. Never write a block shorter than the floor.** Round up;
+    never down. **30 minutes is the default; the floor is the PROFILE's grain (`Your units`) wherever
+    they state one** (§0c). A block under it fails twice: its title does not render at that height —
+    **and that height is a probe at their client's density, never a prediction (§13)** — so it is as
+    inoperable as an all-day banner; and it lies about the cost, because the price is activation.
+  - **A block's length is its row's own duration rounded up to the floor — never a constant per
+    kind.** Nothing in I0–I6 yields a number for a call, an errand, or a doc session: I2 yields
+    *there is a minimum*; I4 prices an errand at its **trip**, which makes the length of an errand's
+    block meaningless rather than three-quarters of an hour. **A table of lengths per kind is one
+    calendar's shape wearing the syntax of a law** (§0c) — and §5 has already banned it under its own
+    name, one section up.
   - **Overlap is allowed; collision is not.** A routine chain runs underneath everything, so blocks
     may overlap. But two overlapping blocks must start ≥15 minutes apart, or the later title is
-    unreadable. **Never write two blocks on the same start time.**
+    unreadable. **Never write two blocks on the same start time.** **≥15 is the default — half the
+    default grain, which is the relationship that holds when the grain moves — and it yields to the
+    PROFILE's `Your units`** (§0c). What it protects is legibility at their client's density, and
+    that is probeable (§13); the number stands until a probe replaces it.
 - **Undated → never on the calendar.** Correct for parked and cockpit items — and for the prep
   checklist of an appointment that is already a calendar row.
-- **Date-only due dates: banned by default — with two exceptions stated immediately below. Read them
-  before applying the ban.** A date without a time renders as an all-day banner — invisible,
-  inoperable, and the single largest source of calendar clutter.
+- **Date-only due dates: banned by default — with three exceptions stated immediately below. Read
+  them before applying the ban.** **The ban guards two harms, and only one of them was ever written
+  down.** **At render:** a date without a time becomes an all-day banner — invisible, inoperable,
+  and the single largest source of calendar clutter. **That harm needs a projection to happen in.**
+  **At the row:** an hour the surface would have taken and did not get. §5's calculus resolves to an
+  hour; a row that omits one has computed the placement and thrown it away, telling them a day and
+  hiding the when. No calendar is involved in the second — it is I5's suppression face standing
+  where a field was left empty, and **it needs an hour field to happen in.** **Both are live
+  wherever the surface carries an hour and the rows project, which is what the ban is written for.
+  Where neither can happen, flip-condition 3.**
   - **Flip-condition 1 — the streak exception.** All-day is *correct* for a flexible daily discipline
     whose forcing function is a streak rather than a clock — where the commitment is "some amount,
     today, don't break the chain," and pinning a time would falsify it. The test is not "does it have
     a time" but **"what is its forcing function?"** Clock → time it. Streak → all-day, leave it alone.
-    Keep these to a handful.
     - **Authorship clause — the streak exception is theirs, never yours.** It covers only disciplines
       they authored. **An engine creates no all-day rows except the Sales rail.** Never invoke this to
       justify a row you are about to create.
     - Precedence. This overrides the date-only ban, the weekly date-only check, and the
       triple-homing delete. A streak item is not a Routine even though it recurs daily.
   - **Flip-condition 2 — the Sales rail** (§7s). Date-only by design. The ban does not reach it.
+  - **Flip-condition 3 — the surface has no hour to give, and nothing projects.** Two probes, both
+    this run: `~~state` cannot carry a time of day (§0b's fourth question, answered no by the
+    read-back — never by the field's name), **and** no calendar receives its rows (the projection
+    probe this section already runs for the ghost sweep, with a dated row since a timed one is
+    unavailable here). Then **no projection, no banner; no hour field, nothing discarded** — both
+    harms are unreachable, and a ban still cutting there costs every dated row and prevents nothing.
+    **That is the exact shape §13's filter law forbids: cutting on the axis of a harm, at a stage
+    where the harm does not happen.** So it does not apply, and a dated row on that surface is the
+    surface working rather than a defect.
+    - **Either probe unproven → the ban stands in full.** No probe, no flip — the rule the ghost
+      sweep already runs on, for the same reason (§13: never launder an untested assumption into a
+      law).
+    - **It lifts a SHAPE rule and grants no date.** This is the clause that would otherwise make it
+      an engine loophole, so read it twice: the other two exceptions are theirs, and this one is
+      yours. **§5 is untouched and still decides whether a day exists at all — no matching anchor →
+      stays undated, never a fake date.** A row earns its day from an anchor or a real external
+      deadline. It never earns one here.
+    - **It reaches no other surface. Where the hour field exists, date-only stays banned — including
+      where nothing projects**, because there the second harm is live and the banner's absence is
+      beside the point.
+    - **The authorship clause is not loosened: there is no all-day row to create.** *All-day* is a
+      render, and this is the case where nothing renders. An engine still creates no all-day rows
+      except the Sales rail.
+    - **The hour is not lost, it is relocated — to where §4 already puts every fact a loop depends
+      on: the row's own description.** And the pass says so in one line: *this surface carries no
+      time of day; rows carry a day and the placement is written beside it.* A narrowing they cannot
+      see is a capability claim they cannot check (§9c).
 - **Appointments → native `~~calendar` only, never duplicated into the task surface.**
 - **Never create a calendar event that duplicates a task.** Single home.
 - One merged view — and a timed task IS a calendar row. They see all calendars together as one
@@ -744,15 +1032,29 @@ authority, and it is the only one in this file.**
   vendor behaviour: if the vendor fixes the sync, the sweep silently deletes nothing and this file's
   most confident claim becomes the new error.
 
-## 7. The Inbox is the cockpit — not a triage bin · derives from I5 and I6
+## 7. The cockpit — the one surface they open · derives from I5 and I6
 
-They open the Inbox. An empty Inbox means they see nothing. "Process Inbox to zero" is wrong.
-The Inbox holds a **short, ordered shortlist of quick actionable loops, easiest-most-actionable
-first** (shortest duration first — momentum compounds).
+**The cockpit is whichever surface they actually open, and the PROFILE names it (`Your units`). The
+default is the task list's Inbox** (§0c). That is a default and not a fact about anybody: this whole
+section is I5 running, and I5 asks whether *their* surface is right — which the law cannot answer
+without knowing which surface it is. Get it wrong and every rule below curates a screen they never
+look at, perfectly.
+
+**An empty cockpit means they see nothing. "Process it to zero" is wrong.** It holds a **short,
+ordered shortlist of quick actionable loops.**
+
+**The order is the PROFILE's activation mechanism (§5), defaulted to easiest-most-actionable first**
+— shortest duration first, because momentum compounds *for the people it compounds for*. **Eat-the-
+frog is the other half of the population**, and the law has no way to know which half they are in
+except by reading the field it already asked for: someone who says the hard thing has to go first is
+telling you their order, and shortest-first hands them nine easy rows to hide behind. Default
+shortest-first. **Say which order you used.**
 
 The two-tier test:
 
-- Transient quick loop = would they do it in a ~2-minute phone sitting? → cockpit, consolidated
+- Transient quick loop = would they do it in a ~2-minute phone sitting? — **~2 min is a default, and
+  the test underneath it is §11's computation, not the number: doing it now is cheaper than filing
+  it** (§0c) — → cockpit, consolidated
   under one parent (the desk-blitz block, §5) with the loops as subtasks. Only a genuinely
   high-consequence one-off sits standalone above the parent.
 - Substantive / dated / recurring / multi-week → its domain project (§3).
@@ -812,7 +1114,17 @@ The test: does the skeleton carry this content at a time? If no, it isn't triple
 
 ### The obligation gate — the first question about any candidate row
 
-**Default: nothing. Most inbound messages contain zero todos, and zero is the correct answer.**
+**Default: nothing, and zero is the correct answer.**
+
+**But the default is not a base rate — do not carry one in here** (§0c). How much of *their*
+`~~inbound[]` carries an obligation is a fact about their correspondents, not about the stream. An
+ordinary inbox really is mostly noise — and a support rep's queue, a recruiter's, a solo
+consultant's, anyone's on a shared ops alias **IS their job queue**, where the noise is the
+exception. A prior tuned to the first is a suppressor pointed at the second. **What is universal is
+the gate, not the rate.** The test below decides each candidate on its own evidence and returns
+whatever it returns; a pass admitting nine in ten has counted, not failed. **Report the count. Never
+the expectation** — a stated rate primes the engine to expect an outcome, and expecting an outcome
+is how a gate gets skipped.
 
 **The positive test. Name both, from evidence you read this run, or create nothing:**
 
@@ -938,6 +1250,12 @@ The visibility ladder — what "earns visibility" concretely means:
 | They own it, high consequence (legal, health-critical, a closing window) | Standalone item above the parent, highest priority. |
 | They own it, nobody waiting, no deadline | Normal shortest-first position, low priority. This is the default — and the row that keeps getting dropped. |
 
+**The ladder's ORDER is law — it derives from I1 and from §0's two values. Its FURNITURE is not**
+(§0c): *desk-batch subtask*, *standalone above the parent*, and the priority levels are this file's
+defaults, and they yield to the PROFILE's value hierarchy and to whatever containers their surface
+actually offers. A surface with no sub-tasks renders the same order differently and is not in
+violation. **Keep the order. Do not defend the furniture.**
+
 ## 9b. The second door — offense · derives from I1 and I5's suppression face
 
 **Read this before you trust §9. The obligation gate is correct and it is not the whole law. Alone,
@@ -966,7 +1284,8 @@ toward creating. **This door must be positive for the same reason, or it becomes
 1. **The lane is declared.** The PROFILE names this lane as offense. **They declare it; you never
    infer it.** A lane you decided was important is your opinion about their life.
 2. **The lane is starved**, and you can prove it from the surface this run: no completed row in that
-   lane inside its declared cadence, or its container deferred 3×.
+   lane inside its declared cadence, or its container deferred 3× (**3× is a default and it yields to
+   `Your units` — §0c**).
    - **The starvation query excludes your own rows — filter out the `chief-of-staff` label.**
      Otherwise the door writes a container, they tick it, a completed row now exists in the lane,
      starvation clears, and the one uncomfortable number on the card goes healthy because they
@@ -998,7 +1317,9 @@ Cap the door — the count, not the intention.
 - **More than three declared lanes → the door does not fire at all.** Render *"N lanes declared, N
   starved — the profile is a wish list"* as the metric and refrain. A wish list starves the same way
   silence does, and eight blocks placed before the reactive work is not a plan — it is the pile moved
-  onto the calendar, which §5 already prices.
+  onto the calendar, which §5 already prices. **Three is this file's default, not a derivation (§0c),
+  and it yields to `Your units`.** What derives is only that a door firing on everything is a door
+  firing on nothing.
 - Multiple lanes starved and the door may fire once → the profile's value hierarchy ranks them. Use
   it, and say which lane lost.
 
@@ -1265,21 +1586,31 @@ Each sweep, also run this checklist — one line, one check:
    description is empty or stale, keep the task row dated.**
 4. **Block shape (§6 floor) — your rows only.** Prove it is yours from the activity log first; otherwise
    report and leave it.
-5. Date-only tasks → should be zero, with two exceptions: declared streak items and the Sales rail.
+5. Date-only tasks → should be zero, with three exceptions: declared streak items, the Sales rail,
+   and a surface with no hour field and no projection (§6), where every row is date-only and none of
+   them is a defect — check the count against §6's two probes, not against the number.
    **Everything else date-only is your defect: fix it.**
-6. **Priority inflation — count the top-priority rows.** More than a couple and you are the cause:
-   re-run the ladder (§9); the fourth row is the default.
+6. **Priority inflation — count the top-priority rows** *of yours.* More than a couple and you are
+   the cause: re-run the ladder (§9); the fourth row is the default. **"A couple" is a default (§0c);
+   the real test is whether the top level still discriminates** — it doesn't at two rows on a
+   five-row card, and it does at ten on a list of fifty. **Count against what they actually see.**
 7. Duplicates — search *within* Someday too, not just the cockpit. The dominance test binds.
 8. Raw, unparsed captures. A row titled with a voice-dump sentence is their raw material, not your
    defect. **Never rewrite it, never delete it. Name it once, leave it.**
-9. Parked > 90 days → propose a drop, once, never nag.
+9. Parked > 90 days → propose a drop, once, never nag. **90 days is a default (§0c) — it yields to
+   the lane's own declared cadence where the profile states one.**
 10. **Deferred 3× → the row is not a task, it is a decision wearing a task's shape.** Reshape it:
     *"Decide: X, or drop it."* A thing rescheduled three times is waiting on a call they haven't made.
+    **3× is a default and it yields to `Your units` (§0c).** What derives is that repeated deferral is
+    the signal (I4 — it never fires because the decision was never made), never the count itself:
+    someone who re-dates half their list every Monday as a matter of habit has a different number,
+    and 3 will nag them.
 11. Drift checks — reference material creeping back into the task surface; anything §V would evict
     from an artifact.
 12. **Regression replay — re-run the known defect classes and treat any recurrence as the loudest thing
     in the report:** duplicates · all-day banners · emoji · lapsed-while-open · a closed row resurfacing
-    · an emptied cockpit · a fake-dated errand · a hardcoded ID or instance · a sub-30m sliver ·
+    · an emptied cockpit · a fake-dated errand · a hardcoded ID or instance · a sub-floor sliver ·
+    **a number stated with no clause naming where it yields (§0c)** ·
     corridor-taxed admin · an undated row whose calendar row is empty or stale · a row that cannot name a
     counterparty and a clock · a loop kept past its own resolution · a classification made off a header ·
     a row of theirs re-opened or re-placed · a duplicate built because only open tasks were queried · a

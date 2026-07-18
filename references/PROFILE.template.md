@@ -44,14 +44,37 @@ tomorrow without anyone touching this profile? Then it doesn't belong here.)*
 - **Default travel modes** (and realistic door-to-door times to the places you actually go):
 - **Time zone:**
 
+## Your task list — whose is it?
+
+**One question, and it is the only thing in this whole file the engine cannot find out for itself.**
+The API returns identical bytes for a founder's own workspace and an employee's — same rows, same
+endpoints, same admin seat — so nothing can tell them apart by looking. Hence the question.
+
+- **The list this system treats as yours is:** *personal — mine, and I keep the account when I
+  leave* **/** *my employer's workspace*
+
+**Why it matters, in one line:** an employer's workspace has the horizon of your job, and a passport
+renews every ten years. If it's your employer's, the answer isn't "switch tools" — it's **two
+surfaces, one direction**: work stays exactly where it is and becomes a source the engine reads;
+your life gets a list you own. The engine will say so out loud rather than quietly putting forty
+years of your life in a three-year container.
+
 ## The activation mechanism — the most important section
 
 **What actually makes you start something?** Be honest and specific. This decides the entire
 placement strategy, and getting it wrong makes every block a fiction.
 
-Examples of a real answer: *"I move on urgency and consequence, not intention — an unanchored
-plan does not fire no matter how important it is."* · *"I start easily but never finish; I need
-end-walls, not start-times."* · *"I work best against another person waiting."*
+Examples of a real answer — **and each one changes what the engine does, concretely:**
+
+| If you say… | What changes |
+|---|---|
+| *"I move on urgency and consequence, not intention — an unanchored plan does not fire no matter how important it is."* | Blocks go against walls and deadlines; nothing floats in open time. |
+| *"I start easily but never finish; I need end-walls, not start-times."* | Blocks are placed **backwards from the wall** — the block ends where the next hard thing begins. A deadline three weeks out stops counting as a container. |
+| *"I work best against another person waiting."* | A forcing function with a **name** beats a date: work lands against the call, the send, the review someone expects — not against the due field. |
+| *"Rituals. If it isn't attached to something I already do, it doesn't happen."* | Work rides existing anchors; the morning chain and the weekly reset become the containers. |
+
+**Say it in your own words even if it's none of those.** If the engine has no route for what you
+said, it will tell you in one line rather than quietly defaulting.
 
 - **My mechanism:**
 - **What reliably makes me START:**
@@ -68,8 +91,11 @@ across ranks.**
 4.
 5.
 
-*(Two rules hold regardless: a person waiting outranks a company waiting. Discretionary never
-leads.)*
+*(Two rules hold regardless — and they are the law's **values**, not its mechanics, which means you
+can argue with them: **a person waiting outranks a company waiting**, and **discretionary never
+leads.** The second is narrower than it sounds: *discretionary* means something nobody is waiting on
+that you have not declared. **Your own work, below, is never discretionary** — its block goes ahead
+of the reactive pile by design.)*
 
 ## Your own work — the most important section, and the one nothing else can supply
 
@@ -152,17 +178,45 @@ Windows that read as free and are not. **Nothing gets placed here.**
 
 -
 
-## Your lanes / projects
+## Your lanes — the routing map, and the engine has no other one
 
-What the work actually serves. Name each lane and one sentence on what it's for. **Do not list
-project IDs — the engine queries those live.**
+**Every row gets filed into the lane that owns its consequence** — the lane whose objective breaks
+if that row never happens. **The engine ships with no list of lanes, on purpose.** A shipped list is
+always somebody else's life: it would hand a side venture a lane of its own and file your kid's
+school forms next to a package delivery.
 
+**So name yours.** One line each: the lane, and what routes into it. **Whatever is actually large in
+your life is a lane**, whether or not software usually has a name for it.
+
+- **Lane — what routes to it:**
 -
+-
+
+*(Examples of the shape, not the set: "Kids — school, appointments, anything with their name on
+it." · "Clinic — anything that happens on shift." · "The book — drafting, research, agent." ·
+"Money — bills, disputes, subscriptions, anything with a number on it.")*
+
+**Do not list project IDs — the engine queries those live.** A row that fits no lane you named gets
+one report line and the closest lane you did name. **The engine never invents a lane.**
+
+## Your units
+
+**Skip this entire section unless something in it is already true for you.** The law ships a default
+for every number here and names, in its own text, where each one yields to you. **A blank line costs
+you nothing** — this is not a settings page, and nobody is asked these questions.
+
+- **Grain** — the shortest block worth putting on your calendar. *(Default: 30 minutes. Shorter than
+  that and the title doesn't render and the block lies about what it costs. Answer only if 30 is
+  wrong for you.)*
+- **The surface you open first** — the one screen you actually look at. *(Default: the Inbox of your
+  task list. That surface gets curated short; everything else is filed behind it. If you actually
+  live in Today, or a filter, or a calendar, say so — otherwise it will curate a screen you never
+  open, perfectly.)*
+- **Anything else the law got wrong about your units:**
 
 ## Standing preferences
 
 - **Never put ___ in a task title:**
-- **Batch these together:**
 - **Never schedule ___ before ___:**
 - **Notification tolerance:**
 

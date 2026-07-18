@@ -4,28 +4,40 @@ graph TB
     START -->|"NO — hosted connectors only<br/>tasks · calendar · mail · notes"| CLOUD
     START -->|"YES — your message history,<br/>a wearable that records your day,<br/>notes that live on your own disk"| LOCAL
 
-    subgraph CLOUD["CLOUD-ELIGIBLE · the transfer-grade product"]
-        C1["Runs on Anthropic infrastructure"]
+    subgraph CLOUD["HOSTED-ONLY · the transfer-grade product · VERIFIED"]
+        C1["A Cowork scheduled task,<br/>running remotely"]
         C2["Fires with your computer OFF"]
         C3["7am brief actually arrives at 7am"]
-        C4["Minimum interval: 1 hour"]
-        C5["No access to local files"]
+        C4["Finest published cadence: hourly"]
+        C5["Nothing in the loop<br/>touches your machine"]
         C1 --> C2 --> C3 --> C4 --> C5
     end
 
-    subgraph LOCAL["MACHINE-PINNED · richer, less reliable"]
-        L1["Runs on your machine only"]
-        L2["Computer asleep at 7am = run SKIPPED"]
-        L3["One catch-up run on wake,<br/>older misses discarded"]
-        L4["A 7am brief can fire at 10pm"]
+    subgraph LOCAL["LOCAL DEPENDENCY · richer, and at risk · CONTESTED"]
+        L1["⚠ The vendor's own article says BOTH:<br/>'can't be tied to a folder on your computer'<br/>AND 'will only run locally'"]
+        L2["Reading A → the scheduled task<br/>cannot reach the folder at all"]
+        L3["Reading B → the run pins to<br/>a machine that has to be awake"]
+        L4["Either reading puts the 7am run at risk.<br/>Nobody has probed it yet.<br/>references/VOLATILE.md · Scheduling"]
         L5["Buys: your message history,<br/>a wearable's record of your day,<br/>notes that live on your own disk"]
-        L1 --> L2 --> L3 --> L4 --> L5
+        L1 --> L2 --> L4
+        L1 --> L3 --> L4
+        L4 --> L5
     end
+
+    subgraph CCD["Claude Code Desktop's local tasks · VERIFIED · a DIFFERENT product, shown for scale only"]
+        D1["Asleep at the hour = run SKIPPED"]
+        D2["One catch-up run on wake,<br/>older misses discarded"]
+        D3["A 9am task can fire at 11pm"]
+        D4["⚠ NOT documented for Cowork.<br/>Do not dress this as Cowork's rule."]
+        D1 --> D2 --> D3 --> D4
+    end
+
+    LOCAL -.->|"the nearest documented behaviour —<br/>a different product, and not authority here"| CCD
 
     CLOUD --> WIN["Reliability"]
     LOCAL --> WIN2["Corroboration"]
 
-    WIN -.->|"the tradeoff nobody names:<br/>every local dependency<br/>costs you the cloud"| WIN2
+    WIN -.->|"the recommendation needs no resolution:<br/>start hosted-only, add a local reader only<br/>when you can name the blind spot it closes"| WIN2
 
     classDef q fill:#F1EFE8,stroke:#5F5E5A,color:#2C2C2A
     classDef good fill:#E1F5EE,stroke:#0F6E56,color:#085041
@@ -35,4 +47,5 @@ graph TB
     class START q
     class C1,C2,C3,C4,C5 good
     class L1,L2,L3,L4,L5 warn
+    class D1,D2,D3,D4 q
     class WIN,WIN2 res

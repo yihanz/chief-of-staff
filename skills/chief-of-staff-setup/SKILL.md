@@ -1,6 +1,6 @@
 ---
 name: chief-of-staff-setup
-description: Set up, extend, troubleshoot, or remove the chief-of-staff system. Use when the user installs this plugin or says "set up my chief of staff", "get me started", "onboard me", "what do I need to connect", "how much does this cost", "can I use this on the free plan", "where is Cowork", "why isn't my brief running", "it keeps asking me to connect things already connected", "it recreated a task I deleted", "everything is an all-day banner", "add my calendar", "my calendar is iCloud", "I use Outlook", "I don't use Todoist — what else works", "can I just use Linear or Asana", "can it control my Mac", "where does my profile live", or "how do I uninstall this". Runs onboarding as a guided conversation — probe what exists, run a real pass before asking for anything, build the profile by interview with their own work first, write it where the engine can reach it, teach the required behaviours, schedule the run.
+description: Set up, extend, troubleshoot, or remove the chief-of-staff system. Use when the user installs this plugin or says "set up my chief of staff", "get me started", "onboard me", "what do I need to connect", "how much does this cost", "can I use this on the free plan", "where is Cowork", "why isn't my brief running", "it recreated a task I deleted", "everything is an all-day banner", "add my calendar", "my calendar is iCloud", "I use Outlook", "I don't use Todoist — what else works", "my tasks are already in Linear or Jira", "my own work never gets a block", "where do I configure my connectors", "I uploaded the skill and nothing happened", "can it control my Mac", or "how do I uninstall this". Runs onboarding as a guided conversation — probe what exists and test whether it qualifies, not just whether it answers; run a real pass before asking for anything; build the profile by interview, their own work first; write it where the engine can reach it; teach the required behaviours; schedule the run.
 ---
 
 # Setup — a guided onboarding, start to finish
@@ -18,8 +18,8 @@ placeholders unless they ask. They are setting up an assistant, not configuring 
 should be able to stop after any phase and still have something that works.
 
 **Show before you ask.** The first artifact comes before the first interview question — that's
-Phase 1, and it is the shape of this whole conversation. An onboarding that asks two dozen
-questions before it produces anything is an onboarding people leave.
+Phase 1, and it is the shape of this whole conversation. An onboarding that runs its whole interview
+before it produces anything is an onboarding people leave.
 
 **Never present the full stack as a prerequisite.** That is how people bounce. A calendar and a
 task list is a real product. Everything after that is earned.
@@ -99,6 +99,10 @@ and **the scheduled task.** Then pick up at the first thing that isn't done and 
 got Todoist connected and your profile row is there but empty. Let's fill it in."*
 **Re-asking someone what they already answered is how they conclude you weren't listening.**
 
+**One exception, and it runs the other way: if the profile row exists but has nothing under *whose
+task list is this*, that question was never asked and you have to ask it** — a blank there is not an
+answer, and it's the one thing in Phase 0 the probe can't recover for you.
+
 ---
 
 ## Phase 0 — Probe before you ask anything
@@ -124,7 +128,55 @@ not marking a checklist.
 **A listed tool is not a capability — the probe is the fact.** Confirm the tool responds, not just
 that it appears.
 
-Then report back in one short list, **in their words. The two-and-three shape is how you think about
+### Then the probe that decides the whole conversation — because "it answered" is not "it qualifies"
+
+**This phase tests presence. Presence is the cheapest signal here and it is the one you must not act
+on.** A work tracker answers *"somewhere your tasks live"* instantly and confidently — the way a
+filing cabinet answers *"somewhere to sleep."* **The question was too easy, and the answer routes
+someone past every warning in this file by construction.** Nobody with Linear already connected ever
+*suggests* using Linear. They don't think they're choosing anything. **So you have to look.**
+
+**This is a probe, not an interview. It is five readings and one question, and it costs under a
+minute.**
+
+**Ask their task surface five things — live, by calling it. A tool's website is not a capability.**
+*(Short form, for speed. **Phase 7 has all five in full, with what each one costs when the answer is
+no** — say those there, not here.)*
+
+1. **What's open?** Everything answers this. It proves nothing.
+2. **What did I already finish?** No → it will rebuild rows they closed, forever.
+3. **Can it tell my rows from theirs?** — does the history say what *wrote* each row, not just who?
+   **Not pass/fail; it picks the mode.** *(No history tool at all is a distinct answer from a history
+   tool with no such field — write down which, it matters below.)*
+4. **Does an hour stick on a row? — before the length, always.** Write one, read it BACK, delete it.
+   Never the field's name. No hour → **degraded, not disqualified.**
+5. **How long does this take — in minutes?** Story points are not minutes. No minutes → no length.
+
+**Those five are about features. The next one is about the container — and a surface can answer all
+five perfectly and still fail it.** That is not a technicality; it is the entire reason this fork
+exists. **A place your life lives has to be yours, and it has to outlive your job.** The second half
+is the one that decides it and it has no exception.
+
+**And no probe on earth can answer it, so ask it out loud.** It is the only new thing this setup asks
+that a machine could not have found for itself, and it takes five seconds:
+
+> Quick one — and it's the only thing about your setup I genuinely can't work out by looking. That
+> **[Linear / Asana / Notion / whatever they showed you]** — **is that your own workspace, or your
+> employer's?**
+
+**Why you cannot look it up: the connector returns identical bytes either way.** A solo founder on
+her own workspace and an employee on her company's seat are the same rows, the same endpoints, the
+same admin screen. **The answer changes everything and nothing on the wire carries it.**
+
+**Ask it of anything that has workspaces or teams at all** — every work tracker, Notion, and any task
+app with a business tier. **Skip it only where an employer's version cannot exist** (Apple Reminders,
+Things). **The product's tier is a hint and never the answer:** plenty of people run a company on a
+personal-tier tool, and plenty of employers hand out seats on one. **Take their word, don't debate
+it, and write it into the profile when you build it** — it has a section of its own.
+
+### Then fork — on what the probe found, never on what answered
+
+Report back first, in one short list, **in their words. The two-and-three shape is how you think about
 it, not how you say it — no role names, no jargon, no piles named out loud.** Something like:
 
 > Here's what I can already see:
@@ -135,18 +187,42 @@ it, not how you say it — no role names, no jargon, no piles named out loud.** 
 >
 > That's enough to run. Give me thirty seconds and I'll just show you.
 
-**Then ask only about what the probe could not resolve — and fork:**
+**Then ask only about what the probe could not resolve — and fork on three outcomes, not two:**
 
-- **Both of the two answered → Phase 1. Run it. Do not explain first, do not ask first.**
-- **Either one missing → Phase 2** for the sixty seconds, **Phase 7** for the connect path, then
-  **come straight back to Phase 1.** The run still comes before the interview.
+- **A personal list that outlives their job, and both of the two answered → Phase 1. Run it.** Do not
+  explain first, do not ask first.
+- **A work tracker, or an employer's workspace → go to Phase 7's task-list section and say the
+  container argument there, now, before anything else.** **Their floor is not missing — that is
+  precisely why this fork has to exist.** Something answered, and it was the wrong thing, and every
+  later phase would have treated it as settled. **Then Phase 1, on the list they own.**
+- **Either of the two missing → Phase 2** for the sixty seconds, **Phase 7** for the connect path,
+  then **come straight back to Phase 1.** The run still comes before the interview.
+
+**This fork is not a formality and it cannot be recovered later — this is the only place in the whole
+system where the sentence is allowed to be said.** Once the engine is running it may propose dropping
+a source it can see; **it may never propose that they go acquire one it can't.** That rule is
+deliberate and it is what keeps the morning brief from turning into a shop. **The consequence is
+this: nothing downstream of here will ever tell them to get a personal task list.** Not on day one,
+not in a year, not when it starts failing them. **Here or nowhere.**
+
+**Say it as a fit problem, not a verdict on their tool** — you are three minutes into their first
+conversation and their tool is fine:
+
+> Before I run anything — one thing I want to flag now rather than in a month, because it's the kind
+> of thing that's cheap today and expensive later. Your **[Linear]** is doing the job of *"somewhere
+> my tasks live,"* and it'll answer me when I ask it things. But it's a **work** tracker, and I'm
+> about to start putting your life in it. Give me sixty seconds on why that's the one thing I'd
+> change, and then I'll show you the thing regardless.
+
+**Then Phase 7. Then come back and run it.** They still get a card in the first few minutes — the
+fork costs a minute, not the demo.
 
 ---
 
 ## Phase 1 — Run a pass before you ask for anything
 
 **This is the most important structural rule in this file.** They have not agreed to anything yet.
-An argument does not earn two dozen personal questions. **A card does.**
+An argument does not earn a page of personal questions. **A card does.**
 
 ### First, create the profile row — empty
 
@@ -324,16 +400,36 @@ answer honestly when they know what the answer is for.
    you actually go?"** *(Real times, not map times.)*
 10. **"Time zone?"**
 
-**What outranks what:**
+**The map of your life — and this one has to come before the ranking, because a ranking needs
+something to rank:**
 
-11. **"Rank them — what beats what when two things collide?"**
+11. **"What are the big areas your life actually splits into? Name them however you'd name them to a
+    friend."**
+    *Why: every row gets filed under the area whose thing breaks if it never happens, and that's how
+    it decides what to show you and in what order.* **Get one line each: the area, and what goes in
+    it.**
+
+    **Do not offer them a list to choose from, and do not fill this in for them.** There is no
+    shipped list of areas anywhere in this system, deliberately — **any list we shipped would be
+    somebody else's life.** It would hand a side project an area of its own and file a parent's
+    single largest area next to parcel deliveries. **Whatever is actually large in their life is an
+    area, whether or not software has ever had a word for it.**
+
+    If they stall, one nudge: *"What would you be upset to find you'd dropped for a month?"* Two or
+    three is plenty; this isn't a taxonomy exercise. **A row that fits nothing they named still gets
+    handled — it lands in the closest one and says so in the receipts.** Say that; it takes the
+    pressure off getting it right.
+
+**What outranks what — and now "them" means something:**
+
+12. **"Now rank those. What beats what when two of them collide?"**
     *Why: sets priority and review order. Deadline proximity moves an item within its rank, never
     across ranks. Two rules hold regardless: a person waiting outranks a company waiting, and
     discretionary never leads.*
 
 **What makes a free slot not actually free:**
 
-12. **"When do you wake, and when are you trying to sleep?"**
+13. **"When do you wake, and when are you trying to sleep?"**
 
 **Now the body questions — and say the opt-out AT the question, not later:**
 
@@ -342,37 +438,37 @@ answer honestly when they know what the answer is for.
 > stupidly. Skip anything you'd rather not have passing through a cloud service. The only thing I
 > genuinely can't work around is the one you already answered.
 
-13. **"Anything that changes what you can do on a given day — medication, recovery, pain, an
+14. **"Anything that changes what you can do on a given day — medication, recovery, pain, an
     energy trough?"** *Why: it decides whether a window is usable at all. And say this before they
     answer, not after: the engine may read this, but it never puts it in a task title or a calendar
     row.*
-14. **"Any hard medical flags — allergies, contraindications?"** *Why: it surfaces these into
+15. **"Any hard medical flags — allergies, contraindications?"** *Why: it surfaces these into
     appointment prep. Also optional — if you'd rather carry those yourself, say skip.*
-15. **"Anything that makes a slot unusable that a calendar would show as wide open?"**
+16. **"Anything that makes a slot unusable that a calendar would show as wide open?"**
 
 **The cheap containers:**
 
-16. **"Walk me through your morning. What already happens without you deciding to do it?"**
+17. **"Walk me through your morning. What already happens without you deciding to do it?"**
     *Why: an activation you're already paying is the cheapest one available. The engine attaches
     work to things that already fire.*
-17. **"Any recurring captive windows — commutes, waiting rooms, standing appointments?"**
+18. **"Any recurring captive windows — commutes, waiting rooms, standing appointments?"**
     *Why: these are the best admin containers you have. Stuck in a chair anyway is free time.*
-18. **"Training window? Wind-down? Weekly reset?"**
+    **Listen to the length of the answer here, don't just log the window** — see the read-back below.
+19. **"Training window? Wind-down? Weekly reset?"**
 
 **The no-go zones:**
 
-19. **"Any windows that look free and absolutely are not? Nothing gets placed there, ever."**
+20. **"Any windows that look free and absolutely are not? Nothing gets placed there, ever."**
 
 **Day modes:**
 
-20. **"Are there days that run on different rules — short sleep, travel, a bad pain day?"**
+21. **"Are there days that run on different rules — short sleep, travel, a bad pain day?"**
     *Why: the engine names the mode on the card when it isn't the default day.*
 
-**Standing preferences:**
+**Standing preferences — one line, both halves, then move on:**
 
-21. **"Anything that should never appear in a task title?"**
-22. **"Anything you want batched together? Anything that must never be scheduled before something
-    else?"**
+22. **"Anything that should never appear in a task title? Anything that must never be scheduled
+    before something else?"**
 23. **"How much notification do you actually tolerate?"**
 
 **How it reaches you — ask this once, here, and never again:**
@@ -394,13 +490,15 @@ answer honestly when they know what the answer is for.
 
 **Do not let them stall out on completeness.** They can stop when they have:
 
+- **Whose the task list is** — already answered back in Phase 0. **Write it down; never ask it
+  twice.** It's first here because it decides *which list the rest of this even lives on.*
 - **Their own work** — or the recorded decision not to name any. **Blocking.**
 - **The activation mechanism.**
 - **Home base + time zone.**
 - **Wake anchor.**
 
-Everything else accretes. Say: *"That's enough to run. The rest we can fill in the first time it
-matters."*
+Everything else accretes — **including their areas, which fill themselves in as rows arrive.** Say:
+*"That's enough to run. The rest we can fill in the first time it matters."*
 
 ### Now write it down — and the profile is a row, not a file
 
@@ -409,10 +507,31 @@ interview that ends in a nice conversation and nothing written is the single wor
 available here: they paid the whole cost and got none of it.
 
 **Fill in the stub row you made in Phase 1** — same row, same label, their answers under the
-template's headings in its description. Then **read it back and confirm it:**
+template's headings in its description. **Phase 0's answer about whose task list it is goes in too —
+it has a heading of its own. Don't ask it again; you already have it.** Then **read it back and
+confirm it:**
 
 > Done — it's all in that **Chief of Staff — Profile** row on your list. Here's what I wrote.
 > [read it back] Anything wrong?
+
+**And say one sentence at the read-back that you did not ask as a question — this is the one number
+that quietly decides whether any of this fits their life:**
+
+> One assumption I've been making that I should say out loud rather than leave you to discover.
+> **I assume half an hour is the shortest block worth putting on your calendar** — below that the
+> title won't even render and the block lies about what the thing costs. **That's just a starting
+> number, and it's wrong for plenty of people.** If your real windows are twenty minutes — a break
+> between patients, the gap between drop-off and the first call — **say so now and I'll write it
+> down**, and I'll stop refusing to place things that would actually have fit.
+
+**Why this is a sentence and not question 25 — and the distinction matters, so hold it.** The engine
+can *see* their windows: their calendar holds months of how their days actually run, and looking is
+free while asking is not. **A number the runtime can observe is never worth a question.** But it can
+only see the shape, not the judgement — so the number stays a default, **and the one person it's
+wrong about gets told, in plain words, that it's a default and where to say so.** That's what this
+sentence is. **It is not a settings screen and this is not the start of one.** Say it once, at the
+read-back, when they can hear it — and if question 18 already told you their windows are twenty
+minutes, **you have your answer without spending the sentence.** Write it down and move on.
 
 **Then tell them it's theirs, plainly:**
 
@@ -525,7 +644,17 @@ an app that doesn't exist.** Cowork *is* on the web. It is a toggle in the messa
 **The one real wall is money, and it's on the schedule:** scheduled tasks are **Cowork-only and
 paid-only.** Read the current plan names out of `references/VOLATILE.md`.
 
-**So check their plan before you promise them a 7am brief:**
+**So check their plan before you promise them a 7am brief — and "check" means ASK. You cannot see
+it.** There is no call that returns their plan, no field to read, nothing in this conversation that
+knows. **A guess here is the worst kind available: you'd promise a stranger an unattended morning
+brief they cannot have.** One line, and it costs nothing:
+
+> One thing I can't see from in here — **are you on a paid Claude plan, or the free one?** It only
+> decides whether the morning run can happen on its own. Everything else is the same either way.
+
+**Never infer it from what's connected, from the plugin being installed, or from anything working so
+far.** Connectors are on every plan; a plugin's presence proves someone *else* installed it. **Ask,
+take their word, move on.**
 
 - **On a paid plan → carry on. All three decisions below apply.**
 - **On Free → they cannot have the schedule, and they can have everything else.** Do not treat this
@@ -539,8 +668,26 @@ paid-only.** Read the current plan names out of `references/VOLATILE.md`.
 
 **And if they're on Free and don't have the plugin at all — the skills still install by hand.**
 **Skills work on Free; plugins do not.** Zip each skill folder and upload it at **Customize >
-Skills** — code execution must be enabled. Connectors work on Free too, on every surface including
-mobile. **Read the current click path from VOLATILE before dictating it.**
+Skills**. Connectors work on Free too, on every surface including mobile. **Read the current click
+path from VOLATILE before dictating it.**
+
+**But first, the switch that gates the entire free path — and it is off by default, so say it before
+they try:**
+
+> Skills need **code execution** turned on, and it's a setting, not a plan. If it's off, the upload
+> screen won't do anything useful and there's nothing on it that tells you why. **Turn it on first:**
+>
+> 1. Open **Settings.**
+> 2. Go to **Capabilities.**
+> 3. Turn on **Code execution and file creation.**
+>
+> Then come back and upload.
+
+**This is the one prerequisite in the whole package that nothing else names, and it fails
+silently — which is why it's here in full rather than in a clause.** *(It's a click path, so it
+rots: `references/VOLATILE.md` wins if it disagrees, and if VOLATILE can't be read, **name the
+destination — the capability toggle in Settings — and say you can't see the current buttons.** Do
+not reconstruct them.)*
 
 **And tell them to put `references/` inside each skill folder before zipping — this is the step
 nobody thinks of, and skipping it silently costs them the price sheet.** `references/` lives
@@ -563,46 +710,65 @@ it. Don't ask twice.**
 
 ### Decision 2 — where it runs. This follows from what they connected, not from a preference.
 
-| | Cloud routine | Local / desktop task |
+| | Hosted connectors only | Anything that reads the machine |
 |---|---|---|
-| **Fires with the computer off** | **Yes** | **No — the run is skipped** |
-| **Access to local files and apps** | **No** | **Yes** |
-| Minimum interval | 1 hour | 1 minute |
+| **Fires with the computer off** | **Yes — verified: scheduled tasks run remotely** | **At risk — and see below** |
+| **Access to local files and apps** | **No** | **Yes, wherever it runs at all** |
+| Finest published cadence | hourly | — |
 
-**The rule that ties the two halves of this setup together, verbatim from the Cowork docs: *"If a
-scheduled task requires local files or apps, it will only run locally."*** So the choice is already
-made by what they connected:
+**This section used to carry one vendor sentence as the rule that ties the two halves of setup
+together. It is not a rule — the vendor's own article contradicts itself about it, in the same
+article, and this package had been leaning on the half it liked.** **`references/VOLATILE.md` →
+Scheduling carries both positions, quoted, dated and sourced, with the probe that would settle it.
+Read it there. Do not restate it from here** — that is this file's own rule, and a contested vendor
+quote is the case it exists for. **Nobody has probed it yet, so quote neither sentence as the rule;
+quote the behaviour instead, and cite VOLATILE.**
 
-- **Everything hosted — task list, calendar, Gmail, Notion → cloud.** It runs whether or not the
-  laptop is open. **This is most people, and it should be.**
-- **Anything that reads the machine — Apple Notes, a Markdown folder, messages, a lifelog → local.**
-  There is no cloud option; the surface is on the machine.
+**And here is why the contradiction costs this conversation almost nothing.** The recommendation is
+the same under either reading:
 
-**THE TRAP — say this out loud, in these words, to anyone with a local surface connected.**
-**Unattended scheduling and local access are mutually exclusive, and nothing on screen tells you
-so.** The failure has no error message:
+- **Under one, the scheduled task cannot reach the folder at all** — which is worse, and fails harder.
+- **Under the other, the run pins to a machine that has to be awake.**
+
+**Both make the local dependency the thing that puts the morning run at risk.** So the choice is
+still made by what they connected:
+
+- **Everything hosted — task list, calendar, Gmail, Notion → the schedule is safe, and that half is
+  verified.** It runs whether or not the laptop is open. **This is most people, and it should be.**
+- **Anything that reads the machine — Apple Notes, a Markdown folder, messages, a lifelog → the
+  morning run is at risk, and which way is unsettled.** **Start hosted-only. Add a local reader only
+  when you can name the blind spot it closes.**
+
+**THE TRAP — say this out loud to anyone with a local surface connected.** **Nothing on screen tells
+them, and the failure has no error message either way:**
 
 > Here's the one that catches everyone. If you point a scheduled task at anything on this machine —
-> a folder, your Apple Notes, your messages — **it can only run on this machine.** So you set it for
-> 7am, you go to bed, the laptop sleeps, and **the run just doesn't happen.** No error. No
-> notification. Nothing in your inbox. You find out at lunchtime when you notice there was no brief,
-> and you assume the thing is broken. It isn't — it was asleep, exactly as designed, and nobody
-> mentioned it.
+> a folder, your Apple Notes, your messages — **the morning run stops being something I can promise
+> you.** And I'm going to be straight about why: **the docs say two different things and I'm not
+> going to pick the one that flatters me.** Either that task can't reach your folder at all, or it
+> can only run while this machine is awake — in which case you set it for 7am, you go to bed, the
+> laptop sleeps, and **the run just doesn't happen.** No error. No notification. Nothing in your
+> inbox. You find out at lunchtime, and you assume the thing is broken.
 >
-> So it's genuinely one or the other: **a brief that fires while you sleep, or a brief that can read
-> your machine.** Not both. Every local surface you add buys you one blind spot closed and costs you
-> the schedule.
+> **Both of those are bad in the same direction, which is the part I'm sure of.** So: **start with
+> the hosted stuff only** — that fires while you sleep and that half isn't in doubt. **Add a local
+> surface when you can name the blind spot it closes**, and we'll find out together what your setup
+> actually does with it.
 
-**If they're on the local path anyway, tell them the two behaviours that otherwise get reported as
-bugs:**
+**If they add a local surface anyway, two things to say — and be exact about whose behaviour each one
+is, because this is where a plausible fact gets dressed as a sourced one:**
 
-- A skipped run gets **one catch-up on wake.** Older misses are discarded. **A 7am brief can fire
-  at 10pm.**
-- **That is exactly why the engine renders "what's LEFT" instead of a morning-shaped brief when it
-  fires late.** Designed behaviour, not a fault.
+- **What a Cowork scheduled task does when it MISSES a run is not documented anywhere.** No catch-up
+  rule, no skip rule, no retry rule is published for it. **Do not borrow Claude Code Desktop's skip
+  and catch-up rules** — those are real, they are verified, and they belong to **a different
+  product.** VOLATILE says so in as many words. **Probe it instead: create the task, try to give it a
+  folder, and see what the modal actually offers. One run answers it** — then tell them what you
+  found rather than what you expected.
+- **If a run does fire late, the engine renders "what's LEFT" instead of a morning-shaped brief.**
+  That one is ours, it is designed behaviour, and it is not a fault.
 
-**Tell them to leave the laptop awake if they want the local run:** that is the only fix, and it is
-theirs to choose. Everything else about a local task is fine — it is the sleeping that kills it.
+**And if their local run turns out to be the machine-pinned kind, leaving the laptop awake is the
+only fix** — theirs to choose. **Find that out by probing, not by assuming.**
 
 ### Decision 3 — the prompt text. Give it to them to paste, verbatim.
 
@@ -698,7 +864,7 @@ people have five, some have none, and **none is a legitimate answer that needs n
 | The kind | What belongs in it | The honest pitch |
 |---|---|---|
 | **Places other people can put something on you** | Mail. A chat app. Work assigned to you. A portal that emails you. | **The highest-leverage thing you can add, and for most people that means mail.** Without it the engine can only organize what you already knew about; with it, it finds the thing you'd have missed. It's what changes the feeling from "tidy" to "covered." |
-| **Places you write your own thinking** | A notes app, voice capture, a journal — **or nothing.** | Your own hand is the best record of your intentions. **But most people don't keep a second brain, and that's fine.** More often than not the engine correctly finds *nothing* in your notes and leaves your thinking alone. **If you already email yourself notes, you're done — mail covers this.** |
+| **Places you write your own thinking** | A notes app, voice capture, a journal — **or nothing.** | Your own hand is the best record of your intentions. **But most people don't keep a second brain, and that's fine.** What it finds in there depends entirely on how you write: if you write to think, it'll correctly leave nearly all of it alone; if you keep a bullet journal, nearly every line is a real move. **It reads all of it and tells you what it found — it never guesses in advance which kind of writer you are.** **If you already email yourself notes, you're done — mail covers this.** |
 | **Things that can prove a fact one way or the other** | Your sent mail, a message thread, a health record, a receipt. | Each one closes **one specific blind spot** — a text that moved a time, a visit that proves a loop closed. **Only worth it if that blind spot is one you actually have.** Ask; don't assume. |
 
 **Two things to say plainly when they ask about the third row especially:**
@@ -707,8 +873,9 @@ people have five, some have none, and **none is a legitimate answer that needs n
   it couldn't reach — that's the `read 5/6` on the card. A complete pass over whatever your stack
   happens to be reads `sources 6/6`; **the day a source goes dark, the number drops and the
   receipts name it.**
-- **Anything that reads this machine costs you the schedule.** That's the real price, it's invisible
-  otherwise, and it's in **Phase 5, decision 2.** Name it every time.
+- **Anything that reads this machine puts the morning run at risk** — and the vendor's own docs
+  disagree about exactly how. That's the real price, it's invisible otherwise, and it's in
+  **Phase 5, decision 2.** Name it every time.
 
 **Where it runs — cloud or this machine — is a separate question with its own answer in Phase 5. It
 is not a level and it never was.**
@@ -717,39 +884,79 @@ is not a level and it never was.**
 
 ## Phase 7 — The connect paths
 
-**This is reference, not a walk.** Come here from Phase 0 when the floor is missing, or from
-Phase 6 when they want to add something else. For each one: **required or optional → what it does → why →
-what it asks → the actual clicks.** Real numbered paths. Never "go check the docs."
+**This is reference, not a walk.** Come here from **Phase 0** when the floor is missing **or when the
+probe found a work tracker**, or from Phase 6 when they want to add something else. For each one:
+**required or optional → what it does → why → what it asks → the actual clicks.** Real numbered
+paths. Never "go check the docs."
 
 **And before you dictate any of them: read `references/VOLATILE.md`.** Every screen below belongs
 to somebody else and they redesign it without telling us.
 
+### "So where are my connectors configured?" — answer this the moment they ask, and the answer is a relief
+
+**Anyone who unzipped this and looked at the files will ask.** There's a file in there called
+**`mcp.example.json`** that looks exactly like the place connectors get declared, and finding it is
+how someone talks themselves into editing JSON to connect Gmail. **They'd be doing work that has no
+reason to exist.** The file says so itself, at the bottom, in a block nothing else in this package
+points at:
+
+> **Your Gmail, your calendar, your task list — none of them are configured in any file, and that's
+> the good news.** They're hosted connectors: **you add them once in Claude's own settings and
+> they're on everywhere** — this chat, your phone, the 7am run that happens while you're asleep.
+> Nothing to edit, nothing to keep in sync, nothing that breaks when you get a new laptop. **That's
+> strictly better than anything a config file could do for you, which is exactly why they're not in
+> one.**
+>
+> That `mcp.example.json` is an example, it isn't loaded, and it's named that on purpose. It's only
+> for the rare local thing that runs on your own machine — **and every one of those puts the morning
+> run at risk** (Phase 5, decision 2). **You almost certainly want nothing to do with it.**
+
+**Do not walk them through that file. Do not rename it for them.** Send them to the connector path
+below — that's the whole answer, and it's shorter than the question.
+
 ### The task list — this choice matters most, and here's the honest reason
 
-The engine asks it **four** questions, not one. **Probe them live — a tool's website is not a
+The engine asks it **five** questions, not one. **Probe them live — a tool's website is not a
 capability, the call is.**
 
-1. **What's open?** — every task manager does this. It's the least of the four, and it's the only
+1. **What's open?** — every task manager does this. It's the least of the five, and it's the only
    one most people check before picking a tool.
 2. **What did I already finish?** — otherwise it rebuilds a row you closed an hour ago, forever.
    **Required.**
 3. **Who put this row here — me, or the engine?** — otherwise it "fixes" a block you deliberately
    moved. **This one isn't pass/fail. It picks which of two modes you get** — see below.
-4. **How long does this take?** — the engine places work as *blocks*, and a block has a length. **No
+4. **Does an hour stick on a row? — ask this BEFORE the length, always.** Placement needs to know
+   *when* before it needs to know *how long*: the whole calculus resolves to an hour, and a
+   date-only surface has no field to put one into. **Prove it with a throwaway row — write an hour,
+   read the field BACK, delete it.** A field called *due date* may take a time, and one
+   documented as taking a time may drop it on write; **only the read-back knows.** **Not pass/fail
+   and not a dealbreaker — no hour makes the engine narrower, never wrong.**
+5. **How long does this take?** — the engine places work as *blocks*, and a block has a length. **No
    duration on a row, no length** — so it can't tell you what the thing costs and can't hold the
-   30-minute floor. It shows a `—` where the hour would go rather than an hour it has nothing behind.
+   floor. It shows a `—` where the hour would go rather than an hour it has nothing behind.
    **What your calendar draws for that row is your task app's business, not ours — so probe it on the
-   first run and tell them what you found.** Never predict it.
+   first run and tell them what you found.** Never predict it. **Ask 4 first — an hour it can't write
+   subsumes a length it can't write, and this one may already be answered.**
 
 **And two questions about the container it lives in, which have nothing to do with features:**
 
 - **Is it yours, not your employer's?**
 - **Will it outlive your job?** ← **this is the one that decides it, and it has no exception.**
 
-#### Why a work tracker cannot be the place your life lives — say this whenever they suggest one
+#### Why a work tracker cannot be the place your life lives — say this whenever the probe finds one
 
-**They will suggest it, because they already live in it all day.** Don't wave them off with a
-feature comparison — **the argument that actually lands is the container:**
+**Not when they suggest one. When you find one.** That distinction is the whole reason this section
+reaches anybody: **the person who most needs this paragraph never suggests anything.** They had
+Linear open before they met you, it answered the probe, and they don't experience themselves as
+having made a choice. **A warning that waits to be invited is a warning that only ever reaches the
+people who didn't need it.** Phase 0's probe is the trigger. This is the destination.
+
+**And say it to the person whose workspace turned out to be their employer's, even if their tool is
+otherwise perfect** — that answer is the one thing here with no exception, and it never arrives on
+its own.
+
+**Don't wave them off with a feature comparison — the argument that actually lands is the
+container:**
 
 > Your life has a forty-year horizon. A passport renews every ten years. A mortgage runs thirty. A
 > health condition runs until you die.
@@ -764,16 +971,69 @@ feature comparison — **the argument that actually lands is the container:**
 Two more, briefly, if they want them: **the rows aren't yours** — admins can export private boards
 and teams; the vendors document this themselves — and **most work trackers can't tell you a task's
 length in minutes** (they estimate in points, or not at all), so nothing on that surface can state
-what a life-row costs or hold the 30-minute floor.
+what a life-row costs or hold the floor.
 
-**But do not tell them to leave the work tracker. It's excellent at work.** The move is **two
-surfaces, one direction** — say it exactly this way:
+##### Then tell them exactly what they'd get and what they'd never get. Be specific, not gloomy.
+
+**They've earned a straight answer, and "it degrades" is not one.** Say what works, then say the one
+thing that is dead — **and say *dead*, because the word doing the work here is *forever*:**
+
+> Here's the honest split, and it isn't all bad news.
+>
+> **Door one works, and it works well.** Your mail is a real inbox — things arrive there and I read
+> what arrived. I don't have to guess what to search for. So *"who is waiting on me and what breaks
+> if I don't"* — that whole half runs fine.
+>
+> **The appointment math works.** All that needs is your calendar, what you tell me about yourself,
+> and arithmetic. Nothing about your task list touches it.
+>
+> **Door two — your own work — cannot ever fire on this surface.** Not badly. Not sometimes. Never,
+> at any price, on any plan. Before I protect a block for your own work, I have to check whether I
+> already tried that and you deleted it — otherwise I'd ask you again every morning until you hated
+> me. **That check reads the history. This surface doesn't hand me one.** No history, no check; no
+> check, no block. **And that's not a tier away** — I'm not about to tell you an upgrade fixes it,
+> because there isn't one. Every morning, forever, the one part of this that's about *you* would sit
+> down before it started.
+
+**Probe it; never predict it.** Whether *their* surface exposes a readable history is a fact about
+their surface today, and it is what Phase 0's question 3 is for. **What is durable is the mechanism:
+no readable history → no proof of a previous attempt → no block.** Say what you found, in the same
+breath as what it costs them. **`references/STACK.md` carries what each surface returned when it was
+last probed, dated — read it there, never from memory.**
+
+##### The move is two surfaces, one direction — and you lead with the promotion
+
+**But do not tell them to leave the work tracker. It's excellent at work.** And before you say a word
+about what it should stop doing, **say what it should start doing — because that half is a genuine
+promotion and not a spoonful of sugar.**
+
+**The work tracker is not a bad place for your life. It is one of the best things they could hand
+this engine, and it has been doing the wrong job.** Everything above says it fails as a database.
+**Nothing above touches what it is superb at** — and that gets buried under the argument unless you
+put it first. Say it in this order and the conversation changes shape:
+
+> Actually, let me put that the other way round, because I've been underselling your Linear.
+>
+> The thing I most need and almost never get is a straight answer to **"what did people ask of me?"**
+> Almost nothing answers that. Every one of those tools makes me *search* — I have to already know
+> what I'm looking for, which means I miss exactly the thing you'd have wanted me to catch. **Mail is
+> the one real exception, because things arrive in it and arriving is the filing.**
+>
+> **Your work tracker is the other one.** Assigned-to-me is a list. Somebody put an obligation on
+> you, on purpose, with their name on it and a place to put it. **That is the single cleanest signal
+> of "someone is waiting on you" that exists anywhere in your setup** — and right now it's being
+> spent as a database that can't tell me how long anything takes.
+>
+> So I don't want you to stop using it. **I want to read it.**
+
+**Then the shape, in the same breath:**
 
 > Keep it. It's genuinely good at work, and work is what it's for. **Two lists, and they never talk
 > to each other:**
 >
 > - **Work stays where it is** — and I read it, the same way I read your mail. Something assigned to
->   you is just another person putting something on you.
+>   you is just another person putting something on you, which is exactly the thing I'm built to
+>   catch.
 > - **Your life gets its own list, on your own account.** That one's yours forever and nobody can
 >   switch it off.
 > - When a work thing needs a slot in your day, I put a row on *your* list with **a link back to the
@@ -870,8 +1130,8 @@ isn't one here on purpose.**
 **Why those two rows are the whole argument:**
 
 - **Durations are a paid feature.** The engine places work as time blocks, and **a block is a
-  length.** Without a duration it cannot state what a thing costs and cannot enforce the 30-minute
-  floor — so the card's time gutter reads `—` for every task-derived row, and it reports the floor as
+  length.** Without a duration it cannot state what a thing costs and cannot enforce **the floor** —
+  so the card's time gutter reads `—` for every task-derived row, and it reports the floor as
   unenforceable instead of pretending to hold it. **That's a fact about the engine, and it's the part
   we own.** The free tier doesn't break it: rows still get placed, at their hour, and **both doors
   still fire.** What you don't get is the *length* — the thing you can see, and the floor the engine
@@ -888,8 +1148,9 @@ Then say the honest version and let them choose — **with the price read live f
 
 > You can absolutely run on the free tier. Everything still runs — I still protect your own work,
 > still place things at an hour, still close loops. What you don't get is the **length**: without a
-> duration I can't tell you what a thing costs, and I can't hold the 30-minute floor — so where an
-> hour would go, you'll see a dash, and I'll say the floor is unenforceable rather than pretend.
+> duration I can't tell you what a thing costs, and I can't hold the floor on how short a block gets
+> — **thirty minutes, unless you tell me you work in different units** — so where an hour would go,
+> you'll see a dash, and I'll say the floor is unenforceable rather than pretend.
 > **I'll check what your calendar actually does with those rows on the first run and tell you what I
 > found** — that's yours to see, and I'd rather look than guess. After the history window closes I
 > stop adjusting anything I placed. Paid is [price from VOLATILE]. It's the only spend I'm going to
@@ -1099,22 +1360,35 @@ hand *wherever it already is*.
 | If they use… | Verdict |
 |---|---|
 | **Notion** | Official connector, hosted, rich. Best supported. **The one place a profile-in-a-note works well.** |
-| **Apple Notes** | Local, Mac-only, works well. Never leaves the machine. **Pins the schedule — see Phase 5, decision 2.** |
-| **Obsidian / a folder of Markdown** | Read the folder directly. Simple and durable. **Local — pins the schedule.** |
+| **Apple Notes** | Local, Mac-only, works well. Never leaves the machine. **Puts the morning run at risk — see Phase 5, decision 2.** |
+| **Obsidian / a folder of Markdown** | Read the folder directly. Simple and durable. **Local — puts the morning run at risk.** |
 | **Emailing themselves** | **Legitimate and common.** If they mail themselves notes, the mail connector already covers this role. Point the engine at the self-sent thread and skip a connector entirely. |
 | **A voice recorder / lifelog** | First-person transcripts only. |
 | **Nothing** | **Genuinely fine. Skip it.** Say it without a hint of disappointment. |
 
-#### The ones that install somewhere else entirely — Apple Notes and iMessage
+#### The two that install somewhere else entirely — Apple Notes and iMessage
 
-**Say this before they go looking in the connector list and can't find them.** They're **extensions**,
-not connectors, and **a plugin cannot install one** — different channel, by design. **Both are
-official Anthropic extensions**; you're not sending them to a stranger's code.
+**These two share an install door and nothing else. Do not let the shared door file them together.**
+
+- **Apple Notes is a notes surface.** It belongs to the question this section is asking — *where do
+  you write your own thinking?*
+- **iMessage is not, and it never was.** It's a **thing that can prove a fact** — Phase 6's third
+  row. Somebody asking *"can it check what he actually said about moving the time?"* is asking
+  whether a claim can be settled, not where they keep their own hand. **They are on the wrong page,
+  and it isn't their fault: it's here only because it installs through the same door as Apple
+  Notes.** Answer the question they asked — one blind spot, closed, if it's a blind spot they
+  actually have — and price it there. **Never route someone to "your notes" because the tool they
+  named got filed under a heading.**
+
+**Say this before they go looking in the connector list and can't find either one.** They're
+**extensions**, not connectors, and **a plugin cannot install one** — different channel, by design.
+**Both are official Anthropic extensions**; you're not sending them to a stranger's code.
 
 - **Where:** **Settings > Extensions > Browse.** These are Anthropic-reviewed. **Read the current
   path from VOLATILE.**
 - **iMessage additionally needs Full Disk Access**, which only they can grant, in macOS settings.
-- **Both are local**, so both cost the schedule — **Phase 5, decision 2.** Say it again here.
+- **Both are local**, so both put the morning run at risk — **Phase 5, decision 2.** Say it again
+  here, and say it in that shape: the docs disagree about the mechanism, not about the risk.
 - ⚠️ They **appear** to work on Claude Free, but that isn't documented anywhere — **don't promise
   it.** If they're on Free, say "try it, it may work" and nothing stronger.
 
@@ -1256,11 +1530,11 @@ one calendar. **That's the whole footprint, and now they've seen all of it.**
 | Symptom | Likely cause |
 |---|---|
 | **"It keeps recreating a task I deleted"** | **You deleted it instead of parking it.** A deleted row leaves no trace — the engine has no memory, so tomorrow the same evidence produces the same row. **Park it in Someday.** That's a decision the engine reads and honours permanently. |
-| **"Everything's an all-day banner, not a time block"** | **Read the mode line on the card first — don't diagnose this from here.** If durations aren't sticking on your list (paid feature on most, free tier included), there's **no length for the engine to place**, which is why it can't state a cost or hold the 30-minute floor and shows `—` instead of an hour. **But the engine doesn't draw that banner — your task list's calendar sync does**, and what it draws is a property of your app and your setup. **The run probes exactly that and reports what it found; that finding is the diagnosis, not this table.** If it's banners you're seeing and you want lengths, durations are what buys them — and if you'd rather not pay, the fix isn't to live with clutter: **stop syncing task rows to the calendar and read them off the card**, where the `—` is honest about what's known. This fails silently, which is why it's a surprise. |
+| **"Everything's an all-day banner, not a time block"** | **Read the mode line on the card first — don't diagnose this from here.** If durations aren't sticking on your list (paid feature on most, free tier included), there's **no length for the engine to place**, which is why it can't state a cost or hold **the floor** and shows `—` instead of an hour. **But the engine doesn't draw that banner — your task list's calendar sync does**, and what it draws is a property of your app and your setup. **The run probes exactly that and reports what it found; that finding is the diagnosis, not this table.** If it's banners you're seeing and you want lengths, durations are what buys them — and if you'd rather not pay, the fix isn't to live with clutter: **stop syncing task rows to the calendar and read them off the card**, where the `—` is honest about what's known. This fails silently, which is why it's a surprise. |
 | **"It stopped fixing / re-placing anything after about a week"** | Free-tier **activity history is capped** (VOLATILE has the current window). Past that the engine can't prove which rows are its own, so it stops touching everything. Failing safe, working as designed. |
 | **"It tells me a block is the wrong shape instead of just fixing it"** | **That's the mode you're in, and it's correct.** Your list can't tell the engine's rows apart from yours, so **it only ever creates — it never goes back and edits.** It names the problem in one line rather than reaching into your list to fix it. This is the safer half of the trade, not a broken feature. |
 | **"Expired sale banners are piling up"** | Same mode, same reason: deleting a row needs proof it placed that row, and your list can't give it. **It reports the count instead of silently deleting.** Clear them by hand, or use a list that records what wrote each row. |
-| **"My own work never gets a block"** / **"the dark-day count never shows up"** | **Nothing declared in the profile.** Door two can't fire and the count has nothing to count against. Both failures are invisible by design — fix it in the profile row. |
+| **"My own work never gets a block"** / **"the dark-day count never shows up"** | **Two causes, and they need different answers.** ① **Nothing declared in the profile** — door two can't fire and the count has nothing to count against. Fix it in the profile row. ② **Your list is a work tracker with no readable history.** Before protecting a block, the engine has to check it didn't already try and get overruled — no history, no check, no block. **That one is not a setting and not a tier: it's the surface, and no upgrade revives it.** The fix is a personal list beside the work one — Phase 7. **Both failures are invisible by design, which is why they're one row here.** |
 | **"It says it can't find my profile"** / the brief hard-stops | The scheduled task's prompt doesn't name the profile location, **and** there's no `cos-profile`-labelled row to fall back to. Check the row still has its **label** — a rename is survivable, a delabel is not. Then check the prompt text still carries the profile line. |
 | **"I edited my profile and nothing changed"** | It's read fresh every run — so it lands on the *next* run, not this one. If it still doesn't: you edited a different row, or the profile is in a note the scheduled task's prompt doesn't name. |
 | **"My recurring task lost its repeat"** | Someone said **"change the date."** That strips recurrence. **Say "reschedule."** |
@@ -1268,14 +1542,16 @@ one calendar. **That's the whole footprint, and now they've seen all of it.**
 | **"It proposes calendar events instead of creating them"** | Read-only calendar — standard on Microsoft 365 unless an admin enabled the write tools. Correct behaviour, not a fault. |
 | **"The Todoist connector isn't there"** | **You didn't open a new chat after connecting.** Tools only load at the start of a conversation. |
 | **"I can't find Cowork / do I have to buy it?"** | **Cowork isn't an app and isn't a separate purchase — it's a toggle.** claude.ai → find the message box → **"Cowork" in the bottom left corner.** Same site, same login. What *is* paid is the scheduled task itself. |
-| **"I'm on Free and can't install the plugin"** | **Correct — plugins are paid-plan only. Skills aren't.** Upload each skill as a ZIP at **Customize > Skills** (code execution must be on) and connect Gmail/Calendar/your task list as normal. **You get everything except the packaged install and the automatic morning run** — start the run yourself with *"run my chief-of-staff brief."* |
+| **"I'm on Free and can't install the plugin"** | **Correct — plugins are paid-plan only. Skills aren't.** **First: Settings > Capabilities > turn on Code execution and file creation** — it's off by default, it's a setting rather than a plan, and skills do nothing without it. Then upload each skill as a ZIP at **Customize > Skills**, and connect Gmail/Calendar/your task list as normal. **Put a copy of the `references` folder inside each skill folder before zipping**, or the prices and click paths won't be there. **You get everything except the packaged install and the automatic morning run** — start the run yourself with *"run my chief-of-staff brief."* |
+| **"I uploaded the skill and nothing happens"** | **Code execution is off.** It's the gate on the whole free path, it's off by default, and nothing on the upload screen says so. **Settings > Capabilities > Code execution and file creation.** |
+| **"Where do I configure my connectors? I found `mcp.example.json`"** | **Nowhere, and that's the good news.** Gmail, your calendar and your task list are hosted connectors — **added once in Claude's own settings, live everywhere including the 7am run.** No file, nothing to sync. That `mcp.example.json` isn't loaded, is named that on purpose, and only covers local servers that would **put the morning run at risk** anyway. **Don't edit it.** Phase 7. |
 | **"The scheduled run asks me to connect things that are already connected"** | **A known bug, not your setup, and there is nothing for you to fix.** Scheduled runs can fail to see connectors that are plainly connected, then stop and ask for them. **It reproduces**, it has been reported, and it has been seen on more than one surface — so treat it as the behaviour, not as an accident of your install. **Do not re-connect anything — it won't help**, and re-connecting is the one move the symptom talks you into. Run the brief by hand from a chat that morning; it works there. |
-| **"The brief silently never fires"** / **"nothing runs overnight"** | **You pointed it at something local.** A task that touches local files or apps **can only run locally** — and a local run is **skipped** whenever the machine sleeps, with no error and no notification. **Unattended scheduling and local access are mutually exclusive.** Either drop the local surface and go back to cloud, or leave the machine awake. |
-| **"The brief didn't run"** | Check the scheduled task exists and **has a next-run time** — a task with no next run is the failure that looks like success. Then check the row above: was the machine asleep? Local tasks fire on next wake — **one** catch-up, older misses dropped. Also check whether the run stopped to ask for connectors — the connector-blindness row above. |
+| **"The brief silently never fires"** / **"nothing runs overnight"** | **You pointed it at something local, and that is the suspect** — but don't state the mechanism, because the vendor's own article contradicts itself about it (`references/VOLATILE.md` → Scheduling, both quotes, dated). Either the task can't reach the local surface at all, or it only runs on a machine that has to be awake. **Both fail silently and both point at the same repair: drop the local surface and go hosted, or leave the machine awake.** **Probe which one it is** rather than reporting a reading as the diagnosis. |
+| **"The brief didn't run"** | Check the scheduled task exists and **has a next-run time** — a task with no next run is the failure that looks like success. Then check the row above: was the machine asleep, and does anything in this task touch the machine? **What a Cowork scheduled task does with a missed run is not documented anywhere — do not quote Claude Code Desktop's catch-up rule at them; that's a different product** (VOLATILE says so). Also check whether the run stopped to ask for connectors — the connector-blindness row above. |
 | **"An event I made disappeared from my calendar"** | **Did you title it starting with `✓`?** On the calendar your task list projects onto, that's the ghost sweep's delete signal and it can't tell your event from a leftover. Nothing else there is ever deleted, and no other calendar is ever touched. |
 | **"It made a duplicate"** | The completed-row query is unavailable, or a create was retried. |
 | **"It moved a block I placed"** | **It should never do this, in either mode.** A row you placed or touched is yours, permanently. If your list records what wrote each row, this is a bug — report it. If it doesn't, the engine shouldn't have been editing *anything*, so it's a worse bug. Either way it's ours, not yours. |
 | **"Can it control my Mac / run shell commands?"** | **No, and setup won't help you add that.** Extensions run **unsandboxed with full system permissions** — by design, because the trust model treats what you installed as what you trust. **Zero-click compromise through a single calendar invite is a demonstrated class**, and this engine reads calendar invites for a living. Nothing about that combination depends on a patch. See Phase 7. |
 | **"It says my calendar is clean and it isn't"** | Poll lag on a subscribed feed — hours on a public ICS link, minutes on a paid sync. The engine only sees what synced. |
-| **"Nothing shows up from my notes"** | Usually correct — most notes contain zero commitments. Check the connector responded at all: an **unread** source and an **empty** one are different. |
+| **"Nothing shows up from my notes"** | **First, check the connector responded at all — an unread source and an empty one are different**, and only one of them is a bug. If it read them and found nothing, that is very often the right answer, **but not because "notes rarely contain tasks."** Whether your notes hold commitments is a fact about *you*: someone who writes to think has almost none, and someone who keeps a bullet journal has pages that are nearly all of them. **Every note in the window gets read and gets the same test; what comes back is a count, not an expectation.** So a quiet result is a finding about your notes — never a prediction about notes. |
 | **"It's asking about things I already decided"** | The parked row isn't being read, or the decision never landed on the list. **Decisions live on the list, not in chat.** |

@@ -66,9 +66,10 @@ down. Both are real; they cost you different things.)*
 Todoist included; `references/VOLATILE.md` carries the current price and the date it was checked.
 Here is exactly what that costs you, and we'll keep it to what this package actually owns.
 
-**Without a duration the engine cannot state what a thing costs, and cannot enforce the 30-minute
-floor.** So the time gutter renders `—` rather than an hour it has nothing to stand behind. That is
-a fact about the engine, and it's true on any surface, on any tier.
+**Without a duration the engine cannot state what a thing costs, and cannot enforce the floor** —
+the shortest block it will place, which is a default your profile overrides. So the time gutter
+renders `—` rather than an hour it has nothing to stand behind. That is a fact about the engine, and
+it's true on any surface, on any tier.
 
 **What your own calendar draws for a timed row with no length, this page does not predict.** The
 engine doesn't author a calendar event for a task — your task list's sync draws that row, and how it
@@ -85,7 +86,7 @@ general.
 | `14:10` Envelope opens | `14:10` | `14:10` — computed, never a block on either tier |
 
 **The card names which one you're on**, in a line of the receipts, together with what the duration
-probe actually found on your list. It also reports the 30-minute floor as unenforceable rather than
+probe actually found on your list. It also reports the floor as unenforceable rather than
 pretending to hold it.
 
 **Everything else is unchanged, and it is not a demo:** the gate and the six things it refused, both
@@ -101,8 +102,25 @@ block also needs your task list's **activity history** — the engine reads it t
 re-placing a block you already killed. Free tiers cap that history to a short window (VOLATILE has
 the current length). **Where the cadence you declared runs longer than that window, the door goes
 quiet rather than guess.** `9 days dark` still renders and still climbs, so it isn't invisible — and
-if that number is climbing while no blocks ever appear, **the mode line on the card is where you
-look.**
+if that number is climbing while no blocks ever appear, **the card says why, in a line of its own.**
+
+**That line is the door-two line, and it names a cause rather than a symptom.** `9 days dark` is a
+number, and a number has no *because*. Three causes reach you:
+
+- ***"door two is quiet on `<lane>` — its cadence outruns the log's window."*** The free-tier limit
+  above. **This is the door working:** it went quiet instead of guessing. A longer history is what
+  moves it.
+- ***"door two cannot fire on this surface — no activity log."*** Your list keeps no history at all,
+  so the check can never run. **This one is permanent — no plan, no upgrade, no setting revives
+  it.** The repair is a different task list, or none.
+- ***"door two has no hour to place — this surface carries a date, not a time."*** Your list takes a
+  date but drops the hour, so there's nowhere to write a block *at* 13:00.
+
+**The line is absent exactly when the door can fire, and never absent when it can't** — so nothing
+there means nothing is wrong. **Don't read the write mode for this.** `write-once` answers a
+different question: most people run write-once over a live log and door two fires for them every
+week. **A dead log and a dead clock are different repairs, and being handed the wrong one is how you
+buy the wrong thing.**
 
 ---
 
@@ -196,17 +214,36 @@ Go to **claude.ai**, find the message box, and **select "Cowork" in the bottom l
 site, same login, nothing to download, nothing extra to buy. There is no "web version vs. Cowork" —
 Cowork *is* on the web.
 
+**"Where do my connectors go?" Nowhere — and that's the good news.** Your task list, your calendar,
+your mail are **hosted connectors: you add each one once, in Claude's own connector settings, and
+it's live on every surface you use — including mobile, including the unattended 7am run.** Nothing
+about them is declared in a file here, and that's deliberate rather than missing: a connector named
+in a bundled file would be a *local* one, and a local one **pins your brief to a machine that has to
+be awake.** Hosted keeps the run cloud-eligible, which is strictly better than anything this package
+could ship. **The archive does contain `mcp.example.json` — it isn't loaded, it's named that on
+purpose, and it covers only that local kind. You don't need to open it.**
+
 ### On the free plan? You can have almost all of this.
 
 **The wall is on plugins, not on skills.** Plugins need a paid plan. **Skills don't — they work on
-Free, Pro, Max, Team and Enterprise alike** (you need code execution turned on). Connectors work
-everywhere too, on every plan and every surface, **including mobile.**
+Free, Pro, Max, Team and Enterprise alike.** Connectors work everywhere too, on every plan and every
+surface, **including mobile.**
+
+**One switch gates the entire free path, and it's off by default. Turn it on before you upload
+anything:** **Settings → Capabilities → turn on *Code execution and file creation*.** With it off,
+the upload screen does nothing useful and nothing on it tells you why. It's a setting, not a plan —
+free accounts have it. *(Another click path, so it rots the same way the three above do: if your
+screen disagrees, trust the screen. The destination is the capability toggle in Settings.)*
 
 **So the free path is real:**
 
-1. **Zip each skill folder** in `skills/` and upload them at **Customize > Skills.**
-2. **Connect** your task list, Google Calendar, Gmail — normal connectors, no plan gate.
-3. **Start the run yourself:** open a chat and say `run my chief-of-staff brief`.
+1. **Put a copy of `references/` inside each skill folder — before you zip.** It lives *beside*
+   `skills/`, not inside it, so a skill zipped as it ships arrives with no price sheet, no `RISK`,
+   no `STACK` and no profile template. It still runs; it just can't tell you what anything costs,
+   and setup will have to send you to the vendor's own page instead. **One copy per skill folder.**
+2. **Zip each skill folder** in `skills/` and upload them at **Customize > Skills.**
+3. **Connect** your task list, Google Calendar, Gmail — normal connectors, no plan gate.
+4. **Start the run yourself:** open a chat and say `run my chief-of-staff brief`.
 
 **You get everything except the packaged install and the automatic morning run.** Same pass, same
 rules, same card — **you just type five words instead of it firing at 7am.** Scheduled tasks are the
@@ -229,6 +266,15 @@ beautiful card every morning made entirely of other people's demands. So the sec
 to **your** declaration instead of a stranger's: you name the lane, and if it's starving, the
 engine protects a block for it **before** the reactive work and puts the dark-day count on the card
 where you can't miss it.
+
+**This isn't a hunch about the category — the market leader's own default concedes it.** In the
+best-known tool of this kind, a meeting another person put on your calendar is treated as top
+priority by default and can never be overbooked by the work you asked the tool to protect,
+*whatever* priority you gave that work — a defensible choice, since auto-declining someone's meeting
+is a sharp edge and they offer that as an option rather than a default. But it means their default
+protects a **slot**, and the slot yields; **this one refuses, and when it can't place the block it
+makes you look at the number instead of quietly giving the hour away.**
+`references/VOLATILE.md` carries the vendor, the quote and the date it was checked.
 
 **The uncomfortable metric is the point.** If that number climbs while your briefs keep looking
 clean and productive, the system is working beautifully at the thing it wasn't built for — and it
@@ -254,10 +300,24 @@ has its blast radius, including what happens to expired banners in write-once mo
 
 ## Two design decisions worth knowing
 
-**The law is portable. You are not.** They're kept apart: the law holds no facts about any person,
-which is what lets it be shared, audited and improved by strangers. **Your profile lives as a row
-on your task list, labelled `cos-profile`** — not as a file on a computer, because a file only
-works on that one computer and dies on the next one. Setup writes it with you. It **is not packaged
+**The law is portable. You are not.** They're kept apart: the law holds none of your personal
+facts — every one of those lives in the profile — which is what lets it be shared, audited and
+improved by strangers.
+
+**Portable is not the same as universal, and the law makes the narrower claim on purpose.** It is
+universal in how it reasons and in what it does — the gates, the burden of proof, the envelope
+arithmetic, the refusal to guess where it can probe. **Its numbers are a different animal: they are
+defaults, most of them somebody's calibration rather than physics, and every one of them names, in
+the sentence that states it, where it yields.** The 30-minute floor is the honest example — a real
+opinion about what a block has to be worth, true of the person it was measured on, and not a fact
+about you. **Where a number is wrong about you, your profile overrides it and the law doesn't
+argue.** Where the *epistemics* are concerned it argues absolutely: no profile gets to say *close on
+a hunch* or *skip the probe*. **A tool that names its assumptions is worth more than one claiming to
+have none** — and stripping the opinions out wouldn't make it neutral, it would just hand you a form
+instead of a plan.
+
+**Your profile lives as a row on your task list, labelled `cos-profile`** — not as a file on a
+computer, because a file only works on that one computer and dies on the next one. Setup writes it with you. It **is not packaged
 and is never shared** with whoever handed you this. It **does** pass through the model each run,
 the same way your mail and calendar already do — *"not packaged"* is not *"never leaves your
 machine,"* and you should hold us to the difference. One test per line: would you send this fact
@@ -320,9 +380,13 @@ lists, one direction, never synced.** `references/STACK.md` has the full argumen
 - **`references/PROFILE.template.md`** — only if you'd rather see the questions before you're
   asked. Setup fills it in with you; you don't need to open it.
 - **`assets/architecture.svg`** (source: `assets/architecture.mermaid`) — the design on one page.
+- **`mcp.example.json`** — **you don't need to open it, and it's here for completeness.** It isn't
+  loaded, and it describes only *local* servers, which your connectors aren't. See the connector
+  note above.
 
-Inside the plugin: `chief-of-staff-law` is the operating law (universal, no personal facts),
-`chief-of-staff-engine` is the pass that runs, `chief-of-staff-setup` is the onboarding.
+Inside the plugin: `chief-of-staff-law` is the operating law — **no personal facts, universal in its
+mechanisms, and its numbers defaulted rather than pretended-universal** — `chief-of-staff-engine` is
+the pass that runs, `chief-of-staff-setup` is the onboarding.
 
 ---
 
