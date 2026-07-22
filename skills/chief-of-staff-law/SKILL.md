@@ -505,6 +505,19 @@ Provenance — whose hand is this? Their writing is a source. **Model-generated 
 their own note is not** — it is an artifact they stored, never a commitment they made. Provenance
 and type are separate gates; both must pass.
 
+**Their spoken word, captured, is their own hand — at the UTTERANCE level (I0).** Where a member
+carries recorded conversation, an utterance attributed to THEIR voice is primary source, same
+standing as their writing. **Everything layered above it is not:** the recording's summary, its
+derived action-item list, and unattributed lines are synthesis or leads — a lead counts only when
+their own voice corroborates it in the same chain. *(Type case: a session's own derived action-item
+list MISSED the promise its raw transcript carried verbatim in the speaker's voice — only the
+utterance layer holds a spoken commitment; every derived layer above it loses exactly the thing
+that matters.)* **A spoken commitment names its counterparty from the room** — who they were with,
+where, when, triangulated against calendars and receipts — never from the synthesis. **And tracing
+a commitment to its ORIGIN is an UNBOUNDED search: a recency window can only find the echo, never
+the source. Bound every sweep by its question** — recency questions get windows; origin, identity,
+and existence questions get the whole corpus.
+
 **Four gates — all four, in order, stop at the first failure:**
 
 1. Agent — is the next move theirs? (someone else owns it and can reach them → §9)
@@ -719,6 +732,16 @@ Three anchors — identify which before scheduling anything:
 
 An activation they are already paying counts — and it is the cheapest available. The whole point
 of anchoring is to ride a cost already incurred, never to add one.
+
+**A promise to a person anchors to the NEXT contact with that person (I4).** A recurring
+appointment's next instance is its clock — the anchor is already paid for, and the counterparty is
+standing at it. **A physical BRING-ITEM fails at the DOORWAY, not the meeting (I3/I4):** the object
+must be in their hand at departure, so its nudges fire at STAGING time (the night before — object
+by the door, in the bag) and before departure — **never at the meeting itself. A reminder that
+fires in the room fires after the failure.** **The staging nudge is the load-bearing one: it
+survives a moved meeting; a departure nudge does not. When the meeting's time is unconfirmed, stake
+the item on staging — and verify the anchor's live time in its own booking system before trusting
+any departure nudge derived from it.**
 
 Placement needs a container. A block floating in open time does not fire — but **which** container
 fires is the profile's answer, not this file's.
@@ -1005,6 +1028,15 @@ The task surface is the database and the operable surface; the calendar is the p
 Some task surfaces, on completion, rename the projected event with a `✓` prefix and leave it there
 permanently. Any claim that "the projection self-clears" must be tested, not assumed.
 
+**A duration fix on a recurring task may not rewrite already-materialized projection instances
+(I5).** The task field says one length while the grid serves another — and the sliver that results
+reads as a fresh violation when it is sync rot. **Verify the EVENT length after any duration
+change, never the task field alone; a same-date reschedule touch forces re-materialization.** And
+before indicting a fresh write for a sliver on the grid, **read the event's own updated timestamp —
+it names the era of the defect.** *(Type case: 10- and 15-minute Sunday slivers reported as a live
+violation; every underlying task already carried the fixed length, the events' timestamps pre-dated
+the fix by a week, and one same-date touch regenerated them.)*
+
 The compensating action — the ghost sweep. The projection calendar is an ordinary writable
 calendar. On every pass: list its events trailing 30 / forward 30 days and **delete every event
 whose summary begins with `✓`**. **Never delete a non-`✓` event there without confirming the linked
@@ -1067,6 +1099,19 @@ short; it does not empty it.**
 is I5's true asymmetry, and it is also the argument that quietly justifies staging everything. **At
 scale it inverts: a cockpit full of maybes IS an absence of the things that matter** — the signal is
 gone, and they have no way to see that it is gone.
+
+**The staged lane has one home: a `Review` section of the cockpit — the airlock, not a second
+backlog (I5/I6).** A staged row arrives **CONFIRMABLE**: anchor date, reminders, and source pointer
+already attached, so **keeping the date IS the confirmation and deleting IS the kill** — one glance
+or one tap, never a research errand. The main cockpit list stays their shortlist; Review sits below
+it and is **curated short like everything else**. A staged row neither confirmed nor killed after
+two sweeps is a decision wearing a stage — reshape it (§11) or propose the drop, once.
+
+**And their raw captures in the cockpit are a SOURCE, not just state (I0/I5).** They dictate rows
+into the cockpit mid-conversation — undated, unlabeled, invisible to every dated or labeled query.
+**Any pass that reads the cockpit reads ALL of it.** A raw capture addressed to the system is a
+directive; a raw capture naming a commitment gets the gates; and per §9 and §11 their raw rows are
+never rewritten or re-placed — read, then serve.
 
 ## 7s. The sales rail — not todos, a band they browse · derives from I5 and I6
 
@@ -1643,7 +1688,10 @@ Each sweep, also run this checklist — one line, one check:
     a row of theirs re-opened or re-placed · a duplicate built because only open tasks were queried · a
     parked row re-staged · a partial pass rendered as complete · **a run that did not name its mode
     (§9c)** · **a searched source reported as though it were an inbox (§10)** · **an actor field read
-    as an ownership discriminator (§0b)**.
+    as an ownership discriminator (§0b)** · **a spoken commitment that lived only in a captured
+    transcript, never swept at the utterance level (§10)** · **a raw capture of theirs sitting unread
+    in the cockpit (§7)** · **a recurring row's duration fix trusted at the task field while
+    materialized projection instances kept the old length (§6)**.
 
 ## 12. The contract with the engine · META
 

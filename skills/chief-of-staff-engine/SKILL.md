@@ -472,6 +472,11 @@ a count. A hit you never looked at is a MISS.**
 
 **Exhaust every chain you open — body, every attachment, every message in the case.**
 
+**A thread's last word is the full-thread fetch's to give — NEVER a search preview's.** Search
+surfaces cap the messages they render per thread; a reply can hide past the preview. **Before
+asserting "no reply" or "thread ends with X," open the thread itself.** *(Verified the hard way: a
+same-day reply sat invisible behind a five-message preview while a brief reported silence.)*
+
 ### `~~intent[]` — their own hand
 
 **ZERO MEMBERS IS THE COMMON CASE AND IT IS NOT A DEGRADATION.** Most people keep no second brain
@@ -490,6 +495,33 @@ bullet-journaler's notes are nearly all action items; a diarist's are none. **Wh
 that the four gates decide it, one note at a time. Run them on every note and let them answer. Zero
 is the common OUTCOME — never the prior you start from.**
 
+**Where a member carries RECORDED CONVERSATION (a wearable lifelog, meeting transcripts): sweep at
+the TRANSCRIPT level, every pass. A spoken commitment exists in exactly one place — the raw
+transcript. Every derived layer above it loses it** (the law's utterance rule, with its type case).
+- **Enumerate, don't sample:** the trailing 72h of conversations, their utterances read. Then the
+  recall net, same shape as the mail sweep's: promise-phrasings over the trailing 7 days — "I was
+  supposed to bring" · "I'll bring" · "I'll send" · "I promised" · "I owe" · "remind me" · "I need
+  to bring" · "I'll do it by".
+- **The promise net is a RECENCY net. Tracing a commitment to its ORIGIN drops the window** — bound
+  each sweep by its question (the law's rule).
+- **THEIR utterances only** — attribution to their voice. Summaries, derived action items, and
+  unattributed lines are leads that count only when their own voice corroborates in the same chain.
+- **Triangulate before staging:** conversation location + time ↔ their calendars and receipts name
+  the room and the counterparty. A commitment spoken to a person anchors to the NEXT contact with
+  that person — **verify that anchor's live time in its own booking system before deriving any
+  departure-timed nudge** (the law's doorway rule governs a bring-item's reminders).
+- **Route: STAGED → the cockpit's `Review` section** (create it if absent), each row shipped
+  confirmable — anchor date, reminders, source pointer. Keeping the date is their confirmation;
+  deleting is the kill.
+- **Name the transcript window you actually enumerated in the receipts** — verification scope
+  bounds the claim.
+
+**AND THE COCKPIT ITSELF BELONGS TO THIS SET: their raw captures are a SOURCE, not just state.**
+They dictate rows mid-conversation — undated, unlabeled, invisible to every dated or labeled query.
+**Read the full cockpit every pass** (the law keeps it short). A raw capture addressed to the system
+is a directive — act on it. One naming a commitment gets the gates. **Never rewrite or re-place
+their raw rows; reading them is the job.**
+
 ### `~~evidence[]` — what can confirm or deny a fact
 
 **This is what a row gets CLOSED on (§9), and its authority is a property of the SOURCE, never of
@@ -504,6 +536,9 @@ owns this fact, and can anyone else put text into it?**
 - **The asymmetry that decides every close: a wrongly-created row costs a delete. A wrongly-closed
   row costs the thing itself, silently, forever** — and §9's pre-create check then seals it.
 - **Decode any abbreviation against a system of record before reading a fragment as a task.**
+- **A member that hands out expiring user-facing links: hand the link at the moment of use — never
+  bake an expiring link into a row that will outlive it. Write the mechanism ("ask for a fresh
+  link") instead.**
 - **Surface, wherever a member happens to carry it — these are shapes, never a query list:**
   ready-for-pickup notices · appointment reminders · a time for an event that said "(time TBC)" ·
   **their own outbound closure — their word closes it, in any channel.**
@@ -871,7 +906,8 @@ fallback, it is not a failure when absent, and it enters NEITHER SIDE of the cov
 Someday — an open-row query cannot answer an existence question.**
 **3** ingest records-first, then tripwires — **ranked PER SOURCE, never per set (§10)** —
 **completely.** **Per `~~inbound[]` member: classify inbox vs. search, then pass 1, then its own
-floor.**
+floor.** **Per `~~intent[]` member carrying recorded conversation: the transcript-level spoken-word
+sweep (its block above) — and the cockpit's raw rows, read in full.**
 **3.5 RE-GROUND EVERY CARRIED LOOP:** exhaust its chain, then re-apply the gate. **Do not
 re-decide on fragments.**
 **3.7** coverage honesty: name every source you read, and every one you did not. **It renders — as
@@ -1134,12 +1170,25 @@ top to bottom:
      check would erase exactly the signal that matters.
    - The rest are the ones that actually decide the day — e.g. *Commitments · First move ·
      Envelope opens*.
-4. **Below a `0.5px solid var(--border)` divider: the day itself** — one row per commitment, each
-   ONE line: a mono time gutter, the commitment, and the one clause that placed it. **What needs
-   them is folded IN, at the block where they act on it.** Undated rows that still matter get a
-   `—` gutter and one clause on why undated is correct. **Where duration did not stick (STEP 0.5),
-   task-derived rows take the `—` gutter too — a length you could not write is a length you may not
-   print, and a mono gutter over a row with no length is a lie about the cost.**
+4. **Below a `0.5px solid var(--border)` divider: the day itself, in THREE LANES — the
+   chief-of-staff grammar, the capability rendered visible: what NEEDS THEM, what was HANDLED for
+   them, what is being WATCHED for them.** 11px muted lane labels, hairline dividers between lanes;
+   **a lane with nothing in it is ABSENT, label and all** (check 3).
+   - **NEEDS THEM** — one row per thing requiring THEIR hand, each ONE line: a mono time gutter,
+     the commitment, and the one clause that placed it. **Exactly ONE row carries the accent color —
+     the next action from the fire-clock; zero means the lead is missing, two means it is wrong.**
+     **What needs them is folded IN, at the block where they act on it.** Undated rows that still
+     matter get a `—` gutter and one clause on why undated is correct. **Where duration did not
+     stick (STEP 0.5), task-derived rows take the `—` gutter too — a length you could not write is
+     a length you may not print, and a mono gutter over a row with no length is a lie about the
+     cost.**
+   - **HANDLED** — the pass's completed moves, one muted line each, **the evidence clause inline**
+     (*"closed — their sent reply, named date"*). Outcomes only, never acts of checking; staged rows
+     report here as one line pointing at Review. **This is the audit trail: a close they cannot see
+     is a close they cannot undo.**
+   - **WATCHING** — monitors whose next move belongs to someone else or to a clock: the thing plus
+     its tripwire, one muted line each.
+   - **A row lives in exactly ONE lane** — check 4 counts it.
 5. **A final divider-separated row in `--text-secondary`: the receipts** — the **coverage token**,
    the **write mode**, closes (with the evidence inline), refrains (count + reason class), swept, and
    **unreached** (any source or step that failed, its class, and what is now unknown). **This is
@@ -1207,7 +1256,8 @@ top to bottom:
    - **A set with zero members is not a section with nothing in it — it is a section that does not
      exist.** Never render it, and never report it as absent (§P). This check has nothing to delete
      because you never wrote the line.
-4. **Nothing appears twice.** A row named in the day never reappears in the receipts.
+4. **Nothing appears twice.** A row lives in exactly ONE lane — one named in NEEDS THEM never
+   reappears in HANDLED or WATCHING — and no row named in the day reappears in the receipts.
 5. **Count the metric cards. More than four → you invented structure.**
 6. **Count the rendered rows. A loaded day earns more; a quiet day must take less. Well past the
    day's real load → you wrote a report.**
