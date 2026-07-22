@@ -1031,11 +1031,16 @@ permanently. Any claim that "the projection self-clears" must be tested, not ass
 **A duration fix on a recurring task may not rewrite already-materialized projection instances
 (I5).** The task field says one length while the grid serves another — and the sliver that results
 reads as a fresh violation when it is sync rot. **Verify the EVENT length after any duration
-change, never the task field alone; a same-date reschedule touch forces re-materialization.** And
-before indicting a fresh write for a sliver on the grid, **read the event's own updated timestamp —
-it names the era of the defect.** *(Type case: 10- and 15-minute Sunday slivers reported as a live
-violation; every underlying task already carried the fixed length, the events' timestamps pre-dated
-the fix by a week, and one same-date touch regenerated them.)*
+change, never the task field alone — and know the limits, both surface-tested: a same-date
+reschedule NO-OPS (no change, no sync delta), and a duration re-write does NOT reach
+already-materialized instances.** Regeneration comes from the series ADVANCING — the next
+completion mints fresh instances at current length — or from one manual drag in the client. **Fix
+the task field, report the sliver with its self-heal date, and never claim a repair the surface has
+not shown.** Before indicting a fresh write for a sliver, **read the event's own updated
+timestamp — it names the era of the defect.** *(Type case: sub-floor slivers reported as a live
+violation; every underlying task already carried the fixed length and the events' timestamps
+pre-dated the fix by a week — sync rot, not a fresh write. Two repair routes were then tested at
+the surface and both failed; the honest output was the sliver, its era, and its self-heal date.)*
 
 The compensating action — the ghost sweep. The projection calendar is an ordinary writable
 calendar. On every pass: list its events trailing 30 / forward 30 days and **delete every event
