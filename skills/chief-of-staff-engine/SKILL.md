@@ -1143,6 +1143,8 @@ the thing that missed it.**
   placed a block lives inside that block's row, in one clause.**
 - **A status update is about THEIR DAY. If a sentence is about the engine, it is not in the update.**
 
+**Build the card from a fresh read of the day's surfaces after every write has landed — never from memory of what the run did.** Memory of work produces a work log; the surfaces produce their day. **The beneficiary test on every line: THEM-NOW (changes what they expect or do) → render, as the new state of their world. THEM-IF-WRONG → the surface's own history and on demand, surfacing as a count. THE ENGINE (credit) → nowhere.** A write that altered no commitment, announced as a line, is the engine seeking credit — delete it.
+
 ### THE CARD — inherit this shape, do not reinvent it each run
 
 One card (`var(--surface-2)`, `0.5px solid var(--border)`, `12px` radius, padding `1rem 1.25rem`),
