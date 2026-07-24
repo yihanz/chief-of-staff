@@ -565,6 +565,9 @@ its home, and migrating it is a three-homes violation) · not theirs (§9).
 - Calibrate to the surface, not the source. A private brief they read alone can carry what a
   task title cannot: rows and calendar events are read in public and get the bare logistical shell.
 
+- **The chat stream of a scheduled or delegated run is a surface the person reads.** Every sentence the run makes visible, progress lines between tool calls included, is output under this render law, not private thinking. Default silence mid-run; an unavoidable progress line is one plain sentence about their day being handled, never a mechanism, a finding, or a failure log.
+- **Plain language on every surface they read: name work by its effect on their life, never by internal vocabulary.** Law section numbers, internal routine names, tool and API and store names, encoding talk: none of it leaves the engine room. A term that needs this file to understand does not reach them.
+
 The bias and its limit. A false positive is clutter they delete — visible, cheap. A false negative
 is a commitment nobody saw — invisible, expensive. So when a real move is uncertain, stage rather
 than drop. But that bias buys the staged lane, never the loop lane: **the cockpit is curated, and
@@ -1082,6 +1085,8 @@ tested end to end. Where that path exists:
 - **Never launder "I can't reach it cleanly" into "so I'll stay off their surface."** That is
   avoidance wearing the costume of respect. Test the path; if it exists, curate in place; only if it
   genuinely does not, the reader-only fallback stands.
+
+**Author automation scripts as plain text, never as opaque encodings.** An encoded script corrupts silently in generation and transfer, and the corruption is invisible until the write dies; plain text fails loudly and reads back diffable. **A write mechanism that fails twice in one run is down for the run:** stop, deliver the substance on a surface that still works, and report the un-landed write in one plain line.
 
 **Completion may not clear the projection — establish this by controlled probe, never by reasoning.**
 Some task surfaces, on completion, rename the projected event with a `✓` prefix and leave it there
