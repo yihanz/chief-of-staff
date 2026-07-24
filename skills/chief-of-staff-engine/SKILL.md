@@ -84,8 +84,7 @@ passes.**
 **The PROFILE lives on a CONNECTED SURFACE, and the SCHEDULED TASK'S OWN INSTRUCTIONS NAME WHICH
 ONE.** Read the location out of the prompt you are running under — setup baked it in there as a
 PARAMETER of this run. **That is CONFIG, not state, and the scheduler legitimately owns config:**
-cadence and clock arrive the same way (STEP 0.2), and nothing here remembers anything between
-runs. Then go read the profile at that location, live, and **read it WHOLE.** It carries who they
+cadence and clock arrive the same way (STEP 0.2), and nothing here remembers their world between runs — the machinery ledger row is the one exception. Then go read the profile at that location, live, and **read it WHOLE.** It carries who they
 are, their value hierarchy, physiology, anchors, home base, day modes, their declared offense
 lanes, and their delivery mode — everything I0–I6 asks *about them*.
 
@@ -603,7 +602,7 @@ UNINSTALL possible.** Nothing else on that surface separates a row you wrote fro
 wrote; **it is how the ghost sweep, the row sweep, and §9b's starvation exclusion find their scope
 by label rather than by location.** **An UNLABELLED engine row is permanent litter: nothing can
 find it, so nothing can remove it, and every later pass reads it as theirs and leaves it alone
-forever.** *(The one row the engine never owns is the profile: it carries `cos-profile`, setup
+forever.** *(Two rows stand apart: the profile (theirs — the engine never writes it) and the machinery ledger (engine-written STATE, never a loop, carrying the reserved label plus `cos-ledger`); otherwise the one row the engine never owns is the profile: it carries `cos-profile`, setup
 writes it, and this engine only ever READS it — STEP 0.1.)*
 
 ---
@@ -822,13 +821,13 @@ inventing one is the pitch.**
   offense metric are exempt because each makes an emptiness visible; **this line reports something
   that happened. Nothing happened → it is ABSENT, and absent is the normal morning.**
 
-**THE CAP IS THE LIST, BECAUSE NOTHING HERE REMEMBERS.**
+**THE CAP IS THE LIST, BECAUSE NOTHING HERE REMEMBERS THEIR WORLD.**
 
 - **The line is written INTO the row as ONE clause — a MERGE (step 6), never a second row, never a
   re-place — on the same pass it renders.** The next pass reads the row back: **clause present →
   SILENT, forever.** That is once-per-source-per-install with no store. **The row is the state, which
   is the architecture, not an exception to it** — STEP 0.1's argument one step on: *the ban is on
-  the engine keeping notes about ITSELF; a clause on a row, about THAT ROW's own outcome, is what
+  the engine keeping self-notes outside the machinery ledger; a clause on a row, about THAT ROW's own outcome, is what
   descriptions are for.*
 - **THE CARRIER MUST BE A ROW THE RESERVED LABEL PROVES IS YOURS — BOTH MODES.** Enrichment is scoped
   to the engine's own rows (the write surface), and **write-once loosens nothing: a clause merged
@@ -1056,7 +1055,7 @@ the LIST.**
 `text`. **No RENDER SURFACE at STEP 0.5 → `text`: named ONCE, never as a failure.** **The receipts
 name the WRITE MODE (§9c), every run — and never the canary.**
 
-**There is no step 19: nothing is persisted, because the list is the state.**
+**There is no step 19: none of THEIR world is persisted — the one durable write is the ledger row's machine-fact update, which its own steps already made; beyond that nothing is persisted, because the list is the state.**
 
 ---
 
@@ -1342,8 +1341,7 @@ proved; propose when uncertain** · **never ingest AI-derived items as commitmen
 surface the interior of a private source in a task title or calendar row** · **ambiguous → flag
 plainly, never fabricate** · **THEIR world is never cached — the list is the state; the MACHINE's world lives in the ledger row alone (label `cos-ledger`), machine facts only, each dated with a cheap check that must pass before use, audited weekly, deletable at the cost of one slow run; beyond it no cache, no registry, no sidecar file, no decision recorded in this
 prompt: the list is the state, and an incident is not an exception.** *(Which is exactly why the
-PROFILE is a ROW and not a file — STEP 0.1. This rule bans the engine from keeping notes about
-ITSELF between runs; it has never banned reading what the user owns.)*
+PROFILE is a ROW and not a file — STEP 0.1. This rule bans the engine from keeping any second self-store beyond the machinery ledger row; it has never banned reading what the user owns.)*
 
 **Seven more, and every one of them is a way this engine lies while looking clean:**
 

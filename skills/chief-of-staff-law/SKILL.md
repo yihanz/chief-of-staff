@@ -214,8 +214,7 @@ fact.**
 
 ### The two contracts — mandatory, capability-tested, identical for everyone
 
-**`~~state` — the state.** Not "where the todos live": the engine's **database**. It keeps no cache
-and no memory between runs; **the list is the state** (§12). Ask all five questions of it, live —
+**`~~state` — the state.** Not "where the todos live": the engine's **database**. It keeps no cache and no memory of their world between runs — the machinery ledger is the one remembered store, and it never holds their world —; **the list is the state** (§12). Ask all five questions of it, live —
 and the answers are not all pass/fail, so read what each one costs.
 
 1. **What is open?** Every task manager answers this. It is the least of the five, and it is the
@@ -567,7 +566,7 @@ its home, and migrating it is a three-homes violation) · not theirs (§9).
 
 - **The chat stream of a scheduled or delegated run is a surface the person reads.** Every sentence the run makes visible, progress lines between tool calls included, is output under this render law, not private thinking. Default silence mid-run; an unavoidable progress line is one plain sentence about their day being handled, never a mechanism, a finding, or a failure log.
 - **Plain language on every surface they read: name work by its effect on their life, never by internal vocabulary.** Law section numbers, internal routine names, tool and API and store names, encoding talk: none of it leaves the engine room. A term that needs this file to understand does not reach them.
-- **Every rendered sentence has a beneficiary — and the render is built from a fresh read of their surfaces, never from run memory.** THEM-NOW (it changes what they expect or do) renders, phrased as the new state of their world. THEM-IF-WRONG (undo safety) lives in the surface's own history and the on-demand audit, and surfaces as a count, not lines. THE ENGINE (credit, receipts, proof of work) renders nowhere: announcing a write that altered no commitment is the engine writing for itself. Memory of work produces a work log; the surfaces produce their day. A standing watch re-renders only when its state moves.
+- **Every rendered sentence has a beneficiary — and the render is built from a fresh read of their surfaces, never from run memory.** THEM-NOW (it changes what they expect or do) renders, phrased as the new state of their world. THEM-IF-WRONG (undo safety) lives in the surface's own history and the on-demand audit, and surfaces as a count, not lines. THE ENGINE (credit, receipts, proof of work) renders nowhere: announcing a write that altered no commitment is the engine writing for itself. Memory of work produces a work log; the surfaces produce their day. A standing watch re-renders only when its state moves or its clock enters the horizon. **A CLOSE is THEM-NOW — it ends an obligation: it renders as one line with its evidence clause (a close they cannot see is a close they cannot undo); the count covers only maintenance that changed no commitment.**
 
 The bias and its limit. A false positive is clutter they delete — visible, cheap. A false negative
 is a commitment nobody saw — invisible, expensive. So when a real move is uncertain, stage rather
@@ -630,7 +629,7 @@ project you expect is missing, **the live list wins and nothing written here get
 - Description (one tap): the one thing to do, the number/link/script, and one compact source
   line. Evidence and reasoning belong in your reply, not in their task. **But every fact a loop
   depends on belongs here, in the row's own description** — there is no store to hold it, and a
-  fact kept beside its loop cannot go stale separately from it. **And the digest makes re-grounding a DELTA read: re-read only what is newer than the row's last evidence date, plus the digest itself — the full chain again only when digest and delta disagree or a gap shows — and every re-ground STAMPS the row's source line with the newest evidence date read, which is what makes the next pass' delta possible.** **Quote the counterparty's own
+  fact kept beside its loop cannot go stale separately from it. **And the digest makes re-grounding a DELTA read: re-read only what is newer than the row's last evidence date, plus the digest itself — the full chain again only when digest and delta disagree or a gap shows — and every re-ground STAMPS the row's source line with the newest evidence date read, which is what makes the next pass' delta possible. (The digest is the row's own description — the working copy of everything already read; full-exhaust governs first grounding and any disagreement.)** **Quote the counterparty's own
   words where they name the obligation** — a paraphrase is a synthesis; their sentence is the
   source (I0).
 - Sub-tasks: genuine steps of one multi-step task, or the checklist inside a batch block. Never
@@ -1654,7 +1653,7 @@ every artifact it points at.
   you learn only by opening it. "Cannot fetch" is a capability claim — §13 says attempt it before you
   write it down.
 - **Re-ground, don't snapshot.** A carried loop survives because its evidence is still true, not because
-  the row exists. Re-exhaust its chain and re-apply the gate. Do not re-decide on fragments.
+  the row exists. Re-exhaust its chain and re-apply the gate — on FIRST grounding, and whenever digest and delta disagree; otherwise the delta read satisfies this. Do not re-decide on fragments.
 
 *(Canonical deflations: a security alert followed by a login from their own machine in their own city.
 A request they already answered, their reply in the thread. An insurer writing "we've approved it and
@@ -1765,11 +1764,11 @@ Each sweep, also run this checklist — one line, one check:
 
 
 
-## The two worlds — what may be remembered
+## 11b. The two worlds — what may be remembered
 
 **Facts about the PERSON are never cached: always read live from the owning source.** A stored copy of their world rots invisibly, and a wrong brief costs them the day.
 
-**Facts about the MACHINERY may be remembered — in exactly one place, a LEDGER ROW on the task surface (label `cos-ledger`), under discipline.** The machinery changes slowly, and re-deriving it every run is the discovery tax that eats the pass: re-mapping calendar roles, re-proving vendor behavior, re-inventing scripts. Machine facts only: topology and roles, vendor-behavior premises, tool mechanics and routes. Each entry carries CLAIM · EVIDENCE · VERIFIED DATE · CHEAP CHECK, and the law of use is: **an entry may be used only after its cheap check passes this run; a failed check — or any failed OPERATION against the thing an entry describes — invalidates that entry: re-derive live, update the row with readback.** **The row itself is STATE, not a loop: never dated, never closed, never swept, never gated — and it carries only the `cos-ledger` label so no loop query ever returns it.** The weekly pass audits every entry; an entry without a date or a check is invalid; **deleting the whole row costs one slow re-derivation run and zero wrong briefs — that self-healing property is what separates a ledger from a registry.** A registry shadows the person's state and the stale copy wins; the ledger never holds their state at all.
+**Facts about the MACHINERY may be remembered — in exactly one place, a LEDGER ROW on the task surface (label `cos-ledger`), under discipline.** The machinery changes slowly, and re-deriving it every run is the discovery tax that eats the pass: re-mapping calendar roles, re-proving vendor behavior, re-inventing scripts. Machine facts only: topology and roles, vendor-behavior premises, tool mechanics and routes. Each entry carries CLAIM · EVIDENCE · VERIFIED DATE · CHEAP CHECK, and the law of use is: **an entry may be used only after its cheap check passes this run; a failed check — or any failed OPERATION against the thing an entry describes — invalidates that entry: re-derive live, update the row with readback.** **The row itself is STATE, not a loop: never dated, never closed, never swept, never gated — and it carries the reserved engine label plus `cos-ledger`, and its kind is STATE, not a loop: never dated, never closed, never swept — the ledger label is what excludes it from loop handling.** The weekly pass audits every entry; an entry without a date or a check is invalid; **deleting the whole row costs one slow re-derivation run and zero wrong briefs — that self-healing property is what separates a ledger from a registry. And delete-target identity is never a ledger fact: the calendar a sweep may delete from is proved by THIS pass's probe, every pass — no probe, no delete.** A registry shadows the person's state and the stale copy wins; the ledger never holds their state at all.
 
 **A surface is the durable home of its own logistics.** Before researching a venue, an address, or a detail, read the owned surface that would carry it (the event's location field, the row's description) — a prior pass may already have landed it. Research is for what no owned surface already carries.
 
@@ -1840,7 +1839,7 @@ already gives.
   named in a prompt that does not exist is worse than no store: the read succeeds at being empty.
   **Before any artifact tells anyone to read anything, resolve it live.**
 - The cache trap: re-reading every source every pass is the price of having no state, and it is the
-  correct price. Any future "let me cache this so I don't re-read it" is this defect returning.
+  correct price. Any future "let me cache THEIR state so a source is not re-read" is this defect returning — the machinery ledger and the row digest are the sanctioned exceptions, each with its check.
   **Re-read.**
 
 Two laws that bind any engine:
