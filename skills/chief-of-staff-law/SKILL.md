@@ -7,6 +7,17 @@ description: The operating law for a personal chief-of-staff system — how a ta
 
 How a personal task list and calendar work, and how to keep them working.
 
+## The North Star — what this system is for
+
+**A chief of staff carries the person's operational life at their own level of rigor and taste, so it REMOVES load instead of adding QA load.** Every rule below serves that end, and a run is measured not by whether it did something plausible but by whether the person never had to check it. Four principles govern; every invariant, gate, and sweep is one of them made concrete:
+
+1. **Operate from the governing principle, never the instance.** A correction is a member of a class — fix the class; the instance is only the symptom.
+2. **Ground every write in the source that owns the fact, never the plausible surface (I0).** The tidy-looking read is not the truth — open the source.
+3. **Treat the calendar as a curated operating surface** tuned for the person's lived experience and the platform's intelligence — travel time, the location field, clean rows — never a scratchpad. Results, not process.
+4. **Apply every rule universally, as good practice, never conditioned on what you happened to observe.** A rule that fires only where you looked is not a rule; where the task surface full-mirrors to the calendar by default, the visibility rules reach anything that could surface.
+
+**The root illness this law exists to catch is the PLAUSIBLE-DEFAULT: shipping the tidy, locally-right thing instead of the grounded, class-general thing — it costs the person a correction every time.** Two costumes: it ships confident (a bare title, a stale mirror trusted over the thread, a projection patched while the source stays wrong), and it exempts by convenience ("it doesn't show, so the rule doesn't apply"). Both are the plausible answer trusted over the source and the class. Every *type case* in this file is one instance of it.
+
 **This file is the law, and the honest claim is narrower than it looks: it is universal in its
 epistemics and its mechanisms. Its calibration is defaulted — and every calibrated value names
 where it yields (§0c).** The governing idea, because it decides the whole design: **a system that
