@@ -1186,8 +1186,7 @@ top to bottom:
      stick (STEP 0.5), task-derived rows take the `—` gutter too — a length you could not write is
      a length you may not print, and a mono gutter over a row with no length is a lie about the
      cost.**
-   - **HANDLED** — the pass's completed moves, one muted line each, **the evidence clause inline**
-     (*"closed — their sent reply, named date"*). Outcomes only, never acts of checking; staged rows
+   - **HANDLED** — only what is DIFFERENT about their day — a time moved, a commitment closed, a new event, a staged question — one muted line each, written as the new state of their world, never as the engine's act. A close carries its evidence clause (*"closed — their sent reply, named date"*); nothing else does. Maintenance (addresses landed, notes trued, leftovers swept, rows re-grounded unchanged) is the Handled NUMBER, not lines — discoverable at the surfaces and in their histories on demand. Never acts of checking; staged rows
      report here as one line pointing at Review. **This is the audit trail: a close they cannot see
      is a close they cannot undo.**
    - **WATCHING** — monitors whose next move belongs to someone else or to a clock: the thing plus
