@@ -921,6 +921,28 @@ rest. **Check the task set, not just the calendar — absence from the grid is n
 
 The task surface is the database and the operable surface; the calendar is the projection.
 
+**The calendar is their operating surface, not your scratchpad. Every event and every row you author
+carries the clean RESULT, never the work that produced it (I5).** This binds any surface they read —
+event titles and descriptions, task rows, the brief:
+- **No process, no history, no versioning, no self-narration** in a title or description. Not "moved
+  from X," not "was Y," not "your other copy is stale, delete it," not why-it-changed, not
+  what-you-did. That lives in the reply to them, never on the surface. The event is the commitment as
+  it stands now: a name, a time, a place. *(Type case: an event shipped titled "Consult (moved to
+  4:30, was 3:00)" with a description narrating the reschedule and telling them to delete their other
+  copy. They opened their calendar and read a scratchpad. The correct title was one word.)*
+- **The location goes in the LOCATION FIELD, as a clean geocodable address — never jammed into the
+  title.** The field is load-bearing: their client hyperlinks it and the OS derives travel-time
+  alerts from it, but only if it parses as a real postal address — no parentheticals, no cross-street
+  prose, no venue-name-only. A venue name in the title earns nothing; the address in the field earns
+  travel time. **When the source names only a venue, research it to a real postal address before
+  writing** — an address is a verifiable fact, not a guess (§13).
+- **The title is the name, plus only a doorway bring-item in parentheses, and it must match its own
+  block** — never label a 6:30 block "7pm."
+- **No em-dashes in anything rendered to them; no emoji; no private interior** (the render law).
+- Results on the surface; process in the reply. **The failure this kills is the one that looks
+  correct** — a perfectly-placed, perfectly-timed event carrying the engine's bookkeeping on the very
+  face they operate from.
+
 - Timed task + duration → a real calendar block. This is the operable form.
   - **The 30-minute floor — no slivers. Never write a block shorter than the floor.** Round up;
     never down. **30 minutes is the default; the floor is the PROFILE's grain (`Your units`) wherever
@@ -1023,6 +1045,31 @@ The task surface is the database and the operable surface; the calendar is the p
     and it earns its own staggered row.
   - Sweep the class, not the instance — and check each event's description length, because an
     empty description flips the verdict from "undate" to "keep dated."
+
+**When you CAN reach their calendar in place, that is the job — and the reader-only clause above is
+the fallback, not the rule (§13).** Reader-only is a property of one API, not of their calendar. A
+subscribed feed being unwritable through the calendar API does not mean their events are unreachable:
+the same events are usually writable in place through the platform's own calendar store (EventKit and
+the native calendar app on Apple; the equivalent elsewhere), once access is granted and the write is
+tested end to end. Where that path exists:
+
+- **Read every event they keep, verify its time and place against the owning source, and enrich THEIR
+  event in place** — geocodable address in the location field, clean notes, correct duration — rather
+  than keeping a parallel task row as the writable surface. No duplicate, no "delete your copy," no
+  parallel lane.
+- **Two failure poles, both wrong, and the engine has hit each in turn:** pasting a parallel event
+  beside theirs (a duplicate they must reconcile, off a stale read of what they already keep), and
+  shrugging "they already have it, leave it" (the enrichment that IS the job, undone). **The answer is
+  neither: edit their event, in place, live-verified.**
+- **The reliable mechanism where it is EventKit-class:** find by a bounded date-predicate, never a
+  scan over the whole store — a `whose`-style scan over thousands of events times out; edit the event;
+  save; **commit; and re-read from a FRESH store to confirm the field landed.** The store caches: a
+  same-store re-query returns the stale object and will report a just-deleted event as still present,
+  so the fresh-store read is the only proof — a save that returned success is not. Run the automation
+  from a file, not inline (inline quoting mangles the script).
+- **Never launder "I can't reach it cleanly" into "so I'll stay off their surface."** That is
+  avoidance wearing the costume of respect. Test the path; if it exists, curate in place; only if it
+  genuinely does not, the reader-only fallback stands.
 
 **Completion may not clear the projection — establish this by controlled probe, never by reasoning.**
 Some task surfaces, on completion, rename the projected event with a `✓` prefix and leave it there
