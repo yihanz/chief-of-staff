@@ -1083,7 +1083,7 @@ reschedule NO-OPS (no change, no sync delta), and a duration re-write does NOT r
 already-materialized instances.** Regeneration comes from the series ADVANCING — the next
 completion mints fresh instances at current length — or from one manual drag in the client. **Fix
 the task field, report the sliver with its self-heal date, and never claim a repair the surface has
-not shown.** Before indicting a fresh write for a sliver, **read the event's own updated
+not shown.** **But open the source field before you rule rot: a sliver is sync rot ONLY if the task itself already meets the floor. If the recurring task is STILL sub-floor, the sliver is a LIVE violation, not lag — raise the source duration (the series regenerates at the new length on advance) and do not let “probably sync rot” exonerate a source you never opened. The read that separates rot from a live breach is the one the comfortable branch skips: the task field’s own length.** Before indicting a fresh write for a sliver, **read the event's own updated
 timestamp — it names the era of the defect.** *(Type case: sub-floor slivers reported as a live
 violation; every underlying task already carried the fixed length and the events' timestamps
 pre-dated the fix by a week — sync rot, not a fresh write. Two repair routes were then tested at
