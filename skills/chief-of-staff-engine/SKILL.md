@@ -1339,7 +1339,7 @@ routine skeleton, the user's own calendars, any imported feed, or their own rout
 verified real appointments absent from every readable calendar, and only where write access was
 proved; propose when uncertain** · **never ingest AI-derived items as commitments** · **never
 surface the interior of a private source in a task title or calendar row** · **ambiguous → flag
-plainly, never fabricate** · **no cache, no registry, no sidecar file, no decision recorded in this
+plainly, never fabricate** · **THEIR world is never cached — the list is the state; the MACHINE's world lives in the ledger row alone (label `cos-ledger`), machine facts only, each dated with a cheap check that must pass before use, audited weekly, deletable at the cost of one slow run; beyond it no cache, no registry, no sidecar file, no decision recorded in this
 prompt: the list is the state, and an incident is not an exception.** *(Which is exactly why the
 PROFILE is a ROW and not a file — STEP 0.1. This rule bans the engine from keeping notes about
 ITSELF between runs; it has never banned reading what the user owns.)*

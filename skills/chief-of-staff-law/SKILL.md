@@ -629,7 +629,7 @@ project you expect is missing, **the live list wins and nothing written here get
 - Description (one tap): the one thing to do, the number/link/script, and one compact source
   line. Evidence and reasoning belong in your reply, not in their task. **But every fact a loop
   depends on belongs here, in the row's own description** — there is no store to hold it, and a
-  fact kept beside its loop cannot go stale separately from it. **Quote the counterparty's own
+  fact kept beside its loop cannot go stale separately from it. **And the digest makes re-grounding a DELTA read: re-read only what is newer than the row's last evidence date, plus the digest itself — the full chain again only when digest and delta disagree or a gap shows.** **Quote the counterparty's own
   words where they name the obligation** — a paraphrase is a synthesis; their sentence is the
   source (I0).
 - Sub-tasks: genuine steps of one multi-step task, or the checklist inside a batch block. Never
@@ -1761,6 +1761,16 @@ Each sweep, also run this checklist — one line, one check:
     transcript, never swept at the utterance level (§10)** · **a raw capture of theirs sitting unread
     in the cockpit (§7)** · **a recurring row's duration fix trusted at the task field while
     materialized projection instances kept the old length (§6)**.
+
+
+
+## The two worlds — what may be remembered
+
+**Facts about the PERSON are never cached: always read live from the owning source.** A stored copy of their world rots invisibly, and a wrong brief costs them the day.
+
+**Facts about the MACHINERY may be remembered — in exactly one place, a LEDGER ROW on the task surface (label `cos-ledger`), under discipline.** The machinery changes slowly, and re-deriving it every run is the discovery tax that eats the pass: re-mapping calendar roles, re-proving vendor behavior, re-inventing scripts. Machine facts only: topology and roles, vendor-behavior premises, tool mechanics and routes. Each entry carries CLAIM · EVIDENCE · VERIFIED DATE · CHEAP CHECK, and the law of use is: **an entry may be used only after its cheap check passes this run; a failed check → re-derive live → update the row with readback.** The weekly pass audits every entry; an entry without a date or a check is invalid; **deleting the whole row costs one slow re-derivation run and zero wrong briefs — that self-healing property is what separates a ledger from a registry.** A registry shadows the person's state and the stale copy wins; the ledger never holds their state at all.
+
+**A surface is the durable home of its own logistics.** Before researching a venue, an address, or a detail, read the owned surface that would carry it (the event's location field, the row's description) — a prior pass may already have landed it. Research is for what no owned surface already carries.
 
 ## 12. The contract with the engine · META
 
