@@ -697,8 +697,7 @@ user cannot, and they are also the one that forfeits the overnight run — see S
 `osascript`. Recorded here because it is the general-purpose AppleScript bridge some people already
 have installed, and it can stand in for AppleScript-driven readers (Apple Notes, Reminders, Messages)
 in one extension. **Everything below was verified on 2026-07-17 from the extension's own
-`manifest.json`, its public repo, and — for the directory listing — a live Claude Desktop install
-record.**
+`manifest.json` and its public repo; the directory listing was confirmed in-app on the same date.**
 
 - **Display name:** **"Control your Mac"** — the manifest's `"name"`. Its `"description"` is
   *"Execute AppleScript to automate tasks on macOS."*
@@ -712,11 +711,12 @@ record.**
 - **What it does:** executes arbitrary AppleScript through macOS `osascript`, so it can drive
   scriptable apps and change system settings on the machine.
 - **Install:** the Desktop-Extension channel — **Claude Desktop → Settings → Extensions → Browse.**
-- **✓ VERIFIED — the directory listing.** It appears in the Anthropic-reviewed **Browse extensions**
-  directory. Confirmed on 2026-07-17 from a Claude Desktop install record: the installed extension id
-  is `ant.dir.gh.k6l3.osascript` (installed 2026-07-16), and the `ant.dir.` namespace is the one
-  Claude assigns to extensions installed **from the directory** — distinct from the `local.dxt.`
-  namespace it gives sideloaded ones. **Caveat, because this is a directory and directories change:**
+- **✓ VERIFIED — the directory listing, as of 2026-07-17 and on that version of Claude Desktop or
+  later.** It appears in the Anthropic-reviewed **Browse extensions** directory. The check is
+  repeatable by anyone: an install taken from the directory resolves to the id
+  `ant.dir.gh.k6l3.osascript`, and the `ant.dir.` namespace is the one Claude assigns to extensions
+  installed **from the directory** — distinct from the `local.dxt.` namespace it gives sideloaded
+  ones. **Caveat, because this is a directory and directories change:**
   that is a point-in-time fact; if the listing matters months from now, re-confirm in-app at
   Settings → Extensions → Browse, since an extension can be delisted. The open-source repo carries
   the install either way.

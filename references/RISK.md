@@ -42,10 +42,10 @@ you from one mode to the other.
 | Your task list (`~~state`) — **maintained** | Everything above, plus fixing **its own** rows: resizing a block it made that's too short to read, staggering two of its own blocks that landed on one start time, rolling its own untouched overdue row forward. | It reshapes a row it made that you had come to treat as yours. **Bounded:** it must first prove from the activity log that it placed that row and you have not touched it since — and unprovable means yours. |
 | Your calendar (`~~container`) — the one it writes to | **Create** events, and only for an appointment it verified and could not find on any calendar you already have. **And, where your calendar store can be written in place — access granted, and the write tested end to end this run — edit events you already keep.** Two fields, each verified against the source that owns the fact: a geocodable address in the location field, and the notes. **That list is the whole list. It never touches the date, the time or the duration** — those are your placement, and an event at the wrong time or the wrong length gets one line saying so rather than a silent correction. **It never deletes an event you keep, and it creates events on one calendar only: the one it writes to.** | A wrong event, **or a field of your own overwritten with something wrong.** A wrong event is recoverable — you delete it. **An edit is not.** It lands inside a record you already keep, your own text is gone, and nothing marks the event as having been touched — so there is nothing to notice and nothing to undo. That is the widest write in this table on data that was already yours, which is why it is bounded to three named fields and gated on a write that was tested rather than assumed. **The two write modes above do not gate this** — they are a fact about your task list. What gates it is whether the in-place write proved out this run. |
 | The projection calendar (the sync calendar your task list generates) | Delete events whose title begins with `✓` | Deletes a real event if it targets the wrong calendar. **Bounded twice:** it must identify the projection calendar by live probe every run — no probe, no deletes at all — and it never deletes a non-`✓` event without confirming the linked task is closed. **So don't title your own events with a `✓`.** |
-| The Sales rail | Read promotional mail and create a **date-only row** — which your calendar shows as an **all-day banner**, in its own Sales band, lowest priority, sitting on the day the offer expires. Maintained mode deletes its own expired banners; write-once can't prove they're its own, so they accumulate and it reports the count. | Banners you didn't ask for. **Gated by its own three-part test** — you already have a relationship with that brand, the offer states a real number, the offer states a real end date. Fail any one and no row exists. This is a write, it appears on your calendar, and you should know it exists before it shows up. |
-| A mailbox | **Drafts only** — the engine's rule. On the recommended surface the connector exposes no send verb, so it is also the surface's limit. | A draft you didn't want. **Harmless — on a surface with no send verb.** On one that *can* send, the ceiling is a sent message, held down by the law rather than by the absence of the verb. |
-| The bundled iMessage reader (`companions/imessage-fixed`) — read-only, opt-in | Enumerate threads; read a chat or thread; read the last N hours; full-text search decoded bodies. **No send, no write, no delete, no network.** | **It reads your messages — that is the whole radius.** Nothing to undo, because it writes nothing. The exposure worth weighing is upstream of any failure: the database holds other people's words, and reading it brings them into your session (§3). Blast radius: your messages become readable to the model you already trust with your mail — not one inch past that. |
-| Mac automation — the "Control your Mac" extension, if you add one | Whatever your user account can do: local reads and automations no hosted connector can reach. | **As wide as your own account — stated plainly, once.** A general shell can do what you can do at your own keyboard; that reach *is* the capability and *is* the cost, the same sentence read two ways. It is the broadest surface in this table. **§4 is how to decide whether the breadth earns its place, and when a read-only tool covers the need instead.** |
+| The Sales rail | Read promotional mail and create a **date-only row** — no time, no block, its own Sales band, lowest priority, sitting on the day the offer expires, never in the lead and never counted as backlog. **What your own calendar draws for a date-only row is a property of your task list's sync, not a prediction this page makes** — the engine probes it and reports what it found. Maintained mode deletes its own expired rows; write-once can't prove they're its own, so they accumulate and it reports the count. | Rows you didn't ask for. **Gated by its own three-part test** — you already have a relationship with that brand, the offer states a real number, the offer states a real end date. Fail any one and no row exists. This is a write, it lands on a surface you read, and you should know it exists before it shows up. |
+| A mailbox (an `~~inbound[]` member) | **Drafts only** — the engine's rule. On the recommended surface the connector exposes no send verb, so it is also the surface's limit. | A draft you didn't want. **Harmless — on a surface with no send verb.** On one that *can* send, the ceiling is a sent message, held down by the law rather than by the absence of the verb. |
+| The bundled message reader (`companions/imessage-fixed`) — an `~~evidence[]` member, read-only, opt-in | Enumerate threads; read a chat or thread; read the last N hours; full-text search decoded bodies. **No send, no write, no delete, no network.** | **It reads your messages — that is the whole radius.** Nothing to undo, because it writes nothing. The exposure worth weighing is upstream of any failure: the database holds other people's words, and reading it brings them into your session (§3). Blast radius: your messages become readable to the model you already trust with your mail — not one inch past that. |
+| A general automation bridge on your own machine, if you add one | Whatever your user account can do: local reads and automations no hosted connector can reach. | **As wide as your own account — stated plainly, once.** A general shell can do what you can do at your own keyboard; that reach *is* the capability and *is* the cost, the same sentence read two ways. It is the broadest surface in this table. **§4 is how to decide whether the breadth earns its place, and when a read-only tool covers the need instead.** |
 
 *(One more write, for completeness. **A throwaway row**, created and deleted inside the same step of
 every run, to test whether your list actually stores an hour and a length. It is never labelled,
@@ -125,7 +125,7 @@ order.
 | Choice | Exposure |
 |---|---|
 | Hosted connectors (mail, calendar, tasks, notes) | Your data flows through the model provider under their terms. Read them; that is a real decision, not a formality. |
-| **The public-ICS calendar mirror** | **The biggest self-inflicted risk in the whole setup.** Making an iCloud calendar "public" to get a subscribe URL means **anyone with the link sees every event title and detail** — security by obscurity, nothing more. **Do not do this with a calendar containing medical, legal, or personal detail.** Use a paid sync service or move the calendar instead. |
+| **The public-link calendar mirror** | **The biggest self-inflicted risk in the whole setup.** The free way to mirror a calendar from one ecosystem into another is to publish it to a subscribe URL — and on at least one major provider, publishing it means **anyone holding that link sees every event title and detail. Forever. No password, no expiry, and no free/busy-only option.** Security by obscurity, nothing more. **Do not do this with a calendar containing medical, legal, or personal detail.** Use a paid sync service, or move the calendar instead. `references/VOLATILE.md` carries the provider, its own wording, and the click path. |
 | **Your PROFILE** | **Not packaged, and never shared with whoever handed you this — but it does not stay on your machine, because it isn't on your machine.** It is a row on your task list, labelled `cos-profile`, holding your personal facts in its description. So it lives on your task list vendor's servers, syncs to every device you own, and **passes through the model on every run — exactly like your mail and your calendar already do.** *"Not packaged"* is not *"never leaves your machine,"* and you should hold us to the difference. **One test per line, before you write it: would you send this fact through a cloud service?** If no, leave it out — the engine runs fine without any single field. |
 | A local lifelog / message reader (e.g. the bundled `imessage-fixed`) | **Read-only and opt-in** — a reader like this writes nothing and sends nothing. What there is to weigh is the exposure, not a failure: the database holds the words of *everyone who ever texted you*, most of whom did not consent to this, and reading it brings them into your session. That is the honest reason such a tool is off by default and yours to turn on deliberately — and it is one of the most sensitive surfaces you own. |
 
@@ -136,16 +136,18 @@ alone can carry what a task title cannot. **Same fact, different surface, differ
 
 ---
 
-## 4. Local machine — what Mac automation unlocks, and what it costs
+## 4. Local machine — what a general automation bridge unlocks, and what it costs
 
 **This plugin ships no shell bridge and doesn't need one to run.** But a hosted connector reaches
 only what its vendor exposes, and some of the highest-value signal in your life is local: the plumber
 who texted a new time, a note you left yourself, a file on your own disk. **Mac automation is the rung
 that reaches it** — the class of local reads and automations no cloud connector can see.
 
-**The enable path.** The capability is the **"Control your Mac"** extension (Kenneth Lien / k6l3,
-MIT-licensed, open-source), installed from **Settings > Extensions > Browse.** It is a general
-AppleScript/shell bridge — it runs local automation on your behalf.
+**The enable path.** It is a desktop extension that runs scripts on your own machine on your behalf,
+installed from your AI client's own extension directory. **Which extension, who wrote it, what it is
+licensed under, and the exact click path are dated facts and live in `references/VOLATILE.md`** —
+not here. A vendor name written into this page is a name that goes wrong later with nobody to
+notice.
 
 **The honest tradeoff, stated once and plainly:** a general shell can do what your user account can
 do — the same files, the same apps, the same reach you have at your own keyboard. That breadth *is*
@@ -167,10 +169,11 @@ surfaces the bridge can reach narrow, and to know what you connected.
 
 **A cost that isn't about safety at all:** local readers (messages, notes, files) are
 **single-machine dependencies.** They work on one computer, so a scheduled brief that depends on one
-is tied to that machine being awake. **What a Cowork run does when its time passes while the machine
-slept is not something the vendor documents** (`references/VOLATILE.md`, Scheduling) — do not count on
-a catch-up, and do not import Claude Code Desktop's "runs late on wake" rule, which is a different
-product. Treat a local brief's timing as at-risk, not guaranteed. That is a scheduling cost, not a
+is tied to that machine being awake. **What the scheduled run does when its time passes while the
+machine slept is not documented for the runtime this brief fires from**
+(`references/VOLATILE.md`, Scheduling) — do not count on a catch-up, and do not import the "runs late
+on wake" rule that circulates: it is a different product's documentation. Treat a local brief's
+timing as at-risk, not guaranteed. That is a scheduling cost, not a
 danger, and it is the real thing to weigh against the richer input (see §7 and `references/STACK.md`).
 Hosted connectors keep a run cloud-eligible; local readers trade that for reach.
 
@@ -181,9 +184,10 @@ Hosted connectors keep a run cloud-eligible; local readers trade that for reach.
 1. **Making a sensitive calendar public to mirror it.** Silent, permanent, and the URL is
    guessable-adjacent forever. **Rank 1 because there is no error message.**
 2. **Assuming a scheduled brief ran.** A brief that depends on a local reader needs the machine
-   awake; if it slept through the window, whether the run catches up later is **not documented for
-   Cowork** — so a sleeping laptop can mean no brief, and *nothing tells you.* **A pass that did not
-   run did not run.** (A cloud-only brief — no local readers — does not carry this cost.)
+   awake; if it slept through the window, whether the run catches up later is **undocumented for the
+   runtime this brief fires from** — so a sleeping laptop can mean no brief, and *nothing tells you.*
+   **A pass that did not run did not run.** (A cloud-only brief — no local readers — does not carry
+   this cost.)
 3. **Deleting an engine row instead of parking it.** **The list is the state — so a delete leaves
    no trace in the state model.** You didn't tell the engine anything; you removed the evidence
    that the row ever existed. Tomorrow it reads the same evidence, reaches the same conclusion, and
@@ -253,11 +257,11 @@ Hosted connectors keep a run cloud-eligible; local readers trade that for reach.
 - **The machine-off gap is real, but it is a CONSEQUENCE OF YOUR DEPENDENCY LIST, not a law of
   the universe. Do not read it as structural — it is a choice.**
   - A task with **no local dependencies runs in the cloud and fires with the computer off.**
-  - A task that **needs local files or apps is tied to a waking machine.** What a Cowork run does
-    when its scheduled time passes while the machine sleeps is **not documented** (`references/VOLATILE.md`,
-    Scheduling) — **do not import Claude Code Desktop's "skipped, one catch-up on wake, 7am can fire
-    at 10pm" rule; that is a different product.** Treat the local path's timing as at-risk, not
-    guaranteed.
+  - A task that **needs local files or apps is tied to a waking machine.** What the scheduled run
+    does when its time passes while the machine sleeps is **not documented for the runtime this brief
+    fires from** (`references/VOLATILE.md`, Scheduling) — **do not import the "skipped, one catch-up
+    on wake, a morning task can fire at night" rule that circulates; it is a different product's
+    documentation.** Treat the local path's timing as at-risk, not guaranteed.
   - **So every local reader you add (messages, lifelog, local notes server) buys corroboration and
     pays for it in schedule reliability.** See `references/STACK.md`.
   - **The residual gap applies only to the local configuration:** when the machine is off, the
@@ -300,6 +304,7 @@ The honest one-paragraph version:
 > path; a mail surface that *can* send — the missing send verb is a property of the surface you
 > chose, not a promise this package makes, so connect a mail tool that sends and the capability is
 > live in the session, and what stops a send is the law, not physics; and the ordinary fact that
-> hosted connectors mean your data flows through a vendor. **Mac automation is a further surface, and
-> a real one — as wide as your own user account — but it is a capability to weigh with open eyes, not
-> a trap to avoid; §4 is where to weigh it.** None of this is hidden from you.
+> hosted connectors mean your data flows through a vendor. **A general automation bridge on your own
+> machine is a further surface, and a real one — as wide as your own user account — but it is a
+> capability to weigh with open eyes, not a trap to avoid; §4 is where to weigh it.** None of this is
+> hidden from you.
