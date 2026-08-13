@@ -1204,8 +1204,10 @@ because deleting one needs proof it placed it. The engine names the count. **It'
 **If they use something else** — Asana, Linear, ClickUp, Monday, a Notion database — **probe it,
 then tell them plainly which questions it answers and what degrades:**
 
-- **No completed-task query** → the engine may rebuild rows you closed. It compensates by asking
-  more and creating less.
+- **No completed-task query** → **disqualifying, and the only one on this list that is.** With no way
+  to ask what they already closed, the engine rebuilds rows they finished, forever — **there is no
+  degraded mode and nothing that compensates.** Say so plainly and help them find a surface that
+  answers it.
 - **No way to tell who placed a row** → **write-once.** See above. **Degraded is the wrong word** —
   it fails toward leaving your stuff alone, which is the right direction to fail.
 - **No duration field** → **no length, so no stated cost and no enforceable floor.** The rows still

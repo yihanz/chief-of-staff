@@ -164,11 +164,19 @@ access.** It's the only document here you actually have to read.
 
 - **Send email.** Drafts only. The engine's own rules ban sending — and on the recommended mail
   surface the ban isn't being relied on, because the send capability doesn't exist there at all.
+- **Delete its own tombstones.** On the calendar your task list projects your dated tasks onto, it
+  removes events whose title starts with **`✓`** — the marker some task lists leave behind when you
+  tick a dated task off. **So never title your own events with a `✓` in front: it cannot tell yours
+  from a leftover, and it will delete it.** No other calendar is ever swept and nothing without a
+  `✓` is ever deleted. The full rule is under Install.
   **On a mail surface that *can* send, "drafts only" stops being a guarantee and becomes a
   configuration you must not get wrong.**
 - **Re-open anything you closed.** Your close is final and is never audited.
 - **Move a block you placed.** It places a row once; after that the row is yours.
-- **Rebuild something you parked.** Your decisions live on the list and it reads them.
+- **Rebuild something you parked.** Your decisions live on the list and it reads them — **which is
+  why you park a row you disagree with rather than deleting it.** A delete tells it nothing, so
+  tomorrow the same evidence builds the same row. The two things this asks of you are that one and
+  the `✓` rule above; both are set out in full under Install.
 - **Render a partial run as a complete one.** Silence about a failure is the one unforgivable bug.
 
 **And on almost every task list, it won't edit anything at all — ever.** Telling an agent's rows
@@ -201,6 +209,27 @@ marketplace, so Claude pulls the plugin straight from GitHub — nothing to down
 upload.
 
 1. In **claude.ai** → **Customize** → **Plugins**, find **Personal plugins**, click **"+"**, and
+**Before the click paths, four things that decide whether this works for you at all:**
+
+- **Your task list has to be able to query what you already *finished*.** Not just what's open —
+  **completed rows, on demand.** That query is the engine's only memory of your closes: without it,
+  a row you ticked off an hour ago gets rebuilt tomorrow, and the day after, forever. **A surface
+  that cannot answer it is disqualified** — this is the one requirement on the page with no
+  workaround and no degraded mode.
+- **A personal Outlook, Hotmail or Live account has no path.** Not on any plan, not for any amount
+  of money. It isn't a paywall; it isn't supported. If that's your only calendar, the honest options
+  are running this against a different calendar or not running it.
+- **Microsoft 365 means a work or school account, and an admin.** It has to be a **Microsoft Entra
+  tenant**, and a **Global Admin has to grant tenant-wide consent, once** — an email to IT, not a
+  button, unless you're the admin. Then assume the calendar comes back **read-only**: the engine
+  switches to proposing each event for you to create with one click, and everything else works
+  identically.
+- **The bundled iMessage reader needs a Mac, and it is the one piece a browser can't install.** It's
+  a Desktop Extension, so it wants **macOS**, **Claude Desktop** (extensions don't run on the web
+  app), **Python 3**, and **Full Disk Access granted by hand** in System Settings. If you're
+  following this page in a browser, you structurally cannot install it — and you don't have to. It's
+  optional, and nothing else here needs any of that.
+
    choose **Add marketplace**. *(In Cowork, open the **Cowork** tab first, then **Customize**.)*
 2. Choose **Add from a repository** and paste **`yihanz/chief-of-staff`**. Click **Add**.
 3. The plugin now appears in the catalog — click **Install**.
@@ -241,6 +270,30 @@ setup will argue for; you can say no.
 Go to **claude.ai**, find the message box, and **select "Cowork" in the bottom left corner.** Same
 site, same login, nothing to download, nothing extra to buy. There is no "web version vs. Cowork" —
 Cowork *is* on the web.
+
+### Two rules you have to follow. Nothing else in this asks anything of you.
+
+**Setup teaches both out loud. They're here too, because each one costs you something you can't get
+back if you learn it by discovery.**
+
+**1 — Park a row you disagree with. Never delete it.** Move it to Someday, or whatever your list
+calls *later*. **The engine keeps no memory of your world between runs — your list is the state** —
+so deleting a row doesn't tell it anything; it removes the evidence that the row ever existed.
+Tomorrow it reads the same mail, reaches the same conclusion, and creates the same row. And you'll
+delete it again, and it will look broken while working exactly as designed. **A parked row is a
+decision, written where the engine reads:** it sees it, treats it as settled, and skips it silently,
+forever. Add a one-line reason and it will read that back to you in six months. **Deleting is the
+only action in this whole system that loses information** — finishing, parking and dragging are all
+messages it reads and honours. **Someone who doesn't know this concludes the engine is broken within
+about four days.**
+
+**2 — Never title your own calendar events with a `✓` in front.** Your task list projects your dated
+tasks onto a calendar of its own, and some task lists rename that projected event with a **`✓`** when
+you tick the task off, then leave it on your calendar forever. So every morning the engine sweeps
+**that one calendar** and deletes anything whose title starts with `✓`. **Which means it cannot tell
+`✓ Paid rent` that you wrote from a leftover, and it will delete it.** Title it `Paid rent` and it's
+safe. Everywhere else — your real calendars — title things however you like: it only ever deletes
+from the one calendar your task list projects onto, and only the `✓` ones.
 
 **"Where do my connectors go?" Into Claude's own connector settings — and they stay in the cloud.**
 Your task list, your calendar, your mail are **hosted connectors: you add each one once and it's live
@@ -377,7 +430,7 @@ behind.** Two things are genuinely required, because nothing substitutes for the
 
 | What it needs | Why there's no way around it |
 |---|---|
-| **Somewhere your tasks live** | It's the **memory**. The engine keeps nothing between runs — **your list is the state.** Your profile lives there too. |
+| **Somewhere your tasks live — and it must be able to query what you already finished** | It's the **memory**. The engine keeps nothing about your world between runs — **your list is the state.** Your profile lives there too. **The completed-row query is the hard requirement:** with no way to ask what you closed, the engine rebuilds it, forever. A surface that can't answer it is disqualified — see Install. |
 | **A calendar** | It's the **container** — where your body actually is. Placement is the whole intelligence; with no calendar there's nowhere to put anything. |
 
 **Those two are a real product, today.** The gate, the envelopes, placement by activation cost, the
