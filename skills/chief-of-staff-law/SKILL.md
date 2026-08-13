@@ -118,10 +118,19 @@ How to use them:
 
 - **The invariant is the check — never the rule.** When a rule tells you you're clear, ask its
   invariant before you believe it. That gap is where the defects live.
-- Why rules drift: a rule migrates toward whatever is cheap to check. "Did I create an event" is a
-  lookup; "will they see two rows" means simulating the projection. The cheap proxy and the real
-  invariant agree in the common case and diverge exactly at the edge — so the rule passes every
-  review and fails in production.
+- **Why rules drift — THE AXIS TEST, and it is the generator every rule below is checkable against.
+  A rule keys on whatever was easy to observe in the case that produced it, never on the property
+  that made that case true.** In the originating case the two travel together, which is why the rule
+  reads correct; they come apart in the next one. *"Did I create an event"* is a lookup; *"will they
+  see two rows"* means simulating the projection — same verdict on an ordinary Tuesday, opposite
+  verdicts at the edge, and the rule passes every review on the strength of Tuesday.
+  - **So, for any rule you write, apply, or inherit: name the property it is FOR, name what it
+    actually KEYS ON, confirm they are the same thing, and construct the case where they diverge.**
+  - **Cannot construct one → you have not found the axis yet; you have restated the rule.** The
+    divergent case is the finding, and it resolves two ways: an exception the rule must carry, or
+    proof the rule is keyed to the wrong thing and has to be re-keyed.
+  - This runs on rules already here. Several below carry their own divergent case for exactly that
+    reason — §1's third gate, §8's filter, §9's gate — and each names the pair it came apart on.
 - **A rule that cannot name a parent invariant is a fossil** — the frozen shape of one instance
   wearing the syntax of a law. Re-derive it or delete it. But run the test in both directions: an
   orphan is sometimes a missing invariant, not a fossil.
@@ -525,6 +534,12 @@ and existence questions get the whole corpus.
    bring it Monday"* ✓. *"Prototype one weekend, extension, test"* ✗ — that is a project: a
    direction they authored. **Protect a block for it; never open it, and never open its parts.**
 3. Unmade — past tense, or a record of the doing → closed. **Never re-open a record.**
+   - **The axis, because this gate is keyed to a proxy: past tense reports THE DOING; the property is
+     that the loop is FINISHED.** They part company at a provisional state — an amount credited
+     pending review, a form submitted and not accepted, a thing sent and not received. **Past tense
+     with an amount in it reads most final of all and is the exact shape that isn't.** A record of a
+     step is not a record of the end: **where the source names a condition, a review, or a window
+     still open, the loop is open**, and the past-tense sentence was about the step.
 4. Consequence — if it never happens, name what breaks. This gate kills most false positives.
    **If you cannot name the broken thing, there is no loop** — and "they might want to" is not a
    consequence.
@@ -1149,6 +1164,16 @@ never rewritten or re-placed — read, then serve.
 Routine items are adherence scaffolding, infrastructure. Do not restructure wholesale without their
 say. **Keep them out of Today via a filter.**
 
+**But that filter cuts on CONSEQUENCE, and never on who performs it** — the axis test, and this is
+where it bites hardest. *They do it themselves* is the observable; *nothing breaks if it slips* is the
+property, and on an ordinary recurring row the two are the same fact. **They come apart at an overdue
+one:** a dose, a refill, a device that needs servicing, a filing, a renewal, a payment — every one of
+them self-performed, and every one of them breaking something on a date. **A recurrence whose lapse
+breaks something is not adherence scaffolding. It is an obligation with a clock**, and it takes the
+visibility ladder's consequence row (§9) regardless of whose hands do the work. Filing it by who
+performs it is I5's suppression face holding a broom: the count reads tidy and the thing that breaks
+is off-screen.
+
 **The routine skeleton calendar is the model, never something to switch off.** It renders the day as
 a legible timed skeleton and is usually the best-designed layer in the system; when a surface is
 cluttered, make it more like the skeleton rather than proposing they hide it.
@@ -1696,7 +1721,8 @@ Each sweep, also run this checklist — one line, one check:
     as an ownership discriminator (§0b)** · **a spoken commitment that lived only in a captured
     transcript, never swept at the utterance level (§10)** · **a raw capture of theirs sitting unread
     in the cockpit (§7)** · **a recurring row's duration fix trusted at the task field while
-    materialized projection instances kept the old length (§6)**.
+    materialized projection instances kept the old length (§6)** · **a self-performed recurrence
+    filed as adherence while its lapse breaks something (§8)**.
 
 ## 12. The contract with the engine · META
 
