@@ -41,13 +41,13 @@ tool they abandon. Say what degrades and let them choose.
 **Never invent a fact about them.** An absent profile field is recoverable. A fabricated one is a
 lie the engine will act on every morning.
 
-### READ `references/VOLATILE.md` BEFORE YOU STATE AN INSTANCE — AND THE LIST IS EIGHT
+### READ `${CLAUDE_PLUGIN_ROOT}/references/VOLATILE.md` BEFORE YOU STATE AN INSTANCE — AND THE LIST IS EIGHT
 
 **§V of the law names six: a vendor, a price, a renewal window, a case number, a date, a count.**
 This file adds the two that bite hardest in a setup: **a plan name and a click path.** Prices move,
 plans get renamed, vendors reorganise their settings screens, counts grow, issues get reopened, and
 a status flips the day someone changes their mind. Every one of those facts lives in
-`references/VOLATILE.md` — dated and cited. **This file is not dated and is not the source.** So:
+`${CLAUDE_PLUGIN_ROOT}/references/VOLATILE.md` — dated and cited. **This file is not dated and is not the source.** So:
 
 - **Read VOLATILE before you say a number, name a plan, dictate a path, cite a case, quote a count,
   or report a status.** Not from memory, not from this file.
@@ -224,7 +224,7 @@ So the row has to exist before the first run can happen at all. **Make it now, e
 
 - **Title:** `Chief of Staff — Profile`
 - **Label:** `cos-profile`
-- **Description:** the section headings from `references/PROFILE.template.md`, with nothing under
+- **Description:** the section headings from `${CLAUDE_PLUGIN_ROOT}/references/PROFILE.template.md`, with nothing under
   them.
 
 That is deliberate. An empty profile is not a broken one — it is a **true** one, and the card it
@@ -355,7 +355,7 @@ Say roughly this, in your own words:
 and tell them to go fill it in alone — that is how the most important section in the system ends
 up blank, and a blank one fails **invisibly.**
 
-**`references/PROFILE.template.md` is the shape** — use it for the section headings and the order,
+**`${CLAUDE_PLUGIN_ROOT}/references/PROFILE.template.md` is the shape** — use it for the section headings and the order,
 so what you write into the row matches what the engine expects to read. **It is not a form to hand
 over.** You are conducting an interview; the template is your notes.
 
@@ -745,7 +745,7 @@ because almost everyone assumes it's a separate app they haven't bought:
 an app that doesn't exist.** Cowork *is* on the web. It is a toggle in the message box.
 
 **The one real wall is money, and it's on the schedule:** scheduled tasks are **Cowork-only and
-paid-only.** Read the current plan names out of `references/VOLATILE.md`.
+paid-only.** Read the current plan names out of `${CLAUDE_PLUGIN_ROOT}/references/VOLATILE.md`.
 
 **So check their plan before you promise them a 7am brief — and "check" means ASK. You cannot see
 it.** There is no call that returns their plan, no field to read, nothing in this conversation that
@@ -788,7 +788,7 @@ they try:**
 
 **This is the one prerequisite in the whole package that nothing else names, and it fails
 silently — which is why it's here in full rather than in a clause.** *(It's a click path, so it
-rots: `references/VOLATILE.md` wins if it disagrees, and if VOLATILE can't be read, **name the
+rots: `${CLAUDE_PLUGIN_ROOT}/references/VOLATILE.md` wins if it disagrees, and if VOLATILE can't be read, **name the
 destination — the capability toggle in Settings — and say you can't see the current buttons.** Do
 not reconstruct them.)*
 
@@ -820,7 +820,7 @@ it. Don't ask twice.**
 | Finest published cadence | hourly | — |
 
 **Where a scheduled task runs is not a settled rule — the vendor's own article contradicts itself
-about it, in the same article.** **`references/VOLATILE.md` → Scheduling carries both positions,
+about it, in the same article.** **`${CLAUDE_PLUGIN_ROOT}/references/VOLATILE.md` → Scheduling carries both positions,
 quoted, dated and sourced, with the probe that would settle it. Read it there. Do not restate it from
 here** — that is this file's own rule, and a contested vendor quote is the case it exists for.
 **Nobody has probed it yet, so quote neither sentence as the rule; quote the behaviour instead, and
@@ -914,7 +914,7 @@ find them at all.**
 9. **Check it's now listed with a next-run time.** **If there's no next-run time, it isn't
    scheduled** — and that is the failure that looks exactly like success.
 
-**These clicks move.** Read the current path out of `references/VOLATILE.md` before you dictate
+**These clicks move.** Read the current path out of `${CLAUDE_PLUGIN_ROOT}/references/VOLATILE.md` before you dictate
 them, and if it disagrees with this list, **it wins.**
 
 **Then set one expectation honestly, so the first bad morning doesn't read as a broken plugin:**
@@ -983,7 +983,7 @@ one." **Whatever is actually large in their life is the rung that matters — tu
 | **Mac automation** | Local reads and automations no hosted connector can reach — the general-purpose rung for whatever doesn't have a purpose-built tool yet. | A **general** capability (it can do what AppleScript can), and **local** (waking Mac). **When a purpose-built read-only tool already covers the job — like the messages reader above — prefer that; reach for this when you genuinely need the breadth.** | The **"Control your Mac"** extension — **Settings > Extensions > Browse.** Phase 7. |
 
 **The complete named menu — the real tool for each rung, which two are required, and the exact
-enable path for every one — is `references/DEPENDENCIES.md`.** Keep the offer here at the category
+enable path for every one — is `${CLAUDE_PLUGIN_ROOT}/references/DEPENDENCIES.md`.** Keep the offer here at the category
 level; when they want "so what do I actually click," that file is the answer, not a recital from you.
 
 **Two things to say plainly, every time a rung carries a local cost:**
@@ -1010,7 +1010,7 @@ card, never before it; the pre-card lecture is deleted** — or from Phase 6 whe
 something else. For each one: **required or optional → what it does → why → what it asks → the actual
 clicks.** Real numbered paths. Never "go check the docs."
 
-**And before you dictate any of them: read `references/VOLATILE.md`.** Every screen below belongs
+**And before you dictate any of them: read `${CLAUDE_PLUGIN_ROOT}/references/VOLATILE.md`.** Every screen below belongs
 to somebody else and they redesign it without telling us.
 
 ### "So where are my connectors configured?" — answer this the moment they ask, and the answer is a relief
@@ -1124,7 +1124,7 @@ thing that is dead — **and say *dead*, because the word doing the work here is
 **Probe it; never predict it.** Whether *their* surface exposes a readable history is a fact about
 their surface today, and it is what Phase 0's question 3 is for. **What is durable is the mechanism:
 no readable history → no proof of a previous attempt → no block.** Say what you found, in the same
-breath as what it costs them. **`references/STACK.md` carries what each surface returned when it was
+breath as what it costs them. **`${CLAUDE_PLUGIN_ROOT}/references/STACK.md` carries what each surface returned when it was
 last probed, dated — read it there, never from memory.**
 
 ##### The move is two surfaces, one direction — and you lead with the promotion
@@ -1250,7 +1250,7 @@ discovering it in three weeks.
 | Filters | a handful | plenty |
 
 **Read the current plan names, the current prices, and the current length of that history window
-out of `references/VOLATILE.md`, and quote those.** **Do not quote a price from this file — there
+out of `${CLAUDE_PLUGIN_ROOT}/references/VOLATILE.md`, and quote those.** **Do not quote a price from this file — there
 isn't one here on purpose.**
 
 **Why those two rows are the whole argument:**
@@ -1292,7 +1292,7 @@ outcome, not a theory. **Use the browser, not the phone.**
 account settings → the **subscription** screen → choose a billing period → checkout. That
 destination and that trap don't move.
 
-**The buttons do. Read the current path out of `references/VOLATILE.md` and dictate that one** —
+**The buttons do. Read the current path out of `${CLAUDE_PLUGIN_ROOT}/references/VOLATILE.md` and dictate that one** —
 not a path from here, and not one from memory. A click path written into this file is a path that
 started rotting the day it was written, and a renamed button dictated confidently is a small lie
 that costs you everything you say next.
@@ -1457,7 +1457,7 @@ VOLATILE and quote them.** They reframe the paid option instantly.
 
 **Option B — pay for a sync service. This is the honest recommendation if iCloud is their real
 calendar.** **CalendarBridge** and **OneCal** are both real and shipping; **read their current
-prices and what each tier covers from `references/VOLATILE.md`.**
+prices and what each tier covers from `${CLAUDE_PLUGIN_ROOT}/references/VOLATILE.md`.**
 
 **Now the two things a salesperson wouldn't tell them:**
 
@@ -1703,7 +1703,7 @@ one calendar. **That's the whole footprint, and now they've seen all of it.**
 | **"I uploaded the skill and nothing happens"** | **Code execution is off.** It's the gate on the whole free path, it's off by default, and nothing on the upload screen says so. **Settings > Capabilities > Code execution and file creation.** |
 | **"Where do I configure my connectors? I found `mcp.example.json`"** | **Nowhere, and that's the good news.** Gmail, your calendar and your task list are hosted connectors — **added once in Claude's own settings, live everywhere including the 7am run.** No file, nothing to sync. That `mcp.example.json` isn't loaded, is named that on purpose, and only covers local servers that would **put the morning run at risk** anyway. **Don't edit it.** Phase 7. |
 | **"The scheduled run asks me to connect things that are already connected"** | **A known bug, not your setup, and there is nothing for you to fix.** Scheduled runs can fail to see connectors that are plainly connected, then stop and ask for them. **It reproduces**, it has been reported, and it has been seen on more than one surface — so treat it as the behaviour, not as an accident of your install. **Do not re-connect anything — it won't help**, and re-connecting is the one move the symptom talks you into. Run the brief by hand from a chat that morning; it works there. |
-| **"The brief silently never fires"** / **"nothing runs overnight"** | **You pointed it at something local, and that is the suspect** — but don't state the mechanism, because the vendor's own article contradicts itself about it (`references/VOLATILE.md` → Scheduling, both quotes, dated). Either the task can't reach the local surface at all, or it only runs on a machine that has to be awake. **Both fail silently and both point at the same repair: drop the local surface and go hosted, or leave the machine awake.** **Probe which one it is** rather than reporting a reading as the diagnosis. |
+| **"The brief silently never fires"** / **"nothing runs overnight"** | **You pointed it at something local, and that is the suspect** — but don't state the mechanism, because the vendor's own article contradicts itself about it (`${CLAUDE_PLUGIN_ROOT}/references/VOLATILE.md` → Scheduling, both quotes, dated). Either the task can't reach the local surface at all, or it only runs on a machine that has to be awake. **Both fail silently and both point at the same repair: drop the local surface and go hosted, or leave the machine awake.** **Probe which one it is** rather than reporting a reading as the diagnosis. |
 | **"The brief didn't run"** | Check the scheduled task exists and **has a next-run time** — a task with no next run is the failure that looks like success. Then check the row above: was the machine asleep, and does anything in this task touch the machine? **What a Cowork scheduled task does with a missed run is not documented anywhere — do not quote Claude Code Desktop's catch-up rule at them; that's a different product** (VOLATILE says so). Also check whether the run stopped to ask for connectors — the connector-blindness row above. |
 | **"An event I made disappeared from my calendar"** | **Did you title it starting with `✓`?** On the calendar your task list projects onto, that's the ghost sweep's delete signal and it can't tell your event from a leftover. Nothing else there is ever deleted, and no other calendar is ever touched. |
 | **"It made a duplicate"** | The completed-row query is unavailable, or a create was retried. |

@@ -40,7 +40,7 @@ every other machine. A ROLE LIST IS THE SAME DEFECT ONE LAYER UP** — a name pr
 because one person connected the product, then written into an engine in the syntax of a universal.
 **The contracts are the same question asked of everyone; the sets are nobody's to predict. Probe the
 first, enumerate the second, and claim neither in advance.** Both contracts and all three sets
-resolve at STEP 0.5. See `references/STACK.md`.
+resolve at STEP 0.5. See `${CLAUDE_PLUGIN_ROOT}/references/STACK.md`.
 
 ---
 
