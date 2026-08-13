@@ -595,8 +595,8 @@ the plugins article: **Customize → Plugins → Personal plugins → "+" → Ad
 repository**, then **Install** the plugin. Verbatim: *"Add from a repository: Sync a marketplace from
 a GitHub repository or git URL."* And the install steps: *"Open the Customize menu… Open the Plugins
 tab… Click 'Browse plugins'… Click 'Install' on the plugin you want."* *Why this matters here:* this
-is the one-click on-ramp the README now leads with — add `yihanz/chief-of-staff` as a marketplace,
-click Install, done. No `.plugin` file to handle.
+is the one-click on-ramp the README now leads with — add this repo as a marketplace, click Install,
+done. No `.plugin` file to handle.
 
 **2. THE CAVEAT THAT DECIDES THE INSTRUCTION — add it from the repository (git), NOT from a
 `marketplace.json` URL.** The marketplaces doc states the mechanism directly: *"Relative paths resolve
@@ -605,8 +605,8 @@ source or a local directory. If users add your marketplace via a direct URL to t
 file, relative paths fail…"* — because *"relative paths in the marketplace entry reference files on
 the remote server that were not downloaded."* This plugin references its files by relative path, **so
 a raw `marketplace.json` URL fetches the manifest alone and the plugin's own files come back
-missing.** *Why this matters here:* the README's instruction must say **"Add from a repository, paste
-`yihanz/chief-of-staff`,"** and must never say "paste a marketplace.json URL." One works; the other
+missing.** *Why this matters here:* the README's instruction must say **"Add from a repository,"**
+with the repo path pasted, and must never say "paste a marketplace.json URL." One works; the other
 silently ships a broken plugin.
 
 **3. There is a public plugin directory, with open submission.** Anthropic ships a browsable directory
