@@ -1837,7 +1837,8 @@ Each sweep, also run this checklist — one line, one check:
     author was never named (§10)** · **a first-person claim in a draft that no source read this run
     carries (§4)** · **changed payment details merged in as an update rather than reported as the
     change (§4)** · **a row written and never checked against the five delivery limbs (§7)** · **a
-    list rendered as complete that was bounded by what the pass could reach (§14)**.
+    list rendered as complete that was bounded by what the pass could reach (§14)** · **a rule added
+    or tightened without the same-pass sweep of what it now forbids (§12)**.
 
 ## 12. The contract with the engine · META
 
@@ -1923,6 +1924,16 @@ than incremental — and completeness is what makes a missed pass survivable wit
 artifacts → the scheduler's own task list. **An untouched level silently overrides the corrected ones.
 Grep the value you retired, never the one you just wrote.**
 
+**And a new rule is not a repair.** Writing it changed nothing that already exists: **the surface
+still holds every instance the rule now forbids**, and those instances are invisible precisely
+because the rule that would have named them was written after them. The paragraph above sweeps the
+LEVELS a change has to reach; this one sweeps the INSTANCES it has just condemned, and they are two
+different searches — the first asks *where else is this rule stated*, the second asks *what is
+standing right now that this rule says may not*. **So the sweep belongs in the same pass as the
+rule:** add or tighten it, then immediately look for what it has just made wrong, and fix or report
+every one. **A rule shipped without its sweep is a claim about the future standing over a present
+that contradicts it** — and the next reader takes the present as evidence the rule is not serious.
+
 One law, two executors, no drift. The engine is how the law reaches their data unattended; it is not
 a second opinion about the law.
 
@@ -1945,6 +1956,17 @@ a second opinion about the law.
     triggered a bogus repair. A verification that cries wolf gets ignored.)*
   - Never quote a retired rule verbatim in a live artifact — the quote permanently defeats your own
     "grep the retired value" check.
+- **The read is not the control.** Holding a rule in context is not the same as having a check that
+  fires. A load installs text at load time; the decision it governs happens later, after dozens of
+  intervening acts, and nothing about having read it reaches forward to that moment on its own. **A
+  rule broken by a run that was holding it is the ordinary case, not the anomaly** — which is why the
+  repair for a missed rule is almost never *read it more carefully*, and why that repair keeps
+  failing. **The control is an artifact AT THE MOMENT OF THE ACT:** a probe that returns a field, a
+  count run against the finished draft, a gate the act has to pass through, a read-back. **A rule
+  with no artifact anywhere in the run is a hope, and it will perform like one.** Everything after
+  this is that principle applied — the clause taxonomy below turns their instructions into artifacts,
+  §11's replay turns this file's own defect classes into checks, and §12's canary turns a load into
+  something capable of failing.
 - **Their prompts are compressed — read them as specs, not requests. Decompose every multi-clause
   instruction into its clauses and count them before acting. "Done" is a count, never a feeling.** Then
   classify each:
