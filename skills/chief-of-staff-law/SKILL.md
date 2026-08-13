@@ -1033,8 +1033,6 @@ added on their phone this morning may not appear yet. So a conflict check is nev
 calendar sync typically covers only some projects, so a grid-only conflict check is blind to the
 rest. **Check the task set, not just the calendar — absence from the grid is not absence of a row.**
 
-The task surface is the database and the operable surface; the calendar is the projection.
-
 **The calendar is their operating surface, not your scratchpad. Every event and every row you author
 carries the clean RESULT, never the work that produced it (I5).** This binds any surface they read —
 event titles and descriptions, task rows, the brief:
@@ -1052,10 +1050,17 @@ event titles and descriptions, task rows, the brief:
   writing** — an address is a verifiable fact, not a guess (§13).
 - **The title is the name, plus only a doorway bring-item in parentheses, and it must match its own
   block** — never label a 6:30 block "7pm."
-- **No em-dashes in anything rendered to them; no emoji; no private interior** (the render law).
+- **No private interior** — §1's render law, and that is the only one of these three it owns ·
+  **no emoji — §4's default, which the PROFILE's standing preferences override** · **no em-dashes in
+  anything rendered to them — this section's own rule, single-homed here, about their operating
+  surface.** *(Three rules, three homes. Attributing all three to the render law is how a grep for
+  one of them comes back empty and someone concludes it was never written down.)*
 - Results on the surface; process in the reply. **The failure this kills is the one that looks
   correct** — a perfectly-placed, perfectly-timed event carrying the engine's bookkeeping on the very
   face they operate from.
+
+The task surface is the database and the operable surface; the calendar is the projection. What that
+projection may carry:
 
 - Timed task + duration → a real calendar block. This is the operable form.
   - **The 30-minute floor — no slivers. Never write a block shorter than the floor.** Round up;

@@ -1120,9 +1120,9 @@ preference they set once, in their profile; a dropped receipt is a lie told fres
   which is the best safety property in the stack and it costs nothing.** So compose it, address it
   to them, and leave it in drafts. **The one line in chat carries the takeaway AND says where the
   draft is** — a brief they never learn was written is a pass that did not run. Subject: the day +
-  the takeaway. Body: this card's own shape in HTML with **inline styles** — a mail client has no
-  CDS variables and takes no dark mode from you, so **this is the one place a literal color is not a
-  violation; keep the palette small and it survives more clients.** **No mailbox among `~~inbound[]`
+  the takeaway. Body: this card's own shape in HTML with **inline styles** — a mail client resolves
+  no design token and takes no dark mode from you, so **this is the one place a literal color is not
+  a violation; keep the palette small and it survives more clients.** **No mailbox among `~~inbound[]`
   with a proved DRAFT verb at STEP 0.5 → fall back to `card` and name the fallback in the receipts
   as a degradation** — **a mode they CHOSE and did not get is a degradation; a default they never
   chose is not.** **And the chain terminates: no render surface either → `text`. One line, both
@@ -1172,11 +1172,13 @@ the thing that missed it.**
 
 ### THE CARD — inherit this shape, do not reinvent it each run
 
-One card (`var(--surface-2)`, `0.5px solid var(--border)`, `12px` radius, padding `1rem 1.25rem`),
-top to bottom:
+One card — **a one-step-raised surface, a hairline border, a small radius, padding of about
+`1rem 1.25rem`; the preflight's tokens name all four, and the literals here (`var(--surface-2)`,
+`0.5px solid var(--border)`, `12px`) are the DEFAULT set's, not the contract** — top to bottom:
 
-1. **Header row** — small Tabler outline icon + short label ("Today" / the weekday) on the left; the
-   date and time on the right in `var(--text-muted)` 12px.
+1. **Header row** — a small outline icon **from the preflight's set, and no icon at all under the
+   fallback** + short label ("Today" / the weekday) on the left; the date and time on the right in
+   the muted text token at 12px.
 2. **Status pill + one-line evidence** — a pill (`--bg-ROLE` / `--text-ROLE`) naming the day's
    shape, and beside it one sentence of why. Roles below.
 3. **A metric grid, ≤4 cards** (`--surface-1`, no border, `--radius`), each an 11–12px muted label
@@ -1244,7 +1246,7 @@ where one of those lines belongs is a silent skip wearing an instrument** — ch
      underneath them the day a plan downgrades or a vendor drops a field. **Never render write-once
      as a degradation** — it is a whole product, and the one line says which product ran.
    - **THE DOOR-TWO LINE — SHAPED LIKE `unreached`, NOT LIKE THE MODE: ABSENT when the door can fire,
-     and NEVER absent when it cannot** (5b's table). **It names the CAUSE — *"door two cannot fire on
+     and NEVER absent when it cannot** (5b's table). **It names the CAUSE:** *"door two cannot fire on
      this surface — no activity log"* · *"door two is quiet on `<lane>` — its cadence outruns the
      log's window"* · *"door two has no hour to place — this surface carries a date, not a time."*
      **The mode line is NOT this line and may never stand in for it: write-once and door-two-dead are
@@ -1307,6 +1309,10 @@ where one of those lines belongs is a silent skip wearing an instrument** — ch
     `not declared`) · the write mode (`maintained` or `write-once`).** **They are the only three
     things on this card that must exist when there is nothing to say** — because their absence is
     precisely the failure each exists to expose. **A run that did not name its mode is the law's own
+**The `ICON` column names the DEFAULT set's glyphs, and it is the first thing the preflight
+overrides. Under the fallback there is no icon column at all — the `LABEL` carries the state on its
+own, which is what it was always doing.** **`ROLE` and `LABEL` are this file's and never move.**
+
     named regression (§11).** Any one missing → **the card is not finished. Re-render.**
     - **THREE, AND THE CANARY IS NOT A FOURTH.** Each of these three can be FALSE on a card that
       exists — that is what makes it an instrument. **A canary token could only ever read PASSED,
@@ -1344,13 +1350,15 @@ where one of those lines belongs is a silent skip wearing an instrument** — ch
     block on the card, and no line beside it is a card that watched the flagship fail and said
     nothing** — every element true, the whole false.)*
 
-**Craft:** flat, CDS variables only (never hardcoded hex), sentence case, **no emoji**, weights
-400/500, hairline `0.5px solid var(--border)`, one accent per state, mono for the time gutter only.
-Tabler **outline** icons, never `-filled`. **Dark mode must work — never hardcode a color.** No
-comments in the widget code.
+**Craft:** flat, **the preflight's tokens only — never a hardcoded hex; no preflight and no
+documented vocabulary → the FALLBACK above, which sets no color at all**, sentence case, **no
+emoji**, weights 400/500, a hairline rule, one accent per state, mono for the time gutter only.
+**Outline icons, never filled — and only from the set the preflight names; no preflight, no icons.**
+**Dark mode must work, which is the entire reason a color is never hardcoded.** No comments in the
+widget code.
 
-- **`email` MODE SWAPS EXACTLY ONE OF THESE AND NOTHING ELSE: variables become inline literal
-  colors, because a mail client resolves no CDS variable and gives you no dark mode to hook.**
+- **`email` MODE SWAPS EXACTLY ONE OF THESE AND NOTHING ELSE: tokens become inline literal
+  colors, because a mail client resolves no design token and gives you no dark mode to hook.**
   Everything else holds — flat, sentence case, no emoji, hairlines, one accent, mono gutter.
   **A carve-out for the one rule the surface makes impossible is not a licence for the rest.**
 
