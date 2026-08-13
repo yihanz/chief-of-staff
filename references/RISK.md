@@ -99,6 +99,20 @@ order.
   your records ships **without** its first move pre-done — no number, no link, no script — and
   carries a line telling you the sender is unverified. The row is still admitted, because
   suppressing a real obligation is the worse error. **You are the check.**
+- **The payload worth naming on its own is money, because it is the one where a single row can
+  cost you everything in the account.** The design answers it in four places, and you should know
+  all four rather than trusting one:
+  - **Account numbers, beneficiary names, payment links are treated as content the engine READ —
+    never as instructions it follows.** A mail saying *"pay this account"* is a fact about that
+    mail.
+  - **A change of those details part-way through a live thread is reported to you as the shape of
+    the fraud**, not merged in as an update. That is the single commonest invoice attack there is,
+    and the engine's job is to make the change visible rather than to resolve it.
+  - **Verification is out of band or it hasn't happened** — a number from your own records, not the
+    one the message supplied. A confirmation arriving down the same pipe confirms nothing.
+  - **The engine never moves money.** That is a rule, not a missing capability, so read it the way
+    you read drafts-only on a send-capable mail surface: **on a setup where nothing can pay, it
+    costs nothing; on one where something can, it is the only thing standing there.**
 - **Mitigation you can apply today:** the engine cites its source on every row. **If a row's
   source line names a sender you don't recognise, treat the row as hostile until you check.**
 - **Never widen the write surface to something that can send, transfer, or post publicly.** That
@@ -214,6 +228,8 @@ Hosted connectors keep a run cloud-eligible; local readers trade that for reach.
 | Law fails to load | **Hard stop.** No law, no run — never "proceed on what I remember" |
 | A stale cache asserts a wrong version | **There is no cache.** The list is the state, by design |
 | An injected instruction in an email | Data-not-instructions boundary + positive obligation gate |
+| Bank details change part-way through a thread | Reported to you as the change, never merged as an update; verified out of band or not at all; the engine never pays |
+| A draft in your name asserts a fact nobody verified | Every claim in a draft names the channel that carries it; anything inferred is a question, never a first-person assertion |
 
 ---
 
