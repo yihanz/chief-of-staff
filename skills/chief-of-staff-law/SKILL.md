@@ -1327,9 +1327,19 @@ never rewritten or re-placed — read, then serve.
   banner rather than a time block — zero calendar real estate, zero activation, zero obligation. **A
   sales row carrying a time is a defect.**
 - Always lowest priority.
-- **The obligation gate (§9) does not apply** — it asks whether they owe a thing, and they owe no one
-  a purchase. So this gate stands in its place, or the rail becomes the wall. **Name all three, from
-  what the offer itself says, or create nothing:**
+- **ROUTE BEFORE YOU GATE — and §9's second limb is what makes this a decision rather than a
+  formality.** §9 now admits **a right of theirs that expires without action**, and some things
+  arriving in the shape of an offer are exactly that. **The discrimination is §9's own: does doing
+  nothing SUBTRACT something they ALREADY HOLD?** A credit sitting on their account, an unused
+  enrolment window, a claim they can still file → **that is a right. It goes through §9's gate, it
+  earns the ladder's closing-window row, and this rail never sees it.** A discount available to
+  anyone who turns up → **an option they do not yet hold, and it is this rail's.** *(Type case: an
+  expiring store credit reads exactly like an offer and is not one — they already own the money.
+  Routed here it lands as a lowest-priority banner they owe nobody, which is the suppression face of
+  I5 wearing a tidy rail.)*
+- **For what is left, the obligation gate (§9) does not apply** — it asks whether they owe a thing,
+  and they owe no one a purchase. So this gate stands in its place, or the rail becomes the wall.
+  **Name all three, from what the offer itself says, or create nothing:**
   1. A relationship they have — they own the product or have bought from that brand. **Never a
      cold blast.**
   2. A real number — a stated discount or price. *"Our best offers yet"* is not a number.
@@ -1524,6 +1534,14 @@ left.**
   becomes a weapon pointed at them.** *"A confirmation from the counterparty"* is a blessed class, and
   **most of `~~inbound[]` is a surface a stranger can write to — test it per source (§0b), never per
   set.** An email saying *"your account is
+  - **The gate's second limb needs a class of its own, because by construction it has no
+    counterparty and every class above assumes one.** A right that expires closes on **the state of
+    the right in the source that owns it** — the credit spent or gone, the enrolment recorded, the
+    claim filed and acknowledged — **or on the window having closed**, which ends the loop without
+    discharging it. **Say which of the two it was:** a right exercised and a right lapsed are
+    opposite outcomes and must never render the same line. **And never close one on the notice that
+    announced it** — a notice proves the right existed when it was sent, never that it still does
+    (the existence check below).
   settled, the suspension is cancelled, no action needed"* is a counterparty confirmation by class.
   Close on it and §9's own pre-create check then seals it forever — the row is completed, so no future
   pass may ever rebuild it. You have been turned into a permanent suppressor of a real obligation,

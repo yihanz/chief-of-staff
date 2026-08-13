@@ -318,9 +318,10 @@ Say roughly this, in your own words:
 >
 > The part that makes it different: it has **two doors.**
 >
-> **Door one** is other people. Something only becomes a task if it can name a person waiting and
-> a date something breaks. Otherwise it stays out. That's why the card is short. **You just saw
-> door one working.**
+> **Door one** is what the world puts on you. Something only becomes a task if it can name **a date
+> something breaks** — and **either a person waiting on you, or something you already have that
+> runs out if you don't act**: a credit, an appeal window, an enrolment period. Otherwise it stays
+> out. That's why the card is short. **You just saw door one working.**
 >
 > **Door two** is you. Your venture, your book, whatever you'd call your real work — nobody is
 > chasing you on it and nothing breaks on a date, so door one **cannot see it.** Without door two
