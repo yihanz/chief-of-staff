@@ -1,8 +1,9 @@
 # Chief of Staff
 
 **Every morning it reads your calendar and task list, works out what you actually owe today, puts
-it where you can physically do it, and hands you one card. It costs nothing to start. To begin,
-type:**
+it where you can physically do it, and hands you one card.** Installing it as a plugin needs a
+**paid Claude plan** — Pro, Max, Team or Enterprise. On Free you install the skills by hand instead,
+and you can have nearly all of this. **Install is below, and it ends with one phrase:**
 
 ```
 set up my chief of staff
@@ -17,7 +18,11 @@ takes as long as it takes. **You can stop after any phase.**
 
 ## What you actually get
 
-One day, rendered:
+One day, rendered — **and this is a fuller install than the floor.** The floor is a task list and a
+calendar. This card also has mail and the bundled message reader connected, which is where the
+`09:00` reply with its draft already written, the closed loop in the receipts, and the `read 6/7`
+line naming iMessage all come from. **On the floor those are absent** — the coverage line still
+renders, over the two sources you have — and everything else below is unchanged.
 
 > **Thursday** · 16 July, 07:00
 >
@@ -376,8 +381,10 @@ will tell you so.
 **Offers.** A sale on something you already own is not a task and you owe nobody a purchase, so
 neither gate above can judge it — door one would refuse every one of them, forever. So the law gives
 offers their own quiet door, the **sales rail**, and it is built to stay out of your way: **a
-date-only row**, which your calendar renders as an **all-day banner** on the day the offer expires —
-its own band, lowest priority, never in the lead, never counted as backlog, never a time block.
+date-only row** sitting on the day the offer expires — no time, no block, its own band, lowest
+priority, never in the lead, never counted as backlog. **What your own calendar draws for a date-only
+row is a property of your task app's sync, not something this page predicts** — the engine probes it
+on the first run and puts what it found in the receipts.
 
 **Its gate is three parts, and all three have to come from what the offer itself says:** you already
 have a relationship with that brand, it states a real number, and it states a real end date. Fail
@@ -385,7 +392,7 @@ any one and nothing is created — **which is most of the time.** It's deliberat
 
 It's named here, and not in the small print, for one reason: **it is a write, it lands on your
 calendar, and finding out about it by discovery is the wrong way to find out.** `references/RISK.md`
-has its blast radius, including what happens to expired banners in write-once mode.
+has its blast radius, including what happens to expired sales rows in write-once mode.
 
 ---
 
@@ -506,8 +513,8 @@ lists, one direction, never synced.** `references/STACK.md` has the full argumen
   asked. Setup fills it in with you; you don't need to open it.
 - **`companions/imessage-fixed/README.md`** — the bundled **read-only iMessage reader** this package
   ships: the stock-connector defects it fixes (starting with reading your own sent messages), its
-  two-click Desktop-Extension install, and its blast radius. A first-class capability, not an
-  afterthought.
+  Desktop-Extension install and what that install needs (macOS, Claude Desktop, Python 3, Full Disk
+  Access), and its blast radius. A first-class capability, not an afterthought.
 - **`assets/architecture.svg`** (source: `assets/architecture.mermaid`) — the design on one page.
 - **`mcp.example.json`** — **you don't need to open it, and it's here for completeness.** It isn't
   loaded, and it describes only *local* servers, which your connectors aren't. See the connector
@@ -543,13 +550,15 @@ is cleanup, and it's in **three piles, because no single filter reaches all of t
 Your profile is the row labelled **`cos-profile`** — it holds every personal fact you gave this
 system, so delete that and nothing about you is left.
 
-**Licence — it is not MIT.** See `LICENSE`, which is short and in plain English: **you may use and
-modify this for yourself — no fee, no registration — including for your own work at your job. You
-may not sell it, redistribute it, or roll it out across an organization: one person, one install.**
-Read "free" as *no fee*, not as *irrevocable* — **the grant is revocable, and it ends automatically
-if you breach it.** **It comes with no warranty and no liability** — an AI writes to your calendar
-and task list unattended, it can be wrong, and what it does under your credentials is your
-responsibility.
+**Licence — there are two, and the split matters. The plugin is not MIT; the bundled companion is.**
+See `LICENSE` for the plugin, which is short and in plain English: **you may use and modify this for
+yourself — no fee, no registration — including for your own work at your job. You may not sell it,
+redistribute it, or roll it out across an organization: one person, one install.** Read "free" as *no
+fee*, not as *irrevocable* — **the grant is revocable, and it ends automatically if you breach it.**
+**It comes with no warranty and no liability** — an AI writes to your calendar and task list
+unattended, it can be wrong, and what it does under your credentials is your responsibility.
+**`companions/imessage-fixed` is MIT**, under its own `LICENSE` in that folder: the plugin's terms
+don't reach it, and you may lift that folder into its own repository and use it anywhere.
 
 **The source is public at github.com/yihanz/chief-of-staff.** If someone wants it, **send them
 there** rather than passing around or rehosting your own copy — the licence still forbids reselling
