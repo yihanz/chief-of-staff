@@ -223,7 +223,7 @@ fact.**
 
 ### The two contracts — mandatory, capability-tested, identical for everyone
 
-**`~~state` — the state.** Not "where the todos live": the engine's **database**. It keeps no cache and no memory of their world between runs — the machinery ledger is the one remembered store, and it never holds their world —; **the list is the state** (§12). Ask all five questions of it, live —
+**`~~state` — the state.** Not "where the todos live": the engine's **database**. It keeps no cache and no memory between runs; **the list is the state** (§12). Ask all five questions of it, live —
 and the answers are not all pass/fail, so read what each one costs.
 
 1. **What is open?** Every task manager answers this. It is the least of the five, and it is the
@@ -1904,16 +1904,6 @@ Each sweep, also run this checklist — one line, one check:
     list rendered as complete that was bounded by what the pass could reach (§14)** · **a rule added
     or tightened without the same-pass sweep of what it now forbids (§12)**.
 
-
-
-## 11b. The two worlds — what may be remembered
-
-**Facts about the PERSON are never cached: always read live from the owning source.** A stored copy of their world rots invisibly, and a wrong brief costs them the day.
-
-**Facts about the MACHINERY may be remembered — in exactly one place, a LEDGER ROW on the task surface (label `cos-ledger`), under discipline.** The machinery changes slowly, and re-deriving it every run is the discovery tax that eats the pass: re-mapping calendar roles, re-proving vendor behavior, re-inventing scripts. Machine facts only: topology and roles, vendor-behavior premises, tool mechanics and routes. Each entry carries CLAIM · EVIDENCE · VERIFIED DATE · CHEAP CHECK, and the law of use is: **an entry may be used only after its cheap check passes this run; a failed check — or any failed OPERATION against the thing an entry describes — invalidates that entry: re-derive live, update the row with readback.** **The row itself is STATE, not a loop: never dated, never closed, never swept, never gated — and it carries the reserved engine label plus `cos-ledger`, and its kind is STATE, not a loop: never dated, never closed, never swept — the ledger label is what excludes it from loop handling.** The weekly pass audits every entry; an entry without a date or a check is invalid; **deleting the whole row costs one slow re-derivation run and zero wrong briefs — that self-healing property is what separates a ledger from a registry. And delete-target identity is never a ledger fact: the calendar a sweep may delete from is proved by THIS pass's probe, every pass — no probe, no delete.** A registry shadows the person's state and the stale copy wins; the ledger never holds their state at all.
-
-**A surface is the durable home of its own logistics.** Before researching a venue, an address, or a detail, read the owned surface that would carry it (the event's location field, the row's description) — a prior pass may already have landed it. Research is for what no owned surface already carries.
-
 ## 12. The contract with the engine · META
 
 **This file is the law. The engine skill is the engine.** No overlap, so nothing to arbitrate.
@@ -1981,8 +1971,11 @@ already gives.
   named in a prompt that does not exist is worse than no store: the read succeeds at being empty.
   **Before any artifact tells anyone to read anything, resolve it live.**
 - The cache trap: re-reading every source every pass is the price of having no state, and it is the
-  correct price. Any future "let me cache THEIR state so a source is not re-read" is this defect returning — the machinery ledger and the row digest are the sanctioned exceptions, each with its check.
-  **Re-read.**
+  correct price. Any future "let me cache THEIR state so a source is not re-read" is this defect
+  returning, **and it has no sanctioned exception.** **The row digest is not one and must never be
+  read as one:** it is not a second store — it lives inside the row it describes, so it cannot go
+  stale separately from it, and §4 bounds it to an exhibit a fresh read is compared against rather
+  than a confirmation that the unread remainder still holds. **Re-read.**
 
 Two laws that bind any engine:
 

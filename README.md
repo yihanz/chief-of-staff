@@ -361,10 +361,11 @@ the same way your mail and calendar already do — *"not packaged"* is not *"nev
 machine,"* and you should hold us to the difference. One test per line: would you send this fact
 through a cloud service? If no, leave it out; the engine runs fine without any single field.
 
-**The engine has no memory.** No database, no cache, no state file. **Your task list is the
-state.** When you tick a box or drag a block, that *is* the instruction, and it's landed
-everywhere, instantly, with no sync. Every pass re-reads everything from scratch — which is why a
-missed run is survivable and a stale cache can never lie to you.
+**The engine remembers nothing between runs.** No database, no cache, no state file — every fact
+about your world is re-read live from the source that owns it, every pass. **Your task list is the
+state.** When you tick a box or drag a block, that *is* the instruction, and it's landed everywhere,
+instantly, with no sync. Which is why a missed run is survivable and a stale copy of your life can
+never lie to you.
 
 ---
 

@@ -47,9 +47,9 @@ you from one mode to the other.
 | The bundled iMessage reader (`companions/imessage-fixed`) — read-only, opt-in | Enumerate threads; read a chat or thread; read the last N hours; full-text search decoded bodies. **No send, no write, no delete, no network.** | **It reads your messages — that is the whole radius.** Nothing to undo, because it writes nothing. The exposure worth weighing is upstream of any failure: the database holds other people's words, and reading it brings them into your session (§3). Blast radius: your messages become readable to the model you already trust with your mail — not one inch past that. |
 | Mac automation — the "Control your Mac" extension, if you add one | Whatever your user account can do: local reads and automations no hosted connector can reach. | **As wide as your own account — stated plainly, once.** A general shell can do what you can do at your own keyboard; that reach *is* the capability and *is* the cost, the same sentence read two ways. It is the broadest surface in this table. **§4 is how to decide whether the breadth earns its place, and when a read-only tool covers the need instead.** |
 
-*(One more write, for completeness: each run creates a single throwaway row and deletes it within
-the same step, to test whether your list actually stores durations. It is never labelled, never
-rendered, and never left behind.)*
+*(One more write, for completeness. **A throwaway row**, created and deleted inside the same step of
+every run, to test whether your list actually stores an hour and a length. It is never labelled,
+never rendered, and never left behind.)*
 
 **The engine has no send step — and on the recommended mail surface it is not being trusted not
 to: the connector exposes no send verb at all.** Enforced by the absence of the capability, not by
@@ -226,7 +226,7 @@ Hosted connectors keep a run cloud-eligible; local readers trade that for reach.
 | A source is down and the brief looks clean | Unread ≠ empty; the unreached line is mandatory |
 | A partial run reads as complete | Explicitly the cardinal sin; three separable states |
 | Law fails to load | **Hard stop.** No law, no run — never "proceed on what I remember" |
-| A stale cache asserts a wrong version | **There is no cache.** The list is the state, by design |
+| A stale cache asserts a wrong version | **Nothing is cached — and nothing is remembered between runs.** Every fact about your world is re-read live from the source that owns it, every run — the list is the state, by design |
 | An injected instruction in an email | Data-not-instructions boundary + positive obligation gate |
 | Bank details change part-way through a thread | Reported to you as the change, never merged as an update; verified out of band or not at all; the engine never pays |
 | A draft in your name asserts a fact nobody verified | Every claim in a draft names the channel that carries it; anything inferred is a question, never a first-person assertion |
