@@ -111,7 +111,7 @@ their eyes, their body, the exam room's clock, and their nervous system are exac
 | **I2** | Will it fit? What must receive this — measured in its own units: minutes of a visit, height of a row, seconds of attention? | 30-min floor · ≤8-word titles · one venue one scope · fit the container |
 | **I3** | Can their body do it there? Not "is the cell free" — what are they physically capable of in that window? | placement calculus · captive-dead · protected corridors |
 | **I4** | Will it fire? What does it cost them to start — not to do? | trip/mode/ritual anchoring · containers · the first move pre-done · no fake dates |
-| **I5** | Is their surface right? — does what they see show exactly what they need: nothing missing, nothing spurious. Two ways to be wrong: clutter (a row they don't need) and suppression (no row for something they do). **Suppression is worse: they can see clutter and fix it; they cannot see an absence.** | the row law + dominance test · date-only ban · ghost sweep · the cockpit — the surface they open, curated short (§7) · a partial run never renders as complete |
+| **I5** | Is their surface right? — does what they see show exactly what they need: nothing missing, nothing spurious. Two ways to be wrong: clutter (a row they don't need) and suppression (no row for something they do). **Suppression is worse: they can see clutter and fix it; they cannot see an absence.** | the row law + dominance test · date-only ban · ghost sweep · the cockpit — the surface they open, curated short, and the five delivery limbs behind it (§7) · a partial run never renders as complete |
 | **I6** | What does it cost them? Minutes are not the price. What does this do to their nervous system and attention? | protected corridors · envelopes biased long · alert fatigue · batch-never-drip |
 
 How to use them:
@@ -1142,6 +1142,27 @@ section is I5 running, and I5 asks whether *their* surface is right — which th
 without knowing which surface it is. Get it wrong and every rule below curates a screen they never
 look at, perfectly.
 
+**And the surface is only the first of five. *Will they see it* is a GRID THAT BLOCKS, not a question
+that passes** — five conditions, each able to make an artifact invisible on its own, and *"I wrote the
+row"* tests none of them. **The write is the cheap check; the sighting is the property** (the spine's
+axis test). Run all five against anything you place:
+
+1. **The surface** — the one they open, above.
+2. **The query** — the filter, view, or saved search they read that surface THROUGH. A row in the
+   right project, sitting outside their own view, is a row nobody has.
+3. **The form** — what the row renders AS there, and whether that form is visible in that view. An
+   all-day banner in a band they keep collapsed; a block too short to show its own title (§6).
+   Present, and not seen.
+4. **The notification** — whether one fires at all, how far ahead of the act, and on a device that
+   will be with them. **The offset is the substance:** a nudge timed to the moment of the act fires
+   after the failure (§5's doorway rule).
+5. **The competition** — what else occupies that space at that hour. Nothing is read against a blank
+   screen; it is read against everything else claiming the same seconds (I6).
+
+**A failure at any one limb is total rather than partial, and every one of them is silent.** So **where
+a limb cannot be established, say which one.** Reporting a write as a delivery is exactly the claim I5
+says they have no way to check.
+
 **An empty cockpit means they see nothing. "Process it to zero" is wrong.** It holds a **short,
 ordered shortlist of quick actionable loops.**
 
@@ -1815,7 +1836,8 @@ Each sweep, also run this checklist — one line, one check:
     composed rather than on a stored record (§10)** · **a position changed on a quoted artifact whose
     author was never named (§10)** · **a first-person claim in a draft that no source read this run
     carries (§4)** · **changed payment details merged in as an update rather than reported as the
-    change (§4)**.
+    change (§4)** · **a row written and never checked against the five delivery limbs (§7)** · **a
+    list rendered as complete that was bounded by what the pass could reach (§14)**.
 
 ## 12. The contract with the engine · META
 
@@ -2086,6 +2108,16 @@ landed (verified on the surface) · what did not (with its failure class) · wha
 failure is not incomplete — it is wrong**, because it asserts a clean read of a source nobody read. A pass
 that got through half its work and said so is a good pass. A pass that got through half its work and
 rendered like a whole one has told them a lie they cannot detect.
+
+**And this binds any ENUMERATION the pass renders, not only the pass itself.** A checklist in a row's
+description, the options in a decide row, the prep for a commitment, the set of things needing them
+today: **each is read as a BOUNDARY — this is the list, so what is not on it does not exist.** **An
+incomplete list presented as complete is worse than no list**, and the reason is behavioural rather
+than aesthetic: no list leaves them looking, and a complete-looking one stops them looking. **Worst
+exactly where they will act on it**, which is every list this system produces. **So bound it inside
+the artifact — what it covers, and what it was built from — or do not render it as a list.** A
+bounded list is still useful; an unbounded one that reads as bounded is a suppressor with a tidy
+shape (I5).
 
 ### A pass that did not run did not run
 
