@@ -164,16 +164,16 @@ access.** It's the only document here you actually have to read.
 - Ship every task with **the first move already made** — the number found, the draft written where
   you've connected a mailbox that drafts.
 - Report what it **refused to create**, and what it **could not reach**.
-
-**Won't:**
-
-- **Send email.** Drafts only. The engine's own rules ban sending — and on the recommended mail
-  surface the ban isn't being relied on, because the send capability doesn't exist there at all.
 - **Delete its own tombstones.** On the calendar your task list projects your dated tasks onto, it
   removes events whose title starts with **`✓`** — the marker some task lists leave behind when you
   tick a dated task off. **So never title your own events with a `✓` in front: it cannot tell yours
   from a leftover, and it will delete it.** No other calendar is ever swept and nothing without a
   `✓` is ever deleted. The full rule is under Install.
+
+**Won't:**
+
+- **Send email.** Drafts only. The engine's own rules ban sending — and on the recommended mail
+  surface the ban isn't being relied on, because the send capability doesn't exist there at all.
   **On a mail surface that *can* send, "drafts only" stops being a guarantee and becomes a
   configuration you must not get wrong.**
 - **Re-open anything you closed.** Your close is final and is never audited.
@@ -209,11 +209,6 @@ held would be worthless to you. See the licence note at the bottom.
 Enterprise. **Skills don't** — if you're on Free, skip to the next section; you can have nearly all
 of this.
 
-**The one-click path: add this repo as a marketplace, then Install.** This repo *is* a plugin
-marketplace, so Claude pulls the plugin straight from GitHub — nothing to download, nothing to
-upload.
-
-1. In **claude.ai** → **Customize** → **Plugins**, find **Personal plugins**, click **"+"**, and
 **Before the click paths, four things that decide whether this works for you at all:**
 
 - **Your task list has to be able to query what you already *finished*.** Not just what's open —
@@ -235,6 +230,11 @@ upload.
   following this page in a browser, you structurally cannot install it — and you don't have to. It's
   optional, and nothing else here needs any of that.
 
+**The one-click path: add this repo as a marketplace, then Install.** This repo *is* a plugin
+marketplace, so Claude pulls the plugin straight from GitHub — nothing to download, nothing to
+upload.
+
+1. In **claude.ai** → **Customize** → **Plugins**, find **Personal plugins**, click **"+"**, and
    choose **Add marketplace**. *(In Cowork, open the **Cowork** tab first, then **Customize**.)*
 2. Choose **Add from a repository** and paste **`yihanz/chief-of-staff`**. Click **Add**.
 3. The plugin now appears in the catalog — click **Install**.
@@ -271,11 +271,6 @@ walks you through creating a scheduled task (**a plugin cannot ship a schedule**
 calendar is the whole floor** — everything else is whatever you already have. There's one paid upgrade
 setup will argue for; you can say no.
 
-**Where the scheduling lives, since this is where people get lost: Cowork is a toggle, not an app.**
-Go to **claude.ai**, find the message box, and **select "Cowork" in the bottom left corner.** Same
-site, same login, nothing to download, nothing extra to buy. There is no "web version vs. Cowork" —
-Cowork *is* on the web.
-
 ### Two rules you have to follow. Nothing else in this asks anything of you.
 
 **Setup teaches both out loud. They're here too, because each one costs you something you can't get
@@ -299,6 +294,11 @@ you tick the task off, then leave it on your calendar forever. So every morning 
 `✓ Paid rent` that you wrote from a leftover, and it will delete it.** Title it `Paid rent` and it's
 safe. Everywhere else — your real calendars — title things however you like: it only ever deletes
 from the one calendar your task list projects onto, and only the `✓` ones.
+
+**Where the scheduling lives, since this is where people get lost: Cowork is a toggle, not an app.**
+Go to **claude.ai**, find the message box, and **select "Cowork" in the bottom left corner.** Same
+site, same login, nothing to download, nothing extra to buy. There is no "web version vs. Cowork" —
+Cowork *is* on the web.
 
 **"Where do my connectors go?" Into Claude's own connector settings — and they stay in the cloud.**
 Your task list, your calendar, your mail are **hosted connectors: you add each one once and it's live
@@ -459,9 +459,10 @@ and there is no wrong number:
   the stock iMessage connector on the way — most importantly it **reads the messages you sent**, which
   the stock reader drops by ~95% (your sent side has no handle to join on), plus short-code handles,
   text lost to `attributedBody` encoding, and blank Apple Cash messages — and it is **read-only: no
-  send, no writes, no network.** `companions/imessage-fixed/README.md` is its own doc. **Its cost is schedule, not
-  safety:** reading messages is local, so a brief that leans on it runs on a waking Mac (see the
-  honest cost below).
+  send, no writes, no network.** `companions/imessage-fixed/README.md` is its own doc. **It needs a
+  Mac:** macOS, Claude Desktop, Python 3 and Full Disk Access — the prerequisites under Install.
+  **And its cost is schedule, not safety:** reading messages is local, so a brief that leans on it
+  runs on a waking Mac (see the honest cost below).
 - **A place you write your own thinking** — a notes app, voice capture, a journal, **or nothing.**
   Buys capture of what you tell yourself. Most people don't keep a second brain, and **nothing is a
   perfectly good answer;** if you already email yourself notes, mail covers this and you're done.
