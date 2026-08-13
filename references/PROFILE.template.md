@@ -5,9 +5,10 @@ list, labelled `cos-profile`** — the answers live in that row's description. T
 so you can read the questions before you're asked them.
 
 **It is a row and not a file on purpose.** A file is reachable only from the computer holding it, so
-it would pin the whole system to one machine — and the run that needs your profile most is the 7am
-one that fires while you're asleep, from somewhere that has no filesystem at all. Your list is the
-engine's memory; your profile is part of that memory. Delete the row and nothing about you is left.
+it would pin the whole system to one machine — and the run that needs your profile most is the
+unattended one, which fires on a schedule from somewhere that has no filesystem at all. Your list is
+the engine's memory; your profile is part of that memory. Delete the row and nothing about you is
+left.
 
 It holds the personal facts the engine needs to place work where your actual body and actual life
 can do it.
@@ -99,8 +100,9 @@ of the reactive pile by design.)*
 
 ## Your own work — the most important section, and the one nothing else can supply
 
-**The work that is yours, that you actually want, that has nobody chasing it.** The venture. The
-book. The portfolio. The thing you'd say you're really trying to do.
+**The work that is yours, that you actually want, that has nobody chasing it.** Whatever you'd say
+you're really trying to do — and it is whatever *you* say it is, not whatever a page like this would
+have guessed.
 
 **Why this section exists and why it can't be inferred:** the engine's main filter only admits
 things where someone is waiting on you and a date breaks. Your life's work has neither. **If you
@@ -205,13 +207,14 @@ one report line and the closest lane you did name. **The engine never invents a 
 for every number here and names, in its own text, where each one yields to you. **A blank line costs
 you nothing** — this is not a settings page, and nobody is asked these questions.
 
-- **Grain** — the shortest block worth putting on your calendar. *(Default: 30 minutes. Shorter than
-  that and the title doesn't render and the block lies about what it costs. Answer only if 30 is
-  wrong for you.)*
-- **The surface you open first** — the one screen you actually look at. *(Default: the Inbox of your
-  task list. That surface gets curated short; everything else is filed behind it. If you actually
-  live in Today, or a filter, or a calendar, say so — otherwise it will curate a screen you never
-  open, perfectly.)*
+- **Grain** — the shortest block worth putting on your calendar. *(Default: 30 minutes. Below that a
+  block lies about what it costs, because the price is activation — and it may be too short to show
+  its own title, which depends on your calendar app at your density and is a thing to look at rather
+  than to assume. Answer only if 30 is wrong for you.)*
+- **The surface you open first** — the one screen you actually look at. *(Default: whatever screen
+  your task list opens on. That surface gets curated short; everything else is filed behind it. If
+  the screen you actually live in is a different one — a saved view, a filter, a calendar — say so,
+  otherwise it will curate a screen you never open, perfectly.)*
 - **Anything else the law got wrong about your units:**
 
 ## Standing preferences
