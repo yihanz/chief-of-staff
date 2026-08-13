@@ -7,6 +7,15 @@ The organizing fact: **this is an agent with write access to your task list and 
 reading untrusted text from the open internet, running unattended while you are asleep.** Every
 risk below follows from that sentence.
 
+**One convention, borrowed from the rest of the package, so this page names roles rather than
+products.** `~~state` is whatever task list you connect — the engine's memory. `~~container` is
+whatever calendar you connect — where your body actually is. `~~inbound[]` is every stream where
+another person can put an obligation on you. `~~evidence[]` is anything that can confirm or deny a
+fact. `references/STACK.md` is the full vocabulary and the argument behind it, and
+`references/VOLATILE.md` is where the named products, prices and click paths live, dated.
+**Every risk below is a property of the role, not of whatever product you filled it with** — which
+is what lets you check it against your own stack instead of against somebody else's.
+
 ---
 
 ## 1. The blast radius, stated plainly
@@ -140,8 +149,9 @@ alone can carry what a task title cannot. **Same fact, different surface, differ
 
 **This plugin ships no shell bridge and doesn't need one to run.** But a hosted connector reaches
 only what its vendor exposes, and some of the highest-value signal in your life is local: the plumber
-who texted a new time, a note you left yourself, a file on your own disk. **Mac automation is the rung
-that reaches it** — the class of local reads and automations no cloud connector can see.
+who texted a new time, a note you left yourself, a file on your own disk. **A general automation
+bridge is the rung that reaches it** — the class of local reads and automations no cloud connector
+can see.
 
 **The enable path.** It is a desktop extension that runs scripts on your own machine on your behalf,
 installed from your AI client's own extension directory. **Which extension, who wrote it, what it is
@@ -193,8 +203,8 @@ Hosted connectors keep a run cloud-eligible; local readers trade that for reach.
    that the row ever existed. Tomorrow it reads the same evidence, reaches the same conclusion, and
    creates the same row. **Ranked here because the signal you get points the wrong way:** the row
    comes back, so it looks broken while working exactly as designed, and nothing will ever correct
-   the misreading. **Park it in Someday** — a parked row is a decision, written where the engine
-   reads.
+   the misreading. **Park it** — move it to whatever your list calls *later*, and it becomes a
+   decision, written where the engine reads.
 4. **Enabling write/send on a mail surface that supports it.** Turns the best safety property in
    the stack into a config error waiting to happen.
 5. **Editing the law to fix a one-off.** The law is universal. Instance facts belong on rows.
@@ -222,7 +232,7 @@ Hosted connectors keep a run cloud-eligible; local readers trade that for reach.
 
 | Failure | Handled by |
 |---|---|
-| Engine rebuilds a row you closed | Completed-row + Someday query before any create |
+| Engine rebuilds a row you closed | Completed-row and parked-row query before any create |
 | Engine "fixes" a block you moved | Burden of proof on the engine; **fails safe** — unprovable means yours. On nearly every task list, write-once removes the verb entirely |
 | The write mode flips under you | **The mode renders on the card, every run** — you see the flip the day it happens |
 | Retried create makes a duplicate | CREATE is not idempotent; re-read before re-issuing |
@@ -300,8 +310,8 @@ The honest one-paragraph version:
 > something of yours, is not unlikely, it is structurally impossible. Where the field does exist
 > (**maintained**), it may additionally tidy rows it can prove it placed and you have not touched
 > — never yours. **The card names which mode you are in, every run**, so you can check the claim
-> instead of trusting it. The real risks are: a public calendar mirror if you take the free iCloud
-> path; a mail surface that *can* send — the missing send verb is a property of the surface you
+> instead of trusting it. The real risks are: a public calendar mirror if you take the free path to
+> syncing a calendar between ecosystems; a mail surface that *can* send — the missing send verb is a property of the surface you
 > chose, not a promise this package makes, so connect a mail tool that sends and the capability is
 > live in the session, and what stops a send is the law, not physics; and the ordinary fact that
 > hosted connectors mean your data flows through a vendor. **A general automation bridge on your own
