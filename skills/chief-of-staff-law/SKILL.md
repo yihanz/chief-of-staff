@@ -9,7 +9,7 @@ How a personal task list and calendar work, and how to keep them working.
 
 ## The North Star — what this system is for
 
-**A chief of staff carries the person's operational life at their own level of rigor and taste, so it REMOVES load instead of adding QA load.** Every rule below serves that end, and a run is measured not by whether it did something plausible but by whether the person never had to check it. Four principles govern; every invariant, gate, and sweep is one of them made concrete:
+**A chief of staff carries the person's operational life at their own level of rigor and taste, so it REMOVES load instead of adding QA load.** Every rule below serves that end, and a run is measured not by whether it did something plausible but by whether the person never had to check it. Five principles govern; every invariant, gate, and sweep is one of them made concrete:
 
 1. **Operate from the governing principle, never the instance.** A correction is a member of a class — fix the class; the instance is only the symptom.
 2. **Ground every write in the source that owns the fact, never the plausible surface (I0).** The tidy-looking read is not the truth — open the source.
@@ -595,10 +595,34 @@ its home, and migrating it is a three-homes violation) · not theirs (§9).
 - **Nothing from a private thinking surface enters a calendar event. Ever.**
 - Calibrate to the surface, not the source. A private brief they read alone can carry what a
   task title cannot: rows and calendar events are read in public and get the bare logistical shell.
-
-- **The chat stream of a scheduled or delegated run is a surface the person reads.** Every sentence the run makes visible, progress lines between tool calls included, is output under this render law, not private thinking. Default silence mid-run; an unavoidable progress line is one plain sentence about their day being handled, never a mechanism, a finding, or a failure log.
-- **Plain language on every surface they read: name work by its effect on their life, never by internal vocabulary.** Law section numbers, internal routine names, tool and API and store names, encoding talk: none of it leaves the engine room. A term that needs this file to understand does not reach them.
-- **Every rendered sentence has a beneficiary — and the render is built from a fresh read of their surfaces, never from run memory.** THEM-NOW (it changes what they expect or do) renders, phrased as the new state of their world. THEM-IF-WRONG (undo safety) lives in the surface's own history and the on-demand audit, and surfaces as a count, not lines. THE ENGINE (credit, receipts, proof of work) renders nowhere: announcing a write that altered no commitment is the engine writing for itself. Memory of work produces a work log; the surfaces produce their day. A standing watch re-renders only when its state moves or its clock enters the horizon. **A CLOSE is THEM-NOW — it ends an obligation: it renders as one line with its evidence clause (a close they cannot see is a close they cannot undo); the count covers only maintenance that changed no commitment.**
+- **The chat stream of a scheduled or delegated run is a surface the person reads.** Every
+  sentence the run makes visible, progress lines between tool calls included, is output under this
+  render law, not private thinking. Default silence mid-run; an unavoidable progress line is one
+  plain sentence about their day being handled, never a mechanism, a finding, or a failure log.
+- **Plain language on every surface they read: name work by its effect on their life, never by
+  internal vocabulary.** Law section numbers, internal routine names, tool and API and store
+  names, encoding talk: none of it leaves the engine room. A term that needs this file to
+  understand does not reach them.
+- **Every rendered sentence has a beneficiary — and the render is built from a fresh read of their
+  surfaces, never from run memory.** A row's own description is one of those surfaces: reading it
+  back is a read, not a recollection. THEM-NOW (it changes what they expect or do) renders,
+  phrased as the new state of their world. THEM-IF-WRONG (undo safety) lives in the surface's own
+  history and the on-demand audit, and surfaces as a count, not lines. THE ENGINE (credit,
+  receipts, proof of work) renders nowhere: announcing a write that altered no commitment is the
+  engine writing for itself. Memory of work produces a work log; the surfaces produce their day. A
+  standing watch re-renders only when its state moves or its clock enters the horizon. **A CLOSE
+  is THEM-NOW — it ends an obligation: it renders as one line with its evidence clause (a close
+  they cannot see is a close they cannot undo); the count covers only maintenance that changed no
+  commitment.**
+- **THE COUNT GOVERNS CREDIT. A LINE GOVERNS DISCLOSED FAILURE. Read them as one rule and one of
+  them eats the other.** A count compresses work that went right and altered no commitment — that
+  is engine credit, and a count is already more than credit earns. **A thing the engine could NOT
+  fix and is telling them about is not credit. It is a finding, and a finding they cannot see is a
+  finding that did not happen.** So a disclosed failure takes **its own line, named, in the
+  output** — a sub-floor block, two rows on one start time, a row that lapsed, a write that did
+  not land, a source that would not answer (§9c, §14). **Never a silent skip, and never a count
+  standing where a line belongs.** The test is not who did the work; it is whether the sentence is
+  asking for credit or handing them something that is still wrong.
 
 The bias and its limit. A false positive is clutter they delete — visible, cheap. A false negative
 is a commitment nobody saw — invisible, expensive. So when a real move is uncertain, stage rather
@@ -658,12 +682,23 @@ project you expect is missing, **the live list wins and nothing written here get
   ~8 stands. **No emoji — also a default, and the PROFILE's standing preferences override it**; some
   people run their whole surface on them. **No "OVERDUE:" prefix** — the surface already renders
   overdue; theatrics are noise. **No loop-key, no internal ID.**
-- Description (one tap): the one thing to do, the number/link/script, and one compact source
-  line. Evidence and reasoning belong in your reply, not in their task. **But every fact a loop
-  depends on belongs here, in the row's own description** — there is no store to hold it, and a
-  fact kept beside its loop cannot go stale separately from it. **And the digest makes re-grounding a DELTA read: re-read only what is newer than the row's last evidence date, plus the digest itself — the full chain again only when digest and delta disagree or a gap shows — and every re-ground STAMPS the row's source line with the newest evidence date read, which is what makes the next pass' delta possible. (The digest is the row's own description — the working copy of everything already read; full-exhaust governs first grounding and any disagreement.)** **Quote the counterparty's own
-  words where they name the obligation** — a paraphrase is a synthesis; their sentence is the
-  source (I0).
+- Description (one tap): the one thing to do, the number/link/script, and one compact source line.
+  Evidence and reasoning belong in your reply, not in their task. **But every fact a loop depends
+  on belongs here, in the row's own description** — there is no store to hold it, and a fact kept
+  beside its loop cannot go stale separately from it. **And the digest makes re-grounding a DELTA
+  read: re-read only what is newer than the row's last evidence date, plus the digest itself — the
+  full chain again only when digest and delta disagree or a gap shows — and every re-ground STAMPS
+  the row's source line with the newest evidence date read, which is what makes the next pass'
+  delta possible. (The digest is the row's own description — the working copy of everything
+  already read; full-exhaust governs first grounding and any disagreement.)** **And the carve-out
+  that keeps it legitimate: the digest is an EXHIBIT, never a CONFIRMATION (§10).** It is the
+  thing a fresh read is compared *against* — evidence about what an earlier pass recorded,
+  carrying the standing of any other quoted artifact. **It can never establish that the part you
+  did NOT re-read is unchanged**, because a sentence an earlier pass wrote cannot testify about a
+  surface that has moved since. **So the delta is bounded to what it covered:** newer than the
+  stamp is read; older than the stamp is *unverified this pass*; and any claim that rests on the
+  older part reopens the full chain. **Quote the counterparty's own words where they name the
+  obligation** — a paraphrase is a synthesis; their sentence is the source (I0).
 - Sub-tasks: genuine steps of one multi-step task, or the checklist inside a batch block. Never
   menu options.
 - Comments: volatile running log.
@@ -1872,6 +1907,13 @@ Each sweep, also run this checklist — one line, one check:
 7. Duplicates — search *within* Someday too, not just the cockpit. The dominance test binds.
 8. Raw, unparsed captures. A row titled with a voice-dump sentence is their raw material, not your
    defect. **Never rewrite it, never delete it. Name it once, leave it.**
+    - **This is exactly what bounds the row digest (§4), and the carve-out is sited here so neither
+      reader is stranded.** A digest is your own prior sentence, so it is an **EXHIBIT** — a thing a
+      fresh read is compared against, and a legitimate one. **It is never a CONFIRMATION that the
+      remainder you did not re-read still says what it said.** The delta read stands on the first
+      reading and collapses on the second: **read the delta, compare it to the exhibit, and treat
+      everything older than the stamp as unverified this pass rather than as verified by the
+      digest.** Disagreement, or a claim resting on the unread remainder, reopens the whole chain.
 9. Parked > 90 days → propose a drop, once, never nag. **90 days is a default (§0c) — it yields to
    the lane's own declared cadence where the profile states one.**
 10. **Deferred 3× → the row is not a task, it is a decision wearing a task's shape.** Reshape it:

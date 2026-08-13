@@ -1202,6 +1202,12 @@ top to bottom:
      report here as one line pointing at Review. **This is the audit trail: a close they cannot see
      is a close they cannot undo.**
    - **WATCHING** — monitors whose next move belongs to someone else or to a clock: the thing plus
+**THE COUNT GOVERNS CREDIT AND NOTHING ELSE — a DISCLOSED FAILURE IS NOT CREDIT (§1).** A thing the
+engine could NOT fix and is telling them about is a finding, and **a finding they cannot see is a
+finding that did not happen.** **A sub-floor block · two rows on one start time · a row that lapsed ·
+a write that did not land · a source that would not answer: ONE NAMED LINE EACH.** **A count standing
+where one of those lines belongs is a silent skip wearing an instrument** — check 8 counts it.
+
      its tripwire, one muted line each.
    - **A row lives in exactly ONE lane** — check 4 counts it.
 5. **A final divider-separated row in `--text-secondary`: the receipts** — the **coverage token**,
@@ -1278,7 +1284,10 @@ top to bottom:
    day's real load → you wrote a report.**
 7. **Count the things they must act on today. Every one is in the card, at its block.** **If one
    lives in prose, the brief has failed no matter how the card looks.**
-8. **Was the pass partial? Then the unreached line exists.**
+8. **Was the pass partial? Then the unreached line exists.** **AND COUNT THE DISCLOSED FAILURES:
+   every shape problem this pass REPORTED instead of fixing (§9c) has its OWN NAMED LINE in the
+   draft.** The two numbers match, or the card is not finished. **A count standing where one of
+   those lines belongs is a failed check, and the repair is the line — never a bigger number** (§1).
 9. **Condensed is the deliverable. Dropping things is not condensing — it is a worse brief.**
    **Check 1 does not license check 9's violation: prose that must exist MOVES INTO THE CARD.**
 10. **THE THREE ALWAYS-ON TOKENS ARE PRESENT: the coverage token · the offense metric (a number, or
