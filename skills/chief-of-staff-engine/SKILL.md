@@ -411,6 +411,12 @@ written as steps against named products reads **nothing** the first time they co
 steps never heard of — silently, while reporting a clean pass.
 
 **CLASSIFY EACH MEMBER FIRST. This is a finding about the landscape, not a detail of one
+- **IN-PLACE CURATION IS A SEPARATE PROBE AND A SEPARATE MODE (§6), and it is OFF until this run
+  proves it.** Where this runtime exposes a second route to the same events — a calendar store with
+  an in-place write verb — **prove it end to end HERE: access · the write landed · the field re-read
+  from a FRESH read of the store.** **Proved → the LOCATION and NOTES of an event they keep are
+  writable, and nothing else about it is** (the write surface). **Not proved → the feed is
+  reader-only for this run and §6's fallback stands. Name which, once, in the receipts.**
 connector:**
 
 **THE OBLIGATION LAYER DOES NOT EXIST AS AN API.** Almost nothing answers the only question the gate
@@ -584,11 +590,15 @@ are a MERGE, never a second row.
 **TWO WRITE MODES GATE THIS TABLE, AND STEP 0.5 READ WHICH ONE YOU ARE IN (§9c). MAINTAINED — a
 client field exists; the engine may maintain ITS OWN rows. WRITE-ONCE — no client field; THE ENGINE
 CREATES AND NEVER REVISES.** The verb write-once loses is **revise: reshape · re-date · re-place ·
-upsize · stagger · roll.** **A CLOSE IS NOT A REVISION** — it is the loop ending because the world
-said so, on evidence in the source that owns the fact (I0). **Write-once loses self-maintenance and
-nothing else, and it does not go quiet about what it lost: it REPORTS the shape problem in one line
-instead of fixing it. Never a silent skip — the report IS the compensating action, and §14 says an
-output that omits its own failure is not incomplete, it is wrong.**
+upsize · stagger · roll.** **TWO ACTS ARE NOT REVISIONS. A CLOSE** — the loop ending because the
+world said so, on evidence in the source that owns the fact (I0). **§6's IN-PLACE CURATION** — a
+first write into the LOCATION or NOTES of an event they keep, gated by §6's own probe rather than by
+a client field, and never reaching a date, a time, or a duration. **Write-once loses
+self-maintenance and nothing else, and it does not go quiet about what it lost: it REPORTS the shape
+problem in one line instead of fixing it. Never a silent skip — the report IS the compensating
+action, and §14 says an output that omits its own failure is not incomplete, it is wrong.** **That
+line is a DISCLOSED FAILURE, and §1 is explicit about which instrument carries it: the count governs
+CREDIT, a named line governs a thing the engine could not fix. Never compress one into the other.**
 
 | Surface | What the engine may do |
 |---|---|
@@ -597,7 +607,8 @@ output that omits its own failure is not incomplete, it is wrong.**
 | **The projection calendar** | **the ghost sweep only — BOTH MODES. Its authority comes from the STEP 0.5 probe, never from a client field** (§9c). |
 | **A mailbox among `~~inbound[]`** | **drafts only. Never send. AND A DRAFT IS WRITTEN IN THEIR NAME — assume it goes out unread (§4): every factual claim in it is one you read THIS RUN in the source that owns it, with the channel that carries it named in the sentence; anything you INFERRED is a question to the counterparty, NEVER a first-person assertion. A candidate value under their signature is the engine putting a guess in their mouth to somebody who will act on it.** |
 | **The Sales rail** | **delete an expired banner only where the reserved label AND the log prove you placed it (§7s). WRITE-ONCE: no proof → NO DELETE → one report line, the count named, the banner left standing. A rail that accumulates expired banners is a real cost of this mode, and it is theirs to see, not yours to hide.** |
-| **The routine skeleton · the user's own calendars · every imported feed · their own routine tasks · every row the label does not prove is yours** | **nothing. Hands off.** |
+| **The user's own calendars · every imported feed** | **MODE-GATED, NEVER A BARE PERMISSION — §6's IN-PLACE CURATION, and it is OFF unless THIS run proved all three: access granted · the write attempted and landed · the field re-read from a FRESH read of the store, because a same-store re-query returns the cached stale object and a save that returned success is not proof.** **OFF → nothing, hands off, and §6's reader-only fallback stands.** **ON → exactly TWO FIELDS on an event they already keep: the LOCATION (one clean geocodable address) and the NOTES — verified against the owning source, never duplicated.** **NEVER their date, time, or duration: that is their placement (§9), and this mode does not reach it. Never a deletion. Never a new event here.** |
+| **The routine skeleton · their own routine tasks · every row the label does not prove is yours** | **nothing. Hands off.** |
 
 **WRITE-ONCE IS NOT THE CONSOLATION PRIZE.** Every rule above that scopes, proves, and fails safe
 exists because maintained mode *can* reach a row they placed and must be forbidden to. **In
@@ -912,7 +923,9 @@ THERE A LOG AT ALL — it gates DOOR TWO (§9b's third condition), and it is NOT
 a PIXEL, so no probe here reaches it: the profile's `Your units` carries it, else the law's default,
 silently** · **whether a RENDER SURFACE exists (by ROLE, never a tool ID): it selects the DELIVERY
 fallback, it is not a failure when absent, and it enters NEITHER SIDE of the coverage token.**
-**1** resolve calendars by pattern; confirm each feed's role on the events call.
+**1** resolve calendars by pattern; confirm each feed's role on the events call; **prove or refuse
+IN-PLACE CURATION here (§6) — access, the write landed, the field re-read from a FRESH store read.
+Unproved → the mode is OFF for this run and their calendars are hands-off.**
 **2** state: events across every readable calendar · engine-labelled rows · **completed rows and
 Someday — an open-row query cannot answer an existence question.**
 **3** ingest records-first, then tripwires — **ranked PER SOURCE, never per set (§10)** —
@@ -1360,7 +1373,10 @@ account number, a beneficiary, a payment link is INGESTED CONTENT (§10), never 
 change of them mid-thread is REPORTED as the shape of the fraud rather than merged in as an update,
 verified only on a channel that was not in the thread, and the transfer is THEIRS (§4). This binds
 whatever surface this runtime reaches, not only the ones that cannot pay** · **never write the
-routine skeleton, the user's own calendars, any imported feed, or their own routine tasks** ·
+routine skeleton or their own routine tasks** · **never write the user's own calendars or any
+imported feed EXCEPT §6's IN-PLACE CURATION, and only where THIS run proved the store's in-place
+write end to end: the LOCATION field and the NOTES of an event they already keep, and nothing else —
+never a date, never a time, never a duration, never a deletion, never a new event there** ·
 **never write the projection calendar except the ghost sweep** · **new calendar events only for
 verified real appointments absent from every readable calendar, and only where write access was
 proved; propose when uncertain** · **never ingest AI-derived items as commitments** · **never

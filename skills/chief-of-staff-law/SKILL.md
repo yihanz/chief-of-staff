@@ -1141,11 +1141,12 @@ event titles and descriptions, task rows, the brief:
     - The dominance test, before you undate or delete any row: *is the surviving row at least as
       good as the one I'm removing — in content, accuracy, and reachability?* **If you cannot answer
       yes from evidence you read this run, do not remove it.**
-    - The read-only clause — the case that bites. Subscribed feeds are typically reader-only, so
-      the engine cannot write the event's description. **Therefore if their event is empty or stale,
-      the dated task row is the only writable surface carrying the truth — keep it dated.** Undating
-      is correct only when their event already carries the content and it is correct. Two rows
-      they can read beats one row that lies.
+    - The read-only clause — the case that bites, **and read-only is a finding about THIS feed on
+      THIS run, never a fact about feeds.** **Where the calendar API returns this feed reader-only
+      AND in-place curation is not proved this run (the mode below), the engine cannot write the
+      event's description — so if their event is empty or stale, the dated task row is the only
+      writable surface carrying the truth: keep it dated.** Undating is correct only when their event
+      already carries the content and it is correct. Two rows they can read beats one row that lies.
     - Why this is the worst class of defect (I5): removal without merge trades a *visible* cost for an
       invisible loss. *(Type case: an imported event carried a stale visit brief while the corrected
       brief lived in a task. "Resolving the duplicate" by undating the task pulled the good version
@@ -1160,12 +1161,33 @@ event titles and descriptions, task rows, the brief:
   - Sweep the class, not the instance — and check each event's description length, because an
     empty description flips the verdict from "undate" to "keep dated."
 
-**When you CAN reach their calendar in place, that is the job — and the reader-only clause above is
-the fallback, not the rule (§13).** Reader-only is a property of one API, not of their calendar. A
-subscribed feed being unwritable through the calendar API does not mean their events are unreachable:
-the same events are usually writable in place through the platform's own calendar store (EventKit and
-the native calendar app on Apple; the equivalent elsewhere), once access is granted and the write is
-tested end to end. Where that path exists:
+### IN-PLACE CURATION — a distinct MODE, probe-gated, and narrow to two fields
+
+**This is the ONE thing the engine may write on a calendar that is theirs, and it is off until a probe
+turns it on.** Reader-only is a property of one API, not of their calendar: a feed unwritable through
+the calendar API does not mean their events are unreachable. Some runtimes expose a **second route to
+the same events — a calendar store with an in-place write verb, reached on the machine rather than
+through the feed's API.** **That is a capability, never a role name and never a product: probe it
+(§13), and the probe is what turns this mode on.** *(The mechanism for whichever store this runtime
+has — how to find an event without scanning the whole store, edit, save, commit, and re-read — lives
+in the stack reference, never in this file.)*
+
+**THE GATE — all three, proven THIS run, or the mode is OFF and the reader-only clause above stands:**
+
+1. **Access granted** to the store.
+2. **The write attempted and landed** — never inferred from a role name (§13).
+3. **The field re-read from a FRESH read of the store.** The store caches: a same-store re-query
+   returns the stale object and will report a just-deleted event as still present, so the fresh read
+   is the only proof — **a save that returned success is not** (§14).
+
+**WHAT THE MODE MAY TOUCH — a closed list, and closed on purpose: the LOCATION field (one clean
+geocodable address) and the NOTES.** Both carry logistics; neither carries a judgment about what they
+meant to do.
+
+**WHAT IT MAY NEVER TOUCH: the DATE, the TIME, and the DURATION.** Those are their placement, and §9
+makes placement theirs. **A curation pass that retimes or resizes their event believes it can tell a
+mistake from a decision — the identical belief that re-opens a row they closed.** Their event is at
+the wrong time, or the wrong length → **say so in one line and leave it.**
 
 - **Read every event they keep, verify its time and place against the owning source, and enrich THEIR
   event in place** — geocodable address in the location field, clean notes, correct duration — rather
@@ -1174,16 +1196,11 @@ tested end to end. Where that path exists:
 - **Two failure poles, both wrong, and the engine has hit each in turn:** pasting a parallel event
   beside theirs (a duplicate they must reconcile, off a stale read of what they already keep), and
   shrugging "they already have it, leave it" (the enrichment that IS the job, undone). **The answer is
-  neither: edit their event, in place, live-verified.**
-- **The reliable mechanism where it is EventKit-class:** find by a bounded date-predicate, never a
-  scan over the whole store — a `whose`-style scan over thousands of events times out; edit the event;
-  save; **commit; and re-read from a FRESH store to confirm the field landed.** The store caches: a
-  same-store re-query returns the stale object and will report a just-deleted event as still present,
-  so the fresh-store read is the only proof — a save that returned success is not. Run the automation
-  from a file, not inline (inline quoting mangles the script).
+  neither: edit their event, in place, live-verified, in those two fields.**
 - **Never launder "I can't reach it cleanly" into "so I'll stay off their surface."** That is
   avoidance wearing the costume of respect. Test the path; if it exists, curate in place; only if it
-  genuinely does not, the reader-only fallback stands.
+  genuinely does not, the reader-only fallback stands. **And the converse is equally banned: an
+  ungated write is not curation, it is the engine editing their calendar on a hunch.**
 
 **Author automation scripts as plain text, never as opaque encodings.** An encoded script corrupts silently in generation and transfer, and the corruption is invisible until the write dies; plain text fails loudly and reads back diffable. **A write mechanism that fails twice in one run is down for the run:** stop, deliver the substance on a surface that still works, and report the un-landed write in one plain line.
 
@@ -1493,6 +1510,12 @@ left.**
   re-surface it. This settles the loop, not the artifact. Closing the task may leave the `✓` event
   standing; you must also run the ghost sweep (§6). Answering a still-showing complaint with a closure
   rule alone is a misdiagnosis.
+  - **The one carve-out, and it is FIELD-scoped rather than row-scoped: §6's in-place curation mode,
+    on its own probe, may write the LOCATION field and the NOTES of an event they keep** — neither
+    field carries a judgment about when or for how long they meant to be somewhere. **Date, time,
+    and duration are precisely what this rule protects, and that mode never reaches them.** An empty
+    location field is not a placement they made; it is a field nobody filled, and filling it is the
+    job (§6).
 - **You may close a row only on direct evidence in the source that owns the fact.** Their own sent
   reply; a confirmation from the counterparty; the encounter in the record; their word. **Never on
   inference. Never because a row looks stale. Never on a schedule. Never on a duration heuristic.
@@ -1709,6 +1732,8 @@ scope. §13 — absence of evidence is not evidence, and *your own prior action 
 least likely to see.* The mode line is what makes the flip visible the day it happens rather than six
 weeks later, in the rows.
 
+- **in-place curation (§6) — location and notes on an event they keep, on the same footing: its
+  authority is its own probe, never a client field**
 ### Three scopes this must not be read as loosening
 
 - **§9b's third condition.** It reads the log for an engine-created container deleted or dismissed in
