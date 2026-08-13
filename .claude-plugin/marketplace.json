@@ -12,6 +12,7 @@
       "description": "An unattended daily brief. It reads what you have connected, works out what you actually owe today, places it where you can physically do it, and hands you one card. It creates almost nothing on purpose. A task list and a calendar is the whole floor.",
       "source": "./",
       "version": "0.1.0",
+      "license": "LicenseRef-ChiefOfStaff-Personal-Use-1.0",
       "category": "productivity"
     }
   ]
