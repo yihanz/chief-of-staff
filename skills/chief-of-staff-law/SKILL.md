@@ -1204,10 +1204,33 @@ is how a gate gets skipped.
 
 **The positive test. Name both, from evidence you read this run, or create nothing:**
 
-1. The counterparty — the specific person or system waiting on them. A name, not a category.
-2. The clock — the real external date something breaks, and what breaks.
+1. **The stake — and it is a DISJUNCTION.** Either **a counterparty**, the specific person or system
+   waiting on them, a name and not a category — **or a right of theirs that expires without action**:
+   an appeal window, a credit, an enrolment period, a claim deadline.
+2. The clock — the real external date something breaks, and what breaks. **Both limbs need one.** In
+   the second the expiry *is* the clock, and the thing that breaks is the right itself.
 
-**Cannot name both → no row.** Not a p4. Not a bottom-of-batch subtask. Nothing.
+**Cannot name a stake and a clock → no row.** Not a p4. Not a bottom-of-batch subtask. Nothing.
+
+**Why limb one is two limbs, and it is the axis test on this gate's own first draft.** *A counterparty
+is waiting* is the observable; *something is at stake* is the property. They travel together across
+almost everything that arrives — and they come apart at a right that expires by itself, **which has no
+counterparty by construction: nobody is waiting because there is nobody to wait.** Read as a
+conjunction, the gate refuses every one of those, forever, and refuses them **silently**, which I5
+prices as the worst thing this system can do. The ladder below already carries a row for *a closing
+window* with nobody waiting; a conjunctive gate is why nothing could ever reach it.
+
+**And the second limb is not the opportunity door reopening.** The discrimination is whether doing
+nothing SUBTRACTS something they already hold. A right they hold and lose by default is at stake; an
+option they could take up and don't is not, and stays `Someday / Maybe` under the obligation-vs-
+opportunity rule below. **Expiring is not the test — losing is.** A sale expires and costs them
+nothing, which is why offers have their own rail and not this gate (§7s).
+
+**What the second limb costs, named rather than hidden: it admits one more class from an unverified
+sender.** *"Your credit expires Friday"* attaches to no name, so it can reach a row where an invented
+person waiting could not. **§4's corroboration gate is what holds it** — an uncorroborated sender's
+row is admitted with its first move **not** pre-done, and says so. **The asymmetry is unchanged: a
+wrongly-created row costs a delete; a wrongly-suppressed right costs the right.**
 
 Why a positive test — this is the mechanism. A negative test asks *"can I rule this out?"* — and
 when you can't, you create. That resolves toward creating every time, because a created row is
@@ -1263,7 +1286,7 @@ left.**
   the channel the trigger arrived on, seeing nothing, and calling the loop open is not checking — it
   is re-reading the envelope (§10).
 - **This is the same shape as the Someday rule above.** A live obligation dies two ways, and both
-  still name a counterparty and a clock, so both pass the positive test: they **did it** (discharged),
+  still name a stake and a clock, so both pass the positive test: they **did it** (discharged),
   or they **decided against it** (parked). Someday guards the second; this guards the first.
   **Still-owed is a separate fact from was-owed — owned by the record of what they actually did, never
   by the party who made the request (I0).**
@@ -1359,10 +1382,10 @@ violation. **Keep the order. Do not defend the furniture.**
 **Read this before you trust §9. The obligation gate is correct and it is not the whole law. Alone,
 it inverts the system.**
 
-The defect it fixes: §9 admits a row only when you can name a counterparty and a clock — the right
-filter for things arriving *at* the person. But the offense lanes (§0) — the venture, the book, the
-portfolio, the thing they would call their life's work — have neither. Nobody is waiting. Nothing
-breaks on a date. **So a system whose only door is §9 cannot see them**, and renders, every day, a
+The defect it fixes: §9 admits a row only when you can name a stake and a clock — the right filter for
+things arriving *at* the person. But the offense lanes (§0) — the venture, the book, the portfolio,
+the thing they would call their life's work — have neither, on either limb. Nobody is waiting. Nothing
+of theirs expires. Nothing breaks on a date. **So a system whose only door is §9 cannot see them**, and renders, every day, a
 tidy card made entirely of other people's demands.
 
 This is not a tuning problem; it is what the law says to do. The offense lane sits in the same task
@@ -1714,7 +1737,8 @@ Each sweep, also run this checklist — one line, one check:
     · an emptied cockpit · a fake-dated errand · a hardcoded ID or instance · a sub-floor sliver ·
     **a number stated with no clause naming where it yields (§0c)** ·
     corridor-taxed admin · an undated row whose calendar row is empty or stale · a row that cannot name a
-    counterparty and a clock · a loop kept past its own resolution · a classification made off a header ·
+    stake and a clock · **a row refused for want of a counterparty where a right of theirs expires by
+    itself (§9)** · a loop kept past its own resolution · a classification made off a header ·
     a row of theirs re-opened or re-placed · a duplicate built because only open tasks were queried · a
     parked row re-staged · a partial pass rendered as complete · **a run that did not name its mode
     (§9c)** · **a searched source reported as though it were an inbox (§10)** · **an actor field read

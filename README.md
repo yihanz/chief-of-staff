@@ -146,9 +146,11 @@ access.** It's the only document here you actually have to read.
 
 **Will:**
 
-- Create a task from the world only when it can name **a counterparty and a clock** from evidence
-  read this run — **or** protect a block for a lane *you declared*, when it can prove that lane is
-  starving. **Those are the two doors that make work.** There is a third that doesn't — it's for
+- Create a task from the world only when it can name **a stake and a clock** from evidence read this
+  run — a stake being **either someone waiting on you, or a right of yours that expires if you do
+  nothing** (an appeal window, a credit, an enrolment period; those have no counterparty by
+  definition, and a system that demanded one would drop every last one of them) — **or** protect a
+  block for a lane *you declared*, when it can prove that lane is starving. **Those are the two doors that make work.** There is a third that doesn't — it's for
   offers, it's named below, and it writes.
 - Place work by **activation cost**, not duration — an errand rides a trip you're already taking;
   admin goes in the window where you're stuck in a chair anyway.
@@ -291,8 +293,9 @@ money to you, nothing else about your setup changes.
 
 **Door one — what arrives.** Most of what lands in your life is not a task. A system that turns all
 of it into rows doesn't organize your life; it buries it. So the default is **nothing**, and a
-thing earns a row only by naming a person waiting and a date something breaks. That's why the card
-is short — and why it tells you it refused six things.
+thing earns a row only by naming a date something breaks **plus** what is actually at stake — a
+person waiting on you, or a right of yours that runs out if you never act. That's why the card is
+short — and why it tells you it refused six things.
 
 **Door two — what's yours.** Door one is correct and, alone, it inverts the whole system. Your
 venture, your book, your portfolio — the work you'd call your life's work — has **no one waiting

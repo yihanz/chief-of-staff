@@ -72,8 +72,13 @@ order.
 **Why the architecture helps beyond that rule:**
 
 - **The obligation gate is a positive test.** An injected instruction still has to produce a
-  nameable counterparty and a nameable clock from evidence read this run. "Do X" with no
-  counterparty and no clock creates nothing.
+  nameable **stake** — someone waiting on you, or a right of yours running out — **and** a nameable
+  clock, from evidence read this run. "Do X" with neither creates nothing.
+  - **The stake half is a disjunction on purpose, and it is the looser half.** *"Your credit
+    expires Friday"* attaches to no person, so it can reach a row where an invented someone-waiting
+    could not. That is deliberate: a real right that expires by itself has no counterparty either,
+    and refusing all of them to close this gap would suppress the genuine ones silently. **What
+    holds it is the corroboration answer below**, and it is the same answer.
 - **Mail is drafts-only — and on a surface with no send verb, that is the surface's doing.** The
   highest-value injection target, a reply that commits you, then has no send path to aim at. **On a
   send-capable surface the path exists and only the drafts-only rule closes it — and a rule is

@@ -695,7 +695,10 @@ STOPS, because §0b makes them two contracts** — an absent set is never one of
 ## §H — THE HORIZON PASS (weekly, additive)
 
 **Absence of a booking IS the signal. Prefer a staged question over an opened loop. The obligation
-gate applies: an absence you cannot attach to a counterparty and a clock is not a loop.**
+gate applies: an absence you cannot attach to a STAKE and a clock is not a loop** — and **the stake
+is §9's disjunction, both limbs: someone waiting, OR a right of theirs that expires without action.
+A horizon pass is where the second limb lives** — a renewal window, an enrolment period, a claim
+deadline is exactly the shape this pass exists to find, and it has no counterparty to name.
 
 **NO SEED LIST.** Derive the horizon live:
 
